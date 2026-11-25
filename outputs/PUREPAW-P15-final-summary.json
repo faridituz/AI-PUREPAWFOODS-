@@ -1,0 +1,32 @@
+[
+  {
+    "suite": "test",
+    "exit": 0,
+    "file": "../outputs/PUREPAW-P15-final-test.txt"
+  },
+  {
+    "suite": "test:trade:browser",
+    "exit": 0,
+    "file": "../outputs/PUREPAW-P15-final-test-trade-browser.txt"
+  },
+  {
+    "suite": "test:field:browser",
+    "exit": 0,
+    "file": "../outputs/PUREPAW-P15-final-test-field-browser.txt"
+  },
+  {
+    "suite": "test:sales:browser",
+    "exit": 0,
+    "file": "../outputs/PUREPAW-P15-final-test-sales-browser.txt"
+  },
+  {
+    "suite": "test:ops:browser",
+    "exit": 0,
+    "file": "../outputs/PUREPAW-P15-final-test-ops-browser.txt"
+  },
+  {
+    "suite": "test:sales:tls",
+    "exit": 0,
+    "file": "../outputs/PUREPAW-P15-final-test-sales-tls.txt"
+  }
+]

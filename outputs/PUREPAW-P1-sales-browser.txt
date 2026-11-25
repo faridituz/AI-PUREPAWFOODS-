@@ -1,0 +1,5 @@
+
+> purepaw-local-mvp@0.1.0 test:sales:browser
+> node scripts/sales-browser-smoke.mjs ../work
+
+PASS: Edge 390×844, manifest, static worker, offline order/customer/GPS+photo/cash, safe reconnection and explicit confirmation, no API cache, version update, logout guard, account isolation, 3 languages

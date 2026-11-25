@@ -1,0 +1,5 @@
+
+> purepaw-local-mvp@0.1.0 test:trade:browser
+> node scripts/trade-browser-smoke.mjs
+
+PASS: Edge headless UI, 4 roles, two SKUs, reserve, bank verification, warehouse release, admin audit

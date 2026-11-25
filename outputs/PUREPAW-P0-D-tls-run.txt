@@ -1,0 +1,5 @@
+
+> purepaw-local-mvp@0.1.0 test:sales:tls
+> node scripts/sales-tls-smoke.mjs
+
+PASS: trusted local TLSv1.3 certificate, untrusted issuer refused, HTTPS app/worker, same-origin login and Secure Cookie

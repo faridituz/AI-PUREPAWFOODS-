@@ -1,0 +1,50 @@
+{
+  "shadow": {
+    "tables": 74,
+    "rows": 16237,
+    "constraints": 234,
+    "reviewedPartialUniqueIndexes": 3,
+    "criticalChecks": 6,
+    "immutableTables": 5,
+    "mismatches": 0
+  },
+  "shadowBusiness": {
+    "allocationAttempts": 2,
+    "allocated": 100,
+    "unallocated": 50,
+    "replay": "blocked",
+    "partialPayment": "blocked",
+    "paidPickupWinners": 1,
+    "refundReversalWinners": 1,
+    "refundPaymentWinners": 1
+  },
+  "shadowHttp": {
+    "http": "real PostgreSQL loopback",
+    "scopedRoles": 4,
+    "revokedSession": "blocked",
+    "passwordOnlyHighPrivilege": "blocked",
+    "crossAccount": "blocked",
+    "loginMfaReplay": "blocked",
+    "logout": "revoked",
+    "bankReviewAuditRows": 1,
+    "bankReviewReplay": "same result",
+    "bankReviewAllocated": 0,
+    "allocationWinners": 1,
+    "allocatedReceiptRetained": true
+  },
+  "pool": {
+    "transactionClient": "pinned",
+    "rollback": "verified",
+    "readOnly": "verified",
+    "serializationAttempts": 2,
+    "boundParameters": "verified"
+  },
+  "version": "17.12",
+  "connection": "loopback only",
+  "bankAllocated": 100,
+  "remainingBankCredit": 50,
+  "lastUnitWinners": 1,
+  "idempotencyWinners": 1,
+  "deadlock": "40P01 followed by successful ordered retry",
+  "backupRestore": "verified"
+}

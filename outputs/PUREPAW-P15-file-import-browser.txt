@@ -1,0 +1,14 @@
+
+> purepaw-local-mvp@0.1.0 test:field:browser
+> node scripts/field-browser-smoke.mjs
+
+file:///D:/AI%E5%8A%9E%E5%85%AC/purepaw/sales-v1-dev/scripts/field-browser-smoke.mjs:32
+  throw Error('Browser smoke timed out: '+label);
+        ^
+
+Error: Browser smoke timed out: login admin.demo
+    at until (file:///D:/AI%E5%8A%9E%E5%85%AC/purepaw/sales-v1-dev/scripts/field-browser-smoke.mjs:32:9)
+    at async login (file:///D:/AI%E5%8A%9E%E5%85%AC/purepaw/sales-v1-dev/scripts/field-browser-smoke.mjs:90:5)
+    at async file:///D:/AI%E5%8A%9E%E5%85%AC/purepaw/sales-v1-dev/scripts/field-browser-smoke.mjs:101:3
+
+Node.js v24.22.1

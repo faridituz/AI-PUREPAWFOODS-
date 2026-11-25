@@ -1,0 +1,53 @@
+✔ 行政区与全国覆盖：14 州级、199 市区县，包含塔什干市和卡拉卡尔帕克斯坦 (692.822ms)
+✔ 省和区县筛选，地图点位、列表及西里尔/拉丁查询一致 (11.4322ms)
+✔ 发现重试、限流和待核实池独立；重复来源去重 (44.075ms)
+✔ 人工核实才能转正式门店；来源重复刷新不会覆盖核实地址 (197.0049ms)
+✔ 发现限流、取消与失败不影响 CRM (231.2047ms)
+✔ 相同电话与主体提示复核，独立分店不自动合并 (31.9212ms)
+✔ 跨区域点位、搜索、详情及坐标写入无泄露 (8.0939ms)
+✔ 普通 GPS、定位拒绝、失败、低精度、超距和疑似模拟分流 (41.9542ms)
+✔ 异常打卡只能区域经理审核且原坐标不可改，幂等与不同日期记录并存 (41.2538ms)
+✔ 今日任务与有效 GPS 分开；关店取消未完任务并禁止新任务 (38.2028ms)
+✔ 照片验证、去元数据及授权读取 (18.6197ms)
+✔ 地图客户复用 P0-B，价格审批、库存不足及现款门禁有效 (63.6734ms)
+✔ 搬迁审计、交接撤权与历史订单快照 (25.469ms)
+✔ 人工合并保留历史订单和拜访，合并门店禁止新订单 (22.9654ms)
+✔ 已停用账号无法访问地图和档案 (9.5337ms)
+✔ 迁移失败回滚、备份恢复客户、拜访、订单及区域权限 (32.2807ms)
+PERF 100 list ms 3 cluster ms 2 clusters 1 bytes 162
+PERF 1000 list ms 4 cluster ms 2 clusters 1 bytes 156
+PERF 10000 list ms 18 cluster ms 13 clusters 1 bytes 158
+✔ 100/1000/10000 点接口性能，列表分页与聚合仅返回授权点位 (164.9013ms)
+✔ 行政区来源和启用状态可维护，停用阻止新档案但保留历史 (19.9887ms)
+✔ 经理统计仅限分配区域；普通销售不能读取区域汇总 (11.7477ms)
+✔ P15-C: file preview preserves candidates and commit rejects unauthorized rows atomically (27.7121ms)
+✔ P15-C: offline OSM import preserves provenance, authority and separate candidate categories (15.5575ms)
+✖ P15-E: a paid after-sales refund preserves signed purchase history and reports net receipts (48.1695ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 21
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3118.4503
+
+✖ failing tests:
+
+test at test\field.test.mjs:400:1
+✖ P15-E: a paid after-sales refund preserves signed purchase history and reports net receipts (48.1695ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///D:/AI%E5%8A%9E%E5%85%AC/purepaw/sales-v1-dev/test/field.test.mjs:415:10)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

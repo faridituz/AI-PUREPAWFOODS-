@@ -1,0 +1,11 @@
+file:///D:/AI%E5%8A%9E%E5%85%AC/purepaw/sales-v1-dev/server/field-map.mjs:84
+  AND ${confirmedPurchaseFundsSql}>=v.due
+        ^
+
+ReferenceError: Cannot access 'confirmedPurchaseFundsSql' before initialization
+    at file:///D:/AI%E5%8A%9E%E5%85%AC/purepaw/sales-v1-dev/server/field-map.mjs:84:9
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.22.1

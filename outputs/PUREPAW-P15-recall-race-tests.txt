@@ -1,0 +1,18 @@
+✔ 并发分配只允许可用余额内一次入账，登记实收与销售金额分开 (466.5965ms)
+✔ 付款附件上传不入账，私有读取检查客户与角色、内容去除元数据 (13.8519ms)
+✔ 管理员密码重置即时撤销旧会话；匿名及普通销售不能重置；失败触发限流 (313.1408ms)
+✔ 迁移故障事务回滚，SQLite 快照恢复资金、库存、客户、账号和凭证 (31.0591ms)
+✔ 两个认证设备重试同一草稿只登记一次，随后无权核实现金 (48.5108ms)
+✔ 并发退款申请共享同一原始付款额度 (7.5307ms)
+✔ 并发调拨审批至多通过一个，库存守恒且不为负数 (24.8814ms)
+✔ P15-A: bank reversal competes safely with pickup and refund requests (66.1573ms)
+✔ P15-I: one physical unit cannot be reserved and transferred or sampled concurrently (42.3426ms)
+✔ P15-I: count and pickup serialize, and a concurrent recall accounts for any release (75.881ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2152.1166

@@ -1,0 +1,18 @@
+{
+  "sourceVersion": "uzbekistan-261123",
+  "first": {
+    "inserted": 113,
+    "existing": 0
+  },
+  "second": {
+    "inserted": 0,
+    "existing": 113
+  },
+  "administrativeAreas": 44,
+  "categories": {
+    "veterinary": 52,
+    "pet": 60,
+    "pet_grooming": 1
+  },
+  "formalCustomers": 0
+}

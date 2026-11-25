@@ -1,0 +1,17 @@
+{
+  "shadow": {
+    "tables": 74,
+    "rows": 16192,
+    "constraints": 234,
+    "expressionOrPartialUniqueIndexesPending": 3,
+    "mismatches": 0
+  },
+  "version": "17.12",
+  "connection": "loopback only",
+  "bankAllocated": 100,
+  "remainingBankCredit": 50,
+  "lastUnitWinners": 1,
+  "idempotencyWinners": 1,
+  "deadlock": "40P01 followed by successful ordered retry",
+  "backupRestore": "verified"
+}

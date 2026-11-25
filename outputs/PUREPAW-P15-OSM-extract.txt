@@ -1,0 +1,13 @@
+{
+  "source": "Geofabrik/OpenStreetMap",
+  "sourceVersion": "uzbekistan-261123",
+  "snapshotUpdatedAt": "2026-11-23T21:21:17.000Z",
+  "license": "ODbL-1.0",
+  "attribution": "© OpenStreetMap contributors · Geofabrik",
+  "categories": {
+    "veterinary": 52,
+    "pet": 60,
+    "pet_grooming": 1
+  },
+  "total": 113
+}

@@ -1,0 +1,1 @@
+PASS: Edge headless UI, 4 roles, two SKUs, reserve, bank verification, warehouse release, admin audit

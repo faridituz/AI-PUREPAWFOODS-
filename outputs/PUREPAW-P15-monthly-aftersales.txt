@@ -1,0 +1,47 @@
+{
+  "backupRestore": "passed",
+  "sharedBankCreditOrders": 2,
+  "afterSalesReturns": 1,
+  "recallAffectedOrders": 23,
+  "days": 30,
+  "start": "2026-10-01",
+  "orders": 500,
+  "shops": 300,
+  "roles": {
+    "admin": 1,
+    "manager": 2,
+    "sales": 6,
+    "finance": 1,
+    "warehouse": 2,
+    "delivery": 2
+  },
+  "warehouses": 2,
+  "skus": 20,
+  "visits": 300,
+  "delivered": 453,
+  "unpaid": 27,
+  "cancelled": 20,
+  "bank": 4218900,
+  "cash": 1038375,
+  "expected": {
+    "received": 5257275,
+    "refunded": 215310,
+    "sales": 4744240,
+    "freight": 151000,
+    "logistics": 211400,
+    "cost": 2803700,
+    "samples": 6000
+  },
+  "contribution": 1874140,
+  "ledger": {
+    "totals": {
+      "received": 5257275,
+      "refunded": 215310,
+      "reversed": 0,
+      "net": 5041965,
+      "bankUnallocated": 0,
+      "inventory": 746
+    },
+    "differences": []
+  }
+}

@@ -1,0 +1,5 @@
+
+> purepaw-local-mvp@0.1.0 test:ops:browser
+> node scripts/ops-browser-smoke.mjs
+
+PASS: actual Edge operations dashboard, employee detail, finance, stock, delivery, returns, recall, samples, alerts and CSV/XLSX downloads

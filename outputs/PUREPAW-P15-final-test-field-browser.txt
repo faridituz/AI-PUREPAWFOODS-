@@ -1,0 +1,10 @@
+
+> purepaw-local-mvp@0.1.0 test:field:browser
+> node scripts/field-browser-smoke.mjs
+
+PASS: actual Edge CSV and XLSX upload, mapped columns, malformed row preview, candidate-only write and duplicate import
+PASS: desktop/mobile simulated layout, zoom and country reset, map intake, tasks, scoped list, normal/far/denied GPS, order handoff and 3 languages
+Edge startup from login to rendered map (ms, including 200 ms settling): 448
+EDGE PERF 100 render ms 116 clusters 1
+EDGE PERF 1000 render ms 106 clusters 1
+EDGE PERF 10000 render ms 115 clusters 2

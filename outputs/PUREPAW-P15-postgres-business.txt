@@ -1,0 +1,26 @@
+{
+  "shadow": {
+    "tables": 74,
+    "rows": 16237,
+    "constraints": 234,
+    "reviewedPartialUniqueIndexes": 3,
+    "criticalChecks": 6,
+    "immutableTables": 5,
+    "mismatches": 0
+  },
+  "shadowBusiness": {
+    "allocationAttempts": 2,
+    "allocated": 100,
+    "unallocated": 50,
+    "replay": "blocked",
+    "partialPayment": "blocked"
+  },
+  "version": "17.12",
+  "connection": "loopback only",
+  "bankAllocated": 100,
+  "remainingBankCredit": 50,
+  "lastUnitWinners": 1,
+  "idempotencyWinners": 1,
+  "deadlock": "40P01 followed by successful ordered retry",
+  "backupRestore": "verified"
+}

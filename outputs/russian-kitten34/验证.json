@@ -1,0 +1,14 @@
+{
+  "output": "outputs/russian-kitten34/鲜肉系列_幼猫_俄语_34百分比_可编辑分层.psd",
+  "width": 3000,
+  "height": 950,
+  "layers": 24,
+  "textLayers": 14,
+  "vectorLayers": 9,
+  "percentage": "34%",
+  "removedStatements": [
+    "添加全脂羊奶粉",
+    "添加鱼油"
+  ],
+  "textEditRoundtrip": true
+}

@@ -1,0 +1,45 @@
+node:internal/errors:986
+  const err = new Error(message);
+              ^
+
+Error: Command failed: D:\AI办公\purepaw\work\p15-pg\pgsql\bin\initdb.exe -D C:\Users\yinho\AppData\Local\Temp\purepaw-pg-wH2GJE\cluster -U preview_owner --pwfile=C:\Users\yinho\AppData\Local\Temp\purepaw-pg-wH2GJE\bootstrap-password --auth-host=scram-sha-256 --auth-local=scram-sha-256 --locale=C --encoding=UTF8
+2026-11-25 10:44:37.382 +05 [34192] FATAL:  invalid byte sequence for encoding "UTF8": 0xb0
+
+child process exited with exit code 1
+
+initdb: removing data directory "C:/Users/yinho/AppData/Local/Temp/purepaw-pg-wH2GJE/cluster"
+
+
+    at genericNodeError (node:internal/errors:986:15)
+    at wrappedFn (node:internal/errors:540:14)
+    at ChildProcess.exithandler (node:child_process:417:12)
+    at ChildProcess.emit (node:events:514:28)
+    at maybeClose (node:internal/child_process:1172:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:335:5) {
+  code: 1,
+  killed: false,
+  signal: null,
+  cmd: 'D:\\AI办公\\purepaw\\work\\p15-pg\\pgsql\\bin\\initdb.exe -D C:\\Users\\yinho\\AppData\\Local\\Temp\\purepaw-pg-wH2GJE\\cluster -U preview_owner --pwfile=C:\\Users\\yinho\\AppData\\Local\\Temp\\purepaw-pg-wH2GJE\\bootstrap-password --auth-host=scram-sha-256 --auth-local=scram-sha-256 --locale=C --encoding=UTF8',
+  stdout: 'The files belonging to this database system will be owned by user "yinho".\r\n' +
+    'This user must also own the server process.\r\n' +
+    '\r\n' +
+    'The database cluster will be initialized with locale "C".\r\n' +
+    'The default text search configuration will be set to "english".\r\n' +
+    '\r\n' +
+    'Data page checksums are disabled.\r\n' +
+    '\r\n' +
+    'creating directory C:/Users/yinho/AppData/Local/Temp/purepaw-pg-wH2GJE/cluster ... ok\r\n' +
+    'creating subdirectories ... ok\r\n' +
+    'selecting dynamic shared memory implementation ... windows\r\n' +
+    'selecting default "max_connections" ... 100\r\n' +
+    'selecting default "shared_buffers" ... 128MB\r\n' +
+    'selecting default time zone ... Asia/Tashkent\r\n' +
+    'creating configuration files ... ok\r\n' +
+    'running bootstrap script ... ok\r\n' +
+    'performing post-bootstrap initialization ... ',
+  stderr: '2026-11-25 10:44:37.382 +05 [34192] FATAL:  invalid byte sequence for encoding "UTF8": 0xb0\r\n' +
+    'child process exited with exit code 1\r\n' +
+    'initdb: removing data directory "C:/Users/yinho/AppData/Local/Temp/purepaw-pg-wH2GJE/cluster"\r\n'
+}
+
+Node.js v24.22.1
