@@ -1,5 +1,10 @@
 # 历史报错与避坑手册（每次编码前必读）
 
+### [2026-11-26-06] 双机 `.env` 不能整文件互相同步
+- **现象**：本机 `.env` 的 `MEDIA_STORAGE_PATH` 指向 Google Drive（`G:/我的云端硬盘/PurePaw_Media`），同步到旧机后自测报"目录不存在"——旧机只有 C/D 盘且无 Google Drive。
+- **根因**：媒体路径、Python 路径等是"每机不同"的参数，被当成全局常量同步。
+- **铁律**：`.env` 中机器相关项（`MEDIA_STORAGE_PATH` 等）必须按机取值：本机用 Drive 路径，旧机回退工作区 `media/` 绝对路径；跨机同步 `.env` 后必须先跑 `check_env.py` 验证，禁止无脑整文件覆盖。
+
 ### [2026-11-26-05] SSH 远程执行 PowerShell 复杂引号必碎
 - **现象**：`ssh host "powershell -Command \"...长命令...\""` 经 cmd 二次解析后引号错乱，命令静默无输出。
 - **根因**：bash -> Windows OpenSSH cmd -> PowerShell 三层引号解析叠加。
