@@ -1,7 +1,7 @@
 from pathlib import Path
 import json, re, html
 
-root=Path(r'D:/AI办公/purepaw/output')
+root=Path(__file__).resolve().parents[2]/'output'
 old=(root/'PurePaw_上线前备份_20261110.html').read_text(encoding='utf-8')
 sources=json.loads((root/'website_word_sources_20261110.json').read_text(encoding='utf-8-sig'))
 products=[('全猫鸡肉',[1.5,3,10],48,'chicken','cat'),('全猫牛肉',[1.5,3,10],48,'beef','cat'),('幼猫鸡肉',[1.5,3,10],51,'chicken','kitten'),('全犬鸡肉',[1.5,5,15],40,'chicken','dog'),('全犬牛肉',[1.5,5,15],48,'beef','dog'),('小犬鸡肉',[1.5,3],40,'chicken','small'),('小犬牛肉',[1.5,3],48,'beef','small')]

@@ -1,7 +1,7 @@
 ﻿Add-Type -AssemblyName System.IO.Compression
 Add-Type -AssemblyName System.IO.Compression.FileSystem
-$src = 'D:\AI办公\purepaw\work\build'
-$dst = 'D:\AI办公\purepaw\outputs\packaging-word'
+$src = Join-Path $PSScriptRoot '..\..\data\work\build'
+$dst = Join-Path $PSScriptRoot '..\..\outputs\packaging-word'
 if (-not (Test-Path -LiteralPath $dst)) { New-Item -ItemType Directory -Path $dst | Out-Null }
 $counter = 0
 foreach ($dir in (Get-ChildItem -LiteralPath $src -Directory)) {

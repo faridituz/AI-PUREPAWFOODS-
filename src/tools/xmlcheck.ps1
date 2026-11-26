@@ -1,4 +1,4 @@
-﻿$list = Get-Content -LiteralPath 'D:\AI办公\purepaw\work\xmllist.txt' -Encoding UTF8
+﻿$list = Get-Content -LiteralPath (Join-Path $PSScriptRoot '..\..\data\work\xmllist.txt') -Encoding UTF8
 $bad = 0
 foreach ($p in $list) {
   if (-not (Test-Path -LiteralPath $p)) { Write-Output "MISSING $p"; $bad++; continue }

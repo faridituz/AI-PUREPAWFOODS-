@@ -1,7 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const ROOT = 'D:/AI办公/purepaw/work';
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../data/work');
 const SRC = path.join(ROOT, 'sku-data');
 const BUILD = path.join(ROOT, 'build');
 
