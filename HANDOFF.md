@@ -1,5 +1,10 @@
 # 双机交接班日志（HANDOFF.md）
 
+## [2026-11-26] - Telegram 告警接入，本机三通 100% 完成
+- **刚完成**：`.env` 补齐 `TG_BOT_TOKEN`/`TG_ADMIN_CHAT_ID`；新建 `src/check_env.py`（三通自检，Telegram 失败自动 3 次指数退避重试）；本机自测 **3/3 PASS**（Neon 2.06s / 媒体盘读写正常 / Telegram 测试消息已送达管理员）；`.env` 已 scp 至旧机 `D:\AI办公\purepaw\.env`，MD5 与本地逐字节一致。
+- **下一步**：旧机无真实 Python，安装后跑同一自检；X 开发者凭据待申请；数据库业务表设计待启动。
+- **注意事项**：`check_env.py` 每次运行会真实发送一条 Telegram 测试消息；`.env` 含密钥，已确认被 `.gitignore` 屏蔽，严禁入库。
+
 ## [2026-11-26] - 本机环境配置与环境自测
 - **刚完成**：创建本机 `.env`（媒体盘 `G:/我的云端硬盘/PurePaw_Media`、`TZ=Asia/Tashkent` 已配置）；三通自测：①Drive 媒体盘读写正常 ②Neon TCP+TLS 连通（0.49s）③Neon 鉴权通过（补真实密码后 2.26s，PostgreSQL 18.7，库 `neondb`，public 表 0 个=空库）。Telegram 未测（Token 为空）。
 - **阻塞项**：`TG_BOT_TOKEN`、`TG_ADMIN_CHAT_ID` 为空；X 参数确认本机与旧机均无真实值（旧机 `.env.example` 为有意留空的占位符），需在 X 开发者平台重新申请。
