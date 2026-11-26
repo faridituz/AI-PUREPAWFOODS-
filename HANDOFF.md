@@ -1,9 +1,9 @@
 # 双机交接班日志（HANDOFF.md）
 
 ## [2026-11-26] - 新电脑（Qoder）归档迁移完成
-- **刚完成**：接入远端仓库 `faridituz/AI-PUREPAWFOODS-` 并推送初始化提交；全部散落文件迁入标准目录（根目录仅剩 7 个大脑文档 + 标准文件夹）；修复 4 个脚本的旧机硬编码路径，Node/PowerShell 脚本已通过语法检查。
-- **下一步**：旧电脑 Codex 执行 `git pull` 验证同步；本机安装真实 Python 后实测 `src/website/prepare_website_update_20261110.py`；`outputs/` 下历史脚本依赖旧机桌面路径，重跑前需先改路径。
-- **注意事项**：`data/`、`media/` 已加入 `.gitignore`，此后新增文件不再同步 Git（媒体走 `MEDIA_STORAGE_PATH` 云盘，状态走 Neon）；`outputs/`（192 个历史验收证据）按原样保留未改名。
+- **刚完成**：接入远端仓库 `faridituz/AI-PUREPAWFOODS-` 并推送初始化提交；全部散落文件迁入标准目录（根目录仅剩 7 个大脑文档 + 标准文件夹）；修复 4 个脚本的旧机硬编码路径；已安装 Python 3.12.10 并实测 `src/website/prepare_website_update_20261110.py` 通过（输出 HTML 与已提交版本逐字节一致），同时为《网站更新说明》md 加了防覆盖守卫。
+- **下一步**：旧电脑 Codex 执行 `git pull` 验证同步；`outputs/` 下历史脚本依赖旧机桌面路径（`C:/Users/yinho/Desktop/包装袋`），重跑前需先改路径。
+- **注意事项**：`data/`、`media/` 已加入 `.gitignore`，此后新增文件不再同步 Git（媒体走 `MEDIA_STORAGE_PATH` 云盘，状态走 Neon）；`outputs/`（192 个历史验收证据）按原样保留未改名；Python 若 PATH 未生效，用全路径 `C:\Users\ThinkPad\AppData\Local\Programs\Python\Python312\python.exe`。
 
 ## [2026-11-26] - 新电脑（Qoder）初始化
 - **刚完成**：完成工作区标准目录、`.gitignore` 防护及 7 个终极版协同大脑配置文档的初始化。

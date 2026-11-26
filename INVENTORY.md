@@ -2,7 +2,7 @@
 
 | 模块名称 | 文件路径 | 核心功能说明 | 输入/输出 | 状态 |
 | :--- | :--- | :--- | :--- | :--- |
-| 网站八语更新页生成 | `src/website/prepare_website_update_20261110.py` | 读取上线前备份 HTML 与 Word 源 JSON，生成八语更新版 HTML 及更新说明 md | `output/PurePaw_上线前备份_20261110.html`、`output/website_word_sources_20261110.json` -> `output/PurePaw_网站更新_20261110.html` 等 | 路径已修复为相对定位；本机缺 Python 未实测 |
+| 网站八语更新页生成 | `src/website/prepare_website_update_20261110.py` | 读取上线前备份 HTML 与 Word 源 JSON，生成八语更新版 HTML 及更新说明 md | `output/PurePaw_上线前备份_20261110.html`、`output/website_word_sources_20261110.json` -> `output/PurePaw_网站更新_20261110.html` 等 | 已实测通过（Python 3.12.10，8 语言/19 规格断言全过）；说明 md 已加防覆盖守卫，仅首次生成 |
 | SKU docx 批量生成 | `src/tools/gen-sku-docx.mjs` | 按 sku-data 数据批量生成各 SKU 定制 Word 文档 | `data/work/sku-data` -> `data/work/build` | 已通过 `node --check`，未实测 |
 | Word XML 校验 | `src/tools/xmlcheck.ps1` | 批量检查解包 docx 的 XML 完整性并输出缺失清单 | `data/work/xmllist.txt` | 已通过语法解析 |
 | docx 重新打包 | `src/tools/zip-docx.ps1` | 将 build 目录重新打包为 docx | `data/work/build` -> `outputs/packaging-word` | 已通过语法解析 |

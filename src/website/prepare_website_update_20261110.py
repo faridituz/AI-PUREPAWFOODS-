@@ -47,7 +47,9 @@ assert updated.count('<details>')==56
 assert 'Ranges in development' not in updated
 assert 'Fish</p>' not in updated and 'Lamb ·' not in updated
 (root/'PurePaw_网站更新_20261110.html').write_text(updated,encoding='utf-8')
-(root/'PurePaw_网站更新说明_20261110.md').write_text('''# PurePaw 网站更新准备
+note=root/'PurePaw_网站更新说明_20261110.md'
+# 说明文档由人工持续维护（含发布状态），只允许首次生成，禁止覆盖已有版本
+if not note.exists(): note.write_text('''# PurePaw 网站更新准备
 
 状态：已完成本地待更新版本，尚未发布。
 
