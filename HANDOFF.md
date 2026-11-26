@@ -1,9 +1,9 @@
 # 双机交接班日志（HANDOFF.md）
 
 ## [2026-11-26] - 本机环境配置与环境自测
-- **刚完成**：创建本机 `.env`（媒体盘 `G:/我的云端硬盘/PurePaw_Media`、`TZ=Asia/Tashkent` 已配置）；三通自测：①Drive 媒体盘读写正常 ②Neon TCP+TLS 连通（0.49s，证书 `*.c-5.ap-southeast-1.aws.neon.tech`）③Telegram 未测（Token 为空）。
-- **阻塞项**：`DATABASE_URL` 密码被掩码为 `****************`，须替换真实密码后才能做数据库鉴权测试；`TG_BOT_TOKEN`、`TG_ADMIN_CHAT_ID` 为空；`PUREPAW_X_CLIENT_ID/SECRET` 本机仓库无来源（`sales-v1-dev` 不在本机），需从旧电脑复制。
-- **下一步**：补全 `.env` 后重跑鉴权自测；旧电脑 Codex `git pull` 后把旧机 `.env` 中缺失参数同步到本机。
+- **刚完成**：创建本机 `.env`（媒体盘 `G:/我的云端硬盘/PurePaw_Media`、`TZ=Asia/Tashkent` 已配置）；三通自测：①Drive 媒体盘读写正常 ②Neon TCP+TLS 连通（0.49s）③Neon 鉴权通过（补真实密码后 2.26s，PostgreSQL 18.7，库 `neondb`，public 表 0 个=空库）。Telegram 未测（Token 为空）。
+- **阻塞项**：`TG_BOT_TOKEN`、`TG_ADMIN_CHAT_ID` 为空；X 参数确认本机与旧机均无真实值（旧机 `.env.example` 为有意留空的占位符），需在 X 开发者平台重新申请。
+- **下一步**：补齐 Telegram 两值后自测告警通道；数据库为空库，业务表结构需在后续任务中设计建表（涉及表结构变更须先出方案并经确认）。
 - **远程同步结果（2026-11-26 已打通）**：旧机 `farid 100.101.76.43` 上线后，本机经 Tailscale SSH（用户 `yinho`，密钥免密）成功触发旧机 `git pull`（`a7ad637 -> 949ef45`）并完成远程验证：7 份大脑文档齐全、5 个标准目录齐全、HEAD 一致（`949ef45`）。旧机 git 路径 `C:\Users\yinho\.qoder\bin\git\cmd\git.exe`（不在非交互 PATH 中，远程调用需全路径）；旧机 python 仅为商店占位符、node 可用。旧机仓库无任何 `.env`（根目录/sales-v1-dev/.local 均无），`.env.example` 中 `PUREPAW_X_CLIENT_ID/SECRET` 为有意留空的占位符，无真实密钥可提取。
 
 ## [2026-11-26] - 新电脑（Qoder）归档迁移完成
