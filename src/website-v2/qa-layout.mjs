@@ -11,7 +11,7 @@ const getArg = (name, fallback) => {
 };
 const CHROME = process.env.CHROME_PATH || "C:/Program Files/Google/Chrome/Application/chrome.exe";
 const BASE = args.find((a) => a.startsWith("http")) || "http://localhost:4173";
-const THEMES = getArg("--themes", "a,b,c").split(",").filter(Boolean);
+const THEMES = getArg("--themes", "a,b,c,d").split(",").filter(Boolean);
 const LANGS = JSON.parse(readFileSync(path.join(__dirname, "content/languages.json"), "utf-8"))
   .languages.filter((l) => l.enabled)
   .map((l) => l.code);

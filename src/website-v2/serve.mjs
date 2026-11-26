@@ -192,7 +192,7 @@ async function handleLead(req, res) {
 }
 
 async function sendNotFound(req, res, pathname) {
-  const m = pathname.match(/^\/([abc])\/([a-z]{2})\//);
+  const m = pathname.match(/^\/([abcd])\/([a-z]{2})\//);
   if (m) {
     try {
       const html = await readFile(path.join(ROOT, m[1], "errors", `${m[2]}.html`));

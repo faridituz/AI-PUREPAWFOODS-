@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "updatedAt": "2026-11-26",
+    "draft": true,
+    "note": "真实素材登记表：只记录项目内可追溯的来源与状态，不代表已获公开发布授权。",
+    "statuses": {
+      "verified": "已找到并核对",
+      "unapproved": "已找到但未获授权使用",
+      "conflicting": "存在冲突或歧义",
+      "missing": "缺失",
+      "review": "需专业/人工复核"
+    }
+  },
+  "items": [
+    {
+      "id": "logo-official",
+      "status": "verified",
+      "category": "品牌标识",
+      "title": "官方 logo（含 HALAL 徽标）",
+      "path": "media/品牌资料/purepawlogo-official.png",
+      "source": "https://purepawfoods.com/wp-content/uploads/2026/10/purepawlogo.png",
+      "usedIn": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "note": "与线上正式站同一文件（字节数一致）。logo 自带 HALAL 徽标，但未随附清真证书文件。"
+    },
+    {
+      "id": "packaging-docx-19",
+      "status": "verified",
+      "category": "包装文字",
+      "title": "19 份包装文字稿（乌/俄/哈/塔四语）",
+      "path": "media/包装资料/狗/",
+      "source": "项目内既有素材",
+      "usedIn": [
+        "d-product-page"
+      ],
+      "note": "含成分、保证分析值、喂食表、7 天过渡；已提取为 data/extracted/packaging。"
+    },
+    {
+      "id": "barcode-registration",
+      "status": "verified",
+      "category": "商品条码",
+      "title": "GS1 条码登记文件",
+      "path": "media/业务资料/purapaw产品条形码.pdf",
+      "source": "项目内既有素材",
+      "usedIn": [
+        "d-brand-page"
+      ],
+      "note": "GCP 478017820，GLN 4780178209998，16 个 EAN-13；产品名称在 PDF 中未能可靠提取。"
+    },
+    {
+      "id": "state-registration",
+      "status": "verified",
+      "category": "企业资质",
+      "title": "法人国家登记证明（STIR 313101809）",
+      "path": "media/业务资料/pure paw nutrion 营业执照.pdf",
+      "source": "项目内既有素材",
+      "usedIn": [
+        "d-brand-page"
+      ],
+      "note": "公司全称、STIR、注册地址与发证机关可读；证书编号字段存在歧义，未对外展示。"
+    },
+    {
+      "id": "official-site-languages",
+      "status": "verified",
+      "category": "语言范围",
+      "title": "正式站公开语言：en/zh/ru/ar/uz/kk/ky/tg 八语同页",
+      "path": null,
+      "source": "https://purepawfoods.com/",
+      "usedIn": [
+        "language-report"
+      ],
+      "note": "公开首页同一页按 en、zh、ru、ar、uz、kk、ky、tg 顺序输出八套产品与标题；无 hreflang。抓取摘要只截取了前三种，但全文可检索到八语标题。"
+    },
+    {
+      "id": "packaging-diecut-preview",
+      "status": "unapproved",
+      "category": "包装视觉",
+      "title": "猫粮包装刀版预览图",
+      "path": "media/包装资料/狗/微信图片_20261104161942_157_3334.jpg",
+      "source": "项目内既有素材",
+      "usedIn": [],
+      "note": "单张设计预览，不是实物拍摄；未获授权用于对外页面。"
+    },
+    {
+      "id": "equipment-nameplates",
+      "status": "unapproved",
+      "category": "工厂素材",
+      "title": "设备铭牌照片（7 张）",
+      "path": "media/设备铭牌/",
+      "source": "项目内既有素材",
+      "usedIn": [],
+      "note": "设备铭牌为中文，无法证明属于 PURE PAW 生产线，不得作为品牌实力证据。"
+    },
+    {
+      "id": "brochure-image-pdf",
+      "status": "unapproved",
+      "category": "宣传物料",
+      "title": "调味料宣传册（图片型 PDF）",
+      "path": "media/业务资料/益宠调味料宣传册.pdf",
+      "source": "项目内既有素材",
+      "usedIn": [],
+      "note": "无可提取文字，且品类与主粮不同，未使用。"
+    },
+    {
+      "id": "small-dog-beef-feeding-typo",
+      "status": "conflicting",
+      "category": "喂食数据",
+      "title": "小型犬牛肉单一包装喂食量写作 100--125g",
+      "path": "media/包装资料/狗/小犬牛肉3-文字(3).docx",
+      "source": "包装文字稿",
+      "usedIn": [
+        "d-product-page"
+      ],
+      "note": "其余包装为 100–125 g，已按 100–125 g 收录；上线前需与设计稿核对。"
+    },
+    {
+      "id": "certificate-number-ambiguity",
+      "status": "review",
+      "category": "企业资质",
+      "title": "登记证明编号字段存在两个候选值",
+      "path": "media/业务资料/pure paw nutrion 营业执照.pdf",
+      "source": "登记证明",
+      "usedIn": [],
+      "note": "3253280 与 6841141 的字段含义需人工核对，原型未展示证书编号。"
+    },
+    {
+      "id": "nutrition-basis",
+      "status": "review",
+      "category": "营养数据",
+      "title": "保证分析值的计算基准",
+      "path": "data/extracted/packaging/",
+      "source": "包装文字稿",
+      "usedIn": [
+        "d-product-page"
+      ],
+      "note": "包装标注干物质基础；上线前建议由配方/质检人员确认口径与四舍五入规则。"
+    },
+    {
+      "id": "halal-certificate",
+      "status": "missing",
+      "category": "认证文件",
+      "title": "清真证书编号、机构与有效期",
+      "path": null,
+      "source": null,
+      "usedIn": [],
+      "note": "logo 含 HALAL 徽标，但项目内没有证书文件；未在正文新增认证声明。"
+    },
+    {
+      "id": "product-photos",
+      "status": "missing",
+      "category": "产品视觉",
+      "title": "包装正反面实拍、颗粒特写、产品视频",
+      "path": null,
+      "source": null,
+      "usedIn": [],
+      "note": "当前产品页无产品图，不能以 AI 图或渲染图冒充实拍。"
+    },
+    {
+      "id": "factory-photos",
+      "status": "missing",
+      "category": "工厂素材",
+      "title": "可识别的生产线/仓储实拍",
+      "path": null,
+      "source": null,
+      "usedIn": [],
+      "note": "现有铭牌照片不可用；需重新拍摄并确认可公开。"
+    },
+    {
+      "id": "dealer-policy",
+      "status": "missing",
+      "category": "招商政策",
+      "title": "起订量、区域保护、账期、退换货",
+      "path": null,
+      "source": null,
+      "usedIn": [],
+      "note": "招商页仅使用通用合作描述，未编造具体数字。"
+    },
+    {
+      "id": "legal-texts",
+      "status": "missing",
+      "category": "法律合规",
+      "title": "隐私政策与使用条款定稿",
+      "path": null,
+      "source": null,
+      "usedIn": [],
+      "note": "当前为原型说明文案，上线前需法务文本。"
+    }
+  ]
+}

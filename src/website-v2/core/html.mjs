@@ -151,13 +151,18 @@ export const contactBlock = (ctx, lang) => {
 </section>`;
 };
 
+export const netText = (net) => {
+  const i = net.indexOf(": ");
+  return i < 0 ? esc(net) : `${esc(net.slice(0, i + 2))}<bdi dir="ltr">${esc(net.slice(i + 2))}</bdi>`;
+};
+
 export const productCard = (ctx, lang, p) => {
   const c = ctx.SITE[lang];
   const prod = c.products[p.idx];
   return `<article class="card">
   <span class="num">${String(p.idx + 1).padStart(2, "0")}</span>
   <h3><a href="${pagePath(ctx, lang, "product/" + p.slug)}">${esc(prod.name)}</a></h3>
-  <p class="meta">${esc(prod.net)}</p>
+  <p class="meta">${netText(prod.net)}</p>
   <details>
     <summary>${esc(prod.ingredients_label)}</summary>
     <p><strong>${esc(prod.ingredients_heading)}</strong><br>${esc(prod.ingredients)}</p>

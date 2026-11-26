@@ -201,7 +201,7 @@ const fillScript = (kind) => `(() => {
   return true;
 })()`;
 
-for (const theme of ["a", "b", "c"]) {
+for (const theme of ["a", "b", "c", "d"]) {
   for (const lang of ["en", "ru", "ar"]) {
     await send("Page.navigate", { url: `${UI_BASE}/${theme}/${lang}/contact/` });
     await sleep(400);

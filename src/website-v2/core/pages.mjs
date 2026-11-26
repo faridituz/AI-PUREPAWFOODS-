@@ -5,8 +5,8 @@ import {
   layout,
   contactBlock,
   productCard,
+  netText,
   noteBlock,
-  sizesOf,
   orgJsonLd,
   PHONE,
   PHONE_HREF,
@@ -110,6 +110,32 @@ function dealerBenefits(ctx, lang) {
   </ul>`;
 }
 
+function evidenceSection(ctx, lang) {
+  const d = ctx.D[lang];
+  const items = [
+    ["01", d.ev1_title, d.ev1_body],
+    ["02", d.ev2_title, d.ev2_body],
+    ["03", d.ev3_title, d.ev3_body]
+  ];
+  return `<section class="section evidence">
+  <p class="eyebrow">PURE PAW / ${esc(d.evidence_title)}</p>
+  <h2>${esc(d.evidence_title)}</h2>
+  <p class="lead">${esc(d.evidence_lead)}</p>
+  <div class="evidence-grid">
+    ${items
+      .map(
+        ([num, title, text]) => `<article class="spec-card">
+      <span class="num">${num}</span>
+      <h3>${esc(title)}</h3>
+      <p>${esc(text)}</p>
+    </article>`
+      )
+      .join("\n    ")}
+  </div>
+  <p class="note">${esc(d.ev_note)}</p>
+</section>`;
+}
+
 function homePage(ctx, lang) {
   const c = ctx.SITE[lang];
   const t = ctx.UI[lang];
@@ -161,6 +187,33 @@ function homePage(ctx, lang) {
       </div>
       <div class="dealer-form">${leadForm(ctx, lang, "dealer", { uid: "home", rel: "" })}</div>
     </section>`;
+  } else if (ctx.THEME === "d") {
+    body += heroBand(ctx, lang, {
+      primary: { href: "#ranges", label: c.cta_ranges },
+      secondary: { href: pagePath(ctx, lang, "partners"), label: t.nav_partners }
+    });
+    body += trustStrip(ctx, lang);
+    body += `<section class="section split">
+      <div><p class="eyebrow">01 / ${esc(philosophyLabel[lang] || philosophyLabel.en)}</p><h2>${esc(c.philosophy_title)}</h2></div>
+      <div><p>${esc(c.philosophy_body)}</p></div>
+    </section>`;
+    body += groupSection(ctx, lang);
+    body += rangesSection(ctx, lang);
+    body += evidenceSection(ctx, lang);
+    body += stepsSection(ctx, lang);
+    body += `<section class="section dealer-band" id="dealer">
+      <div class="dealer-copy">
+        <p class="eyebrow">PURE PAW / B2B</p>
+        <h2>${esc(m.dealer_title)}</h2>
+        <p>${esc(m.dealer_lead)}</p>
+        ${dealerBenefits(ctx, lang)}
+        <p class="actions">
+          <a class="btn btn-solid" href="${WHATSAPP}">${esc(c.cta_whatsapp)}</a>
+          <a class="btn btn-ghost" href="mailto:${EMAIL}">${esc(c.cta_email)}</a>
+        </p>
+      </div>
+      <div class="dealer-form">${leadForm(ctx, lang, "dealer", { uid: "home", rel: "" })}</div>
+    </section>`;
   } else {
     body += heroBand(ctx, lang, {
       primary: { href: "#ranges", label: c.cta_ranges },
@@ -181,7 +234,7 @@ function homePage(ctx, lang) {
     active: "home",
     title: "PURE PAW — " + c.hero_title.replace(/\n/g, " "),
     description: c.hero_lead,
-    body: ctx.THEME === "a" ? body + orgJsonLd(ctx, lang) : body
+    body: ["a", "d"].includes(ctx.THEME) ? body + orgJsonLd(ctx, lang) : body
   });
 }
 
@@ -213,16 +266,40 @@ ${contactBlock(ctx, lang)}`;
   });
 }
 
+function dataTable(ctx, lang, data) {
+  const t = ctx.UI[lang];
+  const f = data.feeding;
+  const label = { weight: t.feeding_weight, age: t.feeding_age, low: t.feeding_low, high: t.feeding_high, amount: t.feeding_amount };
+  const nutrition = `<table class="data-table">
+      <tbody>
+        ${data.nutrition
+          .map((n) => `<tr><th scope="row">${esc(t[n.key])}</th><td dir="ltr">${esc(n.value)}</td></tr>`)
+          .join("\n        ")}
+      </tbody>
+    </table>`;
+  const feeding = `<table class="data-table">
+      <thead><tr>${f.headers.map((h) => `<th scope="col">${esc(label[h] || h)}</th>`).join("")}</tr></thead>
+      <tbody>
+        ${f.rows
+          .map((r) => `<tr>${r.map((c, i) => `<td${i === r.length - 1 ? ' dir="ltr"' : ""}>${esc(c)}</td>`).join("")}</tr>`)
+          .join("\n        ")}
+      </tbody>
+    </table>`;
+  return { nutrition, feeding };
+}
+
 function productPage(ctx, lang, p) {
   const prod = ctx.SITE[lang].products[p.idx];
+  const data = ctx.PRODUCT_DATA[p.slug];
   const t = ctx.UI[lang];
   const groupLabel = p.group === "cat" ? t.nav_cat : t.nav_dog;
+  const tables = dataTable(ctx, lang, data);
   const siblings = ctx.PRODUCTS.filter((x) => x.group === p.group && x.slug !== p.slug);
   const body = `
 <section class="product-hero">
   <p class="eyebrow"><a href="${pagePath(ctx, lang, p.group)}">${esc(groupLabel)}</a> / ${String(p.idx + 1).padStart(2, "0")}</p>
   <h1>${esc(prod.name)}</h1>
-  <p class="lead">${esc(prod.net)}</p>
+  <p class="lead">${netText(prod.net)}</p>
 </section>
 <section class="section product-body">
   <div class="spec-card">
@@ -232,13 +309,37 @@ function productPage(ctx, lang, p) {
   </div>
   <aside class="spec-side">
     <p class="eyebrow">${esc(t.sizes)}</p>
-    <p class="size-line">${esc(sizesOf(prod.net))}</p>
+    <p class="size-line" dir="ltr">${esc(data.sizes.join(" / "))}</p>
+    <p class="meta">${esc(t.animal_share)}: <strong dir="ltr">${esc(data.animalShare)}</strong></p>
     <p class="actions">
       <a class="btn btn-solid" href="${WHATSAPP}">${esc(prod.ask)}</a>
       <a class="btn btn-ghost" href="mailto:${EMAIL}">${esc(ctx.SITE[lang].cta_email)}</a>
     </p>
     <p class="note"><a href="${pagePath(ctx, lang, "contact")}#ask">${esc(t.nav_contact)} →</a></p>
   </aside>
+</section>
+<section class="section product-data">
+  <div class="spec-card">
+    <p class="eyebrow">PURE PAW / ${esc(t.nutrition_heading)}</p>
+    <h2>${esc(t.nutrition_heading)}</h2>
+    ${tables.nutrition}
+    <p class="note">${esc(t.nutrition_note)}</p>
+  </div>
+  <div class="spec-card">
+    <p class="eyebrow">PURE PAW / ${esc(t.feeding_heading)}</p>
+    <h2>${esc(t.feeding_heading)}</h2>
+    ${tables.feeding}
+    <p class="note">${esc(t.feeding_note)}</p>
+    <div class="transition">
+      <p class="eyebrow">${esc(t.transition_title)}</p>
+      <ol>
+        <li>${esc(t.transition_1)}</li>
+        <li>${esc(t.transition_2)}</li>
+        <li>${esc(t.transition_3)}</li>
+        <li>${esc(t.transition_4)}</li>
+      </ol>
+    </div>
+  </div>
 </section>
 <section class="section">
   <p class="eyebrow">${esc(t.more_from)}</p>
@@ -247,7 +348,7 @@ function productPage(ctx, lang, p) {
       .map(
         (s) => `<article class="card">
       <h3><a href="${pagePath(ctx, lang, "product/" + s.slug)}">${esc(ctx.SITE[lang].products[s.idx].name)}</a></h3>
-      <p class="meta">${esc(ctx.SITE[lang].products[s.idx].net)}</p>
+      <p class="meta">${netText(ctx.SITE[lang].products[s.idx].net)}</p>
       <p class="card-link"><a href="${pagePath(ctx, lang, "product/" + s.slug)}">${esc(t.view_product)} →</a></p>
     </article>`
       )
@@ -282,7 +383,19 @@ function brandPage(ctx, lang) {
 <section class="section">
   <p class="eyebrow">02 / ${esc(t.brand_company)}</p>
   <div class="spec-card">
-    <p><strong>PURE PAW NUTRITION MCHJ</strong><br>Tashkent, Korasuv</p>
+    <p><strong>PURE PAW NUTRITION MCHJ</strong></p>
+    <dl class="facts">
+      <dt>${esc(t.legal_address)}</dt>
+      <dd dir="ltr">Toshkent sh., Yakkasaroy tumani, Muxandislar MFY, Shota Rustaveli ko‘chasi, 53-B</dd>
+      <dt>${esc(t.production_site)}</dt>
+      <dd>Tashkent, Korasuv</dd>
+      <dt>${esc(t.stir_label)}</dt>
+      <dd dir="ltr">313 101 809</dd>
+      <dt>${esc(t.gcp_label)}</dt>
+      <dd dir="ltr">478017820</dd>
+      <dt>${esc(t.gln_label)}</dt>
+      <dd dir="ltr">4780178209998</dd>
+    </dl>
     <p dir="ltr"><a href="${PHONE_HREF}">${PHONE}</a><br><a href="mailto:${EMAIL}">${EMAIL}</a></p>
   </div>
   <p class="actions">

@@ -1,18 +1,108 @@
 {
   "version": 1,
   "updated": "2026-11-26",
-  "note": "可配置语言清单。enabled=false 的语言不会生成页面、不会出现在切换菜单、不会进入 hreflang/sitemap。新增语言必须经项目所有者批准后才能 enabled。",
+  "note": "可配置语言清单。正式站为 en/zh/ru/ar/uz/kk/ky/tg 八语同页；本原型拆为独立 URL 并补 hreflang。全部 8 种语言均为原站已有语言，不得删除；其中 zh/ar/kk/ky/tg 的本轮文案仍为原型草稿，待母语审校。enabled=false 的 kaa/tr 为测试候选，不生成页面、不进菜单、不进 hreflang/sitemap。",
   "default": "en",
   "languages": [
-    { "code": "en", "englishName": "English", "name": "English", "dir": "ltr", "enabled": true, "origin": "live-site", "publicApproved": true, "translation": "official" },
-    { "code": "zh", "englishName": "Chinese", "name": "中文", "dir": "ltr", "enabled": true, "origin": "live-site", "publicApproved": true, "translation": "prototype-draft" },
-    { "code": "ru", "englishName": "Russian", "name": "Русский", "dir": "ltr", "enabled": true, "origin": "live-site", "publicApproved": true, "translation": "official" },
-    { "code": "ar", "englishName": "Arabic", "name": "العربية", "dir": "rtl", "enabled": true, "origin": "live-site", "publicApproved": true, "translation": "prototype-draft" },
-    { "code": "uz", "englishName": "Uzbek", "name": "O‘zbekcha", "dir": "ltr", "enabled": true, "origin": "live-site", "publicApproved": true, "translation": "official" },
-    { "code": "kk", "englishName": "Kazakh", "name": "Қазақша", "dir": "ltr", "enabled": true, "origin": "live-site", "publicApproved": true, "translation": "prototype-draft" },
-    { "code": "ky", "englishName": "Kyrgyz", "name": "Кыргызча", "dir": "ltr", "enabled": true, "origin": "live-site", "publicApproved": true, "translation": "prototype-draft" },
-    { "code": "tg", "englishName": "Tajik", "name": "Тоҷикӣ", "dir": "ltr", "enabled": true, "origin": "live-site", "publicApproved": true, "translation": "prototype-draft" },
-    { "code": "kaa", "englishName": "Karakalpak", "name": "Qaraqalpaqsha", "dir": "ltr", "enabled": false, "origin": "candidate", "publicApproved": false, "translation": "none" },
-    { "code": "tr", "englishName": "Turkish", "name": "Türkçe", "dir": "ltr", "enabled": false, "origin": "candidate", "publicApproved": false, "translation": "none" }
+    {
+      "code": "en",
+      "englishName": "English",
+      "name": "English",
+      "dir": "ltr",
+      "enabled": true,
+      "origin": "live-site",
+      "publicApproved": true,
+      "translation": "official"
+    },
+    {
+      "code": "zh",
+      "englishName": "Chinese",
+      "name": "中文",
+      "dir": "ltr",
+      "enabled": true,
+      "origin": "live-site",
+      "publicApproved": true,
+      "translation": "prototype-draft"
+    },
+    {
+      "code": "ru",
+      "englishName": "Russian",
+      "name": "Русский",
+      "dir": "ltr",
+      "enabled": true,
+      "origin": "live-site",
+      "publicApproved": true,
+      "translation": "official"
+    },
+    {
+      "code": "ar",
+      "englishName": "Arabic",
+      "name": "العربية",
+      "dir": "rtl",
+      "enabled": true,
+      "origin": "live-site",
+      "publicApproved": true,
+      "translation": "prototype-draft"
+    },
+    {
+      "code": "uz",
+      "englishName": "Uzbek",
+      "name": "O‘zbekcha",
+      "dir": "ltr",
+      "enabled": true,
+      "origin": "live-site",
+      "publicApproved": true,
+      "translation": "official"
+    },
+    {
+      "code": "kk",
+      "englishName": "Kazakh",
+      "name": "Қазақша",
+      "dir": "ltr",
+      "enabled": true,
+      "origin": "live-site",
+      "publicApproved": true,
+      "translation": "prototype-draft"
+    },
+    {
+      "code": "ky",
+      "englishName": "Kyrgyz",
+      "name": "Кыргызча",
+      "dir": "ltr",
+      "enabled": true,
+      "origin": "live-site",
+      "publicApproved": true,
+      "translation": "prototype-draft"
+    },
+    {
+      "code": "tg",
+      "englishName": "Tajik",
+      "name": "Тоҷикӣ",
+      "dir": "ltr",
+      "enabled": true,
+      "origin": "live-site",
+      "publicApproved": true,
+      "translation": "prototype-draft"
+    },
+    {
+      "code": "kaa",
+      "englishName": "Karakalpak",
+      "name": "Qaraqalpaqsha",
+      "dir": "ltr",
+      "enabled": false,
+      "origin": "candidate",
+      "publicApproved": false,
+      "translation": "none"
+    },
+    {
+      "code": "tr",
+      "englishName": "Turkish",
+      "name": "Türkçe",
+      "dir": "ltr",
+      "enabled": false,
+      "origin": "candidate",
+      "publicApproved": false,
+      "translation": "none"
+    }
   ]
 }

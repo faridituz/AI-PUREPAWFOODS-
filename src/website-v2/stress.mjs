@@ -190,6 +190,7 @@ await scenario({
 
 // 产品页 / 语言切换序列
 await scenario({ name: "产品页 en", concurrency: 50, durationMs: 10000, pick: () => ({ url: `${BASE}/b/en/product/kitten-chicken/` }) });
+await scenario({ name: "D 首页 en", concurrency: 50, durationMs: 10000, pick: () => ({ url: `${BASE}/d/en/` }) });
 await scenario({
   name: "语言切换序列",
   concurrency: 20,
@@ -224,7 +225,7 @@ await scenario({
 await scenario({ name: "静态资源 热缓存", concurrency: 50, durationMs: 8000, pick: () => ({ url: `${BASE}/b/assets/base.css` }) });
 
 // 长跑内存
-await scenario({ name: "长跑 60s 混合语言", concurrency: 20, durationMs: 60000, pick: (i) => ({ url: `${BASE}/c/${LANGS8[i % LANGS8.length]}/` }) });
+await scenario({ name: "长跑 60s 混合语言", concurrency: 20, durationMs: 60000, pick: (i) => ({ url: `${BASE}/${i % 2 ? "c" : "d"}/${LANGS8[i % LANGS8.length]}/` }) });
 
 // 缓存失效：修改资源后 ETag 变化 + 304 语义
 const cssPath = path.join(ROOT, "output/prototypes/b/assets/base.css");

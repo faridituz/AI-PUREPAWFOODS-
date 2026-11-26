@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-11-26T11:38:38.838Z",
+  "generatedAt": "2026-11-26T12:25:23.191Z",
   "api": "http://localhost:4174",
   "ui": "http://localhost:4175",
-  "total": 44,
+  "total": 53,
   "failed": 0,
   "results": [
     {
       "name": "有效咨询提交",
       "pass": true,
-      "detail": "ref=MP-45DD2D"
+      "detail": "ref=MP-76AE5F"
     },
     {
       "name": "模拟线索写入本地文件",
       "pass": true,
-      "detail": "lines=467"
+      "detail": "lines=1360"
     },
     {
       "name": "必填校验（缺姓名）",
@@ -63,7 +63,7 @@
     {
       "name": "幂等键去重",
       "pass": true,
-      "detail": "ref=MP-121C79"
+      "detail": "ref=MP-573FC5"
     },
     {
       "name": "蜜罐拦截（返回成功但不落库）",
@@ -217,6 +217,51 @@
     },
     {
       "name": "[c/ar] 经销商表单提交成功",
+      "pass": true,
+      "detail": "شكراً. تم تسجيل طلب الشراكة في هذا النموذج الأولي."
+    },
+    {
+      "name": "[d/en] 空表单前端拦截",
+      "pass": true,
+      "detail": "Please fill in the required fields."
+    },
+    {
+      "name": "[d/en] 咨询表单提交成功",
+      "pass": true,
+      "detail": "Thank you. Your inquiry has been recorded in this prototype."
+    },
+    {
+      "name": "[d/en] 经销商表单提交成功",
+      "pass": true,
+      "detail": "Thank you. Your partner request has been recorded "
+    },
+    {
+      "name": "[d/ru] 空表单前端拦截",
+      "pass": true,
+      "detail": "Пожалуйста, заполните обязательные поля."
+    },
+    {
+      "name": "[d/ru] 咨询表单提交成功",
+      "pass": true,
+      "detail": "Спасибо. Ваш вопрос записан в этом прототипе.Это подтвержден"
+    },
+    {
+      "name": "[d/ru] 经销商表单提交成功",
+      "pass": true,
+      "detail": "Спасибо. Ваша заявка записана в этом прототипе.Это"
+    },
+    {
+      "name": "[d/ar] 空表单前端拦截",
+      "pass": true,
+      "detail": "يرجى ملء الحقول المطلوبة."
+    },
+    {
+      "name": "[d/ar] 咨询表单提交成功",
+      "pass": true,
+      "detail": "شكراً. تم تسجيل سؤالك في هذا النموذج الأولي.هذا تأكيد من الن"
+    },
+    {
+      "name": "[d/ar] 经销商表单提交成功",
       "pass": true,
       "detail": "شكراً. تم تسجيل طلب الشراكة في هذا النموذج الأولي."
     },

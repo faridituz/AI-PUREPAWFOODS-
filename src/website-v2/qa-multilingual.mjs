@@ -26,7 +26,8 @@ const UI = readJson("ui.json");
 const FORMS = readJson("forms.json");
 const MKT = readJson("marketing.json");
 const ERRORS = readJson("errors.json");
-const THEMES = ["a", "b", "c"];
+const D = readJson("d.json");
+const THEMES = ["a", "b", "c", "d"];
 
 const results = [];
 const record = (group, name, pass, detail = "") => {
@@ -55,9 +56,12 @@ for (const lang of LANGS) {
     ["ui", UI.ui[lang]],
     ["forms", FORMS.langs[lang]],
     ["marketing", MKT.langs[lang]],
-    ["errors", { ...ERRORS.langs[lang] }]
+    ["errors", { ...ERRORS.langs[lang] }],
+    ["d", D.langs[lang]]
   ]) {
-    const en = flatten(label === "ui" ? UI.ui.en : label === "forms" ? FORMS.langs.en : label === "marketing" ? MKT.langs.en : ERRORS.langs.en);
+    const en = flatten(
+      label === "ui" ? UI.ui.en : label === "forms" ? FORMS.langs.en : label === "marketing" ? MKT.langs.en : label === "d" ? D.langs.en : ERRORS.langs.en
+    );
     const me = flatten(dict);
     const meKeys = new Set(me.map(([k]) => k));
     const enKeys = new Set(en.map(([k]) => k));

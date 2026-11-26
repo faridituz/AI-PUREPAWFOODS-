@@ -1,0 +1,53 @@
+{
+  "updatedAt": "2026-11-26",
+  "productsDraft": true,
+  "productsPublicApproved": false,
+  "evidence": {
+    "verified": 5,
+    "unapproved": 3,
+    "conflicting": 1,
+    "review": 2,
+    "missing": 5
+  },
+  "missing": [
+    {
+      "id": "certificate-number-ambiguity",
+      "title": "登记证明编号字段存在两个候选值",
+      "status": "review"
+    },
+    {
+      "id": "nutrition-basis",
+      "title": "保证分析值的计算基准",
+      "status": "review"
+    },
+    {
+      "id": "halal-certificate",
+      "title": "清真证书编号、机构与有效期",
+      "status": "missing"
+    },
+    {
+      "id": "product-photos",
+      "title": "包装正反面实拍、颗粒特写、产品视频",
+      "status": "missing"
+    },
+    {
+      "id": "factory-photos",
+      "title": "可识别的生产线/仓储实拍",
+      "status": "missing"
+    },
+    {
+      "id": "dealer-policy",
+      "title": "起订量、区域保护、账期、退换货",
+      "status": "missing"
+    },
+    {
+      "id": "legal-texts",
+      "title": "隐私政策与使用条款定稿",
+      "status": "missing"
+    }
+  ],
+  "conflicts": [
+    "small-dog-beef-feeding-typo"
+  ],
+  "logEntries": 7
+}

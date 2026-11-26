@@ -1,0 +1,69 @@
+/* 原型 D：国际品牌与销售转化综合版 —— A 的森林绿品牌底色 + C 的金铜细节 + B 的信任与咨询转化结构 */
+:root {
+  --gold: #b98a3c;
+  /* 小字号金铜文字加深，保证米色底 ≥4.5:1 对比度 */
+  --gold-ink: #74501a;
+  --radius: 12px;
+}
+
+.eyebrow { color: var(--gold-ink); letter-spacing: .2em; }
+.eyebrow a { border-bottom-color: var(--gold-ink); }
+
+.hero { padding-top: clamp(52px, 8vw, 104px); }
+.hero-seal img {
+  border: 1px solid var(--gold);
+  padding: 10px;
+  background: var(--paper);
+  border-radius: var(--radius);
+  box-shadow: 0 26px 70px rgba(20, 43, 33, .2);
+}
+.hero-copy h1 { letter-spacing: -.015em; }
+
+.btn-solid:hover { background: var(--gold-ink); color: var(--paper); }
+.btn-ghost { border-color: var(--gold); color: var(--forest); }
+.btn-ghost:hover { background: var(--gold); color: var(--ink); }
+
+.trust-strip { background: var(--forest-deep); }
+.trust-strip span { background: transparent; border: 1px solid var(--gold); color: var(--gold); }
+
+.group-card { background: var(--forest); }
+.group-card:hover { background: var(--forest-soft); }
+.group-card .count { color: var(--gold); opacity: .9; font-family: var(--serif); }
+
+.card { border-top: 2px solid var(--gold); }
+
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2.4vw, 26px);
+  margin: 26px 0 14px;
+}
+.evidence-grid .num {
+  font-family: var(--serif);
+  color: var(--gold-ink);
+  font-size: .95rem;
+  letter-spacing: .08em;
+}
+.evidence-grid h3 { margin: 8px 0 10px; }
+.evidence-grid p { font-size: .93rem; color: var(--muted); }
+
+.dealer-band {
+  background: var(--cream-2);
+  max-width: none;
+  padding-inline: clamp(24px, 6vw, 72px);
+}
+.dealer-band > .dealer-copy, .dealer-band > .dealer-form { max-width: none; }
+.dealer-copy h2 { max-width: 16ch; }
+.lead-form { border-top: 3px solid var(--gold); }
+.benefit-list li::before { color: var(--gold-ink); }
+
+.contact-band { background: var(--forest-deep); }
+.contact-band .btn-ghost { border-color: var(--gold); }
+.site-foot { background: var(--cream-2); }
+
+@media (max-width: 960px) {
+  .evidence-grid { grid-template-columns: 1fr; }
+}
+@media (min-width: 961px) {
+  .dealer-band { padding-inline: max(24px, calc((100vw - var(--width)) / 2)); }
+}

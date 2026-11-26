@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "note": "内容变更日志：所有记录默认未获公开发布批准；上线前须逐条确认。",
+    "version": "v2.5"
+  },
+  "entries": [
+    {
+      "date": "2026-11-26",
+      "type": "数据导入",
+      "summary": "从 19 份包装文字稿导入 7 个 SKU 的成分、保证分析值、喂食表、7 天过渡与动物性原料占比",
+      "files": ["content/products.json", "data/extracted/packaging/"],
+      "approved": false
+    },
+    {
+      "date": "2026-11-26",
+      "type": "多语言",
+      "summary": "新增营养/喂食/企业资质标签共 18 项，覆盖 8 种语言，全部标记为原型草稿",
+      "files": ["content/ui.json"],
+      "approved": false
+    },
+    {
+      "date": "2026-11-26",
+      "type": "真实性修正",
+      "summary": "移除无证书文件支撑的“清真认证生产”文案，改为可核对的“保证分析值逐袋标注”",
+      "files": ["content/marketing.json"],
+      "approved": false
+    },
+    {
+      "date": "2026-11-26",
+      "type": "真实性修正",
+      "summary": "移除未确认的配送承诺，订购步骤改为“回复可购买的门店与方式”",
+      "files": ["content/marketing.json"],
+      "approved": false
+    },
+    {
+      "date": "2026-11-26",
+      "type": "素材登记",
+      "summary": "建立真实素材登记表，区分已核对、未授权、冲突、缺失、待复核五类",
+      "files": ["content/evidence.json"],
+      "approved": false
+    },
+    {
+      "date": "2026-11-26",
+      "type": "企业信息",
+      "summary": "品牌页增加注册地址、生产地址、STIR、GS1 GCP/GLN，来源为登记证明与条码文件",
+      "files": ["content/ui.json", "core/pages.mjs"],
+      "approved": false
+    },
+    {
+      "date": "2026-11-26",
+      "type": "产品页",
+      "summary": "全部主题产品页增加保证分析值、喂食表、7 天过渡、动物性原料占比与规格",
+      "files": ["core/pages.mjs", "styles/base.css"],
+      "approved": false
+    }
+  ]
+}

@@ -21,7 +21,8 @@ const ONLY = getArg("--theme", "");
 const THEMES = [
   { key: "a", label: "A · 国际高端品牌型" },
   { key: "b", label: "B · 信任与咨询转化型" },
-  { key: "c", label: "C · 国际品牌与招商综合型" }
+  { key: "c", label: "C · 国际品牌与招商综合型" },
+  { key: "d", label: "D · 国际品牌与销售转化综合版" }
 ].filter((t) => !ONLY || t.key === ONLY);
 
 const content = await loadContent();
@@ -93,6 +94,26 @@ for (const theme of THEMES) {
 }
 
 await writeFile(path.join(OUT_ROOT, "build-manifest.json"), JSON.stringify(manifest, null, 2), "utf-8");
+
+const statusCounts = {};
+for (const item of content.EVIDENCE) statusCounts[item.status] = (statusCounts[item.status] || 0) + 1;
+await writeFile(
+  path.join(OUT_ROOT, "content-status.json"),
+  JSON.stringify(
+    {
+      updatedAt: content.PRODUCT_META.updatedAt,
+      productsDraft: content.PRODUCT_META.draft,
+      productsPublicApproved: content.PRODUCT_META.publicApproved,
+      evidence: statusCounts,
+      missing: content.EVIDENCE.filter((i) => i.status === "missing" || i.status === "review").map((i) => ({ id: i.id, title: i.title, status: i.status })),
+      conflicts: content.EVIDENCE.filter((i) => i.status === "conflicting").map((i) => i.id),
+      logEntries: content.CONTENT_LOG.length
+    },
+    null,
+    2
+  ),
+  "utf-8"
+);
 
 if (!ONLY) {
   const cards = manifest.themes

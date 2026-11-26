@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-26T11:29:28.859Z",
+  "builtAt": "2026-11-26T12:19:58.630Z",
   "origin": "http://localhost:4173",
   "noindex": true,
   "langs": [
@@ -12,7 +12,7 @@
     "ky",
     "tg"
   ],
-  "totalPages": 312,
+  "totalPages": 416,
   "themes": [
     {
       "key": "a",
@@ -31,6 +31,12 @@
       "label": "C · 国际品牌与招商综合型",
       "pages": 104,
       "url": "http://localhost:4173/c/en/"
+    },
+    {
+      "key": "d",
+      "label": "D · 国际品牌与销售转化综合版",
+      "pages": 104,
+      "url": "http://localhost:4173/d/en/"
     }
   ]
 }

@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "updatedAt": "2026-11-26",
+    "draft": true,
+    "note": "D 方案专用文案，原型草稿，待母语审校；不得当作已批准的生产文案。"
+  },
+  "langs": {
+    "en": {
+      "evidence_title": "What every pack states",
+      "evidence_lead": "Facts taken from the current packaging of all seven SKUs — not marketing promises.",
+      "ev1_title": "Full composition, with animal share",
+      "ev1_body": "The label lists every ingredient; animal ingredients are stated as a share (40–51% depending on recipe).",
+      "ev2_title": "Guaranteed analysis, printed per pack",
+      "ev2_body": "Protein, fat, fibre, ash, moisture, calcium, phosphorus, taurine and chloride — with the measurement basis stated.",
+      "ev3_title": "Feeding table and a 7-day transition",
+      "ev3_body": "Daily amounts by body weight or age, plus a step-by-step 7-day switch from the previous food.",
+      "ev_note": "Product figures are stored once and shown identically in all languages."
+    },
+    "zh": {
+      "evidence_title": "每袋都公开什么",
+      "evidence_lead": "以下内容取自七个 SKU 当前包装实物信息，不是营销话术。",
+      "ev1_title": "完整成分与动物性原料占比",
+      "ev1_body": "标签逐一列出全部配料，并直接标注动物性原料占比（按配方为 40–51%）。",
+      "ev2_title": "保证分析值，逐袋标注",
+      "ev2_body": "蛋白、脂肪、纤维、灰分、水分、钙、磷、牛磺酸与氯化物——并注明计算基准。",
+      "ev3_title": "喂食量表与 7 天换粮过渡",
+      "ev3_body": "按体重或年龄给出每日用量，并提供从旧粮开始的 7 天逐步过渡方案。",
+      "ev_note": "产品数值只维护一份，在所有语言中显示一致。"
+    },
+    "ru": {
+      "evidence_title": "Что указано на каждой упаковке",
+      "evidence_lead": "Факты с текущей упаковки всех семи SKU — не рекламные обещания.",
+      "ev1_title": "Полный состав с долей животного сырья",
+      "ev1_body": "Этикетка перечисляет все ингредиенты; доля животного сырья указана прямо (40–51% в зависимости от рецепта).",
+      "ev2_title": "Гарантированный анализ на каждой упаковке",
+      "ev2_body": "Белок, жир, клетчатка, зола, влага, кальций, фосфор, таурин и хлориды — с указанием базы расчёта.",
+      "ev3_title": "Таблица кормления и переход за 7 дней",
+      "ev3_body": "Суточные нормы по весу или возрасту и пошаговый переход за 7 дней со старого корма.",
+      "ev_note": "Числовые данные хранятся в одном месте и одинаковы во всех языках."
+    },
+    "uz": {
+      "evidence_title": "Har bir qadoqda nima ko‘rsatilgan",
+      "evidence_lead": "Barcha yetti SKUning amaldagi qadoqidagi faktlar — reklama va’dalari emas.",
+      "ev1_title": "To‘liq tarkib va hayvoniy xomashyo ulushi",
+      "ev1_body": "Yorliqda barcha ingredientlar sanab o‘tilgan; hayvoniy xomashyo ulushi to‘g‘ridan-to‘g‘ri ko‘rsatilgan (retseptga qarab 40–51%).",
+      "ev2_title": "Kafolatlangan tahlil har bir qadoqda",
+      "ev2_body": "Protein, yog‘, tola, kul, namlik, kaltsiy, fosfor, taurin va xloridlar — hisoblash asosi ko‘rsatilgan.",
+      "ev3_title": "Oziqlantirish jadvali va 7 kunlik o‘tish",
+      "ev3_body": "Tana vazni yoki yoshga ko‘ra kunlik me’yor va eski ozuqadan 7 kunlik bosqichma-bosqich o‘tish.",
+      "ev_note": "Raqamli ma’lumotlar bir joyda saqlanadi va barcha tillarda bir xil ko‘rsatiladi."
+    },
+    "ar": {
+      "evidence_title": "ما توضحه كل عبوة",
+      "evidence_lead": "حقائق من العبوة الحالية لجميع المنتجات السبعة، وليست وعودًا تسويقية.",
+      "ev1_title": "التركيب الكامل ونسبة المكونات الحيوانية",
+      "ev1_body": "تسرد الملصقات كل المكونات، وتُذكر نسبة المكونات الحيوانية صراحة (40–51% حسب الوصفة).",
+      "ev2_title": "تحليل مضمون مطبوع على كل عبوة",
+      "ev2_body": "البروتين والدهون والألياف والرماد والرطوبة والكالسيوم والفوسفور والتورين والكلوريد — مع بيان أساس القياس.",
+      "ev3_title": "جدول التغذية والانتقال خلال 7 أيام",
+      "ev3_body": "كميات يومية حسب وزن الجسم أو العمر، مع انتقال تدريجي خلال 7 أيام من الطعام السابق.",
+      "ev_note": "تُحفظ الأرقام مرة واحدة وتظهر نفسها بجميع اللغات."
+    },
+    "kk": {
+      "evidence_title": "Әр қаптамада не көрсетілген",
+      "evidence_lead": "Барлық жеті SKU-дың қазіргі қаптамасындағы фактілер — жарнамалық уәделер емес.",
+      "ev1_title": "Толық құрам және жануар шикізатының үлесі",
+      "ev1_body": "Затбелгіде барлық ингредиенттер тізілген; жануар шикізатының үлесі тікелей көрсетілген (рецептіге қарай 40–51%).",
+      "ev2_title": "Кепілдендірілген талдау әр қаптамада",
+      "ev2_body": "Ақуыз, май, талшық, күл, ылғал, кальций, фосфор, таурин және хлоридтер — есептеу негізі көрсетілген.",
+      "ev3_title": "Азықтандыру кестесі және 7 күндік ауысу",
+      "ev3_body": "Дене салмағы немесе жас бойынша тәуліктік мөлшер және бұрынғы азықтан 7 күндік кезеңдік ауысу.",
+      "ev_note": "Сандық деректер бір жерде сақталады және барлық тілдерде бірдей көрсетіледі."
+    },
+    "ky": {
+      "evidence_title": "Ар бир таңгакта эмне көрсөтүлгөн",
+      "evidence_lead": "Бардык жети SKUнун учурдагы таңгагындагы фактылар — жарнамалык убадалар эмес.",
+      "ev1_title": "Толук курам жана жаныбар чийки затынын үлүшү",
+      "ev1_body": "Этикеткада бардык ингредиенттер тизмеленген; жаныбар чийки затынын үлүшү түз көрсөтүлгөн (рецептке жараша 40–51%).",
+      "ev2_title": "Кепилденген талдоо ар бир таңгакта",
+      "ev2_body": "Белок, май, була, күл, нымдуулук, кальций, фосфор, таурин жана хлориддер — эсептөө негизи көрсөтүлгөн.",
+      "ev3_title": "Тамактандыруу таблицасы жана 7 күндүк өтүү",
+      "ev3_body": "Дене салмагы же жашы боюнча күнүмдүк өлчөм жана мурунку тоюттан 7 күндүк этаптуу өтүү.",
+      "ev_note": "Сандык маалыматтар бир жерде сакталат жана бардык тилдерде бирдей көрсөтүлөт."
+    },
+    "tg": {
+      "evidence_title": "Дар ҳар баста чӣ нишон дода шудааст",
+      "evidence_lead": "Далелҳо аз бастаи ҳозираи ҳафт SKU — на ваъдаҳои таблиғотӣ.",
+      "ev1_title": "Таркиби пурра ва ҳиссаи ашёи ҳайвонӣ",
+      "ev1_body": "Барча компонентҳо дар тамғакоғаз оварда шудаанд; ҳиссаи ашёи ҳайвонӣ мустақиман нишон дода мешавад (вобаста ба ретсепт 40–51%).",
+      "ev2_title": "Таҳлили кафолатнок дар ҳар баста",
+      "ev2_body": "Протеин, равған, нахза, хокистар, рутубат, калсий, фосфор, таурин ва хлоридҳо — бо нишон додани асоси ҳисоб.",
+      "ev3_title": "Ҷадвали ғизо ва гузариши 7-рӯза",
+      "ev3_body": "Меъёри рӯзона аз рӯи вазн ё синну сол ва гузариши марҳилавии 7-рӯза аз ғизои пешина.",
+      "ev_note": "Маълумоти рақамӣ як ҷо нигоҳ дошта мешавад ва дар ҳама забонҳо якхела нишон дода мешавад."
+    }
+  }
+}

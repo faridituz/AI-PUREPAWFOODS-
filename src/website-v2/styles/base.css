@@ -319,6 +319,40 @@ p { margin: 0 0 1em; }
 .spec-side { position: sticky; top: 96px; }
 .size-line { font-family: var(--serif); font-size: 1.3rem; }
 
+.product-data {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 32px);
+  align-items: start;
+}
+.facts {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 8px 18px;
+  margin: 16px 0;
+  font-size: .92rem;
+}
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; }
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .92rem;
+  margin: 8px 0 14px;
+}
+.data-table th, .data-table td {
+  padding: 9px 4px;
+  border-bottom: 1px solid var(--line);
+  text-align: start;
+  vertical-align: baseline;
+}
+.data-table thead th { font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.data-table tbody th { font-weight: 500; color: var(--ink); }
+.data-table tbody td { font-variant-numeric: tabular-nums; }
+.transition { margin-top: 22px; border-top: 1px solid var(--line); padding-top: 16px; }
+.transition ol { margin: 8px 0 0; padding-inline-start: 1.3em; font-size: .9rem; }
+.transition li { margin-bottom: 4px; }
+
 .chips {
   list-style: none;
   padding: 0;
@@ -417,9 +451,11 @@ p { margin: 0 0 1em; }
   .hero { grid-template-columns: 1fr; }
   .hero-seal { order: -1; }
   .hero-seal img { width: clamp(150px, 34vw, 220px); }
-  .split, .product-body, .group-grid, .foot-inner { grid-template-columns: 1fr; }
+  .split, .product-body, .product-data, .group-grid, .foot-inner { grid-template-columns: 1fr; }
   .contact-band { grid-template-columns: 1fr; }
   .spec-side { position: static; }
+  .facts { grid-template-columns: 1fr; gap: 2px; }
+  .facts dd { margin-bottom: 10px; }
 }
 
 @media (max-width: 560px) {
