@@ -1,5 +1,10 @@
 # 历史报错与避坑手册（每次编码前必读）
 
+### [2026-11-26-05] SSH 远程执行 PowerShell 复杂引号必碎
+- **现象**：`ssh host "powershell -Command \"...长命令...\""` 经 cmd 二次解析后引号错乱，命令静默无输出。
+- **根因**：bash -> Windows OpenSSH cmd -> PowerShell 三层引号解析叠加。
+- **铁律**：远程 PowerShell 一律用 `-EncodedCommand`（UTF-16LE Base64）传输，本地用 Python 一行生成编码；远程输出统一经 `iconv -f GBK` 或 `[Console]::OutputEncoding=UTF8` 转码再处理。
+
 ### [2026-11-26-04] 生成脚本覆盖人工维护的说明文档
 - **现象**：重跑 `prepare_website_update_20261110.py` 会把《PurePaw_网站更新说明_20261110.md》覆盖回旧模板，丢失人工补充的发布状态与截图记录。
 - **根因**：脚本每次运行都无条件重写该 md。
