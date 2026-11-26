@@ -1,5 +1,9 @@
 # 双机交接班日志（HANDOFF.md）
 
+## [2026-11-26] - 电源策略：15 分钟自动息屏
+- **刚完成**：本机与旧机均设置"15 分钟无操作自动息屏"（交流/电池均 900s）；旧机额外将睡眠、休眠设为永不（AC/DC），根治后台节点反复掉线。
+- **注意事项**：旧机电池模式下同样永不休眠；如需恢复默认，可执行 `powercfg /change standby-timeout-ac 30` 等命令调整。
+
 ## [2026-11-26] - Telegram 告警接入，双机三通 100% 完成
 - **刚完成**：`.env` 补齐 `TG_BOT_TOKEN`/`TG_ADMIN_CHAT_ID`；新建 `src/check_env.py`；本机自测 **3/3 PASS**（Neon 2.06s / 媒体盘读写正常 / Telegram 测试消息送达）。`.env` 已 scp 至旧机并经远程验证 **3/3 PASS**（Neon 1.44s / 媒体盘回退 `D:/AI办公/purepaw/media` 读写正常 / Telegram 送达）。旧机已装 Python 3.12.10（`C:\Users\yinho\AppData\Local\Programs\Python\Python312\python.exe`）与 psycopg2-binary。
 - **下一步**：X 开发者凭据待申请；数据库业务表设计待启动（结构变更先出方案）。
