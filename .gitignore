@@ -72,3 +72,10 @@ raw-assets/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# ---- 终极大脑标准目录（2026-11-26 初始化新增）--------------------------
+# 抓取数据、CSV/JSON 中间文件、日志与备份仅存本地，不入库
+data/
+# Python 缓存
+__pycache__/
+*.pyc
