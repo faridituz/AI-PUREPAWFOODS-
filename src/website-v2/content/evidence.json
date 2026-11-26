@@ -2,7 +2,7 @@
   "meta": {
     "updatedAt": "2026-11-26",
     "draft": true,
-    "note": "真实素材登记表：只记录项目内可追溯的来源与状态，不代表已获公开发布授权。",
+    "note": "真实素材登记表：只记录项目内可追溯的来源与状态，不代表已获公开发布授权。requiredForLaunch=true 的项目未解决前，正式构建必须阻断。",
     "statuses": {
       "verified": "已找到并核对",
       "unapproved": "已找到但未获授权使用",
@@ -19,61 +19,128 @@
       "title": "官方 logo（含 HALAL 徽标）",
       "path": "media/品牌资料/purepawlogo-official.png",
       "source": "https://purepawfoods.com/wp-content/uploads/2026/10/purepawlogo.png",
+      "version": "与线上正式站同一文件（39,399 字节一致）",
+      "date": "2026-10",
+      "files": [
+        "media/品牌资料/purepawlogo-official.png"
+      ],
       "usedIn": [
         "a",
         "b",
         "c",
         "d"
       ],
-      "note": "与线上正式站同一文件（字节数一致）。logo 自带 HALAL 徽标，但未随附清真证书文件。"
+      "publicUse": "yes",
+      "requiredForLaunch": true,
+      "note": "logo 自带 HALAL 徽标，但项目内没有清真证书文件；证书缺失时 logo 的 HALAL 徽标同样需要老板确认可公开。"
     },
     {
       "id": "packaging-docx-19",
-      "status": "verified",
+      "status": "review",
       "category": "包装文字",
-      "title": "19 份包装文字稿（乌/俄/哈/塔四语）",
+      "title": "19 份包装背面四语数据稿（乌/俄/哈/英）",
       "path": "media/包装资料/狗/",
       "source": "项目内既有素材",
+      "version": "packaging-docx-2026-11-03",
+      "date": "2026-11-03",
+      "files": [
+        "media/包装资料/狗/全猫鸡肉1.5-文字(5).docx",
+        "media/包装资料/狗/全猫鸡肉3-文字(4).docx",
+        "media/包装资料/狗/全猫鸡肉10-文字(4).docx",
+        "media/包装资料/狗/全猫牛肉1.5-文字(4).docx",
+        "media/包装资料/狗/全猫牛肉3-文字(4).docx",
+        "media/包装资料/狗/全猫牛肉10-文字(4).docx",
+        "media/包装资料/狗/幼猫鸡肉1.5-文字(2).docx",
+        "media/包装资料/狗/幼猫鸡肉3-文字(2).docx",
+        "media/包装资料/狗/幼猫鸡肉10-文字(2).docx",
+        "media/包装资料/狗/全犬鸡肉1.5-文字(9).docx",
+        "media/包装资料/狗/全犬鸡肉5-文字(8).docx",
+        "media/包装资料/狗/全犬鸡肉15-文字(9).docx",
+        "media/包装资料/狗/全犬牛肉1.5-文字(9).docx",
+        "media/包装资料/狗/全犬牛肉5-文字(8).docx",
+        "media/包装资料/狗/全犬牛肉15-文字(2).docx",
+        "media/包装资料/狗/小犬鸡肉1.5-文字(3).docx",
+        "media/包装资料/狗/小犬鸡肉3-文字(3).docx",
+        "media/包装资料/狗/小犬牛肉1.5-文字(3).docx",
+        "media/包装资料/狗/小犬牛肉3-文字(3).docx"
+      ],
       "usedIn": [
         "d-product-page"
       ],
-      "note": "含成分、保证分析值、喂食表、7 天过渡；已提取为 data/extracted/packaging。"
+      "publicUse": "fields-only",
+      "requiredForLaunch": true,
+      "conflicts": [
+        "small-dog-beef-feeding-typo"
+      ],
+      "note": "docx 正文注明源自 PSD 文字图层提取；项目内无 PSD 原件，也未有实物包装照片。数据本身视为“可追溯转录”，不视为已核验。"
     },
     {
       "id": "barcode-registration",
       "status": "verified",
       "category": "商品条码",
-      "title": "GS1 条码登记文件",
+      "title": "GS1 条码登记文件（GCP 478017820 / GLN 4780178209998）",
       "path": "media/业务资料/purapaw产品条形码.pdf",
       "source": "项目内既有素材",
+      "version": "条码登记文件（16 个 EAN-13）",
+      "date": "2026（PDF 内日期字段不完整）",
+      "holder": "M.Ch.J. “PURE PAW NUTRITION”",
+      "files": [
+        "media/业务资料/purapaw产品条形码.pdf"
+      ],
       "usedIn": [
         "d-brand-page"
       ],
-      "note": "GCP 478017820，GLN 4780178209998，16 个 EAN-13；产品名称在 PDF 中未能可靠提取。"
+      "publicUse": "fields-only",
+      "requiredForLaunch": false,
+      "note": "GCP/GLN 是 GS1 商品编码标识，不是产品质量认证；品牌页只展示这两个编号，不展示 16 个 EAN 明细。"
     },
     {
       "id": "state-registration",
       "status": "verified",
       "category": "企业资质",
-      "title": "法人国家登记证明（STIR 313101809）",
+      "title": "法人国家登记证明（STIR 313 101 809）",
       "path": "media/业务资料/pure paw nutrion 营业执照.pdf",
       "source": "项目内既有素材",
+      "version": "登记日期 2026-06-12",
+      "date": "2026-06-12",
+      "holder": "“PURE PAW NUTRITION” MAS’ULIYATI CHEKLANGAN JAMIYATI（MCHJ）",
+      "issuer": "TOSHKENT SHAHRI, YAKKASAROY TUMANI DXM",
+      "validity": "登记证明，未标注失效日期",
+      "files": [
+        "media/业务资料/pure paw nutrion 营业执照.pdf"
+      ],
       "usedIn": [
         "d-brand-page"
       ],
-      "note": "公司全称、STIR、注册地址与发证机关可读；证书编号字段存在歧义，未对外展示。"
+      "publicUse": "fields-only",
+      "requiredForLaunch": true,
+      "note": "可读字段：公司全称、STIR、注册地址（Yakkasaroy 区 Shota Rustaveli 街 53-B）、发证机关。证书编号字段存在两个候选值，未对外展示。仅依据 PDF 文本核对字段，未向发证机关在线核验；该登记信息不是产品质量认证。"
     },
     {
       "id": "official-site-languages",
       "status": "verified",
       "category": "语言范围",
-      "title": "正式站公开语言：en/zh/ru/ar/uz/kk/ky/tg 八语同页",
-      "path": null,
+      "title": "正式站公开语言：en/zh/ru/ar/uz/kk/ky/tg 八语单选面板",
+      "path": "output/evidence/live-langs/",
       "source": "https://purepawfoods.com/",
+      "version": "2026-11-26 截取",
+      "date": "2026-11-26",
+      "files": [
+        "output/evidence/live-langs/en.png",
+        "output/evidence/live-langs/zh.png",
+        "output/evidence/live-langs/ru.png",
+        "output/evidence/live-langs/ar.png",
+        "output/evidence/live-langs/uz.png",
+        "output/evidence/live-langs/kk.png",
+        "output/evidence/live-langs/ky.png",
+        "output/evidence/live-langs/tg.png"
+      ],
       "usedIn": [
         "language-report"
       ],
-      "note": "公开首页同一页按 en、zh、ru、ar、uz、kk、ky、tg 顺序输出八套产品与标题；无 hreflang。抓取摘要只截取了前三种，但全文可检索到八语标题。"
+      "publicUse": "yes",
+      "requiredForLaunch": false,
+      "note": "同一 HTML 内含 8 个语言面板（article.panel-xx + 单选标签切换），正文一次性加载；无 hreflang、无独立语言 URL。八语截图证据已保存。"
     },
     {
       "id": "packaging-diecut-preview",
@@ -82,7 +149,14 @@
       "title": "猫粮包装刀版预览图",
       "path": "media/包装资料/狗/微信图片_20261104161942_157_3334.jpg",
       "source": "项目内既有素材",
+      "version": "微信图片 2026-11-04",
+      "date": "2026-11-04",
+      "files": [
+        "media/包装资料/狗/微信图片_20261104161942_157_3334.jpg"
+      ],
       "usedIn": [],
+      "publicUse": "no",
+      "requiredForLaunch": false,
       "note": "单张设计预览，不是实物拍摄；未获授权用于对外页面。"
     },
     {
@@ -92,7 +166,20 @@
       "title": "设备铭牌照片（7 张）",
       "path": "media/设备铭牌/",
       "source": "项目内既有素材",
+      "version": "微信图片 2026-10-24",
+      "date": "2026-10-24",
+      "files": [
+        "media/设备铭牌/微信图片_20261024150903_47_320.jpg",
+        "media/设备铭牌/微信图片_20261024150907_48_320.jpg",
+        "media/设备铭牌/微信图片_20261024150912_49_320.jpg",
+        "media/设备铭牌/微信图片_20261024150915_50_320.jpg",
+        "media/设备铭牌/微信图片_20261024150917_51_320.jpg",
+        "media/设备铭牌/微信图片_20261024150922_52_320.jpg",
+        "media/设备铭牌/微信图片_20261024150928_53_320.jpg"
+      ],
       "usedIn": [],
+      "publicUse": "no",
+      "requiredForLaunch": false,
       "note": "设备铭牌为中文，无法证明属于 PURE PAW 生产线，不得作为品牌实力证据。"
     },
     {
@@ -102,20 +189,37 @@
       "title": "调味料宣传册（图片型 PDF）",
       "path": "media/业务资料/益宠调味料宣传册.pdf",
       "source": "项目内既有素材",
+      "version": "无文字层",
+      "date": "未标注",
+      "files": [
+        "media/业务资料/益宠调味料宣传册.pdf"
+      ],
       "usedIn": [],
+      "publicUse": "no",
+      "requiredForLaunch": false,
       "note": "无可提取文字，且品类与主粮不同，未使用。"
     },
     {
       "id": "small-dog-beef-feeding-typo",
       "status": "conflicting",
       "category": "喂食数据",
-      "title": "小型犬牛肉单一包装喂食量写作 100--125g",
+      "title": "小犬两产品 6–8 kg 低活动量写作 100--125g",
       "path": "media/包装资料/狗/小犬牛肉3-文字(3).docx",
-      "source": "包装文字稿",
+      "source": "包装背面四语数据稿",
+      "version": "packaging-docx-2026-11-03",
+      "date": "2026-11-03",
+      "files": [
+        "media/包装资料/狗/小犬牛肉1.5-文字(3).docx",
+        "media/包装资料/狗/小犬牛肉3-文字(3).docx",
+        "media/包装资料/狗/小犬鸡肉1.5-文字(3).docx",
+        "media/包装资料/狗/小犬鸡肉3-文字(3).docx"
+      ],
       "usedIn": [
         "d-product-page"
       ],
-      "note": "其余包装为 100–125 g，已按 100–125 g 收录；上线前需与设计稿核对。"
+      "publicUse": "no",
+      "requiredForLaunch": true,
+      "note": "小犬牛肉 1.5/3kg、小犬鸡肉 3kg 的四语表格为 100--125g；小犬鸡肉 1.5kg 的 docx 已被人工改为 100-125g（生成链源文件仍为双连字符）。表头明确为每日推荐量（g/kun、г/день、g/day）。双连字符为排版笔误的可能性高，但牛肉无单连字符版本，仍需包装负责人确认。"
     },
     {
       "id": "certificate-number-ambiguity",
@@ -124,40 +228,83 @@
       "title": "登记证明编号字段存在两个候选值",
       "path": "media/业务资料/pure paw nutrion 营业执照.pdf",
       "source": "登记证明",
+      "version": "2026-06-12",
+      "date": "2026-06-12",
+      "files": [
+        "media/业务资料/pure paw nutrion 营业执照.pdf"
+      ],
       "usedIn": [],
+      "publicUse": "no",
+      "requiredForLaunch": false,
       "note": "3253280 与 6841141 的字段含义需人工核对，原型未展示证书编号。"
     },
     {
       "id": "nutrition-basis",
       "status": "review",
       "category": "营养数据",
-      "title": "保证分析值的计算基准",
+      "title": "保证分析值的计算基准与四舍五入规则",
       "path": "data/extracted/packaging/",
-      "source": "包装文字稿",
+      "source": "包装背面四语数据稿",
+      "version": "packaging-docx-2026-11-03",
+      "date": "2026-11-03",
+      "files": [
+        "data/extracted/packaging/"
+      ],
       "usedIn": [
         "d-product-page"
       ],
-      "note": "包装标注干物质基础；上线前建议由配方/质检人员确认口径与四舍五入规则。"
+      "publicUse": "no",
+      "requiredForLaunch": true,
+      "note": "包装标注“干物质基础”；小犬鸡肉 3kg 俄语磷值存在 ≥0.91% 的单语笔误（其余三语 ≥0.9%），已按 ≥0.9% 收录，仍需配方/质检人员确认口径。"
+    },
+    {
+      "id": "production-address-source",
+      "status": "review",
+      "category": "企业信息",
+      "title": "生产地址“Tashkent, Korasuv”仅见于包装数据稿页脚",
+      "path": "media/包装资料/狗/",
+      "source": "包装背面四语数据稿 / 登记证明",
+      "version": "packaging-docx-2026-11-03",
+      "date": "2026-11-03",
+      "files": [
+        "media/包装资料/狗/"
+      ],
+      "usedIn": [
+        "d-brand-page"
+      ],
+      "publicUse": "fields-only",
+      "requiredForLaunch": true,
+      "note": "登记证明的法定地址为 Yakkasaroy 区 Shota Rustaveli 街 53-B；包装稿写“Ташкент, Корасув”。两者可能是注册地/生产地之别，需老板确认生产地址表述。"
     },
     {
       "id": "halal-certificate",
       "status": "missing",
       "category": "认证文件",
-      "title": "清真证书编号、机构与有效期",
+      "title": "清真证书编号、机构、适用产品与有效期",
       "path": null,
       "source": null,
+      "version": null,
+      "date": null,
+      "files": [],
       "usedIn": [],
-      "note": "logo 含 HALAL 徽标，但项目内没有证书文件；未在正文新增认证声明。"
+      "publicUse": "no",
+      "requiredForLaunch": true,
+      "note": "logo 含 HALAL 徽标，但项目内没有证书文件；未在正文新增认证声明。证书缺失时不得补充任何清真认证文案。"
     },
     {
       "id": "product-photos",
       "status": "missing",
       "category": "产品视觉",
-      "title": "包装正反面实拍、颗粒特写、产品视频",
+      "title": "7 个 SKU 包装正反面实拍、营养标签特写、颗粒特写、产品视频",
       "path": null,
       "source": null,
+      "version": null,
+      "date": null,
+      "files": [],
       "usedIn": [],
-      "note": "当前产品页无产品图，不能以 AI 图或渲染图冒充实拍。"
+      "publicUse": "no",
+      "requiredForLaunch": true,
+      "note": "当前产品页无产品图，不能以 AI 图或渲染图冒充实拍；也不得用设计刀版图代替实物。"
     },
     {
       "id": "factory-photos",
@@ -166,18 +313,28 @@
       "title": "可识别的生产线/仓储实拍",
       "path": null,
       "source": null,
+      "version": null,
+      "date": null,
+      "files": [],
       "usedIn": [],
-      "note": "现有铭牌照片不可用；需重新拍摄并确认可公开。"
+      "publicUse": "no",
+      "requiredForLaunch": false,
+      "note": "现有铭牌照片不可用；需重新拍摄并确认可公开。当前页面未使用工厂照片，因此不阻断发布。"
     },
     {
       "id": "dealer-policy",
       "status": "missing",
       "category": "招商政策",
-      "title": "起订量、区域保护、账期、退换货",
+      "title": "起订量、区域保护、账期、退换货政策",
       "path": null,
       "source": null,
+      "version": null,
+      "date": null,
+      "files": [],
       "usedIn": [],
-      "note": "招商页仅使用通用合作描述，未编造具体数字。"
+      "publicUse": "no",
+      "requiredForLaunch": true,
+      "note": "招商页仅使用通用合作描述，未编造具体数字；正式招商表单上线前必须有政策文本。"
     },
     {
       "id": "legal-texts",
@@ -186,8 +343,95 @@
       "title": "隐私政策与使用条款定稿",
       "path": null,
       "source": null,
+      "version": null,
+      "date": null,
+      "files": [],
       "usedIn": [],
-      "note": "当前为原型说明文案，上线前需法务文本。"
+      "publicUse": "no",
+      "requiredForLaunch": true,
+      "note": "表单已收集联系人信息，正式上线前必须有隐私政策与条款；当前为原型说明文案。"
+    },
+    {
+      "id": "trademark",
+      "status": "missing",
+      "category": "品牌资产",
+      "title": "PURE PAW 商标注册文件",
+      "path": null,
+      "source": null,
+      "version": null,
+      "date": null,
+      "files": [],
+      "usedIn": [],
+      "publicUse": "no",
+      "requiredForLaunch": false,
+      "note": "项目内未找到商标注册证；页面未使用 ® 标记。"
+    },
+    {
+      "id": "test-reports",
+      "status": "missing",
+      "category": "检测报告",
+      "title": "第三方检测报告（营养/微生物/重金属）",
+      "path": null,
+      "source": null,
+      "version": null,
+      "date": null,
+      "files": [],
+      "usedIn": [],
+      "publicUse": "no",
+      "requiredForLaunch": false,
+      "note": "项目内未找到检测报告；页面未做“第三方检测”类声明，因此不阻断发布，但不得新增此类文案。"
+    },
+    {
+      "id": "packaging-version-conflict",
+      "status": "review",
+      "category": "包装版本",
+      "title": "包装版本与日期字段无法从数据稿确认",
+      "path": "media/包装资料/狗/",
+      "source": "包装背面四语数据稿",
+      "version": "packaging-docx-2026-11-03",
+      "date": "2026-11-03",
+      "files": [
+        "media/包装资料/狗/"
+      ],
+      "usedIn": [],
+      "publicUse": "no",
+      "requiredForLaunch": false,
+      "note": "数据稿中没有生产日期、保质期或包装设计版本号；文件名中的数字为文件序号，不是版本号。需以实物包装正面信息为准。"
+    },
+    {
+      "id": "barcode-duplicate-risk",
+      "status": "conflicting",
+      "category": "商品条码",
+      "title": "全犬鸡肉 1.5kg 与小犬牛肉 1.5kg 的 PSD EAN 曾重复",
+      "path": "media/业务资料/purapaw产品条形码.pdf",
+      "source": "条码登记表 + PSD 核对记录（src/tools/gen-sku-docx.mjs 注释）",
+      "version": "2026 条码登记",
+      "date": "2026",
+      "files": [
+        "media/业务资料/purapaw产品条形码.pdf",
+        "src/tools/gen-sku-docx.mjs"
+      ],
+      "usedIn": [],
+      "publicUse": "no",
+      "requiredForLaunch": false,
+      "note": "PSD 曾显示全犬鸡肉 1.5 为 4780178200193，与小犬牛肉 1.5 相同；页面未展示任何 EAN，因此不阻断。上线前若展示条码或做扫码追溯，必须先核对实际印刷条码。"
+    },
+    {
+      "id": "name-registry-mismatch",
+      "status": "review",
+      "category": "商品条码",
+      "title": "幼猫鸡肉 1.5kg 登记名称写作“幼猫/孕哺猫鸡肉”",
+      "path": "media/业务资料/purapaw产品条形码.pdf",
+      "source": "条码登记表核对记录",
+      "version": "2026 条码登记",
+      "date": "2026",
+      "files": [
+        "media/业务资料/purapaw产品条形码.pdf"
+      ],
+      "usedIn": [],
+      "publicUse": "no",
+      "requiredForLaunch": false,
+      "note": "条码登记表的俄语名称比页面用名多了“孕哺猫”；页面未使用登记表名称，暂不阻断，但对外宣传前需确认产品定位。"
     }
   ]
 }

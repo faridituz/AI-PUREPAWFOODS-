@@ -1,0 +1,147 @@
+{
+  "checkedAt": "2026-11-26T12:32:51.412Z",
+  "url": "https://purepawfoods.com/",
+  "doc": {
+    "url": "https://purepawfoods.com/",
+    "htmlLang": "en-US",
+    "title": "PurePaw | Dog & Cat Food – Inspired by nature. Made with care."
+  },
+  "langs": [
+    {
+      "code": "en",
+      "found": true,
+      "checked": true,
+      "lang": "en",
+      "dir": null,
+      "width": 1340,
+      "height": 3099,
+      "top": 207,
+      "heading": "Pets are family. Every meal deserves thoughtful care.",
+      "headings": [
+        "Pets are family. Every meal deserves thoughtful care.",
+        "Explore our ranges",
+        "Let’s find their next favourite."
+      ],
+      "file": "output\\evidence\\live-langs\\en.png"
+    },
+    {
+      "code": "zh",
+      "found": true,
+      "checked": true,
+      "lang": "zh",
+      "dir": null,
+      "width": 1340,
+      "height": 3027,
+      "top": 207,
+      "heading": "宠物是家人，每一餐都值得用心对待。",
+      "headings": [
+        "宠物是家人，每一餐都值得用心对待。",
+        "探索产品系列",
+        "为它，了解更多。"
+      ],
+      "file": "output\\evidence\\live-langs\\zh.png"
+    },
+    {
+      "code": "ru",
+      "found": true,
+      "checked": true,
+      "lang": "ru",
+      "dir": null,
+      "width": 1340,
+      "height": 3330,
+      "top": 207,
+      "heading": "Питомцы — это семья, и каждый приём пищи заслуживает внимательного отношения.",
+      "headings": [
+        "Питомцы — это семья, и каждый приём пищи заслуживает внимательного отношения.",
+        "Наши линейки",
+        "Узнайте больше для своего питомца."
+      ],
+      "file": "output\\evidence\\live-langs\\ru.png"
+    },
+    {
+      "code": "ar",
+      "found": true,
+      "checked": true,
+      "lang": "ar",
+      "dir": "rtl",
+      "width": 1340,
+      "height": 3011,
+      "top": 207,
+      "heading": "الحيوانات الأليفة من العائلة، وكل وجبة تستحق الاهتمام.",
+      "headings": [
+        "الحيوانات الأليفة من العائلة، وكل وجبة تستحق الاهتمام.",
+        "استكشف المنتجات",
+        "اكتشف المزيد من أجل رفيقك."
+      ],
+      "file": "output\\evidence\\live-langs\\ar.png"
+    },
+    {
+      "code": "uz",
+      "found": true,
+      "checked": true,
+      "lang": "uz",
+      "dir": null,
+      "width": 1340,
+      "height": 3242,
+      "top": 207,
+      "heading": "Uy hayvonlari — oila a’zolari. Har bir taom e’tiborga loyiq.",
+      "headings": [
+        "Uy hayvonlari — oila a’zolari. Har bir taom e’tiborga loyiq.",
+        "Mahsulotlarni ko‘rish",
+        "Do‘stingiz uchun ko‘proq bilib oling."
+      ],
+      "file": "output\\evidence\\live-langs\\uz.png"
+    },
+    {
+      "code": "kk",
+      "found": true,
+      "checked": true,
+      "lang": "kk",
+      "dir": null,
+      "width": 1340,
+      "height": 3336,
+      "top": 207,
+      "heading": "Үй жануарлары — отбасы. Әрбір асқа мұқият қарау керек.",
+      "headings": [
+        "Үй жануарлары — отбасы. Әрбір асқа мұқият қарау керек.",
+        "Өнімдерді көру",
+        "Серігіңіз үшін көбірек біліңіз."
+      ],
+      "file": "output\\evidence\\live-langs\\kk.png"
+    },
+    {
+      "code": "ky",
+      "found": true,
+      "checked": true,
+      "lang": "ky",
+      "dir": null,
+      "width": 1340,
+      "height": 3445,
+      "top": 207,
+      "heading": "Үй жаныбарлары — үй-бүлө. Ар бир тамакка көңүл буруу зарыл.",
+      "headings": [
+        "Үй жаныбарлары — үй-бүлө. Ар бир тамакка көңүл буруу зарыл.",
+        "Өнүмдөрдү көрүү",
+        "Досуңуз үчүн көбүрөөк билиңиз."
+      ],
+      "file": "output\\evidence\\live-langs\\ky.png"
+    },
+    {
+      "code": "tg",
+      "found": true,
+      "checked": true,
+      "lang": "tg",
+      "dir": null,
+      "width": 1340,
+      "height": 3279,
+      "top": 207,
+      "heading": "Ҳайвоноти хонагӣ аъзои оилаанд. Ҳар як хӯрок сазовори таваҷҷуҳ аст.",
+      "headings": [
+        "Ҳайвоноти хонагӣ аъзои оилаанд. Ҳар як хӯрок сазовори таваҷҷуҳ аст.",
+        "Дидани маҳсулот",
+        "Барои ҳамроҳи худ бештар бидонед."
+      ],
+      "file": "output\\evidence\\live-langs\\tg.png"
+    }
+  ]
+}

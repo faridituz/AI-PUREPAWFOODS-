@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T12:25:23.191Z",
+  "generatedAt": "2026-11-26T12:44:34.015Z",
   "api": "http://localhost:4174",
   "ui": "http://localhost:4175",
   "total": 53,
@@ -8,12 +8,12 @@
     {
       "name": "有效咨询提交",
       "pass": true,
-      "detail": "ref=MP-76AE5F"
+      "detail": "ref=MP-CF155D"
     },
     {
       "name": "模拟线索写入本地文件",
       "pass": true,
-      "detail": "lines=1360"
+      "detail": "lines=1393"
     },
     {
       "name": "必填校验（缺姓名）",
@@ -63,7 +63,7 @@
     {
       "name": "幂等键去重",
       "pass": true,
-      "detail": "ref=MP-573FC5"
+      "detail": "ref=MP-D750A3"
     },
     {
       "name": "蜜罐拦截（返回成功但不落库）",

@@ -24,7 +24,8 @@
       "ar": "rtl"
     },
     "default": "en",
-    "note": " 营养/喂食与企业资质标签为 2026-11-26 新增原型草稿，待母语审校。"
+    "note": "营养/喂食/企业资质标签为 2026-11-26 新增原型草稿，待母语审校；非 draft 才能进入正式构建。",
+    "draft": true
   },
   "ui": {
     "en": {
@@ -86,7 +87,8 @@
       "production_site": "Production site",
       "stir_label": "Tax ID (STIR)",
       "gcp_label": "GS1 company prefix (GCP)",
-      "gln_label": "GS1 location (GLN)"
+      "gln_label": "GS1 location (GLN)",
+      "facts_note": "STIR is the taxpayer ID; GCP/GLN are GS1 company and location identifiers. None of them is a product quality certification."
     },
     "zh": {
       "nav_home": "首页",
@@ -147,7 +149,8 @@
       "production_site": "生产地址",
       "stir_label": "纳税人识别号（STIR）",
       "gcp_label": "GS1 厂商前缀（GCP）",
-      "gln_label": "GS1 位置码（GLN）"
+      "gln_label": "GS1 位置码（GLN）",
+      "facts_note": "STIR 为纳税人识别号，GCP/GLN 为 GS1 企业与位置编码，均不代表产品质量认证。"
     },
     "ru": {
       "nav_home": "Главная",
@@ -208,7 +211,8 @@
       "production_site": "Производственная площадка",
       "stir_label": "ИНН (STIR)",
       "gcp_label": "Префикс компании GS1 (GCP)",
-      "gln_label": "Локация GS1 (GLN)"
+      "gln_label": "Локация GS1 (GLN)",
+      "facts_note": "STIR — идентификационный номер налогоплательщика; GCP/GLN — идентификаторы компании и местоположения GS1. Они не являются сертификатами качества продукции."
     },
     "ar": {
       "nav_home": "الرئيسية",
@@ -269,7 +273,8 @@
       "production_site": "موقع الإنتاج",
       "stir_label": "الرقم الضريبي (STIR)",
       "gcp_label": "بادئة الشركة GS1 (GCP)",
-      "gln_label": "موقع GS1 (GLN)"
+      "gln_label": "موقع GS1 (GLN)",
+      "facts_note": "STIR هو رقم تعريف دافع الضرائب، وGCP/GLN معرّفان للشركة والموقع لدى GS1. ولا يُعد أي منها شهادة جودة للمنتج."
     },
     "uz": {
       "nav_home": "Bosh sahifa",
@@ -330,7 +335,8 @@
       "production_site": "Ishlab chiqarish joyi",
       "stir_label": "STIR (soliq raqami)",
       "gcp_label": "GS1 kompaniya prefiksi (GCP)",
-      "gln_label": "GS1 joylashuv kodi (GLN)"
+      "gln_label": "GS1 joylashuv kodi (GLN)",
+      "facts_note": "STIR — soliq to‘lovchining identifikatsiya raqami; GCP/GLN — GS1 kompaniya va joylashuv identifikatorlari. Ular mahsulot sifati sertifikati emas."
     },
     "kk": {
       "nav_home": "Басты бет",
@@ -391,7 +397,8 @@
       "production_site": "Өндіріс орны",
       "stir_label": "СТИР (салық нөмірі)",
       "gcp_label": "GS1 компания префиксі (GCP)",
-      "gln_label": "GS1 орналасу коды (GLN)"
+      "gln_label": "GS1 орналасу коды (GLN)",
+      "facts_note": "STIR — салық төлеушінің сәйкестендіру нөмірі; GCP/GLN — GS1 компания мен орналасу идентификаторлары. Олар өнім сапасының сертификаты емес."
     },
     "ky": {
       "nav_home": "Башкы бет",
@@ -452,7 +459,8 @@
       "production_site": "Өндүрүш орду",
       "stir_label": "СТИР (салык номери)",
       "gcp_label": "GS1 компания префикси (GCP)",
-      "gln_label": "GS1 жайгашуу коду (GLN)"
+      "gln_label": "GS1 жайгашуу коду (GLN)",
+      "facts_note": "STIR — салык төлөөчүнүн идентификациялык номери; GCP/GLN — GS1 компания жана жайгашуу идентификаторлору. Алар продукт сапасынын сертификаты эмес."
     },
     "tg": {
       "nav_home": "Саҳифаи асосӣ",
@@ -513,7 +521,8 @@
       "production_site": "Ҷойи истеҳсолот",
       "stir_label": "Рақами андоз (STIR)",
       "gcp_label": "Префикси ширкати GS1 (GCP)",
-      "gln_label": "Ҷойгиршавии GS1 (GLN)"
+      "gln_label": "Ҷойгиршавии GS1 (GLN)",
+      "facts_note": "STIR — рақами муайянкунии андозсупор; GCP/GLN — муайянкунандаҳои ширкат ва ҷойгиршавии GS1. Онҳо сертификати сифати маҳсулот нестанд."
     }
   }
 }

@@ -1,0 +1,709 @@
+{
+  "scannedAt": "2026-11-26T12:35:46.756Z",
+  "root": "media/",
+  "totalFiles": 31,
+  "byType": {
+    "pdf": 3,
+    "docx": 19,
+    "jpg": 8,
+    "png": 1
+  },
+  "bySku": {
+    "all-age-dog-beef": [
+      {
+        "sizeKg": 1.5,
+        "path": "media/包装资料/狗/全犬牛肉1.5-文字(9).docx",
+        "modified": "2026-11-03T07:52:29Z"
+      },
+      {
+        "sizeKg": 5,
+        "path": "media/包装资料/狗/全犬牛肉5-文字(8).docx",
+        "modified": "2026-11-03T05:05:58Z"
+      },
+      {
+        "sizeKg": 15,
+        "path": "media/包装资料/狗/全犬牛肉15-文字(2).docx",
+        "modified": "2026-11-03T08:15:27Z"
+      }
+    ],
+    "all-age-dog-chicken": [
+      {
+        "sizeKg": 1.5,
+        "path": "media/包装资料/狗/全犬鸡肉1.5-文字(9).docx",
+        "modified": "2026-11-03T08:14:44Z"
+      },
+      {
+        "sizeKg": 5,
+        "path": "media/包装资料/狗/全犬鸡肉5-文字(8).docx",
+        "modified": "2026-11-03T07:26:33Z"
+      },
+      {
+        "sizeKg": 15,
+        "path": "media/包装资料/狗/全犬鸡肉15-文字(9).docx",
+        "modified": "2026-11-03T05:08:18Z"
+      }
+    ],
+    "all-age-cat-beef": [
+      {
+        "sizeKg": 1.5,
+        "path": "media/包装资料/狗/全猫牛肉1.5-文字(4).docx",
+        "modified": "2026-11-03T05:06:42Z"
+      },
+      {
+        "sizeKg": 3,
+        "path": "media/包装资料/狗/全猫牛肉3-文字(4).docx",
+        "modified": "2026-11-03T05:07:00Z"
+      },
+      {
+        "sizeKg": 10,
+        "path": "media/包装资料/狗/全猫牛肉10-文字(4).docx",
+        "modified": "2026-11-03T07:28:04Z"
+      }
+    ],
+    "all-age-cat-chicken": [
+      {
+        "sizeKg": 1.5,
+        "path": "media/包装资料/狗/全猫鸡肉1.5-文字(5).docx",
+        "modified": "2026-11-03T05:05:44Z"
+      },
+      {
+        "sizeKg": 3,
+        "path": "media/包装资料/狗/全猫鸡肉3-文字(4).docx",
+        "modified": "2026-11-03T05:06:03Z"
+      },
+      {
+        "sizeKg": 10,
+        "path": "media/包装资料/狗/全猫鸡肉10-文字(4).docx",
+        "modified": "2026-11-03T05:06:26Z"
+      }
+    ],
+    "small-dog-beef": [
+      {
+        "sizeKg": 1.5,
+        "path": "media/包装资料/狗/小犬牛肉1.5-文字(3).docx",
+        "modified": "2026-11-03T08:09:17Z"
+      },
+      {
+        "sizeKg": 3,
+        "path": "media/包装资料/狗/小犬牛肉3-文字(3).docx",
+        "modified": "2026-11-03T08:10:49Z"
+      }
+    ],
+    "small-dog-chicken": [
+      {
+        "sizeKg": 1.5,
+        "path": "media/包装资料/狗/小犬鸡肉1.5-文字(3).docx",
+        "modified": "2026-11-03T08:07:11Z"
+      },
+      {
+        "sizeKg": 3,
+        "path": "media/包装资料/狗/小犬鸡肉3-文字(3).docx",
+        "modified": "2026-11-03T08:13:13Z"
+      }
+    ],
+    "kitten-chicken": [
+      {
+        "sizeKg": 1.5,
+        "path": "media/包装资料/狗/幼猫鸡肉1.5-文字(2).docx",
+        "modified": "2026-11-03T07:37:19Z"
+      },
+      {
+        "sizeKg": 3,
+        "path": "media/包装资料/狗/幼猫鸡肉3-文字(2).docx",
+        "modified": "2026-11-03T08:06:22Z"
+      },
+      {
+        "sizeKg": 10,
+        "path": "media/包装资料/狗/幼猫鸡肉10-文字(2).docx",
+        "modified": "2026-11-03T08:06:27Z"
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "media/业务资料/purapaw产品条形码.pdf",
+      "type": "pdf",
+      "size": 121494,
+      "modified": "2026-11-26T05:38:44.998Z",
+      "sha256": "2c722c6d43a09975462107dc12e10178b403d16ceb6820ae510ab188814ab4f9",
+      "sku": null,
+      "sizeKg": null,
+      "docx": null,
+      "evidenceId": "barcode-registration",
+      "status": "verified",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/业务资料/pure paw nutrion 营业执照.pdf",
+      "type": "pdf",
+      "size": 182907,
+      "modified": "2026-11-26T05:38:45.001Z",
+      "sha256": "4405ac49295c6addda516510b259ac19a0d3c822c3dd0af75772c0da94b30312",
+      "sku": null,
+      "sizeKg": null,
+      "docx": null,
+      "evidenceId": "state-registration",
+      "status": "verified",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/业务资料/益宠调味料宣传册.pdf",
+      "type": "pdf",
+      "size": 3991401,
+      "modified": "2026-11-26T05:38:46.228Z",
+      "sha256": "be98a23648b4bdb4cc3a979882bc2c46b9cfc7ddd6309c292a21d70baf6a9507",
+      "sku": null,
+      "sizeKg": null,
+      "docx": null,
+      "evidenceId": "brochure-image-pdf",
+      "status": "unapproved",
+      "publicUse": "no",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/包装资料/狗/全犬牛肉1.5-文字(9).docx",
+      "type": "docx",
+      "size": 72346,
+      "modified": "2026-11-26T05:38:45.663Z",
+      "sha256": "5a9af9d1a46c8828aa51bff58904bde85e3edc57777214f978ea7323c052dbfe",
+      "sku": "all-age-dog-beef",
+      "sizeKg": 1.5,
+      "docx": {
+        "title": null,
+        "creator": "python-docx",
+        "lastModifiedBy": "w、",
+        "created": "2013-12-23T23:15:00Z",
+        "modified": "2026-11-03T07:52:29Z"
+      },
+      "evidenceId": "packaging-docx-19",
+      "status": "review",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/包装资料/狗/全犬牛肉15-文字(2).docx",
+      "type": "docx",
+      "size": 72847,
+      "modified": "2026-11-26T05:38:45.664Z",
+      "sha256": "f79b96b87e37a7eafa8c81e9a6283987b8620efd2e6d6e5bff20ffd3fe934a6f",
+      "sku": "all-age-dog-beef",
+      "sizeKg": 15,
+      "docx": {
+        "title": null,
+        "creator": "python-docx",
+        "lastModifiedBy": "UZ殷红文",
+        "created": "2013-12-23T23:15:00Z",
+        "modified": "2026-11-03T08:15:27Z"
+      },
+      "evidenceId": "packaging-docx-19",
+      "status": "review",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/包装资料/狗/全犬牛肉5-文字(8).docx",
+      "type": "docx",
+      "size": 71901,
+      "modified": "2026-11-26T05:38:45.666Z",
+      "sha256": "82318cdb2635d085449b41a8d2bd5b6033d35b25929d5b0c5a490e1247e525d6",
+      "sku": "all-age-dog-beef",
+      "sizeKg": 5,
+      "docx": {
+        "title": null,
+        "creator": "python-docx",
+        "lastModifiedBy": "UZ殷红文",
+        "created": "2013-12-23T23:15:00Z",
+        "modified": "2026-11-03T05:05:58Z"
+      },
+      "evidenceId": "packaging-docx-19",
+      "status": "review",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/包装资料/狗/全犬鸡肉1.5-文字(9).docx",
+      "type": "docx",
+      "size": 72295,
+      "modified": "2026-11-26T05:38:45.668Z",
+      "sha256": "a7aafa317fb0f0a6ee2df68d775ca213ef133ab32bcba7531d782978a97da29b",
+      "sku": "all-age-dog-chicken",
+      "sizeKg": 1.5,
+      "docx": {
+        "title": null,
+        "creator": "python-docx",
+        "lastModifiedBy": "UZ殷红文",
+        "created": "2013-12-23T23:15:00Z",
+        "modified": "2026-11-03T08:14:44Z"
+      },
+      "evidenceId": "packaging-docx-19",
+      "status": "review",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/包装资料/狗/全犬鸡肉15-文字(9).docx",
+      "type": "docx",
+      "size": 72390,
+      "modified": "2026-11-26T05:38:45.669Z",
+      "sha256": "452feb80ae7cdf6d29890ce7b70c0580c00f7e958e174e3a52a617f99945121a",
+      "sku": "all-age-dog-chicken",
+      "sizeKg": 15,
+      "docx": {
+        "title": null,
+        "creator": "python-docx",
+        "lastModifiedBy": "w、",
+        "created": "2013-12-23T23:15:00Z",
+        "modified": "2026-11-03T05:08:18Z"
+      },
+      "evidenceId": "packaging-docx-19",
+      "status": "review",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/包装资料/狗/全犬鸡肉5-文字(8).docx",
+      "type": "docx",
+      "size": 72147,
+      "modified": "2026-11-26T05:38:45.671Z",
+      "sha256": "2c988cc70eb8882ba1f4ec2ece90d2e2c52882a3e807e34176957adb66c289d3",
+      "sku": "all-age-dog-chicken",
+      "sizeKg": 5,
+      "docx": {
+        "title": null,
+        "creator": "python-docx",
+        "lastModifiedBy": "w、",
+        "created": "2013-12-23T23:15:00Z",
+        "modified": "2026-11-03T07:26:33Z"
+      },
+      "evidenceId": "packaging-docx-19",
+      "status": "review",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/包装资料/狗/全猫牛肉1.5-文字(4).docx",
+      "type": "docx",
+      "size": 69724,
+      "modified": "2026-11-26T05:38:45.672Z",
+      "sha256": "59da17c0c35f808520512e6193db3ea09409fa1d710ec986acaa50db4fad865d",
+      "sku": "all-age-cat-beef",
+      "sizeKg": 1.5,
+      "docx": {
+        "title": null,
+        "creator": "python-docx",
+        "lastModifiedBy": "w、",
+        "created": "2013-12-23T23:15:00Z",
+        "modified": "2026-11-03T05:06:42Z"
+      },
+      "evidenceId": "packaging-docx-19",
+      "status": "review",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/包装资料/狗/全猫牛肉10-文字(4).docx",
+      "type": "docx",
+      "size": 70566,
+      "modified": "2026-11-26T05:38:45.674Z",
+      "sha256": "d77728ed0eaa11fd0f16a4b78dff9b40c02423ae0570e80a65e1d2c324151ea9",
+      "sku": "all-age-cat-beef",
+      "sizeKg": 10,
+      "docx": {
+        "title": null,
+        "creator": "python-docx",
+        "lastModifiedBy": "w、",
+        "created": "2013-12-23T23:15:00Z",
+        "modified": "2026-11-03T07:28:04Z"
+      },
+      "evidenceId": "packaging-docx-19",
+      "status": "review",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/包装资料/狗/全猫牛肉3-文字(4).docx",
+      "type": "docx",
+      "size": 69544,
+      "modified": "2026-11-26T05:38:45.675Z",
+      "sha256": "84e716440a89a0d690a3d2a4aa4e075f4d45ef8031338d20645acf34a60f648c",
+      "sku": "all-age-cat-beef",
+      "sizeKg": 3,
+      "docx": {
+        "title": null,
+        "creator": "python-docx",
+        "lastModifiedBy": "w、",
+        "created": "2013-12-23T23:15:00Z",
+        "modified": "2026-11-03T05:07:00Z"
+      },
+      "evidenceId": "packaging-docx-19",
+      "status": "review",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/包装资料/狗/全猫鸡肉1.5-文字(5).docx",
+      "type": "docx",
+      "size": 71160,
+      "modified": "2026-11-26T05:38:45.676Z",
+      "sha256": "ae4b4231d13ebc2aaac07a5b030e1dc145b0152418c7972ab08d143ce42c96c8",
+      "sku": "all-age-cat-chicken",
+      "sizeKg": 1.5,
+      "docx": {
+        "title": null,
+        "creator": "python-docx",
+        "lastModifiedBy": "w、",
+        "created": "2013-12-23T23:15:00Z",
+        "modified": "2026-11-03T05:05:44Z"
+      },
+      "evidenceId": "packaging-docx-19",
+      "status": "review",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/包装资料/狗/全猫鸡肉10-文字(4).docx",
+      "type": "docx",
+      "size": 71517,
+      "modified": "2026-11-26T05:38:45.694Z",
+      "sha256": "2ae3d62720a283e2befa296ea23fc9648b52d852e06630be5cc42f5f5f2b1ffe",
+      "sku": "all-age-cat-chicken",
+      "sizeKg": 10,
+      "docx": {
+        "title": null,
+        "creator": "python-docx",
+        "lastModifiedBy": "w、",
+        "created": "2013-12-23T23:15:00Z",
+        "modified": "2026-11-03T05:06:26Z"
+      },
+      "evidenceId": "packaging-docx-19",
+      "status": "review",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/包装资料/狗/全猫鸡肉3-文字(4).docx",
+      "type": "docx",
+      "size": 71681,
+      "modified": "2026-11-26T05:38:45.711Z",
+      "sha256": "167add7c86ec0708f1283c68e4fadc8bfdb0ea8cb85f1e97c4b143cb4b3b52e4",
+      "sku": "all-age-cat-chicken",
+      "sizeKg": 3,
+      "docx": {
+        "title": null,
+        "creator": "python-docx",
+        "lastModifiedBy": "w、",
+        "created": "2013-12-23T23:15:00Z",
+        "modified": "2026-11-03T05:06:03Z"
+      },
+      "evidenceId": "packaging-docx-19",
+      "status": "review",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/包装资料/狗/小犬牛肉1.5-文字(3).docx",
+      "type": "docx",
+      "size": 72603,
+      "modified": "2026-11-26T05:38:45.724Z",
+      "sha256": "405d5e8971c70e384a1792235155fb74021e9caaf7a1f4ea29d3367a61095c87",
+      "sku": "small-dog-beef",
+      "sizeKg": 1.5,
+      "docx": {
+        "title": null,
+        "creator": "python-docx",
+        "lastModifiedBy": "UZ殷红文",
+        "created": "2013-12-23T23:15:00Z",
+        "modified": "2026-11-03T08:09:17Z"
+      },
+      "evidenceId": "packaging-docx-19",
+      "status": "review",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": [
+        "100--125g 双连字符"
+      ]
+    },
+    {
+      "path": "media/包装资料/狗/小犬牛肉3-文字(3).docx",
+      "type": "docx",
+      "size": 72659,
+      "modified": "2026-11-26T05:38:45.731Z",
+      "sha256": "247141c7a44878c852399eca1c0967bdc93a83b9c08fd160fc4ae714198153c5",
+      "sku": "small-dog-beef",
+      "sizeKg": 3,
+      "docx": {
+        "title": null,
+        "creator": "python-docx",
+        "lastModifiedBy": "UZ殷红文",
+        "created": "2013-12-23T23:15:00Z",
+        "modified": "2026-11-03T08:10:49Z"
+      },
+      "evidenceId": "packaging-docx-19",
+      "status": "review",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": [
+        "100--125g 双连字符"
+      ]
+    },
+    {
+      "path": "media/包装资料/狗/小犬鸡肉1.5-文字(3).docx",
+      "type": "docx",
+      "size": 71917,
+      "modified": "2026-11-26T05:38:45.789Z",
+      "sha256": "55ec92b8150efb981d7468a3e68c508e23af190e3f1086cf5023dc2a402838e9",
+      "sku": "small-dog-chicken",
+      "sizeKg": 1.5,
+      "docx": {
+        "title": null,
+        "creator": "python-docx",
+        "lastModifiedBy": "UZ殷红文",
+        "created": "2013-12-23T23:15:00Z",
+        "modified": "2026-11-03T08:07:11Z"
+      },
+      "evidenceId": "packaging-docx-19",
+      "status": "review",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/包装资料/狗/小犬鸡肉3-文字(3).docx",
+      "type": "docx",
+      "size": 71883,
+      "modified": "2026-11-26T05:38:45.790Z",
+      "sha256": "d7038e02594c993d7a64574e571d2da881908222df753761c9d8de005107668a",
+      "sku": "small-dog-chicken",
+      "sizeKg": 3,
+      "docx": {
+        "title": null,
+        "creator": "python-docx",
+        "lastModifiedBy": "UZ殷红文",
+        "created": "2013-12-23T23:15:00Z",
+        "modified": "2026-11-03T08:13:13Z"
+      },
+      "evidenceId": "packaging-docx-19",
+      "status": "review",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": [
+        "100--125g 双连字符"
+      ]
+    },
+    {
+      "path": "media/包装资料/狗/幼猫鸡肉1.5-文字(2).docx",
+      "type": "docx",
+      "size": 72789,
+      "modified": "2026-11-26T05:38:45.793Z",
+      "sha256": "3ea809a3d7c3ee5d2e4ba9b7e94e3bac3ab60c4980186f64843d512029fc2af8",
+      "sku": "kitten-chicken",
+      "sizeKg": 1.5,
+      "docx": {
+        "title": null,
+        "creator": "python-docx",
+        "lastModifiedBy": "UZ殷红文",
+        "created": "2013-12-23T19:15:00Z",
+        "modified": "2026-11-03T07:37:19Z"
+      },
+      "evidenceId": "packaging-docx-19",
+      "status": "review",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/包装资料/狗/幼猫鸡肉10-文字(2).docx",
+      "type": "docx",
+      "size": 73487,
+      "modified": "2026-11-26T05:38:45.795Z",
+      "sha256": "a3111d1ed22f60874d19f53d87cf774e82664ef000c09297818d2ebd53ec04be",
+      "sku": "kitten-chicken",
+      "sizeKg": 10,
+      "docx": {
+        "title": null,
+        "creator": "python-docx",
+        "lastModifiedBy": "UZ殷红文",
+        "created": "2013-12-23T19:15:00Z",
+        "modified": "2026-11-03T08:06:27Z"
+      },
+      "evidenceId": "packaging-docx-19",
+      "status": "review",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/包装资料/狗/幼猫鸡肉3-文字(2).docx",
+      "type": "docx",
+      "size": 73322,
+      "modified": "2026-11-26T05:38:45.797Z",
+      "sha256": "8d2d0e70ab719785cee1d7cae2c15b4d39201a56828448f630c029923bbf6f48",
+      "sku": "kitten-chicken",
+      "sizeKg": 3,
+      "docx": {
+        "title": null,
+        "creator": "python-docx",
+        "lastModifiedBy": "UZ殷红文",
+        "created": "2013-12-23T19:15:00Z",
+        "modified": "2026-11-03T08:06:22Z"
+      },
+      "evidenceId": "packaging-docx-19",
+      "status": "review",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/包装资料/狗/微信图片_20261104161942_157_3334.jpg",
+      "type": "jpg",
+      "size": 3980680,
+      "modified": "2026-11-26T05:38:46.080Z",
+      "sha256": "46ba39b40efb47bde904e190995c89679cc59f3c849dc64766ee2f64e3c1cba4",
+      "sku": null,
+      "sizeKg": null,
+      "docx": null,
+      "evidenceId": "packaging-docx-19",
+      "status": "review",
+      "publicUse": "fields-only",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/品牌资料/purepawlogo-official.png",
+      "type": "png",
+      "size": 39399,
+      "modified": "2026-11-26T11:53:09.266Z",
+      "sha256": "705842ea5913663680bd2db120bf501f918411edc189639f28e8a2bc524b67c0",
+      "sku": null,
+      "sizeKg": null,
+      "docx": null,
+      "evidenceId": "logo-official",
+      "status": "verified",
+      "publicUse": "yes",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/设备铭牌/微信图片_20261024150903_47_320.jpg",
+      "type": "jpg",
+      "size": 2966683,
+      "modified": "2026-11-26T05:38:45.477Z",
+      "sha256": "46a00029d52a4ceabfa4b3ef08c03b9eb7584611d68a571f21da10b5bedb44a5",
+      "sku": null,
+      "sizeKg": null,
+      "docx": null,
+      "evidenceId": "equipment-nameplates",
+      "status": "unapproved",
+      "publicUse": "no",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/设备铭牌/微信图片_20261024150907_48_320.jpg",
+      "type": "jpg",
+      "size": 3317357,
+      "modified": "2026-11-26T05:38:45.517Z",
+      "sha256": "4b1b3174ff7891fe4f4d4409930c52e2de57f8ede9a4e189de7a40e998a24190",
+      "sku": null,
+      "sizeKg": null,
+      "docx": null,
+      "evidenceId": "equipment-nameplates",
+      "status": "unapproved",
+      "publicUse": "no",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/设备铭牌/微信图片_20261024150912_49_320.jpg",
+      "type": "jpg",
+      "size": 3066901,
+      "modified": "2026-11-26T05:38:45.547Z",
+      "sha256": "67504c3c7e03f48904aa8e422c326a9c4112e86c813112352609bc9483259638",
+      "sku": null,
+      "sizeKg": null,
+      "docx": null,
+      "evidenceId": "equipment-nameplates",
+      "status": "unapproved",
+      "publicUse": "no",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/设备铭牌/微信图片_20261024150915_50_320.jpg",
+      "type": "jpg",
+      "size": 2112109,
+      "modified": "2026-11-26T05:38:45.569Z",
+      "sha256": "90faabc44366ec71ff82d31a48d3596838898f9033aa4e7d009d2223c38e4605",
+      "sku": null,
+      "sizeKg": null,
+      "docx": null,
+      "evidenceId": "equipment-nameplates",
+      "status": "unapproved",
+      "publicUse": "no",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/设备铭牌/微信图片_20261024150917_51_320.jpg",
+      "type": "jpg",
+      "size": 1974427,
+      "modified": "2026-11-26T05:38:45.585Z",
+      "sha256": "33be486784529f38d87b2e5f669df03f3d3dec4121afd2557b947ecb67fca971",
+      "sku": null,
+      "sizeKg": null,
+      "docx": null,
+      "evidenceId": "equipment-nameplates",
+      "status": "unapproved",
+      "publicUse": "no",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/设备铭牌/微信图片_20261024150922_52_320.jpg",
+      "type": "jpg",
+      "size": 4870154,
+      "modified": "2026-11-26T05:38:45.626Z",
+      "sha256": "3fdbb1fc9c409f4ee784934c0103bdca4d56103abe71c6a0d76f3e269afdd2a1",
+      "sku": null,
+      "sizeKg": null,
+      "docx": null,
+      "evidenceId": "equipment-nameplates",
+      "status": "unapproved",
+      "publicUse": "no",
+      "finalApproved": false,
+      "conflicts": []
+    },
+    {
+      "path": "media/设备铭牌/微信图片_20261024150928_53_320.jpg",
+      "type": "jpg",
+      "size": 2526248,
+      "modified": "2026-11-26T05:38:45.657Z",
+      "sha256": "9abc8bde4a5ed4caaf4e3365531e7b39a0920416e541d174db8f1220b771c960",
+      "sku": null,
+      "sizeKg": null,
+      "docx": null,
+      "evidenceId": "equipment-nameplates",
+      "status": "unapproved",
+      "publicUse": "no",
+      "finalApproved": false,
+      "conflicts": []
+    }
+  ]
+}

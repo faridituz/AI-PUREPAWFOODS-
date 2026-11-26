@@ -2,11 +2,12 @@
 
 | 模块名称 | 文件路径 | 核心功能说明 | 输入/输出 | 状态 |
 | :--- | :--- | :--- | :--- | :--- |
-| 四原型统一构建器 | `src/website-v2/build.mjs` | 单一内容源生成 A/B/C/D 四主题×8语×13类=416页；含 hreflang/canonical/RTL/sitemap/robots/assets/content-status；`--index` 切生产索引 | `content/*.json`、`core/*`、`styles/*` -> `output/prototypes/{a,b,c,d}/` | 已实测：416页，四主题回归0失败 |
-| 内容加载与校验 | `src/website-v2/core/content.mjs` | 读取 languages/site/ui/forms/marketing/errors/products/d/evidence/content-log；校验语言齐全、产品数、9项营养、喂食表、证据状态、变更日志 | JSON -> 统一 ctx | 已实测 |
-| 真实产品数据源 | `src/website-v2/content/products.json` | 7 SKU 保证分析值/喂食表/动物性原料占比/规格/来源/冲突，唯一数字源 | 包装 docx -> JSON | 已实测；`draft:true, publicApproved:false` |
-| 素材证据登记 | `src/website-v2/content/evidence.json` | 16 项素材按已验证/未授权/冲突/缺失/待复核五类登记 | 素材路径 -> 状态清单 | 已实测 |
-| 内容变更日志 | `src/website-v2/content/content-log.json` | 产品/翻译/真实性修正的变更记录，全部 `approved:false` | 变更 -> 记录 | 已实测 |
+| 四原型统一构建器 | `src/website-v2/build.mjs` | 单一内容源生成 A/B/C/D 四主题×8语×13类=416页；含 hreflang/canonical/RTL/sitemap/robots/assets/content-status；`--index` 切生产索引；`--release` 只构建 D、强制索引、先跑发布门禁 | `content/*.json`、`core/*`、`styles/*` -> `output/prototypes/{a,b,c,d}/` 或 `output/release/` | 已实测：416页；release 门禁 13项拦截9项 |
+| 正式发布门禁 | `src/website-v2/core/release-gate.mjs` | 13项上线检查：八语范围/翻译状态/草稿标记/产品批准/实物核验/数据冲突/内容日志/必需证据/表单接收端/原型文案/认证宣称/HTTPS origin | content ctx + origin -> 通过/阻断清单 | 已实测：4通过9阻断，未生成发布文件 |
+| 内容加载与校验 | `src/website-v2/core/content.mjs` | 读取 languages/site/ui/forms/marketing/errors/products/d/evidence/content-log；校验语言齐全、产品数、9项营养、喂食表、证据五状态+requiredForLaunch/publicUse、内容日志九字段 | JSON -> 统一 ctx | 已实测 |
+| 真实产品数据源 | `src/website-v2/content/products.json` | 7 SKU 保证分析值/喂食表/动物性原料占比/规格/来源/冲突/逐SKU核验状态，唯一数字源 | 包装 docx -> JSON | 已实测；`draft:true, publicApproved:false`，7 SKU `pending-physical` |
+| 素材证据登记 | `src/website-v2/content/evidence.json` | 22 项素材按已验证/未授权/冲突/缺失/待复核五类登记；含文件、版本、日期、持有人/签发机构、公开范围、是否阻断上线 | 素材路径 -> 状态清单 | 已实测 |
+| 内容变更日志 | `src/website-v2/content/content-log.json` | v2.6 九字段：来源/产品版本/证据状态/审核状态/批准状态/适用语言；未批准禁止进入正式构建 | 变更 -> 记录 | 已实测：8条 pending |
 | D 方案专属文案 | `src/website-v2/content/d.json` | D 首页“每袋都公开什么”8 语言文案 | JSON | 已实测 |
 | HTML/SEO 组件 | `src/website-v2/core/html.mjs` | 转义、页面路径、9条 hreflang、canonical、语言切换、header/footer、JSON-LD | ctx -> HTML | 已实测 |
 | 表单校验（共享） | `src/website-v2/core/validate.mjs` | 前后端共用 `validateLead`：长度、电话、邮箱、渠道、同意、蜜罐 | 表单对象 -> `{ok,errors,values}` | 已实测（44项） |
@@ -18,6 +19,10 @@
 | 产品数据一致性检查 | `src/website-v2/qa-data.mjs` | 4主题×8语×7 SKU 逐页比对营养/喂食/规格/占比；扫描虚标与喂食笔误；校验语言治理 | 本地服务 -> `output/evidence/qa-data.json` | 已实测 1925/0 |
 | 本机隔离压测 | `src/website-v2/stress.mjs` | 10/50/100并发、单/6/8语言、D首页、长跑、冷启动、缓存失效；独立端口 4180/4181 | 构建产物 -> `output/evidence/stress-report.json` | 已实测 13 场景 0 失败 |
 | 截图工具 | `src/website-v2/shot.mjs` | CDP 指定 URL/宽高截图 | url,w,h,out -> PNG | 已实测 |
+| 正式站八语证据 | `src/website-v2/evidence-langs.mjs` | 只读打开正式站，逐语点击语言选择器并截取 8 个面板，记录标题/可见性/URL | 正式站 -> `output/evidence/live-langs/{8语}.png` + manifest | 已实测 8/8 |
+| 真实资料盘点 | `src/website-v2/materials.mjs` | 扫描 `media/`，记录路径/SHA-256/docx元数据/SKU/规格/证据状态/公开范围 | media -> `output/evidence/materials.json` | 已实测 31 文件 |
+| 数据反向核验 | `src/website-v2/check-sources.mjs` | 用 19 份包装数据稿反向核验 products.json：四语喂食表/9项营养/每日量/单位/跨规格/跨产品 | 提取稿+products.json -> `output/evidence/source-check.json` | 已实测 295项，5处源文件问题 |
+| 发布包泄漏检查 | `src/website-v2/qa-release.mjs` | 构建后扫描：noindex/原型标记/mock/localhost/测试数据/A-B-C链接/页面数/404/sitemap/robots | 构建目录 -> `output/evidence/qa-release.json` | 已实测：原型D识别7项泄漏 |
 | 8语原型生成器（方案A，旧） | `src/website-v2/build-a.mjs` | 初版单主题生成器 | 旧 content/styles -> `output/prototypes/a/` | 已被 `build.mjs` 取代，保留备查 |
 | 原型本地预览与模拟API | `src/website-v2/serve.mjs` | 静态服务 + mock 线索 API（同源/JSON/16KB/限流/蜜罐/幂等/脱敏日志）、CSP等安全头、ETag/304、多语言404；`STRESS=1` 开放统计 | 原型目录 -> http://localhost:4173 | 已实测 |
 | 8语布局自检 | `src/website-v2/qa-layout.mjs` | CDP 驱动 Chrome，四主题×8语×7断点×5页（含320/360/412/1920）检查溢出/lang/dir/hreflang/noindex/中文串入/表单；含切换保页与后退交互 | 本地服务 -> 控制台/`output/evidence/qa-layout.json` | 已实测：736组合0异常 |

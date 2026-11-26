@@ -1,57 +1,209 @@
 {
   "meta": {
-    "note": "内容变更日志：所有记录默认未获公开发布批准；上线前须逐条确认。",
-    "version": "v2.5"
+    "note": "内容变更日志 v2.6：每条记录必须带来源、产品版本、证据状态、审核状态与批准状态；approvalStatus 不是 approved 的内容不得进入正式构建。",
+    "version": "v2.6",
+    "schema": [
+      "date",
+      "type",
+      "summary",
+      "source",
+      "productVersion",
+      "evidenceStatus",
+      "reviewStatus",
+      "approvalStatus",
+      "languages",
+      "updatedAt"
+    ]
   },
   "entries": [
     {
       "date": "2026-11-26",
       "type": "数据导入",
-      "summary": "从 19 份包装文字稿导入 7 个 SKU 的成分、保证分析值、喂食表、7 天过渡与动物性原料占比",
-      "files": ["content/products.json", "data/extracted/packaging/"],
-      "approved": false
+      "summary": "从 19 份包装背面四语数据稿导入 7 个 SKU 的保证分析值、喂食表、7 天过渡与动物性原料占比",
+      "source": "media/包装资料/狗/*.docx（docx 元数据最后修改人 UZ殷红文，2026-11-03）",
+      "productVersion": "packaging-docx-2026-11-03",
+      "evidenceStatus": "review",
+      "reviewStatus": "not-reviewed",
+      "approvalStatus": "pending",
+      "languages": [
+        "en",
+        "zh",
+        "ru",
+        "ar",
+        "uz",
+        "kk",
+        "ky",
+        "tg"
+      ],
+      "updatedAt": "2026-11-26"
     },
     {
       "date": "2026-11-26",
       "type": "多语言",
       "summary": "新增营养/喂食/企业资质标签共 18 项，覆盖 8 种语言，全部标记为原型草稿",
-      "files": ["content/ui.json"],
-      "approved": false
+      "source": "src/website-v2/content/ui.json",
+      "productVersion": "ui-v2.5",
+      "evidenceStatus": "review",
+      "reviewStatus": "not-reviewed",
+      "approvalStatus": "pending",
+      "languages": [
+        "en",
+        "zh",
+        "ru",
+        "ar",
+        "uz",
+        "kk",
+        "ky",
+        "tg"
+      ],
+      "updatedAt": "2026-11-26"
     },
     {
       "date": "2026-11-26",
       "type": "真实性修正",
       "summary": "移除无证书文件支撑的“清真认证生产”文案，改为可核对的“保证分析值逐袋标注”",
-      "files": ["content/marketing.json"],
-      "approved": false
+      "source": "src/website-v2/content/marketing.json",
+      "productVersion": "marketing-v2.5",
+      "evidenceStatus": "missing",
+      "reviewStatus": "not-reviewed",
+      "approvalStatus": "pending",
+      "languages": [
+        "en",
+        "zh",
+        "ru",
+        "ar",
+        "uz",
+        "kk",
+        "ky",
+        "tg"
+      ],
+      "updatedAt": "2026-11-26"
     },
     {
       "date": "2026-11-26",
       "type": "真实性修正",
       "summary": "移除未确认的配送承诺，订购步骤改为“回复可购买的门店与方式”",
-      "files": ["content/marketing.json"],
-      "approved": false
+      "source": "src/website-v2/content/marketing.json",
+      "productVersion": "marketing-v2.5",
+      "evidenceStatus": "review",
+      "reviewStatus": "not-reviewed",
+      "approvalStatus": "pending",
+      "languages": [
+        "en",
+        "zh",
+        "ru",
+        "ar",
+        "uz",
+        "kk",
+        "ky",
+        "tg"
+      ],
+      "updatedAt": "2026-11-26"
     },
     {
       "date": "2026-11-26",
       "type": "素材登记",
       "summary": "建立真实素材登记表，区分已核对、未授权、冲突、缺失、待复核五类",
-      "files": ["content/evidence.json"],
-      "approved": false
+      "source": "src/website-v2/content/evidence.json",
+      "productVersion": "evidence-v2.6",
+      "evidenceStatus": "review",
+      "reviewStatus": "not-reviewed",
+      "approvalStatus": "pending",
+      "languages": [
+        "en",
+        "zh",
+        "ru",
+        "ar",
+        "uz",
+        "kk",
+        "ky",
+        "tg"
+      ],
+      "updatedAt": "2026-11-26"
     },
     {
       "date": "2026-11-26",
       "type": "企业信息",
       "summary": "品牌页增加注册地址、生产地址、STIR、GS1 GCP/GLN，来源为登记证明与条码文件",
-      "files": ["content/ui.json", "core/pages.mjs"],
-      "approved": false
+      "source": "media/业务资料/pure paw nutrion 营业执照.pdf；media/业务资料/purapaw产品条形码.pdf",
+      "productVersion": "license-2026-06-12 / barcode-2026",
+      "evidenceStatus": "verified",
+      "reviewStatus": "not-reviewed",
+      "approvalStatus": "pending",
+      "languages": [
+        "en",
+        "zh",
+        "ru",
+        "ar",
+        "uz",
+        "kk",
+        "ky",
+        "tg"
+      ],
+      "updatedAt": "2026-11-26"
     },
     {
       "date": "2026-11-26",
       "type": "产品页",
       "summary": "全部主题产品页增加保证分析值、喂食表、7 天过渡、动物性原料占比与规格",
-      "files": ["core/pages.mjs", "styles/base.css"],
-      "approved": false
+      "source": "src/website-v2/core/pages.mjs；src/website-v2/content/products.json",
+      "productVersion": "products-v2.6",
+      "evidenceStatus": "review",
+      "reviewStatus": "not-reviewed",
+      "approvalStatus": "pending",
+      "languages": [
+        "en",
+        "zh",
+        "ru",
+        "ar",
+        "uz",
+        "kk",
+        "ky",
+        "tg"
+      ],
+      "updatedAt": "2026-11-26"
+    },
+    {
+      "date": "2026-11-26",
+      "type": "上线门禁",
+      "summary": "新增正式构建门禁：未批准内容、未核实产品数据、原型草稿文案、缺失必需证据、未配置正式表单接收端、疑似认证宣称均阻止发布",
+      "source": "src/website-v2/core/release-gate.mjs；src/website-v2/build.mjs",
+      "productVersion": "release-gate-v2.6",
+      "evidenceStatus": "review",
+      "reviewStatus": "not-reviewed",
+      "approvalStatus": "pending",
+      "languages": [
+        "en",
+        "zh",
+        "ru",
+        "ar",
+        "uz",
+        "kk",
+        "ky",
+        "tg"
+      ],
+      "updatedAt": "2026-11-26"
+    },
+    {
+      "date": "2026-11-26",
+      "type": "企业信息说明",
+      "summary": "品牌页增加 GCP/GLN 说明：税号与 GS1 编码不代表产品质量认证",
+      "source": "src/website-v2/content/ui.json",
+      "productVersion": "ui-v2.6",
+      "evidenceStatus": "verified",
+      "reviewStatus": "not-reviewed",
+      "approvalStatus": "pending",
+      "languages": [
+        "en",
+        "zh",
+        "ru",
+        "ar",
+        "uz",
+        "kk",
+        "ky",
+        "tg"
+      ],
+      "updatedAt": "2026-11-26"
     }
   ]
 }

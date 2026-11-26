@@ -396,6 +396,7 @@ function brandPage(ctx, lang) {
       <dt>${esc(t.gln_label)}</dt>
       <dd dir="ltr">4780178209998</dd>
     </dl>
+    <p class="note">${esc(t.facts_note)}</p>
     <p dir="ltr"><a href="${PHONE_HREF}">${PHONE}</a><br><a href="mailto:${EMAIL}">${EMAIL}</a></p>
   </div>
   <p class="actions">

@@ -3,13 +3,18 @@
   "productsDraft": true,
   "productsPublicApproved": false,
   "evidence": {
-    "verified": 5,
+    "verified": 4,
+    "review": 6,
     "unapproved": 3,
-    "conflicting": 1,
-    "review": 2,
-    "missing": 5
+    "conflicting": 2,
+    "missing": 7
   },
   "missing": [
+    {
+      "id": "packaging-docx-19",
+      "title": "19 份包装背面四语数据稿（乌/俄/哈/英）",
+      "status": "review"
+    },
     {
       "id": "certificate-number-ambiguity",
       "title": "登记证明编号字段存在两个候选值",
@@ -17,17 +22,22 @@
     },
     {
       "id": "nutrition-basis",
-      "title": "保证分析值的计算基准",
+      "title": "保证分析值的计算基准与四舍五入规则",
+      "status": "review"
+    },
+    {
+      "id": "production-address-source",
+      "title": "生产地址“Tashkent, Korasuv”仅见于包装数据稿页脚",
       "status": "review"
     },
     {
       "id": "halal-certificate",
-      "title": "清真证书编号、机构与有效期",
+      "title": "清真证书编号、机构、适用产品与有效期",
       "status": "missing"
     },
     {
       "id": "product-photos",
-      "title": "包装正反面实拍、颗粒特写、产品视频",
+      "title": "7 个 SKU 包装正反面实拍、营养标签特写、颗粒特写、产品视频",
       "status": "missing"
     },
     {
@@ -37,17 +47,38 @@
     },
     {
       "id": "dealer-policy",
-      "title": "起订量、区域保护、账期、退换货",
+      "title": "起订量、区域保护、账期、退换货政策",
       "status": "missing"
     },
     {
       "id": "legal-texts",
       "title": "隐私政策与使用条款定稿",
       "status": "missing"
+    },
+    {
+      "id": "trademark",
+      "title": "PURE PAW 商标注册文件",
+      "status": "missing"
+    },
+    {
+      "id": "test-reports",
+      "title": "第三方检测报告（营养/微生物/重金属）",
+      "status": "missing"
+    },
+    {
+      "id": "packaging-version-conflict",
+      "title": "包装版本与日期字段无法从数据稿确认",
+      "status": "review"
+    },
+    {
+      "id": "name-registry-mismatch",
+      "title": "幼猫鸡肉 1.5kg 登记名称写作“幼猫/孕哺猫鸡肉”",
+      "status": "review"
     }
   ],
   "conflicts": [
-    "small-dog-beef-feeding-typo"
+    "small-dog-beef-feeding-typo",
+    "barcode-duplicate-risk"
   ],
-  "logEntries": 7
+  "logEntries": 9
 }

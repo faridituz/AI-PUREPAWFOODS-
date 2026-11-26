@@ -90,8 +90,7 @@ export function footer(ctx, lang) {
       <a href="mailto:${EMAIL}" dir="ltr">${EMAIL}</a>
     </div>
   </div>
-  <p class="proto-note">${esc(t.prototype)}</p>
-</footer>`;
+${ctx.RELEASE ? "" : `  <p class="proto-note">${esc(t.prototype)}</p>\n`}</footer>`;
 }
 
 export function layout(ctx, { lang, rel, active, title, description, body, bodyClass = "" }) {
@@ -119,7 +118,7 @@ ${ctx.NOINDEX ? '<meta name="robots" content="noindex, nofollow">' : ""}
 <link rel="stylesheet" href="${ctx.BASE}/assets/theme.css">
 ${alternates(ctx, lang, rel)}
 </head>
-<body class="theme-${ctx.THEME} ${bodyClass}" data-prototype="${ctx.THEME}" data-lang="${lang}">
+<body class="theme-${ctx.THEME} ${bodyClass}"${ctx.RELEASE ? "" : ` data-prototype="${ctx.THEME}"`} data-lang="${lang}">
 ${header(ctx, lang, rel, active)}
 <main id="main">
 ${body}

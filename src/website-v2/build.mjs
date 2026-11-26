@@ -5,6 +5,7 @@ import { loadContent } from "./core/content.mjs";
 import { buildPages, PAGE_RELS } from "./core/pages.mjs";
 import { pagePath, escAttr, esc, layout } from "./core/html.mjs";
 import { validateLead } from "./core/validate.mjs";
+import { checkRelease } from "./core/release-gate.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2);
@@ -13,10 +14,11 @@ const getArg = (name, fallback) => {
   return i >= 0 ? args[i + 1] : fallback;
 };
 
-const OUT_ROOT = path.resolve(__dirname, getArg("--out", "../../output/prototypes"));
-const ORIGIN = getArg("--origin", "http://localhost:4173");
-const NOINDEX = !args.includes("--index");
-const ONLY = getArg("--theme", "");
+const RELEASE = args.includes("--release");
+const OUT_ROOT = path.resolve(__dirname, getArg("--out", RELEASE ? "../../output/release" : "../../output/prototypes"));
+const ORIGIN = getArg("--origin", RELEASE ? "" : "http://localhost:4173");
+const NOINDEX = RELEASE ? false : !args.includes("--index");
+const ONLY = RELEASE ? "d" : getArg("--theme", "");
 
 const THEMES = [
   { key: "a", label: "A · 国际高端品牌型" },
@@ -26,6 +28,20 @@ const THEMES = [
 ].filter((t) => !ONLY || t.key === ONLY);
 
 const content = await loadContent();
+
+if (RELEASE) {
+  const gate = checkRelease(content, { origin: ORIGIN });
+  const reportPath = path.resolve(__dirname, "../../output/evidence/release-gate.json");
+  await mkdir(path.dirname(reportPath), { recursive: true });
+  await writeFile(reportPath, JSON.stringify(gate, null, 2), "utf-8");
+  console.log(`正式构建门禁：${gate.checks.length} 项，通过 ${gate.checks.filter((c) => c.pass).length} 项`);
+  for (const c of gate.checks) console.log(`${c.pass ? "通过" : "阻断"}  ${c.label}${c.pass ? "" : " —— " + c.detail}`);
+  if (!gate.pass) {
+    console.error(`正式构建已阻断：${gate.blockers.length} 项未满足，未生成任何发布文件。门禁报告 -> ${reportPath}`);
+    process.exit(1);
+  }
+}
+
 const formJsTemplate = await readFile(path.join(__dirname, "assets/form.js"), "utf-8");
 const formJs = formJsTemplate.replace("/*__VALIDATE__*/", validateLead.toString());
 
@@ -35,7 +51,7 @@ const manifest = { builtAt, origin: ORIGIN, noindex: NOINDEX, langs: content.LAN
 for (const theme of THEMES) {
   const outDir = path.join(OUT_ROOT, theme.key);
   const assetsDir = path.join(outDir, "assets");
-  const ctx = { ...content, THEME: theme.key, BASE: "/" + theme.key, ORIGIN, NOINDEX };
+  const ctx = { ...content, THEME: theme.key, BASE: "/" + theme.key, ORIGIN, NOINDEX, RELEASE };
 
   await rm(outDir, { recursive: true, force: true });
   await mkdir(assetsDir, { recursive: true });

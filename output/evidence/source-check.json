@@ -1,0 +1,2088 @@
+{
+  "checkedAt": "2026-11-26T12:37:00.739Z",
+  "source": "data/extracted/packaging/*.txt（由 media/包装资料/狗/*.docx 提取）",
+  "checks": 295,
+  "failed": 5,
+  "sharedFeedingTables": [
+    [
+      "all-age-cat-chicken",
+      "all-age-cat-beef"
+    ],
+    [
+      "all-age-dog-chicken",
+      "all-age-dog-beef"
+    ],
+    [
+      "small-dog-chicken",
+      "small-dog-beef"
+    ]
+  ],
+  "files": 19,
+  "results": [
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉1.5-文字_9_.txt",
+      "label": "单位未混用（mg/kg 与 g/kg）",
+      "pass": true,
+      "detail": "仅 % 与 g/天"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉1.5-文字_9_.txt",
+      "label": "uz 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉1.5-文字_9_.txt",
+      "label": "uz 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉1.5-文字_9_.txt",
+      "label": "uz 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉1.5-文字_9_.txt",
+      "label": "ru 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉1.5-文字_9_.txt",
+      "label": "ru 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉1.5-文字_9_.txt",
+      "label": "ru 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉1.5-文字_9_.txt",
+      "label": "kk 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉1.5-文字_9_.txt",
+      "label": "kk 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉1.5-文字_9_.txt",
+      "label": "kk 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉1.5-文字_9_.txt",
+      "label": "en 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉1.5-文字_9_.txt",
+      "label": "en 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉1.5-文字_9_.txt",
+      "label": "en 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉1.5-文字_9_.txt",
+      "label": "四语喂食表一致",
+      "pass": true,
+      "detail": "1 种写法"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉1.5-文字_9_.txt",
+      "label": "动物性原料占比与 products.json 一致",
+      "pass": true,
+      "detail": "源=48% 库=48%"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉15-文字_2_.txt",
+      "label": "单位未混用（mg/kg 与 g/kg）",
+      "pass": true,
+      "detail": "仅 % 与 g/天"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉15-文字_2_.txt",
+      "label": "uz 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉15-文字_2_.txt",
+      "label": "uz 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉15-文字_2_.txt",
+      "label": "uz 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉15-文字_2_.txt",
+      "label": "ru 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉15-文字_2_.txt",
+      "label": "ru 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉15-文字_2_.txt",
+      "label": "ru 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉15-文字_2_.txt",
+      "label": "kk 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉15-文字_2_.txt",
+      "label": "kk 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉15-文字_2_.txt",
+      "label": "kk 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉15-文字_2_.txt",
+      "label": "en 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉15-文字_2_.txt",
+      "label": "en 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉15-文字_2_.txt",
+      "label": "en 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉15-文字_2_.txt",
+      "label": "四语喂食表一致",
+      "pass": true,
+      "detail": "1 种写法"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉15-文字_2_.txt",
+      "label": "动物性原料占比与 products.json 一致",
+      "pass": true,
+      "detail": "源=48% 库=48%"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉5-文字_8_.txt",
+      "label": "单位未混用（mg/kg 与 g/kg）",
+      "pass": true,
+      "detail": "仅 % 与 g/天"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉5-文字_8_.txt",
+      "label": "uz 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉5-文字_8_.txt",
+      "label": "uz 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉5-文字_8_.txt",
+      "label": "uz 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉5-文字_8_.txt",
+      "label": "ru 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉5-文字_8_.txt",
+      "label": "ru 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉5-文字_8_.txt",
+      "label": "ru 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉5-文字_8_.txt",
+      "label": "kk 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉5-文字_8_.txt",
+      "label": "kk 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉5-文字_8_.txt",
+      "label": "kk 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉5-文字_8_.txt",
+      "label": "en 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉5-文字_8_.txt",
+      "label": "en 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉5-文字_8_.txt",
+      "label": "en 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉5-文字_8_.txt",
+      "label": "四语喂食表一致",
+      "pass": true,
+      "detail": "1 种写法"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全犬牛肉5-文字_8_.txt",
+      "label": "动物性原料占比与 products.json 一致",
+      "pass": true,
+      "detail": "源=48% 库=48%"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉1.5-文字_9_.txt",
+      "label": "单位未混用（mg/kg 与 g/kg）",
+      "pass": true,
+      "detail": "仅 % 与 g/天"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉1.5-文字_9_.txt",
+      "label": "uz 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉1.5-文字_9_.txt",
+      "label": "uz 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉1.5-文字_9_.txt",
+      "label": "uz 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉1.5-文字_9_.txt",
+      "label": "ru 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉1.5-文字_9_.txt",
+      "label": "ru 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉1.5-文字_9_.txt",
+      "label": "ru 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉1.5-文字_9_.txt",
+      "label": "kk 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉1.5-文字_9_.txt",
+      "label": "kk 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉1.5-文字_9_.txt",
+      "label": "kk 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉1.5-文字_9_.txt",
+      "label": "en 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉1.5-文字_9_.txt",
+      "label": "en 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉1.5-文字_9_.txt",
+      "label": "en 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉1.5-文字_9_.txt",
+      "label": "四语喂食表一致",
+      "pass": true,
+      "detail": "1 种写法"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉1.5-文字_9_.txt",
+      "label": "动物性原料占比与 products.json 一致",
+      "pass": true,
+      "detail": "源=40% 库=40%"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉15-文字_9_.txt",
+      "label": "单位未混用（mg/kg 与 g/kg）",
+      "pass": true,
+      "detail": "仅 % 与 g/天"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉15-文字_9_.txt",
+      "label": "uz 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉15-文字_9_.txt",
+      "label": "uz 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉15-文字_9_.txt",
+      "label": "uz 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉15-文字_9_.txt",
+      "label": "ru 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉15-文字_9_.txt",
+      "label": "ru 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉15-文字_9_.txt",
+      "label": "ru 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉15-文字_9_.txt",
+      "label": "kk 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉15-文字_9_.txt",
+      "label": "kk 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉15-文字_9_.txt",
+      "label": "kk 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉15-文字_9_.txt",
+      "label": "en 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉15-文字_9_.txt",
+      "label": "en 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉15-文字_9_.txt",
+      "label": "en 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉15-文字_9_.txt",
+      "label": "四语喂食表一致",
+      "pass": true,
+      "detail": "1 种写法"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉15-文字_9_.txt",
+      "label": "动物性原料占比与 products.json 一致",
+      "pass": true,
+      "detail": "源=40% 库=40%"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉5-文字_8_.txt",
+      "label": "单位未混用（mg/kg 与 g/kg）",
+      "pass": true,
+      "detail": "仅 % 与 g/天"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉5-文字_8_.txt",
+      "label": "uz 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉5-文字_8_.txt",
+      "label": "uz 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉5-文字_8_.txt",
+      "label": "uz 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉5-文字_8_.txt",
+      "label": "ru 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉5-文字_8_.txt",
+      "label": "ru 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉5-文字_8_.txt",
+      "label": "ru 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉5-文字_8_.txt",
+      "label": "kk 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉5-文字_8_.txt",
+      "label": "kk 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉5-文字_8_.txt",
+      "label": "kk 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉5-文字_8_.txt",
+      "label": "en 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉5-文字_8_.txt",
+      "label": "en 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉5-文字_8_.txt",
+      "label": "en 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉5-文字_8_.txt",
+      "label": "四语喂食表一致",
+      "pass": true,
+      "detail": "1 种写法"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全犬鸡肉5-文字_8_.txt",
+      "label": "动物性原料占比与 products.json 一致",
+      "pass": true,
+      "detail": "源=40% 库=40%"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉1.5-文字_4_.txt",
+      "label": "单位未混用（mg/kg 与 g/kg）",
+      "pass": true,
+      "detail": "仅 % 与 g/天"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉1.5-文字_4_.txt",
+      "label": "uz 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉1.5-文字_4_.txt",
+      "label": "uz 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥14 ≤5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉1.5-文字_4_.txt",
+      "label": "uz 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉1.5-文字_4_.txt",
+      "label": "ru 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉1.5-文字_4_.txt",
+      "label": "ru 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥14 ≤5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉1.5-文字_4_.txt",
+      "label": "ru 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉1.5-文字_4_.txt",
+      "label": "kk 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉1.5-文字_4_.txt",
+      "label": "kk 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥14 ≤5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉1.5-文字_4_.txt",
+      "label": "kk 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉1.5-文字_4_.txt",
+      "label": "en 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉1.5-文字_4_.txt",
+      "label": "en 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥14 ≤5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉1.5-文字_4_.txt",
+      "label": "en 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉1.5-文字_4_.txt",
+      "label": "四语喂食表一致",
+      "pass": true,
+      "detail": "1 种写法"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉1.5-文字_4_.txt",
+      "label": "动物性原料占比与 products.json 一致",
+      "pass": true,
+      "detail": "源=48% 库=48%"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉10-文字_4_.txt",
+      "label": "单位未混用（mg/kg 与 g/kg）",
+      "pass": true,
+      "detail": "仅 % 与 g/天"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉10-文字_4_.txt",
+      "label": "uz 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉10-文字_4_.txt",
+      "label": "uz 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥14 ≤5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉10-文字_4_.txt",
+      "label": "uz 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉10-文字_4_.txt",
+      "label": "ru 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉10-文字_4_.txt",
+      "label": "ru 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥14 ≤5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉10-文字_4_.txt",
+      "label": "ru 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉10-文字_4_.txt",
+      "label": "kk 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉10-文字_4_.txt",
+      "label": "kk 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥14 ≤5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉10-文字_4_.txt",
+      "label": "kk 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉10-文字_4_.txt",
+      "label": "en 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉10-文字_4_.txt",
+      "label": "en 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥14 ≤5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉10-文字_4_.txt",
+      "label": "en 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉10-文字_4_.txt",
+      "label": "四语喂食表一致",
+      "pass": true,
+      "detail": "1 种写法"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉10-文字_4_.txt",
+      "label": "动物性原料占比与 products.json 一致",
+      "pass": true,
+      "detail": "源=48% 库=48%"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉3-文字_4_.txt",
+      "label": "单位未混用（mg/kg 与 g/kg）",
+      "pass": true,
+      "detail": "仅 % 与 g/天"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉3-文字_4_.txt",
+      "label": "uz 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉3-文字_4_.txt",
+      "label": "uz 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥14 ≤5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉3-文字_4_.txt",
+      "label": "uz 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉3-文字_4_.txt",
+      "label": "ru 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉3-文字_4_.txt",
+      "label": "ru 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥14 ≤5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉3-文字_4_.txt",
+      "label": "ru 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉3-文字_4_.txt",
+      "label": "kk 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉3-文字_4_.txt",
+      "label": "kk 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥14 ≤5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉3-文字_4_.txt",
+      "label": "kk 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉3-文字_4_.txt",
+      "label": "en 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉3-文字_4_.txt",
+      "label": "en 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥14 ≤5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉3-文字_4_.txt",
+      "label": "en 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉3-文字_4_.txt",
+      "label": "四语喂食表一致",
+      "pass": true,
+      "detail": "1 种写法"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全猫牛肉3-文字_4_.txt",
+      "label": "动物性原料占比与 products.json 一致",
+      "pass": true,
+      "detail": "源=48% 库=48%"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉1.5-文字_5_.txt",
+      "label": "单位未混用（mg/kg 与 g/kg）",
+      "pass": true,
+      "detail": "仅 % 与 g/天"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉1.5-文字_5_.txt",
+      "label": "uz 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉1.5-文字_5_.txt",
+      "label": "uz 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥15 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉1.5-文字_5_.txt",
+      "label": "uz 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉1.5-文字_5_.txt",
+      "label": "ru 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉1.5-文字_5_.txt",
+      "label": "ru 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥15 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉1.5-文字_5_.txt",
+      "label": "ru 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉1.5-文字_5_.txt",
+      "label": "kk 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉1.5-文字_5_.txt",
+      "label": "kk 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥15 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉1.5-文字_5_.txt",
+      "label": "kk 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉1.5-文字_5_.txt",
+      "label": "en 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉1.5-文字_5_.txt",
+      "label": "en 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥15 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉1.5-文字_5_.txt",
+      "label": "en 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉1.5-文字_5_.txt",
+      "label": "四语喂食表一致",
+      "pass": true,
+      "detail": "1 种写法"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉1.5-文字_5_.txt",
+      "label": "动物性原料占比与 products.json 一致",
+      "pass": true,
+      "detail": "源=48% 库=48%"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉10-文字_4_.txt",
+      "label": "单位未混用（mg/kg 与 g/kg）",
+      "pass": true,
+      "detail": "仅 % 与 g/天"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉10-文字_4_.txt",
+      "label": "uz 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉10-文字_4_.txt",
+      "label": "uz 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥15 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉10-文字_4_.txt",
+      "label": "uz 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉10-文字_4_.txt",
+      "label": "ru 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉10-文字_4_.txt",
+      "label": "ru 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥15 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉10-文字_4_.txt",
+      "label": "ru 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉10-文字_4_.txt",
+      "label": "kk 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉10-文字_4_.txt",
+      "label": "kk 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥15 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉10-文字_4_.txt",
+      "label": "kk 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉10-文字_4_.txt",
+      "label": "en 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉10-文字_4_.txt",
+      "label": "en 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥15 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉10-文字_4_.txt",
+      "label": "en 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉10-文字_4_.txt",
+      "label": "四语喂食表一致",
+      "pass": true,
+      "detail": "1 种写法"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉10-文字_4_.txt",
+      "label": "动物性原料占比与 products.json 一致",
+      "pass": true,
+      "detail": "源=48% 库=48%"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉3-文字_4_.txt",
+      "label": "单位未混用（mg/kg 与 g/kg）",
+      "pass": true,
+      "detail": "仅 % 与 g/天"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉3-文字_4_.txt",
+      "label": "uz 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉3-文字_4_.txt",
+      "label": "uz 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥15 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉3-文字_4_.txt",
+      "label": "uz 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉3-文字_4_.txt",
+      "label": "ru 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉3-文字_4_.txt",
+      "label": "ru 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥15 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉3-文字_4_.txt",
+      "label": "ru 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉3-文字_4_.txt",
+      "label": "kk 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉3-文字_4_.txt",
+      "label": "kk 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥15 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉3-文字_4_.txt",
+      "label": "kk 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉3-文字_4_.txt",
+      "label": "en 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉3-文字_4_.txt",
+      "label": "en 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥33 ≥15 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉3-文字_4_.txt",
+      "label": "en 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉3-文字_4_.txt",
+      "label": "四语喂食表一致",
+      "pass": true,
+      "detail": "1 种写法"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全猫鸡肉3-文字_4_.txt",
+      "label": "动物性原料占比与 products.json 一致",
+      "pass": true,
+      "detail": "源=48% 库=48%"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉1.5-文字_3_.txt",
+      "label": "单位未混用（mg/kg 与 g/kg）",
+      "pass": true,
+      "detail": "仅 % 与 g/天"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉1.5-文字_3_.txt",
+      "label": "uz 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉1.5-文字_3_.txt",
+      "label": "uz 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉1.5-文字_3_.txt",
+      "label": "uz 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉1.5-文字_3_.txt",
+      "label": "ru 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉1.5-文字_3_.txt",
+      "label": "ru 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉1.5-文字_3_.txt",
+      "label": "ru 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉1.5-文字_3_.txt",
+      "label": "kk 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉1.5-文字_3_.txt",
+      "label": "kk 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉1.5-文字_3_.txt",
+      "label": "kk 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉1.5-文字_3_.txt",
+      "label": "en 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉1.5-文字_3_.txt",
+      "label": "en 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉1.5-文字_3_.txt",
+      "label": "en 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉1.5-文字_3_.txt",
+      "label": "四语喂食表一致",
+      "pass": true,
+      "detail": "1 种写法"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉1.5-文字_3_.txt",
+      "label": "动物性原料占比与 products.json 一致",
+      "pass": true,
+      "detail": "源=48% 库=48%"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉1.5-文字_3_.txt",
+      "label": "无 100--125g 双连字符",
+      "pass": false,
+      "detail": "存在双连字符"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉3-文字_3_.txt",
+      "label": "单位未混用（mg/kg 与 g/kg）",
+      "pass": true,
+      "detail": "仅 % 与 g/天"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉3-文字_3_.txt",
+      "label": "uz 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉3-文字_3_.txt",
+      "label": "uz 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉3-文字_3_.txt",
+      "label": "uz 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉3-文字_3_.txt",
+      "label": "ru 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉3-文字_3_.txt",
+      "label": "ru 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉3-文字_3_.txt",
+      "label": "ru 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉3-文字_3_.txt",
+      "label": "kk 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉3-文字_3_.txt",
+      "label": "kk 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉3-文字_3_.txt",
+      "label": "kk 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉3-文字_3_.txt",
+      "label": "en 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉3-文字_3_.txt",
+      "label": "en 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉3-文字_3_.txt",
+      "label": "en 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉3-文字_3_.txt",
+      "label": "四语喂食表一致",
+      "pass": true,
+      "detail": "1 种写法"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉3-文字_3_.txt",
+      "label": "动物性原料占比与 products.json 一致",
+      "pass": true,
+      "detail": "源=48% 库=48%"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "小犬牛肉3-文字_3_.txt",
+      "label": "无 100--125g 双连字符",
+      "pass": false,
+      "detail": "存在双连字符"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉1.5-文字_3_.txt",
+      "label": "单位未混用（mg/kg 与 g/kg）",
+      "pass": true,
+      "detail": "仅 % 与 g/天"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉1.5-文字_3_.txt",
+      "label": "uz 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉1.5-文字_3_.txt",
+      "label": "uz 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉1.5-文字_3_.txt",
+      "label": "uz 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉1.5-文字_3_.txt",
+      "label": "ru 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉1.5-文字_3_.txt",
+      "label": "ru 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉1.5-文字_3_.txt",
+      "label": "ru 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉1.5-文字_3_.txt",
+      "label": "kk 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉1.5-文字_3_.txt",
+      "label": "kk 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉1.5-文字_3_.txt",
+      "label": "kk 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉1.5-文字_3_.txt",
+      "label": "en 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉1.5-文字_3_.txt",
+      "label": "en 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉1.5-文字_3_.txt",
+      "label": "en 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉1.5-文字_3_.txt",
+      "label": "四语喂食表一致",
+      "pass": true,
+      "detail": "1 种写法"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉1.5-文字_3_.txt",
+      "label": "动物性原料占比与 products.json 一致",
+      "pass": true,
+      "detail": "源=40% 库=40%"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉3-文字_3_.txt",
+      "label": "单位未混用（mg/kg 与 g/kg）",
+      "pass": true,
+      "detail": "仅 % 与 g/天"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉3-文字_3_.txt",
+      "label": "uz 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉3-文字_3_.txt",
+      "label": "uz 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉3-文字_3_.txt",
+      "label": "uz 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉3-文字_3_.txt",
+      "label": "ru 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉3-文字_3_.txt",
+      "label": "ru 保证分析值 9 项一致",
+      "pass": false,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.91 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉3-文字_3_.txt",
+      "label": "ru 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉3-文字_3_.txt",
+      "label": "kk 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉3-文字_3_.txt",
+      "label": "kk 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉3-文字_3_.txt",
+      "label": "kk 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉3-文字_3_.txt",
+      "label": "en 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "5 行"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉3-文字_3_.txt",
+      "label": "en 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥28 ≥13 ≤5 ≤8.5 ≤10 ≥1.1 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉3-文字_3_.txt",
+      "label": "en 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉3-文字_3_.txt",
+      "label": "四语喂食表一致",
+      "pass": true,
+      "detail": "1 种写法"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉3-文字_3_.txt",
+      "label": "动物性原料占比与 products.json 一致",
+      "pass": true,
+      "detail": "源=40% 库=40%"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "小犬鸡肉3-文字_3_.txt",
+      "label": "无 100--125g 双连字符",
+      "pass": false,
+      "detail": "存在双连字符"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉1.5-文字_2_.txt",
+      "label": "单位未混用（mg/kg 与 g/kg）",
+      "pass": true,
+      "detail": "仅 % 与 g/天"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉1.5-文字_2_.txt",
+      "label": "uz 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "3 行"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉1.5-文字_2_.txt",
+      "label": "uz 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥34 ≥15 ≤4.5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉1.5-文字_2_.txt",
+      "label": "uz 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉1.5-文字_2_.txt",
+      "label": "ru 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "3 行"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉1.5-文字_2_.txt",
+      "label": "ru 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥34 ≥15 ≤4.5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉1.5-文字_2_.txt",
+      "label": "ru 标注为每日喂食量",
+      "pass": false,
+      "detail": "未找到每日量标识"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉1.5-文字_2_.txt",
+      "label": "kk 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "3 行"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉1.5-文字_2_.txt",
+      "label": "kk 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥34 ≥15 ≤4.5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉1.5-文字_2_.txt",
+      "label": "kk 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉1.5-文字_2_.txt",
+      "label": "en 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "3 行"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉1.5-文字_2_.txt",
+      "label": "en 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥34 ≥15 ≤4.5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉1.5-文字_2_.txt",
+      "label": "en 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉1.5-文字_2_.txt",
+      "label": "四语喂食表一致",
+      "pass": true,
+      "detail": "1 种写法"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉1.5-文字_2_.txt",
+      "label": "动物性原料占比与 products.json 一致",
+      "pass": true,
+      "detail": "源=51% 库=51%"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉10-文字_2_.txt",
+      "label": "单位未混用（mg/kg 与 g/kg）",
+      "pass": true,
+      "detail": "仅 % 与 g/天"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉10-文字_2_.txt",
+      "label": "uz 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "3 行"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉10-文字_2_.txt",
+      "label": "uz 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥34 ≥15 ≤4.5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉10-文字_2_.txt",
+      "label": "uz 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉10-文字_2_.txt",
+      "label": "ru 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "3 行"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉10-文字_2_.txt",
+      "label": "ru 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥34 ≥15 ≤4.5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉10-文字_2_.txt",
+      "label": "ru 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉10-文字_2_.txt",
+      "label": "kk 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "3 行"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉10-文字_2_.txt",
+      "label": "kk 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥34 ≥15 ≤4.5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉10-文字_2_.txt",
+      "label": "kk 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉10-文字_2_.txt",
+      "label": "en 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "3 行"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉10-文字_2_.txt",
+      "label": "en 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥34 ≥15 ≤4.5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉10-文字_2_.txt",
+      "label": "en 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉10-文字_2_.txt",
+      "label": "四语喂食表一致",
+      "pass": true,
+      "detail": "1 种写法"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉10-文字_2_.txt",
+      "label": "动物性原料占比与 products.json 一致",
+      "pass": true,
+      "detail": "源=51% 库=51%"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉3-文字_2_.txt",
+      "label": "单位未混用（mg/kg 与 g/kg）",
+      "pass": true,
+      "detail": "仅 % 与 g/天"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉3-文字_2_.txt",
+      "label": "uz 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "3 行"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉3-文字_2_.txt",
+      "label": "uz 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥34 ≥15 ≤4.5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉3-文字_2_.txt",
+      "label": "uz 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉3-文字_2_.txt",
+      "label": "ru 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "3 行"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉3-文字_2_.txt",
+      "label": "ru 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥34 ≥15 ≤4.5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉3-文字_2_.txt",
+      "label": "ru 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉3-文字_2_.txt",
+      "label": "kk 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "3 行"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉3-文字_2_.txt",
+      "label": "kk 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥34 ≥15 ≤4.5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉3-文字_2_.txt",
+      "label": "kk 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉3-文字_2_.txt",
+      "label": "en 喂食表与 products.json 一致",
+      "pass": true,
+      "detail": "3 行"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉3-文字_2_.txt",
+      "label": "en 保证分析值 9 项一致",
+      "pass": true,
+      "detail": "源=≥34 ≥15 ≤4.5 ≤8.5 ≤10 ≥1.2 ≥0.9 ≥0.2 ≥0.3"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉3-文字_2_.txt",
+      "label": "en 标注为每日喂食量",
+      "pass": true,
+      "detail": "g/天"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉3-文字_2_.txt",
+      "label": "四语喂食表一致",
+      "pass": true,
+      "detail": "1 种写法"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "幼猫鸡肉3-文字_2_.txt",
+      "label": "动物性原料占比与 products.json 一致",
+      "pass": true,
+      "detail": "源=51% 库=51%"
+    },
+    {
+      "sku": "all-age-dog-beef",
+      "file": "全规格",
+      "label": "同一 SKU 不同规格数据一致",
+      "pass": true,
+      "detail": "3 个文件，1 种数据"
+    },
+    {
+      "sku": "all-age-dog-chicken",
+      "file": "全规格",
+      "label": "同一 SKU 不同规格数据一致",
+      "pass": true,
+      "detail": "3 个文件，1 种数据"
+    },
+    {
+      "sku": "all-age-cat-beef",
+      "file": "全规格",
+      "label": "同一 SKU 不同规格数据一致",
+      "pass": true,
+      "detail": "3 个文件，1 种数据"
+    },
+    {
+      "sku": "all-age-cat-chicken",
+      "file": "全规格",
+      "label": "同一 SKU 不同规格数据一致",
+      "pass": true,
+      "detail": "3 个文件，1 种数据"
+    },
+    {
+      "sku": "small-dog-beef",
+      "file": "全规格",
+      "label": "同一 SKU 不同规格数据一致",
+      "pass": true,
+      "detail": "2 个文件，1 种数据"
+    },
+    {
+      "sku": "small-dog-chicken",
+      "file": "全规格",
+      "label": "同一 SKU 不同规格数据一致",
+      "pass": true,
+      "detail": "2 个文件，1 种数据"
+    },
+    {
+      "sku": "kitten-chicken",
+      "file": "全规格",
+      "label": "同一 SKU 不同规格数据一致",
+      "pass": true,
+      "detail": "3 个文件，1 种数据"
+    }
+  ]
+}

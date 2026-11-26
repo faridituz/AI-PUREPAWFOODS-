@@ -94,6 +94,7 @@ export async function loadContent() {
 
   // 素材登记表只允许五类状态；每条必须有 id 与标题
   const EVIDENCE_STATUSES = ["verified", "unapproved", "conflicting", "missing", "review"];
+  const PUBLIC_USE = ["yes", "no", "fields-only"];
   const EVIDENCE = evidenceFile.items || [];
   const seenIds = new Set();
   for (const item of EVIDENCE) {
@@ -101,11 +102,17 @@ export async function loadContent() {
     seenIds.add(item.id);
     if (!EVIDENCE_STATUSES.includes(item.status)) throw new Error(`evidence.json: ${item.id} 状态非法`);
     if (!item.title || !item.category) throw new Error(`evidence.json: ${item.id} 缺少标题或分类`);
+    if (typeof item.requiredForLaunch !== "boolean") throw new Error(`evidence.json: ${item.id} 缺少 requiredForLaunch`);
+    if (!PUBLIC_USE.includes(item.publicUse)) throw new Error(`evidence.json: ${item.id} publicUse 非法`);
   }
+  const APPROVAL_STATUSES = ["pending", "approved", "rejected"];
   if (!Array.isArray(logFile.entries) || !logFile.entries.length) throw new Error("content-log.json: 缺少变更记录");
   for (const e of logFile.entries) {
-    if (!e.date || !e.type || !e.summary) throw new Error("content-log.json: 记录缺少日期、类型或摘要");
-    if (e.approved !== false) throw new Error("content-log.json: 原型阶段所有记录必须 approved=false");
+    for (const k of ["date", "type", "summary", "source", "productVersion", "evidenceStatus", "reviewStatus", "approvalStatus", "updatedAt"]) {
+      if (!e[k]) throw new Error(`content-log.json: 记录缺少 ${k}`);
+    }
+    if (!APPROVAL_STATUSES.includes(e.approvalStatus)) throw new Error("content-log.json: approvalStatus 非法");
+    if (!Array.isArray(e.languages) || !e.languages.length) throw new Error("content-log.json: 记录缺少适用语言");
   }
 
   return {

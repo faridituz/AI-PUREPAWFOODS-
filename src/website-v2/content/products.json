@@ -3,7 +3,7 @@
     "updatedAt": "2026-11-26",
     "draft": true,
     "publicApproved": false,
-    "note": "营养与喂食数据取自媒体目录内的包装设计文字稿（PSD 文字提取），同一产品不同规格数值一致。仅用于内部原型，正式上线前须由品牌方对照实物包装与检测报告批准。",
+    "note": "营养与喂食数据取自媒体目录内的 19 份包装背面四语数据稿（docx，最后修改人 UZ殷红文，2026-11-03）。文件正文注明源自 PSD 文字图层提取，但项目内没有 PSD 原件，也尚未对照实物包装与营养标签逐项核验。仅用于内部原型，正式上线前必须由品牌方批准。",
     "sources": [
       "media/包装资料/狗/*.docx（19 份包装文字稿）",
       "media/业务资料/purapaw产品条形码.pdf",
@@ -13,10 +13,36 @@
       {
         "slug": "small-dog-beef",
         "field": "feeding",
-        "detail": "包装文字稿将 6–8 kg 低活动量写成 100--125g（双连字符），同系列鸡肉为 100-125g；收录时统一为 100–125 g，待包装负责人确认。",
-        "status": "pending-confirmation"
+        "detail": "四语数据稿在 6–8 kg / 低活动量均写 100--125g（双连字符），同系列小犬鸡肉同位置为 100-125g；表头为每日推荐量（g/天），不是单次喂食量。",
+        "status": "pending-confirmation",
+        "evidence": "media/包装资料/狗/小犬牛肉1.5-文字(3).docx；media/包装资料/狗/小犬牛肉3-文字(3).docx",
+        "blockRelease": true
+      },
+      {
+        "slug": "small-dog-chicken",
+        "field": "nutrition.phosphorus",
+        "detail": "小犬鸡肉 3kg 俄语栏写 ≥0.91%，乌/哈/英三语及 1.5kg 稿均为 ≥0.9%；按 ≥0.9% 收录。",
+        "status": "pending-confirmation",
+        "evidence": "media/包装资料/狗/小犬鸡肉3-文字(3).docx",
+        "blockRelease": false
+      },
+      {
+        "slug": "kitten-chicken",
+        "field": "feeding.header",
+        "detail": "幼猫鸡肉 1.5kg 俄语表头被拆断为“г/де”（源 docx 即如此），乌/英表头明确为每日量。",
+        "status": "pending-confirmation",
+        "evidence": "media/包装资料/狗/幼猫鸡肉1.5-文字(2).docx",
+        "blockRelease": false
       }
-    ]
+    ],
+    "transcription": {
+      "files": 19,
+      "modified": "2026-11-03",
+      "author": "docx 元数据 lastModifiedBy = UZ殷红文",
+      "originClaim": "PSD 文字图层 → data/work/sku-data/*.txt → gen-sku-docx.mjs 生成 docx → media/包装资料/狗/*.docx（2026-11-03 人工修改）。项目内无 PSD 原件。",
+      "physicalChecked": false,
+      "note": "数值可追溯到 docx 数据稿；小犬鸡肉 1.5kg 的 docx 已被人工改为单连字符 100-125g，其余 3 份仍为 100--125g。尚不能视为已对照实物包装/营养标签核验。"
+    }
   },
   "products": {
     "all-age-cat-chicken": {
@@ -103,7 +129,14 @@
         "media/包装资料/狗/全猫鸡肉1.5-文字(5).docx",
         "media/包装资料/狗/全猫鸡肉3-文字(4).docx",
         "media/包装资料/狗/全猫鸡肉10-文字(4).docx"
-      ]
+      ],
+      "verification": {
+        "status": "pending-physical",
+        "basis": "packaging-docx-19",
+        "approved": false,
+        "checkedAt": null,
+        "checkedBy": null
+      }
     },
     "all-age-cat-beef": {
       "nutrition": [
@@ -189,7 +222,14 @@
         "media/包装资料/狗/全猫牛肉1.5-文字(4).docx",
         "media/包装资料/狗/全猫牛肉3-文字(4).docx",
         "media/包装资料/狗/全猫牛肉10-文字(4).docx"
-      ]
+      ],
+      "verification": {
+        "status": "pending-physical",
+        "basis": "packaging-docx-19",
+        "approved": false,
+        "checkedAt": null,
+        "checkedBy": null
+      }
     },
     "kitten-chicken": {
       "nutrition": [
@@ -261,7 +301,14 @@
         "media/包装资料/狗/幼猫鸡肉1.5-文字(2).docx",
         "media/包装资料/狗/幼猫鸡肉3-文字(2).docx",
         "media/包装资料/狗/幼猫鸡肉10-文字(2).docx"
-      ]
+      ],
+      "verification": {
+        "status": "pending-physical",
+        "basis": "packaging-docx-19",
+        "approved": false,
+        "checkedAt": null,
+        "checkedBy": null
+      }
     },
     "all-age-dog-chicken": {
       "nutrition": [
@@ -347,7 +394,14 @@
         "media/包装资料/狗/全犬鸡肉1.5-文字(9).docx",
         "media/包装资料/狗/全犬鸡肉5-文字(8).docx",
         "media/包装资料/狗/全犬鸡肉15-文字(9).docx"
-      ]
+      ],
+      "verification": {
+        "status": "pending-physical",
+        "basis": "packaging-docx-19",
+        "approved": false,
+        "checkedAt": null,
+        "checkedBy": null
+      }
     },
     "all-age-dog-beef": {
       "nutrition": [
@@ -433,7 +487,14 @@
         "media/包装资料/狗/全犬牛肉1.5-文字(9).docx",
         "media/包装资料/狗/全犬牛肉5-文字(8).docx",
         "media/包装资料/狗/全犬牛肉15-文字(2).docx"
-      ]
+      ],
+      "verification": {
+        "status": "pending-physical",
+        "basis": "packaging-docx-19",
+        "approved": false,
+        "checkedAt": null,
+        "checkedBy": null
+      }
     },
     "small-dog-chicken": {
       "nutrition": [
@@ -517,7 +578,14 @@
       "sources": [
         "media/包装资料/狗/小犬鸡肉1.5-文字(3).docx",
         "media/包装资料/狗/小犬鸡肉3-文字(3).docx"
-      ]
+      ],
+      "verification": {
+        "status": "pending-physical",
+        "basis": "packaging-docx-19",
+        "approved": false,
+        "checkedAt": null,
+        "checkedBy": null
+      }
     },
     "small-dog-beef": {
       "nutrition": [
@@ -602,7 +670,15 @@
       "sources": [
         "media/包装资料/狗/小犬牛肉1.5-文字(3).docx",
         "media/包装资料/狗/小犬牛肉3-文字(3).docx"
-      ]
+      ],
+      "verification": {
+        "status": "pending-physical",
+        "basis": "packaging-docx-19",
+        "approved": false,
+        "checkedAt": null,
+        "checkedBy": null,
+        "feedingBlocked": true
+      }
     }
   }
 }
