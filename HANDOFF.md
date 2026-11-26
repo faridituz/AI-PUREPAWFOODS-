@@ -1,5 +1,11 @@
 # 双机交接班日志（HANDOFF.md）
 
+## [2026-11-26] - 官网现状审计完成（V2.2 第一批）
+- **刚完成**：公网只读审计 purepawfoods.com，报告在 `output/官网现状审计报告_20261126.md`。实测：WordPress(Twenty Twenty-Five + DesignSetGo) + Cloudflare + GoDaddy 网关；**线上为 8 语同页**（en/zh/ru/ar/uz/kk/ky/tg），非指令所称 6 语；HTML 173KB（内联 CSS 109KB，gzip 23.5KB）；八语正文 46KB 全部一次性加载；HTML 缓存 31 天（抓取时 Age 15.9 天）；无 hreflang、`html lang=en-US`、无表单（仅 wa.me/tel/mailto）；仅首页 1 个正式页，`/sample-page/`、`/hello-world/` 遗留可访问。
+- **老板已定**：①保留全部 8 语；②可提供 GoDaddy+WP+Cloudflare 全套权限（待安全交接）；③压测在本机+本地副本做。
+- **下一步**：等凭据交接后出服务器资源报告；随后按 V2.1 出三套原型（8 语统一架构），原型阶段再定 A=WordPress 改造 / B=静态生成。
+- **注意事项**：不得删除/合并任何语言；服务器资源数据在拿到权限前一律标"未验证"；不要在聊天窗粘贴明文密码，写入 `data/secure/hosting.env`（已 gitignore）。
+
 ## [2026-11-26] - 电源策略：15 分钟自动息屏
 - **刚完成**：本机与旧机均设置"15 分钟无操作自动息屏"（交流/电池均 900s）；旧机额外将睡眠、休眠设为永不（AC/DC），根治后台节点反复掉线。
 - **注意事项**：旧机电池模式下同样永不休眠；如需恢复默认，可执行 `powercfg /change standby-timeout-ac 30` 等命令调整。
