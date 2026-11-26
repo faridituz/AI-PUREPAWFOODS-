@@ -1,0 +1,13 @@
+{
+  "meta": { "draft": true, "note": "404 页文案草稿，8 语言，需母语审核。" },
+  "langs": {
+    "en": { "title": "Page not found", "body": "The page you are looking for does not exist or has been moved.", "home": "Back to home" },
+    "ru": { "title": "Страница не найдена", "body": "Запрашиваемая страница не существует или была перемещена.", "home": "На главную" },
+    "uz": { "title": "Sahifa topilmadi", "body": "So‘ralgan sahifa mavjud emas yoki ko‘chirilgan.", "home": "Bosh sahifaga" },
+    "zh": { "title": "页面不存在", "body": "您访问的页面不存在或已被移动。", "home": "返回首页" },
+    "ar": { "title": "الصفحة غير موجودة", "body": "الصفحة التي تبحث عنها غير موجودة أو تم نقلها.", "home": "العودة إلى الرئيسية" },
+    "kk": { "title": "Бет табылмады", "body": "Сұралған бет жоқ немесе жылжытылған.", "home": "Басты бетке" },
+    "ky": { "title": "Барак табылган жок", "body": "Суралган барак жок же жылдырылган.", "home": "Башкы бетке" },
+    "tg": { "title": "Саҳифа ёфт нашуд", "body": "Саҳифаи дархостшуда вуҷуд надорад ё кӯчонида шудааст.", "home": "Ба саҳифаи асосӣ" }
+  }
+}

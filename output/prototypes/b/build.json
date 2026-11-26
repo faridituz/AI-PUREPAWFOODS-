@@ -1,0 +1,19 @@
+{
+  "theme": "b",
+  "label": "B · 信任与咨询转化型",
+  "builtAt": "2026-11-26T11:29:28.859Z",
+  "pages": 104,
+  "errorPages": 8,
+  "langs": [
+    "en",
+    "zh",
+    "ru",
+    "ar",
+    "uz",
+    "kk",
+    "ky",
+    "tg"
+  ],
+  "origin": "http://localhost:4173",
+  "noindex": true
+}

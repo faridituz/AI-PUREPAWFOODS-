@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "updated": "2026-11-26",
+  "note": "可配置语言清单。enabled=false 的语言不会生成页面、不会出现在切换菜单、不会进入 hreflang/sitemap。新增语言必须经项目所有者批准后才能 enabled。",
+  "default": "en",
+  "languages": [
+    { "code": "en", "englishName": "English", "name": "English", "dir": "ltr", "enabled": true, "origin": "live-site", "publicApproved": true, "translation": "official" },
+    { "code": "zh", "englishName": "Chinese", "name": "中文", "dir": "ltr", "enabled": true, "origin": "live-site", "publicApproved": true, "translation": "prototype-draft" },
+    { "code": "ru", "englishName": "Russian", "name": "Русский", "dir": "ltr", "enabled": true, "origin": "live-site", "publicApproved": true, "translation": "official" },
+    { "code": "ar", "englishName": "Arabic", "name": "العربية", "dir": "rtl", "enabled": true, "origin": "live-site", "publicApproved": true, "translation": "prototype-draft" },
+    { "code": "uz", "englishName": "Uzbek", "name": "O‘zbekcha", "dir": "ltr", "enabled": true, "origin": "live-site", "publicApproved": true, "translation": "official" },
+    { "code": "kk", "englishName": "Kazakh", "name": "Қазақша", "dir": "ltr", "enabled": true, "origin": "live-site", "publicApproved": true, "translation": "prototype-draft" },
+    { "code": "ky", "englishName": "Kyrgyz", "name": "Кыргызча", "dir": "ltr", "enabled": true, "origin": "live-site", "publicApproved": true, "translation": "prototype-draft" },
+    { "code": "tg", "englishName": "Tajik", "name": "Тоҷикӣ", "dir": "ltr", "enabled": true, "origin": "live-site", "publicApproved": true, "translation": "prototype-draft" },
+    { "code": "kaa", "englishName": "Karakalpak", "name": "Qaraqalpaqsha", "dir": "ltr", "enabled": false, "origin": "candidate", "publicApproved": false, "translation": "none" },
+    { "code": "tr", "englishName": "Turkish", "name": "Türkçe", "dir": "ltr", "enabled": false, "origin": "candidate", "publicApproved": false, "translation": "none" }
+  ]
+}

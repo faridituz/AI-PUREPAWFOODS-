@@ -1,0 +1,229 @@
+{
+  "generatedAt": "2026-11-26T11:38:38.838Z",
+  "api": "http://localhost:4174",
+  "ui": "http://localhost:4175",
+  "total": 44,
+  "failed": 0,
+  "results": [
+    {
+      "name": "有效咨询提交",
+      "pass": true,
+      "detail": "ref=MP-45DD2D"
+    },
+    {
+      "name": "模拟线索写入本地文件",
+      "pass": true,
+      "detail": "lines=467"
+    },
+    {
+      "name": "必填校验（缺姓名）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "手机号格式校验",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "邮箱格式校验",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "隐私同意校验",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "经销商表单必填（公司/渠道）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "超长内容校验",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "错误 Content-Type 拒绝",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "跨站来源拒绝（CSRF）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "XSS 载荷安全落库",
+      "pass": true,
+      "detail": "masked=<***"
+    },
+    {
+      "name": "幂等键去重",
+      "pass": true,
+      "detail": "ref=MP-121C79"
+    },
+    {
+      "name": "蜜罐拦截（返回成功但不落库）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "日志脱敏（手机号/邮箱/姓名）",
+      "pass": true,
+      "detail": "+998***********67 / t***@example.com"
+    },
+    {
+      "name": "记录语言与营销来源",
+      "pass": true,
+      "detail": "lang=ru source=prototype-a"
+    },
+    {
+      "name": "限流触发 429",
+      "pass": true,
+      "detail": "200,200,200,200,200,429,429,429"
+    },
+    {
+      "name": "[a/en] 空表单前端拦截",
+      "pass": true,
+      "detail": "Please fill in the required fields."
+    },
+    {
+      "name": "[a/en] 咨询表单提交成功",
+      "pass": true,
+      "detail": "Thank you. Your inquiry has been recorded in this prototype."
+    },
+    {
+      "name": "[a/en] 经销商表单提交成功",
+      "pass": true,
+      "detail": "Thank you. Your partner request has been recorded "
+    },
+    {
+      "name": "[a/ru] 空表单前端拦截",
+      "pass": true,
+      "detail": "Пожалуйста, заполните обязательные поля."
+    },
+    {
+      "name": "[a/ru] 咨询表单提交成功",
+      "pass": true,
+      "detail": "Спасибо. Ваш вопрос записан в этом прототипе.Это подтвержден"
+    },
+    {
+      "name": "[a/ru] 经销商表单提交成功",
+      "pass": true,
+      "detail": "Спасибо. Ваша заявка записана в этом прототипе.Это"
+    },
+    {
+      "name": "[a/ar] 空表单前端拦截",
+      "pass": true,
+      "detail": "يرجى ملء الحقول المطلوبة."
+    },
+    {
+      "name": "[a/ar] 咨询表单提交成功",
+      "pass": true,
+      "detail": "شكراً. تم تسجيل سؤالك في هذا النموذج الأولي.هذا تأكيد من الن"
+    },
+    {
+      "name": "[a/ar] 经销商表单提交成功",
+      "pass": true,
+      "detail": "شكراً. تم تسجيل طلب الشراكة في هذا النموذج الأولي."
+    },
+    {
+      "name": "[b/en] 空表单前端拦截",
+      "pass": true,
+      "detail": "Please fill in the required fields."
+    },
+    {
+      "name": "[b/en] 咨询表单提交成功",
+      "pass": true,
+      "detail": "Thank you. Your inquiry has been recorded in this prototype."
+    },
+    {
+      "name": "[b/en] 经销商表单提交成功",
+      "pass": true,
+      "detail": "Thank you. Your partner request has been recorded "
+    },
+    {
+      "name": "[b/ru] 空表单前端拦截",
+      "pass": true,
+      "detail": "Пожалуйста, заполните обязательные поля."
+    },
+    {
+      "name": "[b/ru] 咨询表单提交成功",
+      "pass": true,
+      "detail": "Спасибо. Ваш вопрос записан в этом прототипе.Это подтвержден"
+    },
+    {
+      "name": "[b/ru] 经销商表单提交成功",
+      "pass": true,
+      "detail": "Спасибо. Ваша заявка записана в этом прототипе.Это"
+    },
+    {
+      "name": "[b/ar] 空表单前端拦截",
+      "pass": true,
+      "detail": "يرجى ملء الحقول المطلوبة."
+    },
+    {
+      "name": "[b/ar] 咨询表单提交成功",
+      "pass": true,
+      "detail": "شكراً. تم تسجيل سؤالك في هذا النموذج الأولي.هذا تأكيد من الن"
+    },
+    {
+      "name": "[b/ar] 经销商表单提交成功",
+      "pass": true,
+      "detail": "شكراً. تم تسجيل طلب الشراكة في هذا النموذج الأولي."
+    },
+    {
+      "name": "[c/en] 空表单前端拦截",
+      "pass": true,
+      "detail": "Please fill in the required fields."
+    },
+    {
+      "name": "[c/en] 咨询表单提交成功",
+      "pass": true,
+      "detail": "Thank you. Your inquiry has been recorded in this prototype."
+    },
+    {
+      "name": "[c/en] 经销商表单提交成功",
+      "pass": true,
+      "detail": "Thank you. Your partner request has been recorded "
+    },
+    {
+      "name": "[c/ru] 空表单前端拦截",
+      "pass": true,
+      "detail": "Пожалуйста, заполните обязательные поля."
+    },
+    {
+      "name": "[c/ru] 咨询表单提交成功",
+      "pass": true,
+      "detail": "Спасибо. Ваш вопрос записан в этом прототипе.Это подтвержден"
+    },
+    {
+      "name": "[c/ru] 经销商表单提交成功",
+      "pass": true,
+      "detail": "Спасибо. Ваша заявка записана в этом прототипе.Это"
+    },
+    {
+      "name": "[c/ar] 空表单前端拦截",
+      "pass": true,
+      "detail": "يرجى ملء الحقول المطلوبة."
+    },
+    {
+      "name": "[c/ar] 咨询表单提交成功",
+      "pass": true,
+      "detail": "شكراً. تم تسجيل سؤالك في هذا النموذج الأولي.هذا تأكيد من الن"
+    },
+    {
+      "name": "[c/ar] 经销商表单提交成功",
+      "pass": true,
+      "detail": "شكراً. تم تسجيل طلب الشراكة في هذا النموذج الأولي."
+    },
+    {
+      "name": "表单 XSS 注入无执行",
+      "pass": true,
+      "detail": "{\"injected\":0,\"xss\":false}"
+    }
+  ]
+}

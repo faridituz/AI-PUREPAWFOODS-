@@ -1,0 +1,62 @@
+{
+  "source": "https://purepawfoods.com/",
+  "fetched": "2026-11-26T10:34Z",
+  "url_structure": "single URL; language panels toggled client-side (radio + CSS :has), no per-language path",
+  "default_checked": "en",
+  "html_lang": "en-US",
+  "hreflang_count": 0,
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "zh",
+      "name": "中文"
+    },
+    {
+      "code": "ru",
+      "name": "Русский"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    },
+    {
+      "code": "uz",
+      "name": "O‘zbekcha"
+    },
+    {
+      "code": "kk",
+      "name": "Қазақша"
+    },
+    {
+      "code": "ky",
+      "name": "Кыргызча"
+    },
+    {
+      "code": "tg",
+      "name": "Тоҷикӣ"
+    }
+  ],
+  "panel_ids": [
+    "ar",
+    "en",
+    "kk",
+    "ky",
+    "ru",
+    "tg",
+    "uz",
+    "zh"
+  ],
+  "path_probes": {
+    "/ru": "404",
+    "/uz": "404",
+    "/en": "404",
+    "/ar": "404",
+    "/zh": "404",
+    "/kk": "404",
+    "/ky": "404",
+    "/tg": "404"
+  }
+}

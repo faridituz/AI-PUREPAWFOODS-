@@ -1,4 +1,5 @@
 import { spawn } from "node:child_process";
+import { writeFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -8,6 +9,11 @@ const targets = [
   ["原型A 英文首页", "http://localhost:4173/a/en/"],
   ["原型A 俄语首页", "http://localhost:4173/a/ru/"],
   ["原型A 乌语首页", "http://localhost:4173/a/uz/"],
+  ["原型A 产品页(俄)", "http://localhost:4173/a/ru/product/kitten-chicken/"],
+  ["原型B 俄语首页", "http://localhost:4173/b/ru/"],
+  ["原型B 联系表单页(俄)", "http://localhost:4173/b/ru/contact/"],
+  ["原型C 俄语首页", "http://localhost:4173/c/ru/"],
+  ["原型C 招商表单页(俄)", "http://localhost:4173/c/ru/partners/"],
   ["现有线上首页", "https://purepawfoods.com/"]
 ];
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -80,6 +86,7 @@ await send("Page.addScriptToEvaluateOnNewDocument", {
 console.log("移动端 390px + 模拟 3G（1.6Mbps / 150ms），清缓存，每页等待 7s");
 console.log("| 页面 | FCP | LCP | CLS | HTML传输 | 请求数 | 总传输 |");
 console.log("| :--- | ---: | ---: | ---: | ---: | ---: | ---: |");
+const perfRows = [];
 
 for (const [name, url] of targets) {
   await send("Page.navigate", { url });
@@ -103,8 +110,15 @@ for (const [name, url] of targets) {
     })()`
   });
   const v = result.value;
+  perfRows.push({ page: name, url, ...v });
   console.log(`| ${name} | ${v.fcp} ms | ${v.lcp} ms | ${v.cls} | ${(v.htmlBytes / 1024).toFixed(1)} KB | ${v.requests} | ${(v.totalBytes / 1024).toFixed(1)} KB |`);
 }
+
+mkdirSync(path.resolve(__dirname, "../../output/evidence"), { recursive: true });
+writeFileSync(
+  path.resolve(__dirname, "../../output/evidence/perf.json"),
+  JSON.stringify({ generatedAt: new Date().toISOString(), conditions: "390x844, 3G 1.6Mbps/150ms, cache disabled", rows: perfRows }, null, 2)
+);
 
 ws.close();
 chrome.kill();

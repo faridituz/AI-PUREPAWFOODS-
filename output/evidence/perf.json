@@ -1,0 +1,96 @@
+{
+  "generatedAt": "2026-11-26T11:24:10.826Z",
+  "conditions": "390x844, 3G 1.6Mbps/150ms, cache disabled",
+  "rows": [
+    {
+      "page": "原型A 英文首页",
+      "url": "http://localhost:4173/a/en/",
+      "fcp": 840,
+      "lcp": 840,
+      "cls": 0,
+      "htmlBytes": 11112,
+      "requests": 5,
+      "totalBytes": 74211
+    },
+    {
+      "page": "原型A 俄语首页",
+      "url": "http://localhost:4173/a/ru/",
+      "fcp": 648,
+      "lcp": 648,
+      "cls": 0,
+      "htmlBytes": 13561,
+      "requests": 5,
+      "totalBytes": 76660
+    },
+    {
+      "page": "原型A 乌语首页",
+      "url": "http://localhost:4173/a/uz/",
+      "fcp": 612,
+      "lcp": 612,
+      "cls": 0,
+      "htmlBytes": 11719,
+      "requests": 5,
+      "totalBytes": 74818
+    },
+    {
+      "page": "原型A 产品页(俄)",
+      "url": "http://localhost:4173/a/ru/product/kitten-chicken/",
+      "fcp": 616,
+      "lcp": 616,
+      "cls": 0,
+      "htmlBytes": 8604,
+      "requests": 5,
+      "totalBytes": 71703
+    },
+    {
+      "page": "原型B 俄语首页",
+      "url": "http://localhost:4173/b/ru/",
+      "fcp": 668,
+      "lcp": 668,
+      "cls": 0,
+      "htmlBytes": 19575,
+      "requests": 6,
+      "totalBytes": 123629
+    },
+    {
+      "page": "原型B 联系表单页(俄)",
+      "url": "http://localhost:4173/b/ru/contact/",
+      "fcp": 656,
+      "lcp": 656,
+      "cls": 0,
+      "htmlBytes": 11727,
+      "requests": 5,
+      "totalBytes": 76082
+    },
+    {
+      "page": "原型C 俄语首页",
+      "url": "http://localhost:4173/c/ru/",
+      "fcp": 640,
+      "lcp": 640,
+      "cls": 0,
+      "htmlBytes": 19734,
+      "requests": 6,
+      "totalBytes": 124477
+    },
+    {
+      "page": "原型C 招商表单页(俄)",
+      "url": "http://localhost:4173/c/ru/partners/",
+      "fcp": 600,
+      "lcp": 600,
+      "cls": 0,
+      "htmlBytes": 12234,
+      "requests": 5,
+      "totalBytes": 77278
+    },
+    {
+      "page": "现有线上首页",
+      "url": "https://purepawfoods.com/",
+      "fcp": 996,
+      "lcp": 996,
+      "cls": 0,
+      "htmlBytes": 23211,
+      "requests": 12,
+      "totalBytes": 187196
+    }
+  ]
+}

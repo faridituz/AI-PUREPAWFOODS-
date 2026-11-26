@@ -1,0 +1,512 @@
+{
+  "meta": {
+    "draft": true,
+    "note": "原型表单文案草稿。en/ru/uz 为人工可读级别，其余语言为 AI 草稿，上线前必须由母语人员审核。表单只提交到本地模拟 API，不连接真实 CRM。"
+  },
+  "langs": {
+    "en": {
+      "inquiry": {
+        "title": "Ask a question",
+        "lead": "Tell us about your pet and we will help you choose the right PURE PAW product. We reply on WhatsApp or by phone.",
+        "submit": "Send inquiry",
+        "success": "Thank you. Your inquiry has been recorded in this prototype.",
+        "mock_note": "Prototype demo: this form sends data to a local mock API, not to a real CRM."
+      },
+      "dealer": {
+        "title": "Become a PURE PAW partner",
+        "lead": "For pet shops, wholesalers and distributors in Uzbekistan. Send a request and we will contact you.",
+        "submit": "Send partner request",
+        "success": "Thank you. Your partner request has been recorded in this prototype."
+      },
+      "fields": {
+        "name": "Your name",
+        "phone": "Phone number",
+        "email": "Email (optional)",
+        "city": "City",
+        "message": "Message",
+        "company": "Company or shop name",
+        "channel": "Business type",
+        "volume": "Monthly volume",
+        "product": "Product of interest",
+        "consent": "I agree that my contact details may be used to answer this request."
+      },
+      "ph": {
+        "name": "e.g. Aziz Karimov",
+        "phone": "+998 90 000 00 00",
+        "email": "name@example.com",
+        "city": "Tashkent",
+        "message": "Your question",
+        "company": "Shop or company name",
+        "volume": "e.g. 200 packs per month"
+      },
+      "channel": {
+        "pet_shop": "Pet shop",
+        "wholesale": "Wholesaler",
+        "distributor": "Distributor",
+        "grooming": "Grooming / vet",
+        "other": "Other"
+      },
+      "errors": {
+        "required": "Please fill in the required fields.",
+        "phone": "Please enter a valid phone number.",
+        "email": "Please enter a valid email address.",
+        "too_long": "Some fields are too long. Please shorten them.",
+        "rate": "Too many requests. Please try again in a few minutes.",
+        "network": "Connection problem. Please try again.",
+        "server": "The request could not be saved. Please try again.",
+        "consent": "Please confirm the data processing notice."
+      },
+      "privacy": {
+        "title": "How we use your data",
+        "body": "Your contact details are used only to answer this request. In this prototype nothing is sent to a real CRM and no messages are sent to customers."
+      },
+      "status": {
+        "sending": "Sending…",
+        "success_extra": "This is a prototype confirmation, not a real sales lead.",
+        "error_retry": "Try again",
+        "received": "Reference"
+      }
+    },
+    "ru": {
+      "inquiry": {
+        "title": "Задать вопрос",
+        "lead": "Расскажите о вашем питомце, и мы поможем выбрать подходящий корм PURE PAW. Ответим в WhatsApp или по телефону.",
+        "submit": "Отправить вопрос",
+        "success": "Спасибо. Ваш вопрос записан в этом прототипе.",
+        "mock_note": "Демонстрация прототипа: форма отправляет данные в локальный тестовый API, а не в реальную CRM."
+      },
+      "dealer": {
+        "title": "Стать партнёром PURE PAW",
+        "lead": "Для зоомагазинов, оптовиков и дистрибьюторов в Узбекистане. Отправьте заявку, и мы свяжемся с вами.",
+        "submit": "Отправить заявку",
+        "success": "Спасибо. Ваша заявка записана в этом прототипе."
+      },
+      "fields": {
+        "name": "Ваше имя",
+        "phone": "Номер телефона",
+        "email": "Email (необязательно)",
+        "city": "Город",
+        "message": "Сообщение",
+        "company": "Название компании или магазина",
+        "channel": "Тип бизнеса",
+        "volume": "Объём закупки в месяц",
+        "product": "Интересующий продукт",
+        "consent": "Я согласен на использование моих контактных данных для ответа на этот запрос."
+      },
+      "ph": {
+        "name": "например, Азиз Каримов",
+        "phone": "+998 90 000 00 00",
+        "email": "name@example.com",
+        "city": "Ташкент",
+        "message": "Ваш вопрос",
+        "company": "Название магазина или компании",
+        "volume": "например, 200 упаковок в месяц"
+      },
+      "channel": {
+        "pet_shop": "Зоомагазин",
+        "wholesale": "Оптовик",
+        "distributor": "Дистрибьютор",
+        "grooming": "Груминг / ветклиника",
+        "other": "Другое"
+      },
+      "errors": {
+        "required": "Пожалуйста, заполните обязательные поля.",
+        "phone": "Введите корректный номер телефона.",
+        "email": "Введите корректный email.",
+        "too_long": "Некоторые поля слишком длинные. Сократите их.",
+        "rate": "Слишком много запросов. Попробуйте через несколько минут.",
+        "network": "Проблема с соединением. Попробуйте ещё раз.",
+        "server": "Не удалось сохранить запрос. Попробуйте ещё раз.",
+        "consent": "Подтвердите согласие на обработку данных."
+      },
+      "privacy": {
+        "title": "Как мы используем ваши данные",
+        "body": "Контактные данные используются только для ответа на этот запрос. В прототипе ничего не отправляется в реальную CRM и не рассылается клиентам."
+      },
+      "status": {
+        "sending": "Отправка…",
+        "success_extra": "Это подтверждение прототипа, а не реальная заявка в отдел продаж.",
+        "error_retry": "Повторить",
+        "received": "Номер"
+      }
+    },
+    "uz": {
+      "inquiry": {
+        "title": "Savol bering",
+        "lead": "Hayvoningiz haqida yozing, PURE PAW mahsulotini tanlashda yordam beramiz. WhatsApp yoki telefon orqali javob beramiz.",
+        "submit": "Savol yuborish",
+        "success": "Rahmat. Savolingiz ushbu prototipda qayd etildi.",
+        "mock_note": "Prototip namoyishi: forma ma’lumotlarni real CRM’ga emas, lokal sinov API’siga yuboradi."
+      },
+      "dealer": {
+        "title": "PURE PAW hamkori bo‘ling",
+        "lead": "O‘zbekistondagi zo‘r do‘konlar, ulgurji savdogarlar va distribyutorlar uchun. So‘rov yuboring, biz bog‘lanamiz.",
+        "submit": "Hamkorlik so‘rovi",
+        "success": "Rahmat. Hamkorlik so‘rovingiz ushbu prototipda qayd etildi."
+      },
+      "fields": {
+        "name": "Ismingiz",
+        "phone": "Telefon raqami",
+        "email": "Email (majburiy emas)",
+        "city": "Shahar",
+        "message": "Xabar",
+        "company": "Kompaniya yoki do‘kon nomi",
+        "channel": "Biznes turi",
+        "volume": "Oylik xarid hajmi",
+        "product": "Qiziqtirgan mahsulot",
+        "consent": "Kontakt ma’lumotlarim ushbu so‘rovga javob berish uchun ishlatilishiga roziman."
+      },
+      "ph": {
+        "name": "masalan, Aziz Karimov",
+        "phone": "+998 90 000 00 00",
+        "email": "name@example.com",
+        "city": "Toshkent",
+        "message": "Savolingiz",
+        "company": "Do‘kon yoki kompaniya nomi",
+        "volume": "masalan, oyiga 200 paket"
+      },
+      "channel": {
+        "pet_shop": "Zo‘r do‘koni",
+        "wholesale": "Ulgurji savdogar",
+        "distributor": "Distribyutor",
+        "grooming": "Gruming / veterinar",
+        "other": "Boshqa"
+      },
+      "errors": {
+        "required": "Iltimos, majburiy maydonlarni to‘ldiring.",
+        "phone": "To‘g‘ri telefon raqamini kiriting.",
+        "email": "To‘g‘ri email manzilini kiriting.",
+        "too_long": "Ba’zi maydonlar juda uzun. Qisqartiring.",
+        "rate": "Juda ko‘p so‘rov. Bir necha daqiqadan so‘ng urinib ko‘ring.",
+        "network": "Ulanishda muammo. Qayta urinib ko‘ring.",
+        "server": "So‘rovni saqlab bo‘lmadi. Qayta urinib ko‘ring.",
+        "consent": "Ma’lumotlarni qayta ishlash shartini tasdiqlang."
+      },
+      "privacy": {
+        "title": "Ma’lumotlaringiz qanday ishlatiladi",
+        "body": "Kontakt ma’lumotlari faqat ushbu so‘rovga javob berish uchun ishlatiladi. Prototipda hech narsa real CRM’ga yuborilmaydi va mijozlarga xabar yuborilmaydi."
+      },
+      "status": {
+        "sending": "Yuborilmoqda…",
+        "success_extra": "Bu prototip tasdiqi, real savdo lid emas.",
+        "error_retry": "Qayta urinish",
+        "received": "Raqam"
+      }
+    },
+    "zh": {
+      "inquiry": {
+        "title": "咨询产品",
+        "lead": "告诉我们您宠物的情况，我们会帮您选择合适的 PURE PAW 产品。我们通过 WhatsApp 或电话回复。",
+        "submit": "提交咨询",
+        "success": "谢谢。您的咨询已记录在本原型中。",
+        "mock_note": "原型演示：表单数据仅发送到本地模拟 API，不会进入真实 CRM。"
+      },
+      "dealer": {
+        "title": "成为 PURE PAW 合作伙伴",
+        "lead": "面向乌兹别克斯坦的宠物店、批发商与经销商。提交申请后我们会与您联系。",
+        "submit": "提交合作申请",
+        "success": "谢谢。您的合作申请已记录在本原型中。"
+      },
+      "fields": {
+        "name": "您的姓名",
+        "phone": "电话号码",
+        "email": "邮箱（选填）",
+        "city": "城市",
+        "message": "留言",
+        "company": "公司或店铺名称",
+        "channel": "业务类型",
+        "volume": "月采购量",
+        "product": "意向产品",
+        "consent": "我同意使用我的联系方式来回复本次请求。"
+      },
+      "ph": {
+        "name": "例如：阿齐兹",
+        "phone": "+998 90 000 00 00",
+        "email": "name@example.com",
+        "city": "塔什干",
+        "message": "您的问题",
+        "company": "店铺或公司名称",
+        "volume": "例如：每月 200 包"
+      },
+      "channel": {
+        "pet_shop": "宠物店",
+        "wholesale": "批发商",
+        "distributor": "经销商",
+        "grooming": "美容 / 兽医",
+        "other": "其他"
+      },
+      "errors": {
+        "required": "请填写必填项。",
+        "phone": "请输入有效的电话号码。",
+        "email": "请输入有效的邮箱地址。",
+        "too_long": "部分内容过长，请精简。",
+        "rate": "请求过于频繁，请几分钟后再试。",
+        "network": "网络连接异常，请重试。",
+        "server": "保存失败，请重试。",
+        "consent": "请勾选数据处理说明。"
+      },
+      "privacy": {
+        "title": "我们如何使用您的数据",
+        "body": "您的联系方式仅用于回复本次请求。本原型不会把数据发送到真实 CRM，也不会向客户发送消息。"
+      },
+      "status": {
+        "sending": "正在提交…",
+        "success_extra": "这是原型确认，并非真实销售线索。",
+        "error_retry": "重试",
+        "received": "编号"
+      }
+    },
+    "ar": {
+      "inquiry": {
+        "title": "اطرح سؤالاً",
+        "lead": "أخبرنا عن حيوانك الأليف وسنساعدك في اختيار منتج PURE PAW المناسب. نرد عبر واتساب أو الهاتف.",
+        "submit": "إرسال السؤال",
+        "success": "شكراً. تم تسجيل سؤالك في هذا النموذج الأولي.",
+        "mock_note": "عرض أولي: تُرسل بيانات النموذج إلى واجهة API محلية تجريبية، وليس إلى نظام CRM حقيقي."
+      },
+      "dealer": {
+        "title": "كن شريكاً لـ PURE PAW",
+        "lead": "لمتاجر الحيوانات وتجار الجملة والموزعين في أوزبكستان. أرسل طلباً وسنتواصل معك.",
+        "submit": "إرسال طلب الشراكة",
+        "success": "شكراً. تم تسجيل طلب الشراكة في هذا النموذج الأولي."
+      },
+      "fields": {
+        "name": "اسمك",
+        "phone": "رقم الهاتف",
+        "email": "البريد الإلكتروني (اختياري)",
+        "city": "المدينة",
+        "message": "الرسالة",
+        "company": "اسم الشركة أو المتجر",
+        "channel": "نوع النشاط",
+        "volume": "حجم الشراء الشهري",
+        "product": "المنتج المطلوب",
+        "consent": "أوافق على استخدام بيانات الاتصال للرد على هذا الطلب."
+      },
+      "ph": {
+        "name": "مثال: عزيز كريموف",
+        "phone": "+998 90 000 00 00",
+        "email": "name@example.com",
+        "city": "طشقند",
+        "message": "سؤالك",
+        "company": "اسم المتجر أو الشركة",
+        "volume": "مثال: 200 عبوة شهرياً"
+      },
+      "channel": {
+        "pet_shop": "متجر حيوانات",
+        "wholesale": "تاجر جملة",
+        "distributor": "موزع",
+        "grooming": "العناية / عيادة بيطرية",
+        "other": "أخرى"
+      },
+      "errors": {
+        "required": "يرجى ملء الحقول المطلوبة.",
+        "phone": "يرجى إدخال رقم هاتف صالح.",
+        "email": "يرجى إدخال بريد إلكتروني صالح.",
+        "too_long": "بعض الحقول طويلة جداً. يرجى اختصارها.",
+        "rate": "طلبات كثيرة جداً. حاول بعد بضع دقائق.",
+        "network": "مشكلة في الاتصال. حاول مرة أخرى.",
+        "server": "تعذّر حفظ الطلب. حاول مرة أخرى.",
+        "consent": "يرجى تأكيد إشعار معالجة البيانات."
+      },
+      "privacy": {
+        "title": "كيف نستخدم بياناتك",
+        "body": "تُستخدم بيانات الاتصال فقط للرد على هذا الطلب. في هذا النموذج الأولي لا يُرسل أي شيء إلى CRM حقيقي ولا تُرسل رسائل للعملاء."
+      },
+      "status": {
+        "sending": "جارٍ الإرسال…",
+        "success_extra": "هذا تأكيد من النموذج الأولي وليس طلب بيع حقيقياً.",
+        "error_retry": "إعادة المحاولة",
+        "received": "الرقم"
+      }
+    },
+    "kk": {
+      "inquiry": {
+        "title": "Сұрақ қою",
+        "lead": "Үй жануарыңыз туралы айтыңыз, PURE PAW өнімін таңдауға көмектесеміз. WhatsApp немесе телефон арқылы жауап береміз.",
+        "submit": "Сұрақ жіберу",
+        "success": "Рақмет. Сұрағыңыз осы прототипте тіркелді.",
+        "mock_note": "Прототип көрсетілімі: форма деректерді нақты CRM-ге емес, жергілікті сынақ API-іне жібереді."
+      },
+      "dealer": {
+        "title": "PURE PAW серіктесі болыңыз",
+        "lead": "Өзбекстандағы зоо дүкендер, көтерме саудагерлер және дистрибьюторлар үшін. Өтінім жіберіңіз, біз хабарласамыз.",
+        "submit": "Серіктестік өтінімі",
+        "success": "Рақмет. Серіктестік өтініміңіз осы прототипте тіркелді."
+      },
+      "fields": {
+        "name": "Атыңыз",
+        "phone": "Телефон нөмірі",
+        "email": "Email (міндетті емес)",
+        "city": "Қала",
+        "message": "Хабарлама",
+        "company": "Компания немесе дүкен атауы",
+        "channel": "Бизнес түрі",
+        "volume": "Айлық сатып алу көлемі",
+        "product": "Қызықтыратын өнім",
+        "consent": "Байланыс деректерімнің осы сұраққа жауап беру үшін пайдаланылуына келісемін."
+      },
+      "ph": {
+        "name": "мысалы, Әзіз Кәрімов",
+        "phone": "+998 90 000 00 00",
+        "email": "name@example.com",
+        "city": "Ташкент",
+        "message": "Сұрағыңыз",
+        "company": "Дүкен немесе компания атауы",
+        "volume": "мысалы, айына 200 қаптама"
+      },
+      "channel": {
+        "pet_shop": "Зоо дүкені",
+        "wholesale": "Көтерме саудагер",
+        "distributor": "Дистрибьютор",
+        "grooming": "Груминг / ветеринар",
+        "other": "Басқа"
+      },
+      "errors": {
+        "required": "Міндетті өрістерді толтырыңыз.",
+        "phone": "Дұрыс телефон нөмірін енгізіңіз.",
+        "email": "Дұрыс email енгізіңіз.",
+        "too_long": "Кейбір өрістер тым ұзын. Қысқартыңыз.",
+        "rate": "Сұраныс тым көп. Бірнеше минуттан кейін қайталаңыз.",
+        "network": "Қосылу мәселесі. Қайталап көріңіз.",
+        "server": "Сұранысты сақтау мүмкін болмады. Қайталап көріңіз.",
+        "consent": "Деректерді өңдеу ескертпесін растаңыз."
+      },
+      "privacy": {
+        "title": "Деректеріңізді қалай пайдаланамыз",
+        "body": "Байланыс деректері тек осы сұранысқа жауап беру үшін пайдаланылады. Прототипте нақты CRM-ге ештеңе жіберілмейді және клиенттерге хабарлама жіберілмейді."
+      },
+      "status": {
+        "sending": "Жіберілуде…",
+        "success_extra": "Бұл прототип растауы, нақты сату лиді емес.",
+        "error_retry": "Қайталау",
+        "received": "Нөмір"
+      }
+    },
+    "ky": {
+      "inquiry": {
+        "title": "Суроо берүү",
+        "lead": "Үй жаныбарыңыз тууралуу айтыңыз, PURE PAW продуктусун тандоого жардам беребиз. WhatsApp же телефон аркылуу жооп беребиз.",
+        "submit": "Суроо жөнөтүү",
+        "success": "Рахмат. Сурооңуз ушул прототипте катталды.",
+        "mock_note": "Прототип демонстрациясы: форма маалыматты реалдуу CRM’ге эмес, жергиликтүү сыноо API’сине жөнөтөт."
+      },
+      "dealer": {
+        "title": "PURE PAW өнөктөшү болуңуз",
+        "lead": "Өзбекстандагы зоо дүкөндөр, дүң сатуучулар жана дистрибьюторлор үчүн. Өтүнмө жөнөтүңүз, биз байланышабыз.",
+        "submit": "Өнөктөштүк өтүнмөсү",
+        "success": "Рахмат. Өнөктөштүк өтүнмөңүз ушул прототипте катталды."
+      },
+      "fields": {
+        "name": "Атыңыз",
+        "phone": "Телефон номери",
+        "email": "Email (милдеттүү эмес)",
+        "city": "Шаар",
+        "message": "Билдирүү",
+        "company": "Компания же дүкөн аталышы",
+        "channel": "Бизнес түрү",
+        "volume": "Айлык сатып алуу көлөмү",
+        "product": "Кызыктырган продукт",
+        "consent": "Байланыш маалыматым ушул суроого жооп берүү үчүн колдонулушуна макулмун."
+      },
+      "ph": {
+        "name": "мисалы, Азиз Каримов",
+        "phone": "+998 90 000 00 00",
+        "email": "name@example.com",
+        "city": "Ташкен",
+        "message": "Сурооңуз",
+        "company": "Дүкөн же компания аталышы",
+        "volume": "мисалы, айына 200 таңгак"
+      },
+      "channel": {
+        "pet_shop": "Зоо дүкөнү",
+        "wholesale": "Дүң сатуучу",
+        "distributor": "Дистрибьютор",
+        "grooming": "Груминг / ветеринар",
+        "other": "Башка"
+      },
+      "errors": {
+        "required": "Милдеттүү талааларды толтуруңуз.",
+        "phone": "Туура телефон номерин киргизиңиз.",
+        "email": "Туура email киргизиңиз.",
+        "too_long": "Айрым талаалар өтө узун. Кыскартыңыз.",
+        "rate": "Сурамдар өтө көп. Бир нече мүнөттөн кийин аракет кылыңыз.",
+        "network": "Байланыш көйгөйү. Кайра аракет кылыңыз.",
+        "server": "Сурамды сактоо мүмкүн болбоду. Кайра аракет кылыңыз.",
+        "consent": "Маалыматты иштетүү эскертүүсүн ырастаңыз."
+      },
+      "privacy": {
+        "title": "Маалыматыңызды кантип колдонобуз",
+        "body": "Байланыш маалыматыңыз ушул сурамга жооп берүү үчүн гана колдонулат. Прототипте реалдуу CRM’ге эч нерсе жөнөтүлбөйт жана кардарларга билдирүү жөнөтүлбөйт."
+      },
+      "status": {
+        "sending": "Жөнөтүлүүдө…",
+        "success_extra": "Бул прототип ырастоосу, реалдуу сатуу лиди эмес.",
+        "error_retry": "Кайталоо",
+        "received": "Номер"
+      }
+    },
+    "tg": {
+      "inquiry": {
+        "title": "Савол додан",
+        "lead": "Дар бораи ҳайвони хонагии худ нависед, барои интихоби маҳсулоти PURE PAW кӯмак мерасонем. Тавассути WhatsApp ё телефон ҷавоб медиҳем.",
+        "submit": "Ирсоли савол",
+        "success": "Ташаккур. Саволи шумо дар ин прототип сабт шуд.",
+        "mock_note": "Намоиши прототип: форма маълумотро ба CRM-и воқеӣ не, балки ба API-и санҷишии маҳаллӣ мефиристад."
+      },
+      "dealer": {
+        "title": "Шарики PURE PAW шавед",
+        "lead": "Барои дӯконҳои ҳайвонот, фурӯшандагони яклухт ва дистрибьюторҳо дар Ӯзбекистон. Дархост фиристед, мо бо шумо тамос мегирем.",
+        "submit": "Дархости шарикӣ",
+        "success": "Ташаккур. Дархости шарикии шумо дар ин прототип сабт шуд."
+      },
+      "fields": {
+        "name": "Номи шумо",
+        "phone": "Рақами телефон",
+        "email": "Email (ихтиёрӣ)",
+        "city": "Шаҳр",
+        "message": "Паём",
+        "company": "Номи ширкат ё дӯкон",
+        "channel": "Навъи тиҷорат",
+        "volume": "Ҳаҷми хариди моҳона",
+        "product": "Маҳсулоти дилхоҳ",
+        "consent": "Ман ба истифодаи маълумоти тамосам барои ҷавоб ба ин дархост розӣ ҳастам."
+      },
+      "ph": {
+        "name": "масалан, Азиз Каримов",
+        "phone": "+998 90 000 00 00",
+        "email": "name@example.com",
+        "city": "Тошканд",
+        "message": "Саволи шумо",
+        "company": "Номи дӯкон ё ширкат",
+        "volume": "масалан, 200 баста дар моҳ"
+      },
+      "channel": {
+        "pet_shop": "Дӯкони ҳайвонот",
+        "wholesale": "Фурӯшандаи яклухт",
+        "distributor": "Дистрибьютор",
+        "grooming": "Груминг / ветеринар",
+        "other": "Дигар"
+      },
+      "errors": {
+        "required": "Майдонҳои ҳатмиро пур кунед.",
+        "phone": "Рақами телефони дурустро ворид кунед.",
+        "email": "Email-и дурустро ворид кунед.",
+        "too_long": "Баъзе майдонҳо хеле дарозанд. Онҳоро кӯтоҳ кунед.",
+        "rate": "Дархостҳо хеле зиёданд. Баъд аз чанд дақиқа кӯшиш кунед.",
+        "network": "Мушкилии пайвастшавӣ. Боз кӯшиш кунед.",
+        "server": "Дархостро сабт карда нашуд. Боз кӯшиш кунед.",
+        "consent": "Огоҳии коркарди маълумотро тасдиқ кунед."
+      },
+      "privacy": {
+        "title": "Маълумоти шуморо чӣ тавр истифода мебарем",
+        "body": "Маълумоти тамос танҳо барои ҷавоб ба ин дархост истифода мешавад. Дар прототип ба CRM-и воқеӣ чизе фиристода намешавад ва ба мизоҷон паём фиристода намешавад."
+      },
+      "status": {
+        "sending": "Фиристода мешавад…",
+        "success_extra": "Ин тасдиқи прототип аст, на лиди воқеии фурӯш.",
+        "error_retry": "Такрор",
+        "received": "Рақам"
+      }
+    }
+  }
+}

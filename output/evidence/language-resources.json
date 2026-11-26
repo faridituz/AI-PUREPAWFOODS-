@@ -1,0 +1,138 @@
+{
+  "generatedAt": "2026-11-26T11:22:23.850Z",
+  "note": "每语言静态产物统计（未压缩，不含共享资源）",
+  "assets": {
+    "base.css": 16335,
+    "theme.css": 169,
+    "form.js": 5996,
+    "logo.png": 39399
+  },
+  "langs": {
+    "a": {
+      "en": {
+        "pages": 13,
+        "bytes": 101938,
+        "avgKB": 7.7
+      },
+      "zh": {
+        "pages": 13,
+        "bytes": 99822,
+        "avgKB": 7.5
+      },
+      "ru": {
+        "pages": 13,
+        "bytes": 121003,
+        "avgKB": 9.1
+      },
+      "ar": {
+        "pages": 13,
+        "bytes": 116497,
+        "avgKB": 8.8
+      },
+      "uz": {
+        "pages": 13,
+        "bytes": 106695,
+        "avgKB": 8
+      },
+      "kk": {
+        "pages": 13,
+        "bytes": 120357,
+        "avgKB": 9
+      },
+      "ky": {
+        "pages": 13,
+        "bytes": 120324,
+        "avgKB": 9
+      },
+      "tg": {
+        "pages": 13,
+        "bytes": 120313,
+        "avgKB": 9
+      }
+    },
+    "b": {
+      "en": {
+        "pages": 13,
+        "bytes": 106521,
+        "avgKB": 8
+      },
+      "zh": {
+        "pages": 13,
+        "bytes": 104231,
+        "avgKB": 7.8
+      },
+      "ru": {
+        "pages": 13,
+        "bytes": 127017,
+        "avgKB": 9.5
+      },
+      "ar": {
+        "pages": 13,
+        "bytes": 122017,
+        "avgKB": 9.2
+      },
+      "uz": {
+        "pages": 13,
+        "bytes": 111565,
+        "avgKB": 8.4
+      },
+      "kk": {
+        "pages": 13,
+        "bytes": 126293,
+        "avgKB": 9.5
+      },
+      "ky": {
+        "pages": 13,
+        "bytes": 126377,
+        "avgKB": 9.5
+      },
+      "tg": {
+        "pages": 13,
+        "bytes": 126302,
+        "avgKB": 9.5
+      }
+    },
+    "c": {
+      "en": {
+        "pages": 13,
+        "bytes": 106807,
+        "avgKB": 8
+      },
+      "zh": {
+        "pages": 13,
+        "bytes": 104571,
+        "avgKB": 7.9
+      },
+      "ru": {
+        "pages": 13,
+        "bytes": 127176,
+        "avgKB": 9.6
+      },
+      "ar": {
+        "pages": 13,
+        "bytes": 122178,
+        "avgKB": 9.2
+      },
+      "uz": {
+        "pages": 13,
+        "bytes": 111789,
+        "avgKB": 8.4
+      },
+      "kk": {
+        "pages": 13,
+        "bytes": 126484,
+        "avgKB": 9.5
+      },
+      "ky": {
+        "pages": 13,
+        "bytes": 126456,
+        "avgKB": 9.5
+      },
+      "tg": {
+        "pages": 13,
+        "bytes": 126464,
+        "avgKB": 9.5
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+/* 原型 C：国际品牌与招商综合型 —— 深海军蓝 + 金铜色，编辑排版感，招商前置 */
+:root {
+  --forest: #12263f;
+  --forest-deep: #0b1a2b;
+  --forest-soft: #1f3d5c;
+  --cream: #f5f1e6;
+  --cream-2: #ebe3d0;
+  --paper: #fffdf7;
+  --ink: #101a24;
+  --muted: #5a6673;
+  --line: rgba(16, 26, 36, .14);
+  --line-strong: rgba(16, 26, 36, .3);
+  --radius: 6px;
+  --gold: #b98a3c;
+  /* 小字号文字用加深金铜色，保证在米色底上 ≥4.5:1 对比度 */
+  --gold-ink: #7a5518;
+}
+
+h1 { font-size: clamp(2.5rem, 5.8vw, 4.8rem); }
+h2 { letter-spacing: .01em; }
+
+.eyebrow { color: var(--gold-ink); letter-spacing: .22em; }
+.eyebrow a { border-bottom-color: var(--gold-ink); }
+
+.hero { padding-top: clamp(56px, 9vw, 118px); }
+.hero-seal img { border: 1px solid var(--gold); padding: 12px; background: var(--paper); box-shadow: 0 30px 80px rgba(11, 26, 43, .22); }
+.lead { color: #485463; max-width: 42ch; }
+
+.btn-solid { background: var(--forest); }
+.btn-solid:hover { background: var(--gold); color: #101a24; }
+.btn-ghost { border-color: var(--gold); color: var(--forest); }
+.btn-ghost:hover { background: var(--gold); color: #101a24; }
+
+.trust-strip { background: var(--forest-deep); }
+.trust-strip span { background: transparent; border: 1px solid var(--gold); color: var(--gold); }
+
+.group-card { background: var(--forest); border-radius: 2px; }
+.group-card:hover { background: var(--forest-soft); }
+.group-card .count { color: var(--gold); opacity: .9; font-family: var(--serif); }
+.card { border-radius: 2px; border-top: 2px solid var(--gold); }
+.card .num { color: var(--gold); }
+
+.dealer-band { background: var(--cream-2); max-width: none; }
+.dealer-band > .dealer-copy, .dealer-band > .dealer-form { max-width: none; }
+.dealer-band { padding-inline: clamp(24px, 6vw, 72px); }
+.dealer-copy h2 { max-width: 16ch; }
+.lead-form { border-radius: 2px; border-top: 3px solid var(--gold); }
+.benefit-list li::before { color: var(--gold); }
+
+.contact-band { background: var(--forest-deep); }
+.contact-band .btn-ghost { border-color: var(--gold); }
+.site-foot { background: var(--cream-2); }
+
+@media (min-width: 961px) {
+  .dealer-band { padding-inline: max(24px, calc((100vw - var(--width)) / 2)); }
+}

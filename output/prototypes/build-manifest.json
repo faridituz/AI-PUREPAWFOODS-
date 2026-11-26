@@ -1,0 +1,36 @@
+{
+  "builtAt": "2026-11-26T11:29:28.859Z",
+  "origin": "http://localhost:4173",
+  "noindex": true,
+  "langs": [
+    "en",
+    "zh",
+    "ru",
+    "ar",
+    "uz",
+    "kk",
+    "ky",
+    "tg"
+  ],
+  "totalPages": 312,
+  "themes": [
+    {
+      "key": "a",
+      "label": "A · 国际高端品牌型",
+      "pages": 104,
+      "url": "http://localhost:4173/a/en/"
+    },
+    {
+      "key": "b",
+      "label": "B · 信任与咨询转化型",
+      "pages": 104,
+      "url": "http://localhost:4173/b/en/"
+    },
+    {
+      "key": "c",
+      "label": "C · 国际品牌与招商综合型",
+      "pages": 104,
+      "url": "http://localhost:4173/c/en/"
+    }
+  ]
+}
