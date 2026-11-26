@@ -1,0 +1,578 @@
+{
+  "en": {
+    "hero_title": "Closer to nature.\nNutrition with care.",
+    "hero_lead": "Dog & cat food, thoughtfully considered. Discover PurePaw and find the right range for your companion.",
+    "cta_ranges": "Explore our ranges ↗",
+    "philosophy_title": "Pets are family. Every meal deserves thoughtful care.",
+    "philosophy_body": "PURE PAW takes inspiration from a way of life close to nature, with attention to ingredients, nutrition and everyday feeding. We put care for pets into every choice, every portion and every day together.",
+    "ranges_title": "Explore our ranges",
+    "products": [
+      {
+        "name": "All-age cat food · Chicken",
+        "net": "Net weight: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "View ingredients & sizes",
+        "ingredients_heading": "Ingredients",
+        "ingredients": "Chicken + bone-in chicken 48%, corn gluten meal, corn, rice, beet pulp, chicken fat.",
+        "ask": "Ask about this product ↗"
+      },
+      {
+        "name": "All-age cat food · Beef",
+        "net": "Net weight: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "View ingredients & sizes",
+        "ingredients_heading": "Ingredients",
+        "ingredients": "Beef + bone-in beef 48%, corn gluten meal, corn, rice, beet pulp, chicken fat.",
+        "ask": "Ask about this product ↗"
+      },
+      {
+        "name": "Kitten food · Chicken",
+        "net": "Net weight: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "View ingredients & sizes",
+        "ingredients_heading": "Ingredients",
+        "ingredients": "Chicken + bone-in chicken 51%, corn gluten meal, corn, rice, beet pulp, chicken fat.",
+        "ask": "Ask about this product ↗"
+      },
+      {
+        "name": "All-age dog food · Chicken",
+        "net": "Net weight: 1.5 kg / 5 kg / 15 kg",
+        "ingredients_label": "View ingredients & sizes",
+        "ingredients_heading": "Ingredients",
+        "ingredients": "Chicken + bone-in chicken 40%, corn gluten meal, corn, rice, beet pulp, chicken fat.",
+        "ask": "Ask about this product ↗"
+      },
+      {
+        "name": "All-age dog food · Beef",
+        "net": "Net weight: 1.5 kg / 5 kg / 15 kg",
+        "ingredients_label": "View ingredients & sizes",
+        "ingredients_heading": "Ingredients",
+        "ingredients": "Beef + bone-in beef 48%, corn gluten meal, corn, rice, beet pulp, chicken fat.",
+        "ask": "Ask about this product ↗"
+      },
+      {
+        "name": "Small dog food · Chicken",
+        "net": "Net weight: 1.5 kg / 3 kg",
+        "ingredients_label": "View ingredients & sizes",
+        "ingredients_heading": "Ingredients",
+        "ingredients": "Chicken + bone-in chicken 40%, corn gluten meal, corn, rice, beet pulp, chicken fat.",
+        "ask": "Ask about this product ↗"
+      },
+      {
+        "name": "Small dog food · Beef",
+        "net": "Net weight: 1.5 kg / 3 kg",
+        "ingredients_label": "View ingredients & sizes",
+        "ingredients_heading": "Ingredients",
+        "ingredients": "Beef + bone-in beef 48%, corn gluten meal, corn, rice, beet pulp, chicken fat.",
+        "ask": "Ask about this product ↗"
+      }
+    ],
+    "note": "The stated animal-ingredient percentage is the combined amount of meat and bone-in meat. Refer to the product packaging for feeding instructions and the full label.",
+    "contact_title": "Let’s find their next favourite.",
+    "contact_body": "Contact us for product details, availability and business enquiries.",
+    "cta_whatsapp": "Enquire on WhatsApp ↗",
+    "cta_email": "Email us ↗",
+    "address": "PURE PAW NUTRITION MCHJ\nTashkent, Korasuv\n+998 95 826 69 99\nfarid.it.uz@gmail.com"
+  },
+  "zh": {
+    "hero_title": "亲近自然，\n用心滋养。",
+    "hero_lead": "关注犬猫每一天的饮食。探索 PurePaw，为你的伙伴了解适合的产品系列。",
+    "cta_ranges": "探索产品系列 ↗",
+    "philosophy_title": "宠物是家人，每一餐都值得用心对待。",
+    "philosophy_body": "PURE PAW 从亲近自然的生活方式中汲取灵感，关注原料、营养与日常喂养。我们把对宠物的关爱，融入每一次选择、每一份粮食，以及共同度过的每一天。",
+    "ranges_title": "探索产品系列",
+    "products": [
+      {
+        "name": "全龄猫粮 · 鸡肉",
+        "net": "净重: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "查看配料与规格",
+        "ingredients_heading": "配料",
+        "ingredients": "鸡肉＋带骨鸡肉 48%, 玉米蛋白粉、玉米、大米、甜菜粕、鸡油。",
+        "ask": "咨询这款产品 ↗"
+      },
+      {
+        "name": "全龄猫粮 · 牛肉",
+        "net": "净重: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "查看配料与规格",
+        "ingredients_heading": "配料",
+        "ingredients": "牛肉＋带骨牛肉 48%, 玉米蛋白粉、玉米、大米、甜菜粕、鸡油。",
+        "ask": "咨询这款产品 ↗"
+      },
+      {
+        "name": "幼猫粮 · 鸡肉",
+        "net": "净重: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "查看配料与规格",
+        "ingredients_heading": "配料",
+        "ingredients": "鸡肉＋带骨鸡肉 51%, 玉米蛋白粉、玉米、大米、甜菜粕、鸡油。",
+        "ask": "咨询这款产品 ↗"
+      },
+      {
+        "name": "全龄犬粮 · 鸡肉",
+        "net": "净重: 1.5 kg / 5 kg / 15 kg",
+        "ingredients_label": "查看配料与规格",
+        "ingredients_heading": "配料",
+        "ingredients": "鸡肉＋带骨鸡肉 40%, 玉米蛋白粉、玉米、大米、甜菜粕、鸡油。",
+        "ask": "咨询这款产品 ↗"
+      },
+      {
+        "name": "全龄犬粮 · 牛肉",
+        "net": "净重: 1.5 kg / 5 kg / 15 kg",
+        "ingredients_label": "查看配料与规格",
+        "ingredients_heading": "配料",
+        "ingredients": "牛肉＋带骨牛肉 48%, 玉米蛋白粉、玉米、大米、甜菜粕、鸡油。",
+        "ask": "咨询这款产品 ↗"
+      },
+      {
+        "name": "小型犬粮 · 鸡肉",
+        "net": "净重: 1.5 kg / 3 kg",
+        "ingredients_label": "查看配料与规格",
+        "ingredients_heading": "配料",
+        "ingredients": "鸡肉＋带骨鸡肉 40%, 玉米蛋白粉、玉米、大米、甜菜粕、鸡油。",
+        "ask": "咨询这款产品 ↗"
+      },
+      {
+        "name": "小型犬粮 · 牛肉",
+        "net": "净重: 1.5 kg / 3 kg",
+        "ingredients_label": "查看配料与规格",
+        "ingredients_heading": "配料",
+        "ingredients": "牛肉＋带骨牛肉 48%, 玉米蛋白粉、玉米、大米、甜菜粕、鸡油。",
+        "ask": "咨询这款产品 ↗"
+      }
+    ],
+    "note": "动物原料比例指肉与带骨肉两项的合计比例。喂养方法及完整标签信息请参照产品包装。",
+    "contact_title": "为它，了解更多。",
+    "contact_body": "欢迎咨询产品详情、供货情况与商业合作。",
+    "cta_whatsapp": "WhatsApp 咨询 ↗",
+    "cta_email": "发送邮件 ↗",
+    "address": "PURE PAW NUTRITION MCHJ\nTashkent, Korasuv\n+998 95 826 69 99\nfarid.it.uz@gmail.com"
+  },
+  "ru": {
+    "hero_title": "Ближе к природе —\nпитание с заботой.",
+    "hero_lead": "Корма для собак и кошек. Откройте для себя PurePaw и познакомьтесь с нашими линейками.",
+    "cta_ranges": "Наши линейки ↗",
+    "philosophy_title": "Питомцы — это семья, и каждый приём пищи заслуживает внимательного отношения.",
+    "philosophy_body": "PURE PAW черпает вдохновение в образе жизни, близком к природе, уделяя внимание ингредиентам, питанию и ежедневному кормлению. Мы вкладываем заботу о питомцах в каждый выбор, каждую порцию корма и каждый день, проведённый вместе.",
+    "ranges_title": "Наши линейки",
+    "products": [
+      {
+        "name": "Корм для кошек всех возрастов · Курица",
+        "net": "Масса нетто: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "Состав и фасовка",
+        "ingredients_heading": "Ингредиенты",
+        "ingredients": "Куриное мясо + куриное мясо на кости 48%, кукурузный глютен, кукуруза, рис, свекловичный жом, куриный жир.",
+        "ask": "Спросить об этом продукте ↗"
+      },
+      {
+        "name": "Корм для кошек всех возрастов · Говядина",
+        "net": "Масса нетто: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "Состав и фасовка",
+        "ingredients_heading": "Ингредиенты",
+        "ingredients": "Говядина + говядина на кости 48%, кукурузный глютен, кукуруза, рис, свекловичный жом, куриный жир.",
+        "ask": "Спросить об этом продукте ↗"
+      },
+      {
+        "name": "Корм для котят · Курица",
+        "net": "Масса нетто: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "Состав и фасовка",
+        "ingredients_heading": "Ингредиенты",
+        "ingredients": "Куриное мясо + куриное мясо на кости 51%, кукурузный глютен, кукуруза, рис, свекловичный жом, куриный жир.",
+        "ask": "Спросить об этом продукте ↗"
+      },
+      {
+        "name": "Корм для собак всех возрастов · Курица",
+        "net": "Масса нетто: 1.5 kg / 5 kg / 15 kg",
+        "ingredients_label": "Состав и фасовка",
+        "ingredients_heading": "Ингредиенты",
+        "ingredients": "Куриное мясо + куриное мясо на кости 40%, кукурузный глютен, кукуруза, рис, свекловичный жом, куриный жир.",
+        "ask": "Спросить об этом продукте ↗"
+      },
+      {
+        "name": "Корм для собак всех возрастов · Говядина",
+        "net": "Масса нетто: 1.5 kg / 5 kg / 15 kg",
+        "ingredients_label": "Состав и фасовка",
+        "ingredients_heading": "Ингредиенты",
+        "ingredients": "Говядина + говядина на кости 48%, кукурузный глютен, кукуруза, рис, свекловичный жом, куриный жир.",
+        "ask": "Спросить об этом продукте ↗"
+      },
+      {
+        "name": "Корм для собак мелких пород · Курица",
+        "net": "Масса нетто: 1.5 kg / 3 kg",
+        "ingredients_label": "Состав и фасовка",
+        "ingredients_heading": "Ингредиенты",
+        "ingredients": "Куриное мясо + куриное мясо на кости 40%, кукурузный глютен, кукуруза, рис, свекловичный жом, куриный жир.",
+        "ask": "Спросить об этом продукте ↗"
+      },
+      {
+        "name": "Корм для собак мелких пород · Говядина",
+        "net": "Масса нетто: 1.5 kg / 3 kg",
+        "ingredients_label": "Состав и фасовка",
+        "ingredients_heading": "Ингредиенты",
+        "ingredients": "Говядина + говядина на кости 48%, кукурузный глютен, кукуруза, рис, свекловичный жом, куриный жир.",
+        "ask": "Спросить об этом продукте ↗"
+      }
+    ],
+    "note": "Доля животных ингредиентов указана суммарно для мяса и мяса на кости. Рекомендации по кормлению и полная информация приведены на упаковке.",
+    "contact_title": "Узнайте больше для своего питомца.",
+    "contact_body": "Свяжитесь с нами по вопросам продукции, наличия и сотрудничества.",
+    "cta_whatsapp": "Написать в WhatsApp ↗",
+    "cta_email": "Написать по email ↗",
+    "address": "PURE PAW NUTRITION MCHJ\nTashkent, Korasuv\n+998 95 826 69 99\nfarid.it.uz@gmail.com"
+  },
+  "ar": {
+    "hero_title": "أقرب إلى الطبيعة،\nتغذية بعناية.",
+    "hero_lead": "أغذية للكلاب والقطط. اكتشف PurePaw وتعرّف على مجموعات منتجاتنا.",
+    "cta_ranges": "استكشف المنتجات ↗",
+    "philosophy_title": "الحيوانات الأليفة من العائلة، وكل وجبة تستحق الاهتمام.",
+    "philosophy_body": "تستلهم PURE PAW من أسلوب حياة قريب من الطبيعة، مع الاهتمام بالمكونات والتغذية والإطعام اليومي. نضع رعايتنا للحيوانات الأليفة في كل اختيار وكل حصة طعام وكل يوم نقضيه معًا.",
+    "ranges_title": "استكشف المنتجات",
+    "products": [
+      {
+        "name": "أغذية القطط لجميع الأعمار · دجاج",
+        "net": "الوزن الصافي: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "المكونات وأحجام العبوات",
+        "ingredients_heading": "المكونات",
+        "ingredients": "لحم دجاج + لحم دجاج بالعظم 48%, مسحوق غلوتين الذرة، ذرة، أرز، لب البنجر، دهن الدجاج.",
+        "ask": "استفسر عن هذا المنتج ↗"
+      },
+      {
+        "name": "أغذية القطط لجميع الأعمار · لحم بقر",
+        "net": "الوزن الصافي: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "المكونات وأحجام العبوات",
+        "ingredients_heading": "المكونات",
+        "ingredients": "لحم بقر + لحم بقر بالعظم 48%, مسحوق غلوتين الذرة، ذرة، أرز، لب البنجر، دهن الدجاج.",
+        "ask": "استفسر عن هذا المنتج ↗"
+      },
+      {
+        "name": "أغذية القطط الصغيرة · دجاج",
+        "net": "الوزن الصافي: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "المكونات وأحجام العبوات",
+        "ingredients_heading": "المكونات",
+        "ingredients": "لحم دجاج + لحم دجاج بالعظم 51%, مسحوق غلوتين الذرة، ذرة، أرز، لب البنجر، دهن الدجاج.",
+        "ask": "استفسر عن هذا المنتج ↗"
+      },
+      {
+        "name": "أغذية الكلاب لجميع الأعمار · دجاج",
+        "net": "الوزن الصافي: 1.5 kg / 5 kg / 15 kg",
+        "ingredients_label": "المكونات وأحجام العبوات",
+        "ingredients_heading": "المكونات",
+        "ingredients": "لحم دجاج + لحم دجاج بالعظم 40%, مسحوق غلوتين الذرة، ذرة، أرز، لب البنجر، دهن الدجاج.",
+        "ask": "استفسر عن هذا المنتج ↗"
+      },
+      {
+        "name": "أغذية الكلاب لجميع الأعمار · لحم بقر",
+        "net": "الوزن الصافي: 1.5 kg / 5 kg / 15 kg",
+        "ingredients_label": "المكونات وأحجام العبوات",
+        "ingredients_heading": "المكونات",
+        "ingredients": "لحم بقر + لحم بقر بالعظم 48%, مسحوق غلوتين الذرة، ذرة، أرز، لب البنجر، دهن الدجاج.",
+        "ask": "استفسر عن هذا المنتج ↗"
+      },
+      {
+        "name": "أغذية الكلاب صغيرة السلالة · دجاج",
+        "net": "الوزن الصافي: 1.5 kg / 3 kg",
+        "ingredients_label": "المكونات وأحجام العبوات",
+        "ingredients_heading": "المكونات",
+        "ingredients": "لحم دجاج + لحم دجاج بالعظم 40%, مسحوق غلوتين الذرة، ذرة، أرز، لب البنجر، دهن الدجاج.",
+        "ask": "استفسر عن هذا المنتج ↗"
+      },
+      {
+        "name": "أغذية الكلاب صغيرة السلالة · لحم بقر",
+        "net": "الوزن الصافي: 1.5 kg / 3 kg",
+        "ingredients_label": "المكونات وأحجام العبوات",
+        "ingredients_heading": "المكونات",
+        "ingredients": "لحم بقر + لحم بقر بالعظم 48%, مسحوق غلوتين الذرة، ذرة، أرز، لب البنجر، دهن الدجاج.",
+        "ask": "استفسر عن هذا المنتج ↗"
+      }
+    ],
+    "note": "تمثل نسبة المكونات الحيوانية مجموع اللحم واللحم بالعظم. راجع العبوة لإرشادات التغذية ومعلومات الملصق الكاملة.",
+    "contact_title": "اكتشف المزيد من أجل رفيقك.",
+    "contact_body": "تواصل معنا للاستفسار عن المنتجات وتوفرها والتعاون التجاري.",
+    "cta_whatsapp": "تواصل عبر واتساب ↗",
+    "cta_email": "راسلنا بالبريد ↗",
+    "address": "PURE PAW NUTRITION MCHJ\nTashkent, Korasuv\n+998 95 826 69 99\nfarid.it.uz@gmail.com"
+  },
+  "uz": {
+    "hero_title": "Tabiatga yaqin —\ng‘amxo‘rlik bilan oziqlantirish.",
+    "hero_lead": "Itlar va mushuklar uchun ozuqalar. PurePaw va mahsulot turlarimiz bilan tanishing.",
+    "cta_ranges": "Mahsulotlarni ko‘rish ↗",
+    "philosophy_title": "Uy hayvonlari — oila a’zolari. Har bir taom e’tiborga loyiq.",
+    "philosophy_body": "PURE PAW tabiatga yaqin turmush tarzidan ilhomlanib, ingredientlar, oziqlanish va kundalik oziqlantirishga e’tibor beradi. Har bir tanlov, har bir porsiya va birga o‘tgan har bir kunga uy hayvonlariga bo‘lgan mehrimizni singdiramiz.",
+    "ranges_title": "Mahsulotlarni ko‘rish",
+    "products": [
+      {
+        "name": "Barcha yoshdagi mushuklar uchun · Tovuq",
+        "net": "Sof og‘irligi: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "Tarkibi va qadoq hajmi",
+        "ingredients_heading": "Ingredientlar",
+        "ingredients": "Tovuq go‘shti + suyakli tovuq go‘shti 48%, makkajo‘xori oqsil uni, makkajo‘xori, guruch, lavlagi pulpasi, tovuq yog‘i.",
+        "ask": "Mahsulot haqida so‘rash ↗"
+      },
+      {
+        "name": "Barcha yoshdagi mushuklar uchun · Mol go‘shti",
+        "net": "Sof og‘irligi: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "Tarkibi va qadoq hajmi",
+        "ingredients_heading": "Ingredientlar",
+        "ingredients": "Mol go‘shti + suyakli mol go‘shti 48%, makkajo‘xori oqsil uni, makkajo‘xori, guruch, lavlagi pulpasi, tovuq yog‘i.",
+        "ask": "Mahsulot haqida so‘rash ↗"
+      },
+      {
+        "name": "Mushukchalar uchun · Tovuq",
+        "net": "Sof og‘irligi: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "Tarkibi va qadoq hajmi",
+        "ingredients_heading": "Ingredientlar",
+        "ingredients": "Tovuq go‘shti + suyakli tovuq go‘shti 51%, makkajo‘xori oqsil uni, makkajo‘xori, guruch, lavlagi pulpasi, tovuq yog‘i.",
+        "ask": "Mahsulot haqida so‘rash ↗"
+      },
+      {
+        "name": "Barcha yoshdagi itlar uchun · Tovuq",
+        "net": "Sof og‘irligi: 1.5 kg / 5 kg / 15 kg",
+        "ingredients_label": "Tarkibi va qadoq hajmi",
+        "ingredients_heading": "Ingredientlar",
+        "ingredients": "Tovuq go‘shti + suyakli tovuq go‘shti 40%, makkajo‘xori oqsil uni, makkajo‘xori, guruch, lavlagi pulpasi, tovuq yog‘i.",
+        "ask": "Mahsulot haqida so‘rash ↗"
+      },
+      {
+        "name": "Barcha yoshdagi itlar uchun · Mol go‘shti",
+        "net": "Sof og‘irligi: 1.5 kg / 5 kg / 15 kg",
+        "ingredients_label": "Tarkibi va qadoq hajmi",
+        "ingredients_heading": "Ingredientlar",
+        "ingredients": "Mol go‘shti + suyakli mol go‘shti 48%, makkajo‘xori oqsil uni, makkajo‘xori, guruch, lavlagi pulpasi, tovuq yog‘i.",
+        "ask": "Mahsulot haqida so‘rash ↗"
+      },
+      {
+        "name": "Kichik zotli itlar uchun · Tovuq",
+        "net": "Sof og‘irligi: 1.5 kg / 3 kg",
+        "ingredients_label": "Tarkibi va qadoq hajmi",
+        "ingredients_heading": "Ingredientlar",
+        "ingredients": "Tovuq go‘shti + suyakli tovuq go‘shti 40%, makkajo‘xori oqsil uni, makkajo‘xori, guruch, lavlagi pulpasi, tovuq yog‘i.",
+        "ask": "Mahsulot haqida so‘rash ↗"
+      },
+      {
+        "name": "Kichik zotli itlar uchun · Mol go‘shti",
+        "net": "Sof og‘irligi: 1.5 kg / 3 kg",
+        "ingredients_label": "Tarkibi va qadoq hajmi",
+        "ingredients_heading": "Ingredientlar",
+        "ingredients": "Mol go‘shti + suyakli mol go‘shti 48%, makkajo‘xori oqsil uni, makkajo‘xori, guruch, lavlagi pulpasi, tovuq yog‘i.",
+        "ask": "Mahsulot haqida so‘rash ↗"
+      }
+    ],
+    "note": "Hayvon xomashyosi ulushi go‘sht va suyakli go‘shtning jami ulushidir. Oziqlantirish ko‘rsatmalari va to‘liq ma’lumot uchun qadoqqa qarang.",
+    "contact_title": "Do‘stingiz uchun ko‘proq bilib oling.",
+    "contact_body": "Mahsulot tafsilotlari, mavjudligi va hamkorlik bo‘yicha biz bilan bog‘laning.",
+    "cta_whatsapp": "WhatsApp orqali yozish ↗",
+    "cta_email": "Email yuborish ↗",
+    "address": "PURE PAW NUTRITION MCHJ\nTashkent, Korasuv\n+998 95 826 69 99\nfarid.it.uz@gmail.com"
+  },
+  "kk": {
+    "hero_title": "Табиғатқа жақын —\nқамқорлықпен азықтандыру.",
+    "hero_lead": "Иттер мен мысықтарға арналған азықтар. PurePaw өнімдерімен танысыңыз.",
+    "cta_ranges": "Өнімдерді көру ↗",
+    "philosophy_title": "Үй жануарлары — отбасы. Әрбір асқа мұқият қарау керек.",
+    "philosophy_body": "PURE PAW табиғатқа жақын өмір салтынан шабыт алып, құрамдастарға, қоректенуге және күнделікті азықтандыруға көңіл бөледі. Жануарларға деген қамқорлығымызды әр таңдауымызға, әр азық үлесіне және бірге өткізген әр күнге арнаймыз.",
+    "ranges_title": "Өнімдерді көру",
+    "products": [
+      {
+        "name": "Барлық жастағы мысықтарға · Тауық еті",
+        "net": "Таза салмағы: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "Құрамы мен қаптамасы",
+        "ingredients_heading": "Құрамы",
+        "ingredients": "Тауық еті + сүйекті тауық еті 48%, жүгері глютені, жүгері, күріш, қызылша сығындысы, тауық майы.",
+        "ask": "Өнім туралы сұрау ↗"
+      },
+      {
+        "name": "Барлық жастағы мысықтарға · Сиыр еті",
+        "net": "Таза салмағы: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "Құрамы мен қаптамасы",
+        "ingredients_heading": "Құрамы",
+        "ingredients": "Сиыр еті + сүйекті сиыр еті 48%, жүгері глютені, жүгері, күріш, қызылша сығындысы, тауық майы.",
+        "ask": "Өнім туралы сұрау ↗"
+      },
+      {
+        "name": "Марғауларға · Тауық еті",
+        "net": "Таза салмағы: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "Құрамы мен қаптамасы",
+        "ingredients_heading": "Құрамы",
+        "ingredients": "Тауық еті + сүйекті тауық еті 51%, жүгері глютені, жүгері, күріш, қызылша сығындысы, тауық майы.",
+        "ask": "Өнім туралы сұрау ↗"
+      },
+      {
+        "name": "Барлық жастағы иттерге · Тауық еті",
+        "net": "Таза салмағы: 1.5 kg / 5 kg / 15 kg",
+        "ingredients_label": "Құрамы мен қаптамасы",
+        "ingredients_heading": "Құрамы",
+        "ingredients": "Тауық еті + сүйекті тауық еті 40%, жүгері глютені, жүгері, күріш, қызылша сығындысы, тауық майы.",
+        "ask": "Өнім туралы сұрау ↗"
+      },
+      {
+        "name": "Барлық жастағы иттерге · Сиыр еті",
+        "net": "Таза салмағы: 1.5 kg / 5 kg / 15 kg",
+        "ingredients_label": "Құрамы мен қаптамасы",
+        "ingredients_heading": "Құрамы",
+        "ingredients": "Сиыр еті + сүйекті сиыр еті 48%, жүгері глютені, жүгері, күріш, қызылша сығындысы, тауық майы.",
+        "ask": "Өнім туралы сұрау ↗"
+      },
+      {
+        "name": "Ұсақ тұқымды иттерге · Тауық еті",
+        "net": "Таза салмағы: 1.5 kg / 3 kg",
+        "ingredients_label": "Құрамы мен қаптамасы",
+        "ingredients_heading": "Құрамы",
+        "ingredients": "Тауық еті + сүйекті тауық еті 40%, жүгері глютені, жүгері, күріш, қызылша сығындысы, тауық майы.",
+        "ask": "Өнім туралы сұрау ↗"
+      },
+      {
+        "name": "Ұсақ тұқымды иттерге · Сиыр еті",
+        "net": "Таза салмағы: 1.5 kg / 3 kg",
+        "ingredients_label": "Құрамы мен қаптамасы",
+        "ingredients_heading": "Құрамы",
+        "ingredients": "Сиыр еті + сүйекті сиыр еті 48%, жүгері глютені, жүгері, күріш, қызылша сығындысы, тауық майы.",
+        "ask": "Өнім туралы сұрау ↗"
+      }
+    ],
+    "note": "Жануар текті құрамдастардың үлесі ет пен сүйекті еттің жиынтық үлесін білдіреді. Азықтандыру нұсқаулығы мен толық ақпаратты қаптамадан қараңыз.",
+    "contact_title": "Серігіңіз үшін көбірек біліңіз.",
+    "contact_body": "Өнімдер, қолжетімділік және ынтымақтастық туралы бізге хабарласыңыз.",
+    "cta_whatsapp": "WhatsApp арқылы жазу ↗",
+    "cta_email": "Хат жіберу ↗",
+    "address": "PURE PAW NUTRITION MCHJ\nTashkent, Korasuv\n+998 95 826 69 99\nfarid.it.uz@gmail.com"
+  },
+  "ky": {
+    "hero_title": "Табиятка жакын —\nкамкордук менен азыктандыруу.",
+    "hero_lead": "Иттер жана мышыктар үчүн тоюттар. PurePaw өнүмдөрү менен таанышыңыз.",
+    "cta_ranges": "Өнүмдөрдү көрүү ↗",
+    "philosophy_title": "Үй жаныбарлары — үй-бүлө. Ар бир тамакка көңүл буруу зарыл.",
+    "philosophy_body": "PURE PAW табиятка жакын жашоо образынан шыктанып, курамга, азыктанууга жана күнүмдүк тоюттандырууга көңүл бурат. Жаныбарларга болгон камкордугубузду ар бир тандоого, ар бир порцияга жана бирге өткөргөн ар бир күнгө арнайбыз.",
+    "ranges_title": "Өнүмдөрдү көрүү",
+    "products": [
+      {
+        "name": "Бардык курактагы мышыктарга · Тоок эти",
+        "net": "Таза салмагы: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "Курамы жана таңгак өлчөмү",
+        "ingredients_heading": "Курамы",
+        "ingredients": "Тоок эти + сөөктүү тоок эти 48%, жүгөрү глютени, жүгөрү, күрүч, кызылча целлюлозасы, тоок майы.",
+        "ask": "Өнүм жөнүндө суроо ↗"
+      },
+      {
+        "name": "Бардык курактагы мышыктарга · Уй эти",
+        "net": "Таза салмагы: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "Курамы жана таңгак өлчөмү",
+        "ingredients_heading": "Курамы",
+        "ingredients": "Уй эти + сөөктүү уй эти 48%, жүгөрү глютени, жүгөрү, күрүч, кызылча целлюлозасы, тоок майы.",
+        "ask": "Өнүм жөнүндө суроо ↗"
+      },
+      {
+        "name": "Мышыктын балдарына · Тоок эти",
+        "net": "Таза салмагы: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "Курамы жана таңгак өлчөмү",
+        "ingredients_heading": "Курамы",
+        "ingredients": "Тоок эти + сөөктүү тоок эти 51%, жүгөрү глютени, жүгөрү, күрүч, кызылча целлюлозасы, тоок майы.",
+        "ask": "Өнүм жөнүндө суроо ↗"
+      },
+      {
+        "name": "Бардык курактагы иттерге · Тоок эти",
+        "net": "Таза салмагы: 1.5 kg / 5 kg / 15 kg",
+        "ingredients_label": "Курамы жана таңгак өлчөмү",
+        "ingredients_heading": "Курамы",
+        "ingredients": "Тоок эти + сөөктүү тоок эти 40%, жүгөрү глютени, жүгөрү, күрүч, кызылча целлюлозасы, тоок майы.",
+        "ask": "Өнүм жөнүндө суроо ↗"
+      },
+      {
+        "name": "Бардык курактагы иттерге · Уй эти",
+        "net": "Таза салмагы: 1.5 kg / 5 kg / 15 kg",
+        "ingredients_label": "Курамы жана таңгак өлчөмү",
+        "ingredients_heading": "Курамы",
+        "ingredients": "Уй эти + сөөктүү уй эти 48%, жүгөрү глютени, жүгөрү, күрүч, кызылча целлюлозасы, тоок майы.",
+        "ask": "Өнүм жөнүндө суроо ↗"
+      },
+      {
+        "name": "Майда тукумдагы иттерге · Тоок эти",
+        "net": "Таза салмагы: 1.5 kg / 3 kg",
+        "ingredients_label": "Курамы жана таңгак өлчөмү",
+        "ingredients_heading": "Курамы",
+        "ingredients": "Тоок эти + сөөктүү тоок эти 40%, жүгөрү глютени, жүгөрү, күрүч, кызылча целлюлозасы, тоок майы.",
+        "ask": "Өнүм жөнүндө суроо ↗"
+      },
+      {
+        "name": "Майда тукумдагы иттерге · Уй эти",
+        "net": "Таза салмагы: 1.5 kg / 3 kg",
+        "ingredients_label": "Курамы жана таңгак өлчөмү",
+        "ingredients_heading": "Курамы",
+        "ingredients": "Уй эти + сөөктүү уй эти 48%, жүгөрү глютени, жүгөрү, күрүч, кызылча целлюлозасы, тоок майы.",
+        "ask": "Өнүм жөнүндө суроо ↗"
+      }
+    ],
+    "note": "Жаныбар тектүү чийки заттын үлүшү эт менен сөөктүү эттин жалпы үлүшүн билдирет. Тоюттандыруу көрсөтмөлөрүн жана толук маалыматты таңгактан караңыз.",
+    "contact_title": "Досуңуз үчүн көбүрөөк билиңиз.",
+    "contact_body": "Өнүмдөр, жеткиликтүүлүк жана кызматташуу боюнча биз менен байланышыңыз.",
+    "cta_whatsapp": "WhatsApp аркылуу жазуу ↗",
+    "cta_email": "Кат жөнөтүү ↗",
+    "address": "PURE PAW NUTRITION MCHJ\nTashkent, Korasuv\n+998 95 826 69 99\nfarid.it.uz@gmail.com"
+  },
+  "tg": {
+    "hero_title": "Наздиктар ба табиат —\nғизо бо ғамхорӣ.",
+    "hero_lead": "Хӯрок барои сагу гурба. Бо PurePaw ва навъҳои маҳсулоти мо шинос шавед.",
+    "cta_ranges": "Дидани маҳсулот ↗",
+    "philosophy_title": "Ҳайвоноти хонагӣ аъзои оилаанд. Ҳар як хӯрок сазовори таваҷҷуҳ аст.",
+    "philosophy_body": "PURE PAW аз тарзи зиндагии наздик ба табиат илҳом гирифта, ба таркиб, ғизо ва ғизодиҳии ҳаррӯза диққат медиҳад. Мо ғамхорӣ ба ҳайвонотро ба ҳар интихоб, ҳар порсияи хӯрок ва ҳар рӯзи якҷоя мегузорем.",
+    "ranges_title": "Дидани маҳсулот",
+    "products": [
+      {
+        "name": "Барои гурбаҳои ҳама синну сол · Мурғ",
+        "net": "Вазни холис: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "Таркиб ва андозаи баста",
+        "ingredients_heading": "Таркиб",
+        "ingredients": "Гӯшти мурғ + гӯшти мурғи устухондор 48%, глютени ҷуворимакка, ҷуворимакка, биринҷ, селлюлозаи лаблабу, равғани мурғ.",
+        "ask": "Дар бораи маҳсулот пурсед ↗"
+      },
+      {
+        "name": "Барои гурбаҳои ҳама синну сол · Гов",
+        "net": "Вазни холис: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "Таркиб ва андозаи баста",
+        "ingredients_heading": "Таркиб",
+        "ingredients": "Гӯшти гов + гӯшти гови устухондор 48%, глютени ҷуворимакка, ҷуворимакка, биринҷ, селлюлозаи лаблабу, равғани мурғ.",
+        "ask": "Дар бораи маҳсулот пурсед ↗"
+      },
+      {
+        "name": "Барои гурбачаҳо · Мурғ",
+        "net": "Вазни холис: 1.5 kg / 3 kg / 10 kg",
+        "ingredients_label": "Таркиб ва андозаи баста",
+        "ingredients_heading": "Таркиб",
+        "ingredients": "Гӯшти мурғ + гӯшти мурғи устухондор 51%, глютени ҷуворимакка, ҷуворимакка, биринҷ, селлюлозаи лаблабу, равғани мурғ.",
+        "ask": "Дар бораи маҳсулот пурсед ↗"
+      },
+      {
+        "name": "Барои сагҳои ҳама синну сол · Мурғ",
+        "net": "Вазни холис: 1.5 kg / 5 kg / 15 kg",
+        "ingredients_label": "Таркиб ва андозаи баста",
+        "ingredients_heading": "Таркиб",
+        "ingredients": "Гӯшти мурғ + гӯшти мурғи устухондор 40%, глютени ҷуворимакка, ҷуворимакка, биринҷ, селлюлозаи лаблабу, равғани мурғ.",
+        "ask": "Дар бораи маҳсулот пурсед ↗"
+      },
+      {
+        "name": "Барои сагҳои ҳама синну сол · Гов",
+        "net": "Вазни холис: 1.5 kg / 5 kg / 15 kg",
+        "ingredients_label": "Таркиб ва андозаи баста",
+        "ingredients_heading": "Таркиб",
+        "ingredients": "Гӯшти гов + гӯшти гови устухондор 48%, глютени ҷуворимакка, ҷуворимакка, биринҷ, селлюлозаи лаблабу, равғани мурғ.",
+        "ask": "Дар бораи маҳсулот пурсед ↗"
+      },
+      {
+        "name": "Барои сагҳои зоти хурд · Мурғ",
+        "net": "Вазни холис: 1.5 kg / 3 kg",
+        "ingredients_label": "Таркиб ва андозаи баста",
+        "ingredients_heading": "Таркиб",
+        "ingredients": "Гӯшти мурғ + гӯшти мурғи устухондор 40%, глютени ҷуворимакка, ҷуворимакка, биринҷ, селлюлозаи лаблабу, равғани мурғ.",
+        "ask": "Дар бораи маҳсулот пурсед ↗"
+      },
+      {
+        "name": "Барои сагҳои зоти хурд · Гов",
+        "net": "Вазни холис: 1.5 kg / 3 kg",
+        "ingredients_label": "Таркиб ва андозаи баста",
+        "ingredients_heading": "Таркиб",
+        "ingredients": "Гӯшти гов + гӯшти гови устухондор 48%, глютени ҷуворимакка, ҷуворимакка, биринҷ, селлюлозаи лаблабу, равғани мурғ.",
+        "ask": "Дар бораи маҳсулот пурсед ↗"
+      }
+    ],
+    "note": "Ҳиссаи ашёи ҳайвонотӣ маҷмӯи гӯшт ва гӯшти устухондорро ифода мекунад. Дастури ғизодиҳӣ ва маълумоти пурраро дар баста бинед.",
+    "contact_title": "Барои ҳамроҳи худ бештар бидонед.",
+    "contact_body": "Барои маълумоти маҳсулот, мавҷудият ва ҳамкорӣ бо мо тамос гиред.",
+    "cta_whatsapp": "Навиштан дар WhatsApp ↗",
+    "cta_email": "Фиристодани email ↗",
+    "address": "PURE PAW NUTRITION MCHJ\nTashkent, Korasuv\n+998 95 826 69 99\nfarid.it.uz@gmail.com"
+  }
+}

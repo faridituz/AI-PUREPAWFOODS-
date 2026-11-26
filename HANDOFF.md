@@ -1,5 +1,11 @@
 # 双机交接班日志（HANDOFF.md）
 
+## [2026-11-26] - 原型 A 交付：8语统一静态架构落地
+- **刚完成**：`src/website-v2/build-a.mjs` 生成 104 页（13类×8语），内容源为线上8语真实文案提取（`content/site.json`），界面词条 `content/ui.json` 为原型草稿翻译。每语言独立 URL、9个hreflang、canonical、RTL、语言切换保页；原型全站 noindex。本地预览 `node src/website-v2/serve.mjs` → http://localhost:4173/a/en/ 。
+- **实测**：英文首页 9,965B（gzip 2.4KB）对比线上 173,031B（gzip 23.6KB）；120组合（8语×390/768/1440×5页）横向溢出0；0断链；移动3G模拟 LCP 544–676ms vs 线上920ms，CLS=0。报告：`output/原型A交付与测试报告_20261126.md`，截图 `output/prototypes/evidence/`。
+- **下一步**：方案 B（信任转化）、方案 C（品牌+招商）原型；咨询/招商表单（前端校验+防重复，先接模拟接口）；本地 10/50/100 并发压测（Node 脚本）。
+- **注意事项**：新增词条为草稿翻译，上线前须母语复核；未放任何产品实拍图/视频；WP/Cloudflare/GoDaddy 仍无登录会话（浏览器跳转登录页，未绕过），服务器资源仍标未验证。重建原型前先停 `serve.mjs`，否则 Windows 目录被占用导致 EBUSY。
+
 ## [2026-11-26] - 官网现状审计完成（V2.2 第一批）
 - **刚完成**：公网只读审计 purepawfoods.com，报告在 `output/官网现状审计报告_20261126.md`。实测：WordPress(Twenty Twenty-Five + DesignSetGo) + Cloudflare + GoDaddy 网关；**线上为 8 语同页**（en/zh/ru/ar/uz/kk/ky/tg），非指令所称 6 语；HTML 173KB（内联 CSS 109KB，gzip 23.5KB）；八语正文 46KB 全部一次性加载；HTML 缓存 31 天（抓取时 Age 15.9 天）；无 hreflang、`html lang=en-US`、无表单（仅 wa.me/tel/mailto）；仅首页 1 个正式页，`/sample-page/`、`/hello-world/` 遗留可访问。
 - **老板已定**：①保留全部 8 语；②可提供 GoDaddy+WP+Cloudflare 全套权限（待安全交接）；③压测在本机+本地副本做。

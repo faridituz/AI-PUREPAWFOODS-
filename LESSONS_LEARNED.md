@@ -1,5 +1,15 @@
 # 历史报错与避坑手册（每次编码前必读）
 
+### [2026-11-26-08] Chrome 无头截图小窗口会被抬高，误判手机端横向溢出
+- **现象**：`chrome --headless --window-size=390,844` 截图右侧内容被裁掉，看似移动端溢出；实际 CSS 正常。
+- **根因**：Windows 下 Chrome 窗口有最小宽度（约 500px），390 被抬高后按 390 裁图，造成"假溢出"。
+- **铁律**：移动端断点验证一律用 CDP `Emulation.setDeviceMetricsOverride`（见 `src/website-v2/qa-layout.mjs`），不要用命令行 `--window-size` 小于 500 的截图下结论。
+
+### [2026-11-26-07] 重建静态站报 EBUSY（目录被本地服务占用）
+- **现象**：`build-a.mjs` 开头 `rm -rf output/prototypes/a` 报 `EBUSY: resource busy or locked`。
+- **根因**：本机预览服务进程仍在运行，Windows 对目录句柄加锁。
+- **铁律**：重建生成目录前先停掉 `serve.mjs`（或让生成器输出到临时目录再原子替换）；Windows 下不要假设可删除正在被其他进程使用的目录。
+
 ### [2026-11-26-06] 双机 `.env` 不能整文件互相同步
 - **现象**：本机 `.env` 的 `MEDIA_STORAGE_PATH` 指向 Google Drive（`G:/我的云端硬盘/PurePaw_Media`），同步到旧机后自测报"目录不存在"——旧机只有 C/D 盘且无 Google Drive。
 - **根因**：媒体路径、Python 路径等是"每机不同"的参数，被当成全局常量同步。

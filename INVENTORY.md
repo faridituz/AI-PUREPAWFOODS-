@@ -2,6 +2,11 @@
 
 | 模块名称 | 文件路径 | 核心功能说明 | 输入/输出 | 状态 |
 | :--- | :--- | :--- | :--- | :--- |
+| 8语原型生成器（方案A） | `src/website-v2/build-a.mjs` | 读取8语内容与界面词条，静态生成13类页面×8语=104页，含hreflang/canonical/RTL/语言切换 | `content/site.json`、`content/ui.json`、`styles/a.css` -> `output/prototypes/a/` | 已实测：构建通过、0断链、120组合0异常 |
+| 原型本地预览服务 | `src/website-v2/serve.mjs` | 本地静态服务，设置 Content-Language、HTML no-cache、资源长缓存、全站 noindex | 原型目录 -> http://localhost:4173 | 已实测 |
+| 8语布局自检 | `src/website-v2/qa-layout.mjs` | CDP 驱动 Chrome，8语×3断点×5页面检查横向溢出、lang/dir、hreflang、noindex、中文串入；可截图 | 本地服务 -> 控制台报告/截图 | 已实测：120组合0异常 |
+| 性能对比测试 | `src/website-v2/perf.mjs` | CDP 模拟 390px+3G，采集 FCP/LCP/CLS/传输量，对比原型与线上 | URL 列表 -> 控制台表格 | 已实测：原型LCP 544–676ms，线上920ms |
+| 8语内容源 | `src/website-v2/content/site.json`、`ui.json` | 从线上8语HTML逐字段提取的真实文案 + 原型词条草稿翻译 | HTML -> JSON | 8语×7产品完整，词条待母语复核 |
 | 三通环境自检 | `src/check_env.py` | 读取 `.env`，校验 Neon 数据库连接、媒体盘读写、Telegram 测试推送（含 3 次指数退避重试） | `.env` -> PASS/FAIL 输出，全部通过退出码 0 | 本机 3/3 实测通过（Python 3.12） |
 | 网站八语更新页生成 | `src/website/prepare_website_update_20261110.py` | 读取上线前备份 HTML 与 Word 源 JSON，生成八语更新版 HTML 及更新说明 md | `output/PurePaw_上线前备份_20261110.html`、`output/website_word_sources_20261110.json` -> `output/PurePaw_网站更新_20261110.html` 等 | 已实测通过（Python 3.12.10，8 语言/19 规格断言全过）；说明 md 已加防覆盖守卫，仅首次生成 |
 | SKU docx 批量生成 | `src/tools/gen-sku-docx.mjs` | 按 sku-data 数据批量生成各 SKU 定制 Word 文档 | `data/work/sku-data` -> `data/work/build` | 已通过 `node --check`，未实测 |
