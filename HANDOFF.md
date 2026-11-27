@@ -1,5 +1,8 @@
 # 双机交接班日志（HANDOFF.md）
 
+## [2026-11-27] - 管理岗位地图客户编辑
+- 销售分支 a4b8c96 已同步，隔离 PostgreSQL 验证管理员、经理编辑及归属保护。173 项回归通过。下一步入口功能对照、照片写入及现场拜访。无采购或生产修改。
+
 ## [2026-11-27] - V2.8 批准落地：表单关闭门禁、渠道收口、回滚目录
 - **刚完成**：①`forms.json` 增加 `meta.mode="closed"` 与 `meta.channels`（WhatsApp 尾号 6888、电话 approved；Telegram、个人 Gmail 未批准，href 为空）；②closed 模式全站不再渲染表单，替换为 WhatsApp+电话渠道面板，八语新增“打开即咨询、网站不收集信息”说明（AI 草稿待审）；③closed 不复制 `form.js`，本地 `serve.mjs` 的 `/api/lead` 返回 404，发布构建后置扫描若发现表单/模拟接口即清理并退出 1；④门禁条件化：`forms-endpoint` 改为 `forms-mode`+`forms-closed`，模式缺失默认阻断，online 分支保留原接收端检查，其余门禁未动；⑤新增 `backups/rollback/` 策略（仅 README 入库，包本体忽略），构建删除仍限 `output/` 子目录，并新增“发布失败不触碰回滚目录”测试。
 - **验证**：构建 416 页；`qa-gate` 18/18；`qa-forms`（closed）7/0；数据 1925/0；多语言 2500/0；正式门禁 14 项中 6 通过 8 阻断、退出 1、无 `output/release`；`/api/lead` 404。
