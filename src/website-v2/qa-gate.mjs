@@ -1,4 +1,4 @@
-import { mkdir, writeFile, rm, access } from "node:fs/promises";
+import { mkdir, writeFile, rm, access, symlink, rmdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
@@ -85,7 +85,39 @@ try {
 }
 add("stale-residue", "门禁失败时必须清理旧发布目录且退出码非 0", run.status === 1 && gone, `exit=${run.status} 残留=${gone ? "无" : "存在"}`);
 
-const TEMP_OUT = "../../data/temp/gate-nonrelease";
+const build = (...extra) => spawnSync(process.execPath, ["build.mjs", ...extra], { cwd: __dirname, encoding: "utf-8" });
+const exists = async (p) => {
+  try {
+    await access(p);
+    return true;
+  } catch {
+    return false;
+  }
+};
+
+const SENTINEL = path.join(ROOT, "data/temp/guard-sentinel.txt");
+await mkdir(path.dirname(SENTINEL), { recursive: true });
+await writeFile(SENTINEL, "sentinel", "utf-8");
+const runRoot = build("--index", "--out", "../../..");
+add("guard-root", "拒绝把输出目录指向项目根目录或上级", runRoot.status !== 0 && (await exists(SENTINEL)) && (await exists(path.join(ROOT, "AGENTS.md"))), `exit=${runRoot.status}`);
+
+const runData = build("--index", "--out", "../../data");
+add("guard-data", "拒绝把输出目录指向 output 之外的 data/", runData.status !== 0 && (await exists(path.join(ROOT, "data/extracted/barcodes.txt"))), `exit=${runData.status}`);
+
+const runOutput = build("--index", "--out", "../../output");
+add("guard-output", "拒绝删除 output/ 本身", runOutput.status !== 0 && (await exists(path.join(ROOT, "output/evidence"))), `exit=${runOutput.status}`);
+
+const LINK = path.join(ROOT, "output/.gate-link");
+await rmdir(LINK).catch(() => {});
+await symlink(path.join(ROOT, "data"), LINK, "junction");
+const runLink = build("--index", "--out", "../../output/.gate-link");
+const linkKept = await exists(LINK);
+const dataKept = await exists(path.join(ROOT, "data/extracted/barcodes.txt"));
+add("guard-junction", "拒绝通过目录联接删除项目外内容", runLink.status !== 0 && linkKept && dataKept, `exit=${runLink.status} 联接=${linkKept ? "保留" : "已删"} 数据=${dataKept ? "完好" : "丢失"}`);
+await rmdir(LINK).catch(() => {});
+await rm(SENTINEL, { force: true });
+
+const TEMP_OUT = "../../output/.gate-test-nonrelease";
 const run2 = spawnSync(process.execPath, ["build.mjs", "--index", "--out", TEMP_OUT], { cwd: __dirname, encoding: "utf-8" });
 add("no-release-via-flags", "非 release 构建不得写入 output/release", run2.status === 0 && gone, `exit=${run2.status}`);
 await rm(path.resolve(__dirname, TEMP_OUT), { recursive: true, force: true });

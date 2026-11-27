@@ -1,4 +1,4 @@
-import { readFile, writeFile, mkdir, cp, rm } from "node:fs/promises";
+import { readFile, writeFile, mkdir, cp, rm, lstat, realpath } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { loadContent } from "./core/content.mjs";
@@ -8,6 +8,7 @@ import { validateLead } from "./core/validate.mjs";
 import { checkRelease } from "./core/release-gate.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.resolve(__dirname, "../..");
 const args = process.argv.slice(2);
 const getArg = (name, fallback) => {
   const i = args.indexOf(name);
@@ -16,6 +17,49 @@ const getArg = (name, fallback) => {
 
 const RELEASE = args.includes("--release");
 const OUT_ROOT = path.resolve(__dirname, getArg("--out", RELEASE ? "../../output/release" : "../../output/prototypes"));
+const OUTPUT_ROOT = path.join(ROOT, "output");
+
+async function realDeepest(p) {
+  let cur = p;
+  for (;;) {
+    try {
+      return await realpath(cur);
+    } catch {
+      const up = path.dirname(cur);
+      if (up === cur) throw new Error(`无法解析真实路径：${p}`);
+      cur = up;
+    }
+  }
+}
+
+async function assertSafeOut(target, label) {
+  const resolved = path.resolve(target);
+  const realRoot = await realpath(ROOT);
+  const realOutput = await realDeepest(OUTPUT_ROOT);
+  if (resolved === realRoot || realRoot.startsWith(resolved + path.sep)) {
+    throw new Error(`${label}拒绝操作：目标包含项目根目录 ${resolved}`);
+  }
+  if (!resolved.startsWith(OUTPUT_ROOT + path.sep)) {
+    throw new Error(`${label}拒绝操作：目标必须是 output/ 下的子目录，实际为 ${resolved}`);
+  }
+  try {
+    const st = await lstat(resolved);
+    if (st.isSymbolicLink()) throw new Error(`${label}拒绝操作：目标是符号链接或目录联接 ${resolved}`);
+    const real = await realpath(resolved);
+    if (!real.startsWith(realOutput + path.sep)) {
+      throw new Error(`${label}拒绝操作：真实路径越出项目 output/（${real}）`);
+    }
+  } catch (err) {
+    if (err.code !== "ENOENT") throw err;
+  }
+  return resolved;
+}
+
+async function safeRemove(target, label) {
+  await rm(await assertSafeOut(target, label), { recursive: true, force: true });
+}
+
+await assertSafeOut(OUT_ROOT, "构建输出");
 const ORIGIN = getArg("--origin", RELEASE ? "" : "http://localhost:4173");
 const NOINDEX = RELEASE ? false : !args.includes("--index");
 const ONLY = RELEASE ? "d" : getArg("--theme", "");
@@ -37,11 +81,11 @@ if (RELEASE) {
   console.log(`正式构建门禁：${gate.checks.length} 项，通过 ${gate.checks.filter((c) => c.pass).length} 项`);
   for (const c of gate.checks) console.log(`${c.pass ? "通过" : "阻断"}  ${c.label}${c.pass ? "" : " —— " + c.detail}`);
   if (!gate.pass) {
-    await rm(OUT_ROOT, { recursive: true, force: true });
+    await safeRemove(OUT_ROOT, "正式构建");
     console.error(`正式构建已阻断：${gate.blockers.length} 项未满足，未生成任何发布文件，已清理旧发布目录。门禁报告 -> ${reportPath}`);
     process.exit(1);
   }
-  await rm(OUT_ROOT, { recursive: true, force: true });
+  await safeRemove(OUT_ROOT, "正式构建");
 }
 
 const formJsTemplate = await readFile(path.join(__dirname, "assets/form.js"), "utf-8");
@@ -55,7 +99,7 @@ for (const theme of THEMES) {
   const assetsDir = path.join(outDir, "assets");
   const ctx = { ...content, THEME: theme.key, BASE: "/" + theme.key, ORIGIN, NOINDEX, RELEASE };
 
-  await rm(outDir, { recursive: true, force: true });
+  await safeRemove(outDir, "主题输出");
   await mkdir(assetsDir, { recursive: true });
   await copyAssets(ctx, assetsDir);
 
