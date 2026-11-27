@@ -50,3 +50,4 @@
 | 销售系统离线 OSM 候选导入 | `sales-v1-dev/server/field-discovery.mjs`、`sales-v1-dev/server/postgres-preview-bank.mjs` | 复用坐标、许可与来源验证，PostgreSQL 候选池按来源去重 | 离线 JSON → 待核实候选池 | 173 项通过，新增 PostgreSQL 专项待复验 |
 | 销售候选人工转档 | `sales-v1-dev/server/postgres-preview-bank.mjs`、`sales-v1-dev/public/field.js` | 核实、区域权限、去重及来源关联 | 已核实候选 → 正式客户 | 常规回归通过，PostgreSQL 专项待执行 |
 | 销售地图档案及照片 | `sales-v1-dev/server/postgres-preview-field.mjs` | 客户档案、采购历史、照片权限及交接撤权 | PostgreSQL 隔离预览 | 173 项回归及专项通过 |
+| 销售地图建档与编辑 | `sales-v1-dev/public/field.js` | 复用移动客户写入、权限检查及版本校验 | PostgreSQL 隔离预览 | 173 项和 Edge 表单通过 |
