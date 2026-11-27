@@ -1,6 +1,29 @@
-import { esc, escAttr, pagePath, WHATSAPP, EMAIL } from "./html.mjs";
+import { esc, escAttr, pagePath, WHATSAPP, mailLink } from "./html.mjs";
+
+export function channelPanel(ctx, lang) {
+  const C = (ctx.FORMS[lang] || {}).closed || {};
+  const ch = ctx.FORMS_META.channels || {};
+  const items = [];
+  if (ch.whatsapp && ch.whatsapp.approved === true && ch.whatsapp.href) {
+    items.push(`<a class="btn btn-solid" href="${escAttr(ch.whatsapp.href)}" rel="noopener">${esc(C.whatsapp || "WhatsApp")}</a>`);
+  }
+  if (ch.phone && ch.phone.approved === true && ch.phone.href) {
+    items.push(`<a class="btn btn-ghost" href="${escAttr(ch.phone.href)}" dir="ltr">${esc(C.call || "")}</a>`);
+  }
+  if (ch.telegram && ch.telegram.approved === true && /^https:\/\/t\.me\//.test(ch.telegram.href || "")) {
+    items.push(`<a class="btn btn-ghost" href="${escAttr(ch.telegram.href)}" rel="noopener">Telegram</a>`);
+  }
+  if (ch.email && ch.email.approved === true && /^mailto:/.test(ch.email.href || "")) {
+    items.push(`<a class="btn btn-ghost" href="${escAttr(ch.email.href)}">${esc(C.email || "Email")}</a>`);
+  }
+  return `<div class="contact-channels">
+  <p class="actions">${items.join("\n")}</p>
+  <p class="note">${esc(C.note || "")}</p>
+</div>`;
+}
 
 export function leadForm(ctx, lang, kind, opts = {}) {
+  if (ctx.FORMS_META.mode !== "online") return channelPanel(ctx, lang);
   const F = ctx.FORMS[lang];
   const t = ctx.UI[lang];
   const copy = F[kind];
@@ -97,7 +120,7 @@ export function leadForm(ctx, lang, kind, opts = {}) {
   <div class="form-actions">
     <button class="btn btn-solid" type="submit">${esc(copy.submit)}</button>
     <a class="btn btn-text" href="${WHATSAPP}">WhatsApp</a>
-    <a class="btn btn-text" href="mailto:${EMAIL}">${esc(t.email)}</a>
+    ${mailLink(esc(t.email), "btn btn-text")}
   </div>
   <div class="form-status" role="status" aria-live="polite" hidden></div>
   <p class="form-mock">${esc(copy.mock_note || F.inquiry.mock_note)}</p>

@@ -11,6 +11,7 @@ import {
   PHONE,
   PHONE_HREF,
   EMAIL,
+  mailLink,
   WHATSAPP
 } from "./html.mjs";
 import { leadSection, leadForm } from "./forms.mjs";
@@ -182,7 +183,7 @@ function homePage(ctx, lang) {
         ${dealerBenefits(ctx, lang)}
         <p class="actions">
           <a class="btn btn-solid" href="${WHATSAPP}">${esc(c.cta_whatsapp)}</a>
-          <a class="btn btn-ghost" href="mailto:${EMAIL}">${esc(c.cta_email)}</a>
+          ${mailLink(esc(c.cta_email), "btn btn-ghost")}
         </p>
       </div>
       <div class="dealer-form">${leadForm(ctx, lang, "dealer", { uid: "home", rel: "" })}</div>
@@ -209,7 +210,7 @@ function homePage(ctx, lang) {
         ${dealerBenefits(ctx, lang)}
         <p class="actions">
           <a class="btn btn-solid" href="${WHATSAPP}">${esc(c.cta_whatsapp)}</a>
-          <a class="btn btn-ghost" href="mailto:${EMAIL}">${esc(c.cta_email)}</a>
+          ${mailLink(esc(c.cta_email), "btn btn-ghost")}
         </p>
       </div>
       <div class="dealer-form">${leadForm(ctx, lang, "dealer", { uid: "home", rel: "" })}</div>
@@ -313,7 +314,7 @@ function productPage(ctx, lang, p) {
     <p class="meta">${esc(t.animal_share)}: <strong dir="ltr">${esc(data.animalShare)}</strong></p>
     <p class="actions">
       <a class="btn btn-solid" href="${WHATSAPP}">${esc(prod.ask)}</a>
-      <a class="btn btn-ghost" href="mailto:${EMAIL}">${esc(ctx.SITE[lang].cta_email)}</a>
+      ${mailLink(esc(ctx.SITE[lang].cta_email), "btn btn-ghost")}
     </p>
     <p class="note"><a href="${pagePath(ctx, lang, "contact")}#ask">${esc(t.nav_contact)} →</a></p>
   </aside>
@@ -397,7 +398,7 @@ function brandPage(ctx, lang) {
       <dd dir="ltr">4780178209998</dd>
     </dl>
     <p class="note">${esc(t.facts_note)}</p>
-    <p dir="ltr"><a href="${PHONE_HREF}">${PHONE}</a><br><a href="mailto:${EMAIL}">${EMAIL}</a></p>
+    <p dir="ltr"><a href="${PHONE_HREF}">${PHONE}</a></p>
   </div>
   <p class="actions">
     <a class="btn btn-solid" href="${pagePath(ctx, lang, "cat")}">${esc(t.nav_cat)} →</a>
@@ -433,7 +434,7 @@ function partnersPage(ctx, lang) {
   ${dealerBenefits(ctx, lang)}
   <p class="actions">
     <a class="btn btn-solid" href="${WHATSAPP}">${esc(ctx.SITE[lang].cta_whatsapp)}</a>
-    <a class="btn btn-ghost" href="mailto:${EMAIL}">${esc(ctx.SITE[lang].cta_email)}</a>
+    ${mailLink(esc(ctx.SITE[lang].cta_email), "btn btn-ghost")}
   </p>
   <p class="note">${esc(t.no_store || "")}</p>
 </section>
@@ -464,7 +465,7 @@ function contactPage(ctx, lang) {
     <ul class="contact-list">
       <li><span>${esc(t.whatsapp)}</span><a href="${WHATSAPP}" dir="ltr">+998 99 987 68 88</a></li>
       <li><span>${esc(t.phone)}</span><a href="${PHONE_HREF}" dir="ltr">${PHONE}</a></li>
-      <li><span>${esc(t.email)}</span><a href="mailto:${EMAIL}" dir="ltr">${EMAIL}</a></li>
+      ${EMAIL ? `<li><span>${esc(t.email)}</span>${mailLink(EMAIL, "", "ltr")}</li>` : ""}
     </ul>
   </div>
   <div>

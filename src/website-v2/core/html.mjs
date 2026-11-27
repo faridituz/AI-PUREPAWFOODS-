@@ -7,8 +7,10 @@ export const withLineBreaks = (s = "") => esc(s).split("\n").join("<br>");
 
 export const PHONE = "+998 95 826 69 99";
 export const PHONE_HREF = "tel:+998958266999";
-export const EMAIL = "farid.it.uz@gmail.com";
+export const EMAIL = ""; // 个人 Gmail 未获批准作为官网公开邮箱，留空即不渲染
 export const WHATSAPP = "https://wa.me/998999876888";
+export const mailLink = (label, cls = "", dir = "") =>
+  EMAIL ? `<a${cls ? ` class="${cls}"` : ""}${dir ? ` dir="${dir}"` : ""} href="mailto:${EMAIL}">${label}</a>` : "";
 
 export const sizesOf = (net) => {
   const m = String(net).match(/[:：]\s*(.+)$/);
@@ -86,8 +88,7 @@ export function footer(ctx, lang) {
     </nav>
     <div class="foot-contact">
       <a href="${WHATSAPP}">WhatsApp</a><br>
-      <a href="${PHONE_HREF}" dir="ltr">${PHONE}</a><br>
-      <a href="mailto:${EMAIL}" dir="ltr">${EMAIL}</a>
+      <a href="${PHONE_HREF}" dir="ltr">${PHONE}</a>${EMAIL ? `<br>\n      ${mailLink(EMAIL, "", "ltr")}` : ""}
     </div>
   </div>
 ${ctx.RELEASE ? "" : `  <p class="proto-note">${esc(t.prototype)}</p>\n`}</footer>`;
@@ -124,8 +125,7 @@ ${header(ctx, lang, rel, active)}
 ${body}
 </main>
 ${footer(ctx, lang)}
-<script src="${ctx.BASE}/assets/form.js" defer></script>
-</body>
+${ctx.FORMS_META.mode === "online" ? `<script src="${ctx.BASE}/assets/form.js" defer></script>\n` : ""}</body>
 </html>`;
 }
 
@@ -139,13 +139,12 @@ export const contactBlock = (ctx, lang) => {
     <p>${esc(c.contact_body)}</p>
     <p class="actions">
       <a class="btn btn-solid" href="${WHATSAPP}">${esc(c.cta_whatsapp)}</a>
-      <a class="btn btn-ghost" href="mailto:${EMAIL}">${esc(c.cta_email)}</a>
+      ${mailLink(esc(c.cta_email), "btn btn-ghost")}
     </p>
   </div>
   <address dir="ltr">
     <strong>PURE PAW NUTRITION MCHJ</strong><br>Tashkent, Korasuv<br>
-    <a href="${PHONE_HREF}">${PHONE}</a><br>
-    <a href="mailto:${EMAIL}">${EMAIL}</a>
+    <a href="${PHONE_HREF}">${PHONE}</a>${EMAIL ? `<br>\n    ${mailLink(EMAIL)}` : ""}
   </address>
 </section>`;
 };

@@ -1,10 +1,18 @@
 import http from "node:http";
 import { readFile, stat, appendFile, mkdir } from "node:fs/promises";
+import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { validateLead } from "./core/validate.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const FORMS_MODE = (() => {
+  try {
+    return JSON.parse(readFileSync(path.join(__dirname, "content/forms.json"), "utf-8")).meta.mode;
+  } catch {
+    return "closed";
+  }
+})();
 const ROOT = path.resolve(__dirname, process.argv[2] || "../../output/prototypes");
 const PORT = Number(process.argv[3] || 4173);
 const STRESS = process.env.STRESS === "1";
@@ -215,6 +223,7 @@ const server = http.createServer(async (req, res) => {
 
   try {
     if (pathname === "/api/lead") {
+      if (FORMS_MODE !== "online") return json(res, 404, { ok: false, errors: ["forms_closed"] });
       if (req.method !== "POST") return json(res, 405, { ok: false, errors: ["method"] });
       return await handleLead(req, res);
     }

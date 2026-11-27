@@ -1,10 +1,57 @@
 import { spawn } from "node:child_process";
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { loadContent } from "./core/content.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "../..");
+const content = await loadContent();
+
+if (content.FORMS_META.mode !== "online") {
+  const OUT = path.join(ROOT, "output/prototypes");
+  const walk = (dir) =>
+    readdirSync(dir, { withFileTypes: true }).flatMap((e) => {
+      const p = path.join(dir, e.name);
+      return e.isDirectory() ? walk(p) : [p];
+    });
+  const files = walk(OUT);
+  const html = files.filter((f) => f.endsWith(".html"));
+  const ch = content.FORMS_META.channels || {};
+  const banned = [
+    ["表单控件", /<form\b|data-lead-form/i],
+    ["模拟接收接口", /\/api\/lead|assets\/form\.js/i],
+    ["提交成功提示", /\bMP-[A-Z0-9]/i]
+  ];
+  const results = [];
+  for (const [label, re] of banned) {
+    const hits = html.filter((f) => re.test(readFileSync(f, "utf-8")));
+    results.push({ name: `关闭模式：无${label}`, pass: hits.length === 0, detail: hits.length ? path.relative(ROOT, hits[0]) : "通过" });
+  }
+  results.push({
+    name: "关闭模式：无 form.js 资产",
+    pass: files.every((f) => path.basename(f) !== "form.js"),
+    detail: files.filter((f) => path.basename(f) === "form.js").length ? "仍存在" : "通过"
+  });
+  const langs = content.LANGS;
+  const home = (lang) => path.join(OUT, "d", lang, "index.html");
+  const waHits = langs.filter((l) => !existsSync(home(l)) || !/https:\/\/wa\.me\//.test(readFileSync(home(l), "utf-8")));
+  const telHits = langs.filter((l) => !existsSync(home(l)) || !/href="tel:\+/.test(readFileSync(home(l), "utf-8")));
+  results.push({ name: "八语首页均含 WhatsApp 入口", pass: waHits.length === 0, detail: waHits.join("/") || "8/8" });
+  results.push({ name: "八语首页均含电话入口", pass: telHits.length === 0, detail: telHits.join("/") || "8/8" });
+  const tgLeak = ch.telegram && ch.telegram.approved !== true ? html.filter((f) => /t\.me\//.test(readFileSync(f, "utf-8"))) : [];
+  const mailLeak = ch.email && ch.email.approved !== true ? html.filter((f) => /mailto:/.test(readFileSync(f, "utf-8"))) : [];
+  results.push({ name: "未批准渠道（Telegram/邮箱）不渲染", pass: tgLeak.length === 0 && mailLeak.length === 0, detail: [...tgLeak, ...mailLeak].map((f) => path.relative(ROOT, f))[0] || "通过" });
+  const failed = results.filter((r) => !r.pass).length;
+  mkdirSync(path.join(ROOT, "output/evidence"), { recursive: true });
+  writeFileSync(
+    path.join(ROOT, "output/evidence/qa-forms.json"),
+    JSON.stringify({ generatedAt: new Date().toISOString(), mode: "closed", total: results.length, failed, results }, null, 2)
+  );
+  console.log(`=== 表单关闭模式检查：${results.length} 项，失败 ${failed} 项 ===`);
+  process.exit(failed ? 2 : 0);
+}
+
 const CHROME = process.env.CHROME_PATH || "C:/Program Files/Google/Chrome/Application/chrome.exe";
 const API_PORT = 4174;
 const API = `http://localhost:${API_PORT}`;

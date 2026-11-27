@@ -1,13 +1,13 @@
 {
-  "checkedAt": "2026-11-27T10:10:16.692Z",
-  "checks": 13,
+  "checkedAt": "2026-11-27T10:24:26.558Z",
+  "checks": 18,
   "failed": 0,
   "results": [
     {
       "id": "baseline-block",
       "label": "未批准状态下门禁必须阻断",
       "pass": true,
-      "detail": "阻断 9 项"
+      "detail": "阻断 8 项"
     },
     {
       "id": "bad-origin",
@@ -46,10 +46,34 @@
       "detail": "packaging-docx-19(review)、small-dog-beef-feeding-typo(conflicting)、nutrition-basis(review)、production-address-source(review)、dealer-policy(missing)、legal-texts(missing)"
     },
     {
+      "id": "forms-mode-missing",
+      "label": "表单模式缺失时默认安全失败",
+      "pass": true,
+      "detail": "forms-mode=阻断"
+    },
+    {
+      "id": "forms-closed-leak",
+      "label": "未批准的 Telegram 入口不得带链接",
+      "pass": true,
+      "detail": "telegram-unapproved-href"
+    },
+    {
+      "id": "forms-closed-copy",
+      "label": "任何语言的关闭说明缺失必须阻断",
+      "pass": true,
+      "detail": "zh.closed"
+    },
+    {
       "id": "stale-residue",
       "label": "门禁失败时必须清理旧发布目录且退出码非 0",
       "pass": true,
       "detail": "exit=1 残留=无"
+    },
+    {
+      "id": "rollback-untouched",
+      "label": "发布失败清理不得触碰回滚目录",
+      "pass": true,
+      "detail": "保留"
     },
     {
       "id": "guard-root",
@@ -80,6 +104,12 @@
       "label": "非 release 构建不得写入 output/release",
       "pass": true,
       "detail": "exit=0"
+    },
+    {
+      "id": "forms-closed-build",
+      "label": "关闭模式产物无表单/模拟接口且八语含 WhatsApp 与电话",
+      "pass": true,
+      "detail": "残留=0 缺渠道=无"
     }
   ]
 }

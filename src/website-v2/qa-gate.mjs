@@ -1,4 +1,4 @@
-import { mkdir, writeFile, rm, access, symlink, rmdir } from "node:fs/promises";
+import { mkdir, writeFile, rm, access, symlink, rmdir, readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
@@ -18,7 +18,7 @@ const clone = (v) => JSON.parse(JSON.stringify(v));
 const base = await loadContent();
 
 const g1 = checkRelease(base, { origin: ORIGIN });
-add("baseline-block", "未批准状态下门禁必须阻断", g1.pass === false && g1.blockers.length === 9, `阻断 ${g1.blockers.length} 项`);
+add("baseline-block", "未批准状态下门禁必须阻断", g1.pass === false && g1.blockers.length === 8, `阻断 ${g1.blockers.length} 项`);
 
 const g2 = checkRelease(base, { origin: "http://localhost:4173" });
 const originCheck = g2.checks.find((c) => c.id === "origin");
@@ -73,6 +73,37 @@ const g6 = checkRelease(c6, { origin: ORIGIN });
 const ev6 = g6.checks.find((c) => c.id === "evidence-required");
 add("partial-evidence", "仅补齐部分证据不得放行", ev6.pass === false, ev6.detail);
 
+const c7 = clone(base);
+delete c7.FORMS_META.mode;
+const g7 = checkRelease(c7, { origin: ORIGIN });
+const mode7 = g7.checks.find((c) => c.id === "forms-mode");
+const end7 = g7.checks.find((c) => c.id === "forms-endpoint");
+add("forms-mode-missing", "表单模式缺失时默认安全失败", mode7.pass === false && end7 && end7.pass === false, `forms-mode=${mode7.pass ? "通过" : "阻断"}`);
+
+const c8 = clone(base);
+c8.FORMS_META.channels.telegram.href = "https://t.me/purepaw";
+const g8 = checkRelease(c8, { origin: ORIGIN });
+add("forms-closed-leak", "未批准的 Telegram 入口不得带链接", g8.checks.find((c) => c.id === "forms-closed").pass === false, g8.checks.find((c) => c.id === "forms-closed").detail);
+
+const c9 = clone(base);
+delete c9.FORMS.zh.closed.note;
+const g9 = checkRelease(c9, { origin: ORIGIN });
+add("forms-closed-copy", "任何语言的关闭说明缺失必须阻断", g9.checks.find((c) => c.id === "forms-closed").pass === false, g9.checks.find((c) => c.id === "forms-closed").detail);
+
+const exists = async (p) => {
+  try {
+    await access(p);
+    return true;
+  } catch {
+    return false;
+  }
+};
+
+const ROLLBACK = path.join(ROOT, "backups/rollback");
+await mkdir(ROLLBACK, { recursive: true });
+const RB_TEST = path.join(ROLLBACK, ".qa-selftest");
+await writeFile(RB_TEST, "rollback sentinel", "utf-8");
+
 await mkdir(path.join(RELEASE_DIR, "d"), { recursive: true });
 await writeFile(path.join(RELEASE_DIR, "d", "stale.html"), "stale build", "utf-8");
 const run = spawnSync(process.execPath, ["build.mjs", "--release", "--origin", ORIGIN], { cwd: __dirname, encoding: "utf-8" });
@@ -84,16 +115,10 @@ try {
   gone = true;
 }
 add("stale-residue", "门禁失败时必须清理旧发布目录且退出码非 0", run.status === 1 && gone, `exit=${run.status} 残留=${gone ? "无" : "存在"}`);
+add("rollback-untouched", "发布失败清理不得触碰回滚目录", await exists(RB_TEST), (await exists(RB_TEST)) ? "保留" : "丢失");
+await rm(RB_TEST, { force: true });
 
 const build = (...extra) => spawnSync(process.execPath, ["build.mjs", ...extra], { cwd: __dirname, encoding: "utf-8" });
-const exists = async (p) => {
-  try {
-    await access(p);
-    return true;
-  } catch {
-    return false;
-  }
-};
 
 const SENTINEL = path.join(ROOT, "data/temp/guard-sentinel.txt");
 await mkdir(path.dirname(SENTINEL), { recursive: true });
@@ -118,9 +143,39 @@ await rmdir(LINK).catch(() => {});
 await rm(SENTINEL, { force: true });
 
 const TEMP_OUT = "../../output/.gate-test-nonrelease";
+const TEMP_DIR = path.resolve(__dirname, TEMP_OUT);
 const run2 = spawnSync(process.execPath, ["build.mjs", "--index", "--out", TEMP_OUT], { cwd: __dirname, encoding: "utf-8" });
 add("no-release-via-flags", "非 release 构建不得写入 output/release", run2.status === 0 && gone, `exit=${run2.status}`);
-await rm(path.resolve(__dirname, TEMP_OUT), { recursive: true, force: true });
+
+const walk = async (dir) => {
+  const out = [];
+  for (const ent of await readdir(dir, { withFileTypes: true })) {
+    const p = path.join(dir, ent.name);
+    if (ent.isDirectory()) out.push(...(await walk(p)));
+    else out.push(p);
+  }
+  return out;
+};
+let closedLeaks = [];
+let channelMiss = [];
+if (run2.status === 0) {
+  for (const f of await walk(TEMP_DIR)) {
+    if (f.endsWith(".html") && /data-lead-form|<form\b|\/api\/lead|assets\/form\.js/.test(await readFile(f, "utf-8"))) closedLeaks.push(f);
+  }
+  for (const l of base.LANGS) {
+    const p = path.join(TEMP_DIR, "d", l, "index.html");
+    if (!(await exists(p))) continue;
+    const html = await readFile(p, "utf-8");
+    if (!/https:\/\/wa\.me\//.test(html) || !/href="tel:\+/.test(html)) channelMiss.push(l);
+  }
+}
+add(
+  "forms-closed-build",
+  "关闭模式产物无表单/模拟接口且八语含 WhatsApp 与电话",
+  run2.status === 0 && closedLeaks.length === 0 && channelMiss.length === 0,
+  `残留=${closedLeaks.length} 缺渠道=${channelMiss.join("/") || "无"}`
+);
+await rm(TEMP_DIR, { recursive: true, force: true });
 
 const failed = results.filter((r) => !r.pass);
 const report = {

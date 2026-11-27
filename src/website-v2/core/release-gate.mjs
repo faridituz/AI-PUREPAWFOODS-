@@ -70,13 +70,43 @@ export function checkRelease(content, { origin = "" } = {}) {
     missingRequired.length ? missingRequired.map((i) => `${i.id}(${i.status})`).join("、") : "全部 verified"
   );
 
-  const endpoint = content.FORMS_META.productionEndpoint || "";
-  add(
-    "forms-endpoint",
-    "正式表单接收端已配置并获批",
-    /^https:\/\//.test(endpoint) && content.FORMS_META.endpointApproved === true,
-    endpoint ? endpoint : "未配置 productionEndpoint（当前只有本地模拟 API）"
-  );
+  const formsMode = content.FORMS_META.mode;
+  add("forms-mode", "表单模式必须显式配置（closed / online）", formsMode === "closed" || formsMode === "online", formsMode || "未配置（默认安全失败）");
+  if (formsMode === "closed") {
+    const ch = content.FORMS_META.channels || {};
+    const wa = ch.whatsapp || {};
+    const ph = ch.phone || {};
+    const tg = ch.telegram || {};
+    const em = ch.email || {};
+    const issues = [];
+    if (wa.approved !== true || !/^https:\/\/wa\.me\/\d{6,15}$/.test(String(wa.href || ""))) issues.push("whatsapp");
+    if (ph.approved !== true || !/^tel:\+\d{6,15}$/.test(String(ph.href || ""))) issues.push("phone");
+    if (tg.approved === true && !/^https:\/\/t\.me\/[A-Za-z0-9_]{4,}$/.test(String(tg.href || ""))) issues.push("telegram-href");
+    if (em.approved === true && !/^mailto:[^@\s]+@[^@\s]+$/.test(String(em.href || ""))) issues.push("email-href");
+    for (const [key, c] of [["telegram", tg], ["email", em]]) {
+      if (c.approved === false && c.href) issues.push(key + "-unapproved-href");
+    }
+    const missingClosed = enabled
+      .filter((l) => {
+        const c = (content.FORMS[l.code] || {}).closed || {};
+        return !c.note || !c.whatsapp || !c.call;
+      })
+      .map((l) => l.code);
+    add(
+      "forms-closed",
+      "表单关闭：渠道已批准、未批准渠道不展示、八语说明齐全",
+      issues.length === 0 && missingClosed.length === 0,
+      [...issues, ...missingClosed.map((c) => c + ".closed")].join("、") || "WhatsApp + 电话；Telegram/邮箱未批准不展示"
+    );
+  } else {
+    const endpoint = content.FORMS_META.productionEndpoint || "";
+    add(
+      "forms-endpoint",
+      "正式表单接收端已配置并获批",
+      /^https:\/\//.test(endpoint) && content.FORMS_META.endpointApproved === true,
+      endpoint ? endpoint : "未配置 productionEndpoint（当前只有本地模拟 API）"
+    );
+  }
 
   const draftCopy = enabled
     .filter((l) => scan(content.UI[l.code].prototype, DRAFT_PATTERNS) || scan(content.FORMS[l.code], DRAFT_PATTERNS))

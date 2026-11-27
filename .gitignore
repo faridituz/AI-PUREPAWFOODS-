@@ -12,7 +12,11 @@ sales-v1-dev/
 # 其 .local/ 内含 data.key 与真实库文件，不做同步。
 mvp/
 # backups/ 为阶段源码 tar.gz 与 Git bundle，GitHub 上的历史已覆盖其价值。
-backups/
+# 仅回滚目录的策略说明入库；回滚包本体（可能含大文件/敏感数据）不入库。
+backups/*
+!backups/rollback/
+backups/rollback/*
+!backups/rollback/README.md
 
 # ---- 依赖 --------------------------------------------------------------
 node_modules/

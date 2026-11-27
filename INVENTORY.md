@@ -3,7 +3,7 @@
 | 模块名称 | 文件路径 | 核心功能说明 | 输入/输出 | 状态 |
 | :--- | :--- | :--- | :--- | :--- |
 | 四原型统一构建器 | `src/website-v2/build.mjs` | 单一内容源生成 A/B/C/D 四主题×8语×13类=416页；含 hreflang/canonical/RTL/sitemap/robots/assets/content-status；`--index` 切生产索引；`--release` 只构建 D、强制索引、先跑发布门禁，失败时清理旧 `output/release`；所有输出/删除先经 `assertSafeOut`（仅允许 output/ 子目录、拒绝根目录/上级/符号链接与目录联接） | `content/*.json`、`core/*`、`styles/*` -> `output/prototypes/{a,b,c,d}/` 或 `output/release/` | 已实测：416页；release 门禁 13项拦截9项 |
-| 正式发布门禁 | `src/website-v2/core/release-gate.mjs` | 13项上线检查：八语范围/翻译状态/草稿标记/产品批准/实物核验/数据冲突/内容日志/必需证据/表单接收端/原型文案/认证宣称/HTTPS origin | content ctx + origin -> 通过/阻断清单 | 已实测：4通过9阻断，未生成发布文件 |
+| 正式发布门禁 | `src/website-v2/core/release-gate.mjs` | 模式化上线检查：八语范围/翻译状态/草稿标记/产品批准/实物核验/数据冲突/内容日志/必需证据/原型文案/认证宣称/HTTPS origin；表单按 `mode` 分支：online 查正式接收端，closed 查渠道批准/未批准渠道不带链接/八语说明，缺失默认阻断 | content ctx + origin -> 通过/阻断清单 | 已实测：closed 模式 14 项中 6 通过 8 阻断，未生成发布文件 |
 | 内容加载与校验 | `src/website-v2/core/content.mjs` | 读取 languages/site/ui/forms/marketing/errors/products/d/evidence/content-log；校验语言齐全、产品数、9项营养、喂食表、证据五状态+requiredForLaunch/publicUse、内容日志九字段 | JSON -> 统一 ctx | 已实测 |
 | 真实产品数据源 | `src/website-v2/content/products.json` | 7 SKU 保证分析值/喂食表/动物性原料占比/规格/来源/冲突/逐SKU核验状态，唯一数字源 | 包装 docx -> JSON | 已实测；`draft:true, publicApproved:false`，7 SKU `pending-physical` |
 | 素材证据登记 | `src/website-v2/content/evidence.json` | 22 项素材按已验证/未授权/冲突/缺失/待复核五类登记；含文件、版本、日期、持有人/签发机构、公开范围、是否阻断上线 | 素材路径 -> 状态清单 | 已实测 |
@@ -11,10 +11,10 @@
 | D 方案专属文案 | `src/website-v2/content/d.json` | D 首页“每袋都公开什么”8 语言文案 | JSON | 已实测 |
 | HTML/SEO 组件 | `src/website-v2/core/html.mjs` | 转义、页面路径、9条 hreflang、canonical、语言切换、header/footer、JSON-LD | ctx -> HTML | 已实测 |
 | 表单校验（共享） | `src/website-v2/core/validate.mjs` | 前后端共用 `validateLead`：长度、电话、邮箱、渠道、同意、蜜罐 | 表单对象 -> `{ok,errors,values}` | 已实测（44项） |
-| 表单与页面模板 | `src/website-v2/core/forms.mjs`、`pages.mjs` | 询价/经销商表单区块；13类页面与三主题首页旅程 | ctx+lang -> HTML | 已实测 |
-| 前端表单脚本 | `src/website-v2/assets/form.js` | 提交、错误提示、8s超时、幂等ID、重试、状态播报；构建时注入 validateLead | 浏览器事件 -> `/api/lead` | 已实测 |
+| 表单与页面模板 | `src/website-v2/core/forms.mjs`、`pages.mjs` | online 模式渲染询价/经销商表单；closed 模式改为 WhatsApp+电话渠道面板（Telegram/邮箱未批准不渲染）；13类页面与三主题首页旅程 | ctx+lang -> HTML | 已实测（closed 416 页无表单） |
+| 前端表单脚本 | `src/website-v2/assets/form.js` | 提交、错误提示、8s超时、幂等ID、重试、状态播报；构建时注入 validateLead；仅在 `mode=online` 时复制进产物 | 浏览器事件 -> `/api/lead` | 已实测（closed 不产出该文件） |
 | 四主题样式 | `src/website-v2/styles/base.css`、`theme-{a,b,c,d}.css` | 共享版式+表单/信任条/步骤/招商带+营养/喂食表；D 为森林绿+金铜细节统一版 | CSS | 已实测 736 组合 |
-| 表单安全测试 | `src/website-v2/qa-forms.mjs` | 服务端（限流/蜜罐/幂等/XSS/415/413）+ 浏览器端 a/b/c/d×en/ru/ar，共53项；自起 4174(API)/4175(UI，STRESS) 独立服务 | 构建产物 -> `output/evidence/qa-forms.json` | 已实测 53/0 |
+| 表单安全测试 | `src/website-v2/qa-forms.mjs` | online：服务端（限流/蜜罐/幂等/XSS/415/413）+ 浏览器端 53 项；closed：扫描原型产物无表单/form.js/api、八语有 WhatsApp+电话、未批准渠道不渲染 | 构建产物 -> `output/evidence/qa-forms.json` | 已实测：closed 7/0 |
 | 多语言与封闭功能检查 | `src/website-v2/qa-multilingual.mjs` | 2,468项：翻译键/规格/SEO/RTL/404/封闭功能；含 d.json；`--prod` 校验生产索引 | 本地服务 -> 控制台/JSON | 已实测 2468/0 |
 | 产品数据一致性检查 | `src/website-v2/qa-data.mjs` | 4主题×8语×7 SKU 逐页比对营养/喂食/规格/占比；扫描虚标与喂食笔误；校验语言治理 | 本地服务 -> `output/evidence/qa-data.json` | 已实测 1925/0 |
 | 本机隔离压测 | `src/website-v2/stress.mjs` | 10/50/100并发、单/6/8语言、D首页、长跑、冷启动、缓存失效；独立端口 4180/4181 | 构建产物 -> `output/evidence/stress-report.json` | 已实测 13 场景 0 失败 |
@@ -23,15 +23,16 @@
 | 真实资料盘点 | `src/website-v2/materials.mjs` | 扫描 `media/`，记录路径/SHA-256/docx元数据/SKU/规格/证据状态/公开范围 | media -> `output/evidence/materials.json` | 已实测 31 文件 |
 | 数据反向核验 | `src/website-v2/check-sources.mjs` | 用 19 份包装数据稿反向核验 products.json：四语喂食表/9项营养/每日量/单位/跨规格/跨产品 | 提取稿+products.json -> `output/evidence/source-check.json` | 已实测 295项，5处源文件问题 |
 | 发布包泄漏检查 | `src/website-v2/qa-release.mjs` | 构建后扫描：noindex/原型标记/mock/localhost/测试数据/A-B-C链接/页面数/404/sitemap/robots | 构建目录 -> `output/evidence/qa-release.json` | 已实测：原型D识别7项泄漏 |
-| 发布门禁补充测试 | `src/website-v2/qa-gate.mjs` | 13 场景：基线阻断、错误/缺失 origin、宣称注入、单条批准、伪造审批、部分证据、旧 release 残留清理、非 release 不写 release、输出目录防护 4 项（根目录/上级、data、output 本身、目录联接） | 内存内容 + 子进程 -> `output/evidence/qa-gate.json` | 已实测 13/13 |
+| 发布门禁补充测试 | `src/website-v2/qa-gate.mjs` | 18 场景：基线阻断、错误/缺失 origin、宣称注入、单条批准、伪造审批、部分证据、表单模式缺失/未批准渠道带链接/关闭说明缺失、旧 release 残留清理、回滚目录不受影响、非 release 不写 release、输出目录防护 4 项、关闭模式产物扫描 | 内存内容 + 子进程 -> `output/evidence/qa-gate.json` | 已实测 18/18 |
 | 条码核对 | `src/website-v2/audit-barcodes.mjs`、`content/barcodes.json` | 解析 GS1 登记 PDF 提取稿与包装数据稿，校验 24 条 EAN 校验位/重复/规格映射/未映射 | `data/extracted/barcodes.txt` + `barcodes.json` -> `output/evidence/barcodes.json`、`output/V2.7_条码核对表_20261127.md` | 已实测：24 条、19 映射、5 未映射、0 校验位错误 |
 | 产品主数据风险 | `src/website-v2/content/product-risks.json` | P1-001～P1-006：条码冲突、磷含量、喂食量、共用喂食表、注册名、实物核验 | JSON -> 文档/Excel | 已登记，全部未批准 |
 | 产品接口契约 | `src/website-v2/contracts/product-api.schema.json` | 主数据与营销内容分离的产品 JSON Schema（草案，未批准） | Schema -> 对接文档 | 草案 0.1.0 |
 | 证据分类建议 | `src/website-v2/content/evidence-classification.proposal.json` | 22 项证据按法律必须/宣称触发/可选/隐藏分类建议，不参与构建、不改门禁 | evidence.json -> 建议 | 待所有者与专业人员审核 |
+| 回滚包策略 | `backups/rollback/README.md` | 回滚包独立于 output，版本号+SHA-256、禁含密钥/客户数据、异地备份与恢复演练要求；仅说明入库，包本体忽略 | 策略文档 | 已建立；未生成生产回滚包 |
 | V2.8 方向与门禁提案 | `output/V2.8_方向确认与门禁调整提案_20261127.md` | 语言/URL 方向、方案 C 渠道、门禁条件化前后对照、发布目录防护、文件归属与协作方案 | 现有材料 -> 单一提案文档 | 未实施，待批准 |
 | V2.7 核验与交接材料 | `output/V2.7_*.md`、`output/V2.7_产品资料核验表_20261127.xlsx`、`CODEX_REVIEW.md` | 主数据审核材料、接口契约、接收端/SEO 方案、人工待办、Codex 审核入口、六工作表 Excel | 现有数据 -> 文档/Excel | 已生成；干净目录接手验证通过 |
 | 8语原型生成器（方案A，旧） | `src/website-v2/build-a.mjs` | 初版单主题生成器 | 旧 content/styles -> `output/prototypes/a/` | 已被 `build.mjs` 取代，保留备查 |
-| 原型本地预览与模拟API | `src/website-v2/serve.mjs` | 静态服务 + mock 线索 API（同源/JSON/16KB/限流/蜜罐/幂等/脱敏日志）、CSP等安全头、ETag/304、多语言404；`STRESS=1` 开放统计 | 原型目录 -> http://localhost:4173 | 已实测 |
+| 原型本地预览与模拟API | `src/website-v2/serve.mjs` | 静态服务 + mock 线索 API（**仅 `mode=online` 可用，closed 返回 404**）、CSP等安全头、ETag/304、多语言404；`STRESS=1` 开放统计 | 原型目录 -> http://localhost:4173 | 已实测：closed 下 /api/lead=404 |
 | 8语布局自检 | `src/website-v2/qa-layout.mjs` | CDP 驱动 Chrome，四主题×8语×7断点×5页（含320/360/412/1920）检查溢出/lang/dir/hreflang/noindex/中文串入/表单；含切换保页与后退交互 | 本地服务 -> 控制台/`output/evidence/qa-layout.json` | 已实测：736组合0异常 |
 | 性能对比测试 | `src/website-v2/perf.mjs` | CDP 模拟 390px+3G，采集 FCP/LCP/CLS/传输量，对比原型与线上 | URL 列表 -> `output/evidence/perf.json` | 已实测：原型LCP 600–840ms，线上996ms |
 | 8语内容源 | `src/website-v2/content/languages.json`、`site.json`、`ui.json`、`forms.json`、`marketing.json`、`errors.json`、`products.json`、`d.json`、`evidence.json`、`content-log.json` | 语言开关 + 8语真实文案/表单/营销/404 词条 + 产品数值 + 素材登记 + 变更日志 | JSON | 8语×7产品完整；新增语言标原型草稿 |

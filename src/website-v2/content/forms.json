@@ -1,9 +1,32 @@
 {
   "meta": {
     "draft": true,
-    "note": "原型表单文案草稿。en/ru/uz 为人工可读级别，其余语言为 AI 草稿，上线前必须由母语人员审核。表单只提交到本地模拟 API，不连接真实 CRM。",
+    "note": "原型表单文案草稿。en/ru/uz 为人工可读级别，其余语言为 AI 草稿，上线前必须由母语人员审核。第一阶段 mode=closed：不渲染任何在线表单，只展示经批准的 WhatsApp 与电话入口。",
     "productionEndpoint": null,
-    "endpointApproved": false
+    "endpointApproved": false,
+    "mode": "closed",
+    "channels": {
+      "whatsapp": {
+        "href": "https://wa.me/998999876888",
+        "approved": true,
+        "note": "原官网号码，报告仅展示尾号 6888"
+      },
+      "phone": {
+        "href": "tel:+998958266999",
+        "approved": true,
+        "note": "上线前需确认实际接待能力"
+      },
+      "telegram": {
+        "href": "",
+        "approved": false,
+        "note": "账号已有，归属与官方入口核实前不展示"
+      },
+      "email": {
+        "href": "",
+        "approved": false,
+        "note": "个人 Gmail 未获批准公开"
+      }
+    }
   },
   "langs": {
     "en": {
@@ -67,6 +90,11 @@
         "success_extra": "This is a prototype confirmation, not a real sales lead.",
         "error_retry": "Try again",
         "received": "Reference"
+      },
+      "closed": {
+        "whatsapp": "Chat on WhatsApp",
+        "call": "Call us",
+        "note": "Opening WhatsApp or your phone app does not submit an application. This website does not collect or store your personal data."
       }
     },
     "ru": {
@@ -130,6 +158,11 @@
         "success_extra": "Это подтверждение прототипа, а не реальная заявка в отдел продаж.",
         "error_retry": "Повторить",
         "received": "Номер"
+      },
+      "closed": {
+        "whatsapp": "Написать в WhatsApp",
+        "call": "Позвонить",
+        "note": "Открытие WhatsApp или звонок не отправляет заявку. Сайт не собирает и не хранит ваши персональные данные."
       }
     },
     "uz": {
@@ -193,6 +226,11 @@
         "success_extra": "Bu prototip tasdiqi, real savdo lid emas.",
         "error_retry": "Qayta urinish",
         "received": "Raqam"
+      },
+      "closed": {
+        "whatsapp": "WhatsApp orqali yozish",
+        "call": "Qo‘ng‘iroq qilish",
+        "note": "WhatsApp ni ochish yoki qo‘ng‘iroq qilish ariza yubormaydi. Sayt shaxsiy ma’lumotlaringizni yig‘maydi va saqlamaydi."
       }
     },
     "zh": {
@@ -256,6 +294,11 @@
         "success_extra": "这是原型确认，并非真实销售线索。",
         "error_retry": "重试",
         "received": "编号"
+      },
+      "closed": {
+        "whatsapp": "WhatsApp 留言",
+        "call": "拨打电话",
+        "note": "打开 WhatsApp 或拨号不会提交申请，本站不会收集或保存你的个人信息。"
       }
     },
     "ar": {
@@ -319,6 +362,11 @@
         "success_extra": "هذا تأكيد من النموذج الأولي وليس طلب بيع حقيقياً.",
         "error_retry": "إعادة المحاولة",
         "received": "الرقم"
+      },
+      "closed": {
+        "whatsapp": "راسلنا عبر واتساب",
+        "call": "اتصل بنا",
+        "note": "فتح واتساب أو الاتصال لا يعني إرسال طلب، والموقع لا يجمع بياناتك الشخصية أو يحفظها."
       }
     },
     "kk": {
@@ -382,6 +430,11 @@
         "success_extra": "Бұл прототип растауы, нақты сату лиді емес.",
         "error_retry": "Қайталау",
         "received": "Нөмір"
+      },
+      "closed": {
+        "whatsapp": "WhatsApp-қа жазу",
+        "call": "Қоңырау шалу",
+        "note": "WhatsApp ашу немесе қоңырау шалу өтінім жібермейді. Сайт жеке деректеріңізді жинамайды және сақтамайды."
       }
     },
     "ky": {
@@ -445,6 +498,11 @@
         "success_extra": "Бул прототип ырастоосу, реалдуу сатуу лиди эмес.",
         "error_retry": "Кайталоо",
         "received": "Номер"
+      },
+      "closed": {
+        "whatsapp": "WhatsApp аркылуу жазуу",
+        "call": "Чалуу",
+        "note": "WhatsApp ачуу же чалуу арыз жөнөтпөйт. Сайт жеке маалыматтарыңызды чогултпайт жана сактабайт."
       }
     },
     "tg": {
@@ -508,6 +566,11 @@
         "success_extra": "Ин тасдиқи прототип аст, на лиди воқеии фурӯш.",
         "error_retry": "Такрор",
         "received": "Рақам"
+      },
+      "closed": {
+        "whatsapp": "Навиштан дар WhatsApp",
+        "call": "Занг задан",
+        "note": "Кушодани WhatsApp ё занг задан дархост намефиристад. Сайт маълумоти шахсии шуморо ҷамъ намекунад ва нигоҳ намедорад."
       }
     }
   }

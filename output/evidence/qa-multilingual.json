@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T10:10:45.255Z",
+  "generatedAt": "2026-11-27T10:23:40.499Z",
   "base": "http://localhost:4173",
   "langs": [
     "en",
@@ -17,7 +17,7 @@
     "c",
     "d"
   ],
-  "total": 2468,
+  "total": 2500,
   "failed": 0,
   "results": [
     {
@@ -1623,16 +1623,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "a/en/contact",
       "pass": true,
-      "detail": "Please fill in the required fields."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "a/en/contact",
       "pass": true,
-      "detail": "e.g. Aziz Karimov"
+      "detail": "Opening WhatsApp or your phone app does "
+    },
+    {
+      "group": "咨询渠道",
+      "name": "a/en/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -1989,16 +1995,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "a/zh/contact",
       "pass": true,
-      "detail": "请填写必填项。"
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "a/zh/contact",
       "pass": true,
-      "detail": "例如：阿齐兹"
+      "detail": "打开 WhatsApp 或拨号不会提交申请，本站不会收集或保存你的个人信息。"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "a/zh/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -2355,16 +2367,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "a/ru/contact",
       "pass": true,
-      "detail": "Пожалуйста, заполните обязательные поля."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "a/ru/contact",
       "pass": true,
-      "detail": "например, Азиз Каримов"
+      "detail": "Открытие WhatsApp или звонок не отправля"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "a/ru/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -2721,16 +2739,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "a/ar/contact",
       "pass": true,
-      "detail": "يرجى ملء الحقول المطلوبة."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "a/ar/contact",
       "pass": true,
-      "detail": "مثال: عزيز كريموف"
+      "detail": "فتح واتساب أو الاتصال لا يعني إرسال طلب،"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "a/ar/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -3087,16 +3111,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "a/uz/contact",
       "pass": true,
-      "detail": "Iltimos, majburiy maydonlarni to‘ldiring"
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "a/uz/contact",
       "pass": true,
-      "detail": "masalan, Aziz Karimov"
+      "detail": "WhatsApp ni ochish yoki qo‘ng‘iroq qilis"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "a/uz/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -3453,16 +3483,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "a/kk/contact",
       "pass": true,
-      "detail": "Міндетті өрістерді толтырыңыз."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "a/kk/contact",
       "pass": true,
-      "detail": "мысалы, Әзіз Кәрімов"
+      "detail": "WhatsApp ашу немесе қоңырау шалу өтінім "
+    },
+    {
+      "group": "咨询渠道",
+      "name": "a/kk/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -3819,16 +3855,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "a/ky/contact",
       "pass": true,
-      "detail": "Милдеттүү талааларды толтуруңуз."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "a/ky/contact",
       "pass": true,
-      "detail": "мисалы, Азиз Каримов"
+      "detail": "WhatsApp ачуу же чалуу арыз жөнөтпөйт. С"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "a/ky/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -4185,16 +4227,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "a/tg/contact",
       "pass": true,
-      "detail": "Майдонҳои ҳатмиро пур кунед."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "a/tg/contact",
       "pass": true,
-      "detail": "масалан, Азиз Каримов"
+      "detail": "Кушодани WhatsApp ё занг задан дархост н"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "a/tg/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "hreflang 双向一致",
@@ -4623,16 +4671,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "b/en/contact",
       "pass": true,
-      "detail": "Please fill in the required fields."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "b/en/contact",
       "pass": true,
-      "detail": "e.g. Aziz Karimov"
+      "detail": "Opening WhatsApp or your phone app does "
+    },
+    {
+      "group": "咨询渠道",
+      "name": "b/en/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -4989,16 +5043,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "b/zh/contact",
       "pass": true,
-      "detail": "请填写必填项。"
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "b/zh/contact",
       "pass": true,
-      "detail": "例如：阿齐兹"
+      "detail": "打开 WhatsApp 或拨号不会提交申请，本站不会收集或保存你的个人信息。"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "b/zh/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -5355,16 +5415,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "b/ru/contact",
       "pass": true,
-      "detail": "Пожалуйста, заполните обязательные поля."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "b/ru/contact",
       "pass": true,
-      "detail": "например, Азиз Каримов"
+      "detail": "Открытие WhatsApp или звонок не отправля"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "b/ru/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -5721,16 +5787,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "b/ar/contact",
       "pass": true,
-      "detail": "يرجى ملء الحقول المطلوبة."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "b/ar/contact",
       "pass": true,
-      "detail": "مثال: عزيز كريموف"
+      "detail": "فتح واتساب أو الاتصال لا يعني إرسال طلب،"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "b/ar/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -6087,16 +6159,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "b/uz/contact",
       "pass": true,
-      "detail": "Iltimos, majburiy maydonlarni to‘ldiring"
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "b/uz/contact",
       "pass": true,
-      "detail": "masalan, Aziz Karimov"
+      "detail": "WhatsApp ni ochish yoki qo‘ng‘iroq qilis"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "b/uz/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -6453,16 +6531,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "b/kk/contact",
       "pass": true,
-      "detail": "Міндетті өрістерді толтырыңыз."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "b/kk/contact",
       "pass": true,
-      "detail": "мысалы, Әзіз Кәрімов"
+      "detail": "WhatsApp ашу немесе қоңырау шалу өтінім "
+    },
+    {
+      "group": "咨询渠道",
+      "name": "b/kk/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -6819,16 +6903,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "b/ky/contact",
       "pass": true,
-      "detail": "Милдеттүү талааларды толтуруңуз."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "b/ky/contact",
       "pass": true,
-      "detail": "мисалы, Азиз Каримов"
+      "detail": "WhatsApp ачуу же чалуу арыз жөнөтпөйт. С"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "b/ky/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -7185,16 +7275,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "b/tg/contact",
       "pass": true,
-      "detail": "Майдонҳои ҳатмиро пур кунед."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "b/tg/contact",
       "pass": true,
-      "detail": "масалан, Азиз Каримов"
+      "detail": "Кушодани WhatsApp ё занг задан дархост н"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "b/tg/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "hreflang 双向一致",
@@ -7623,16 +7719,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "c/en/contact",
       "pass": true,
-      "detail": "Please fill in the required fields."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "c/en/contact",
       "pass": true,
-      "detail": "e.g. Aziz Karimov"
+      "detail": "Opening WhatsApp or your phone app does "
+    },
+    {
+      "group": "咨询渠道",
+      "name": "c/en/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -7989,16 +8091,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "c/zh/contact",
       "pass": true,
-      "detail": "请填写必填项。"
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "c/zh/contact",
       "pass": true,
-      "detail": "例如：阿齐兹"
+      "detail": "打开 WhatsApp 或拨号不会提交申请，本站不会收集或保存你的个人信息。"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "c/zh/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -8355,16 +8463,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "c/ru/contact",
       "pass": true,
-      "detail": "Пожалуйста, заполните обязательные поля."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "c/ru/contact",
       "pass": true,
-      "detail": "например, Азиз Каримов"
+      "detail": "Открытие WhatsApp или звонок не отправля"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "c/ru/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -8721,16 +8835,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "c/ar/contact",
       "pass": true,
-      "detail": "يرجى ملء الحقول المطلوبة."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "c/ar/contact",
       "pass": true,
-      "detail": "مثال: عزيز كريموف"
+      "detail": "فتح واتساب أو الاتصال لا يعني إرسال طلب،"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "c/ar/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -9087,16 +9207,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "c/uz/contact",
       "pass": true,
-      "detail": "Iltimos, majburiy maydonlarni to‘ldiring"
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "c/uz/contact",
       "pass": true,
-      "detail": "masalan, Aziz Karimov"
+      "detail": "WhatsApp ni ochish yoki qo‘ng‘iroq qilis"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "c/uz/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -9453,16 +9579,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "c/kk/contact",
       "pass": true,
-      "detail": "Міндетті өрістерді толтырыңыз."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "c/kk/contact",
       "pass": true,
-      "detail": "мысалы, Әзіз Кәрімов"
+      "detail": "WhatsApp ашу немесе қоңырау шалу өтінім "
+    },
+    {
+      "group": "咨询渠道",
+      "name": "c/kk/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -9819,16 +9951,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "c/ky/contact",
       "pass": true,
-      "detail": "Милдеттүү талааларды толтуруңуз."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "c/ky/contact",
       "pass": true,
-      "detail": "мисалы, Азиз Каримов"
+      "detail": "WhatsApp ачуу же чалуу арыз жөнөтпөйт. С"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "c/ky/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -10185,16 +10323,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "c/tg/contact",
       "pass": true,
-      "detail": "Майдонҳои ҳатмиро пур кунед."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "c/tg/contact",
       "pass": true,
-      "detail": "масалан, Азиз Каримов"
+      "detail": "Кушодани WhatsApp ё занг задан дархост н"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "c/tg/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "hreflang 双向一致",
@@ -10623,16 +10767,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "d/en/contact",
       "pass": true,
-      "detail": "Please fill in the required fields."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "d/en/contact",
       "pass": true,
-      "detail": "e.g. Aziz Karimov"
+      "detail": "Opening WhatsApp or your phone app does "
+    },
+    {
+      "group": "咨询渠道",
+      "name": "d/en/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -10989,16 +11139,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "d/zh/contact",
       "pass": true,
-      "detail": "请填写必填项。"
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "d/zh/contact",
       "pass": true,
-      "detail": "例如：阿齐兹"
+      "detail": "打开 WhatsApp 或拨号不会提交申请，本站不会收集或保存你的个人信息。"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "d/zh/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -11355,16 +11511,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "d/ru/contact",
       "pass": true,
-      "detail": "Пожалуйста, заполните обязательные поля."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "d/ru/contact",
       "pass": true,
-      "detail": "например, Азиз Каримов"
+      "detail": "Открытие WhatsApp или звонок не отправля"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "d/ru/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -11721,16 +11883,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "d/ar/contact",
       "pass": true,
-      "detail": "يرجى ملء الحقول المطلوبة."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "d/ar/contact",
       "pass": true,
-      "detail": "مثال: عزيز كريموف"
+      "detail": "فتح واتساب أو الاتصال لا يعني إرسال طلب،"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "d/ar/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -12087,16 +12255,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "d/uz/contact",
       "pass": true,
-      "detail": "Iltimos, majburiy maydonlarni to‘ldiring"
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "d/uz/contact",
       "pass": true,
-      "detail": "masalan, Aziz Karimov"
+      "detail": "WhatsApp ni ochish yoki qo‘ng‘iroq qilis"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "d/uz/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -12453,16 +12627,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "d/kk/contact",
       "pass": true,
-      "detail": "Міндетті өрістерді толтырыңыз."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "d/kk/contact",
       "pass": true,
-      "detail": "мысалы, Әзіз Кәрімов"
+      "detail": "WhatsApp ашу немесе қоңырау шалу өтінім "
+    },
+    {
+      "group": "咨询渠道",
+      "name": "d/kk/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -12819,16 +12999,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "d/ky/contact",
       "pass": true,
-      "detail": "Милдеттүү талааларды толтуруңуз."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "d/ky/contact",
       "pass": true,
-      "detail": "мисалы, Азиз Каримов"
+      "detail": "WhatsApp ачуу же чалуу арыз жөнөтпөйт. С"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "d/ky/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "页面可访问",
@@ -13185,16 +13371,22 @@
       "detail": ""
     },
     {
-      "group": "表单提示语言",
+      "group": "表单关闭",
       "name": "d/tg/contact",
       "pass": true,
-      "detail": "Майдонҳои ҳатмиро пур кунед."
+      "detail": ""
     },
     {
-      "group": "表单占位语言",
+      "group": "关闭说明语言",
       "name": "d/tg/contact",
       "pass": true,
-      "detail": "масалан, Азиз Каримов"
+      "detail": "Кушодани WhatsApp ё занг задан дархост н"
+    },
+    {
+      "group": "咨询渠道",
+      "name": "d/tg/contact",
+      "pass": true,
+      "detail": ""
     },
     {
       "group": "hreflang 双向一致",
@@ -13626,7 +13818,7 @@
       "group": "RTL",
       "name": "a/ar 电话数字保持 LTR",
       "pass": true,
-      "detail": "ltr +998 95 826 69 99"
+      "detail": "2 个电话链接"
     },
     {
       "group": "渲染",
@@ -13968,7 +14160,7 @@
       "group": "RTL",
       "name": "b/ar 电话数字保持 LTR",
       "pass": true,
-      "detail": "ltr +998 95 826 69 99"
+      "detail": "3 个电话链接"
     },
     {
       "group": "渲染",
@@ -14310,7 +14502,7 @@
       "group": "RTL",
       "name": "c/ar 电话数字保持 LTR",
       "pass": true,
-      "detail": "ltr +998 95 826 69 99"
+      "detail": "3 个电话链接"
     },
     {
       "group": "渲染",
@@ -14652,7 +14844,7 @@
       "group": "RTL",
       "name": "d/ar 电话数字保持 LTR",
       "pass": true,
-      "detail": "ltr +998 95 826 69 99"
+      "detail": "3 个电话链接"
     },
     {
       "group": "渲染",

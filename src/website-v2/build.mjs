@@ -1,4 +1,4 @@
-import { readFile, writeFile, mkdir, cp, rm, lstat, realpath } from "node:fs/promises";
+import { readFile, writeFile, mkdir, cp, rm, lstat, realpath, readdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { loadContent } from "./core/content.mjs";
@@ -88,8 +88,9 @@ if (RELEASE) {
   await safeRemove(OUT_ROOT, "正式构建");
 }
 
-const formJsTemplate = await readFile(path.join(__dirname, "assets/form.js"), "utf-8");
-const formJs = formJsTemplate.replace("/*__VALIDATE__*/", validateLead.toString());
+const FORMS_ONLINE = content.FORMS_META.mode === "online";
+const formJsTemplate = FORMS_ONLINE ? await readFile(path.join(__dirname, "assets/form.js"), "utf-8") : "";
+const formJs = FORMS_ONLINE ? formJsTemplate.replace("/*__VALIDATE__*/", validateLead.toString()) : "";
 
 const builtAt = new Date().toISOString();
 const manifest = { builtAt, origin: ORIGIN, noindex: NOINDEX, langs: content.LANGS, totalPages: 0, themes: [] };
@@ -157,6 +158,31 @@ for (const theme of THEMES) {
 
 await writeFile(path.join(OUT_ROOT, "build-manifest.json"), JSON.stringify(manifest, null, 2), "utf-8");
 
+async function walk(dir) {
+  const out = [];
+  for (const ent of await readdir(dir, { withFileTypes: true })) {
+    const p = path.join(dir, ent.name);
+    if (ent.isDirectory()) out.push(...(await walk(p)));
+    else out.push(p);
+  }
+  return out;
+}
+
+if (RELEASE && content.FORMS_META.mode === "closed") {
+  const leaks = [];
+  for (const f of await walk(OUT_ROOT)) {
+    if (!/\.(html|js)$/.test(f)) continue;
+    if (/data-lead-form|<form\b|\/api\/lead|assets\/form\.js/.test(await readFile(f, "utf-8"))) {
+      leaks.push(path.relative(ROOT, f));
+    }
+  }
+  if (leaks.length) {
+    await safeRemove(OUT_ROOT, "正式构建");
+    console.error(`表单关闭模式检查失败：${leaks.length} 个文件仍含表单/模拟接口，已清理发布目录。例：${leaks[0]}`);
+    process.exit(1);
+  }
+}
+
 const statusCounts = {};
 for (const item of content.EVIDENCE) statusCounts[item.status] = (statusCounts[item.status] || 0) + 1;
 await writeFile(
@@ -198,5 +224,5 @@ async function copyAssets(ctx, assetsDir) {
   await cp(path.join(__dirname, "styles/base.css"), path.join(assetsDir, "base.css"));
   await cp(path.join(__dirname, "styles", `theme-${ctx.THEME}.css`), path.join(assetsDir, "theme.css"));
   await cp(path.join(__dirname, "assets/logo.png"), path.join(assetsDir, "logo.png"));
-  await writeFile(path.join(assetsDir, "form.js"), formJs, "utf-8");
+  if (ctx.FORMS_META.mode === "online") await writeFile(path.join(assetsDir, "form.js"), formJs, "utf-8");
 }

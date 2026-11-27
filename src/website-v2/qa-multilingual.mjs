@@ -143,10 +143,17 @@ for (const theme of THEMES) {
         for (const [pattern, label] of closedFeaturePatterns) record("封闭功能", `${tag} 无${label}`, !pattern.test(text));
       }
       if (rel === "contact") {
-        const msg = (text.match(/data-msg-required="([^"]*)"/) || [])[1] || "";
-        record("表单提示语言", tag, scriptOk(lang, msg), msg.slice(0, 40));
-        const ph = (text.match(/placeholder="([^"]*)"/) || [])[1] || "";
-        record("表单占位语言", tag, scriptOk(lang, ph), ph.slice(0, 40));
+        if (FORMS.meta.mode === "online") {
+          const msg = (text.match(/data-msg-required="([^"]*)"/) || [])[1] || "";
+          record("表单提示语言", tag, scriptOk(lang, msg), msg.slice(0, 40));
+          const ph = (text.match(/placeholder="([^"]*)"/) || [])[1] || "";
+          record("表单占位语言", tag, scriptOk(lang, ph), ph.slice(0, 40));
+        } else {
+          record("表单关闭", tag, !/<form\b|data-lead-form/.test(text));
+          const closed = (FORMS.langs[lang] || {}).closed || {};
+          record("关闭说明语言", tag, scriptOk(lang, closed.note || ""), (closed.note || "").slice(0, 40));
+          record("咨询渠道", tag, /https:\/\/wa\.me\//.test(text) && /href="tel:\+/.test(text));
+        }
       }
     }
   }
@@ -244,7 +251,7 @@ for (const theme of THEMES) {
         if (el.getAttribute('aria-label')) return false;
         return !(el.id && document.querySelector('label[for="' + CSS.escape(el.id) + '"]'));
       }).length;
-      const tel = document.querySelector('a[href^="tel:"]');
+      const telLinks = [...document.querySelectorAll('a[href^="tel:"]')].map(a => ({ text: a.textContent.trim(), dir: getComputedStyle(a).direction }));
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
       ctx.font = '16px sans-serif';
@@ -264,8 +271,7 @@ for (const theme of THEMES) {
         imgsNoAlt: imgs.filter(i => !i.hasAttribute('alt')).length,
         controls: controls.length,
         unlabeled,
-        telDir: tel ? getComputedStyle(tel).direction : null,
-        telText: tel ? tel.textContent.trim() : '',
+        tels: telLinks,
         cards: document.querySelectorAll('.card').length,
         groups: document.querySelectorAll('.group-card').length,
         switchLinks: document.querySelectorAll('.lang-menu a').length,
@@ -281,7 +287,12 @@ for (const theme of THEMES) {
     record("渲染", `${tag} 无缺字怀疑字符`, v.suspiciousChars === 0, String(v.suspiciousChars));
     if (lang === "ar") {
       record("RTL", `${tag} 页面 RTL`, v.dir === "rtl");
-      record("RTL", `${tag} 电话数字保持 LTR`, v.telDir === "ltr" && /\+998/.test(v.telText), `${v.telDir} ${v.telText}`);
+      record(
+        "RTL",
+        `${tag} 电话数字保持 LTR`,
+        v.tels.length > 0 && v.tels.filter((t) => /\d/.test(t.text)).every((t) => t.dir === "ltr") && v.tels.some((t) => /\+998/.test(t.text)),
+        `${v.tels.length} 个电话链接`
+      );
     }
     if (lang !== "zh") record("渲染", `${tag} 无中文残留`, !hasCJK(v.title + " " + (await evaluate("document.body.innerText"))));
   }

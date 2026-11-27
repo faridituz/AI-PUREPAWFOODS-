@@ -55,10 +55,16 @@
       "detail": "packaging-docx-19(review)、small-dog-beef-feeding-typo(conflicting)、nutrition-basis(review)、production-address-source(review)、halal-certificate(missing)、product-photos(missing)、dealer-policy(missing)、legal-texts(missing)"
     },
     {
-      "id": "forms-endpoint",
-      "label": "正式表单接收端已配置并获批",
-      "pass": false,
-      "detail": "未配置 productionEndpoint（当前只有本地模拟 API）"
+      "id": "forms-mode",
+      "label": "表单模式必须显式配置（closed / online）",
+      "pass": true,
+      "detail": "closed"
+    },
+    {
+      "id": "forms-closed",
+      "label": "表单关闭：渠道已批准、未批准渠道不展示、八语说明齐全",
+      "pass": true,
+      "detail": "WhatsApp + 电话；Telegram/邮箱未批准不展示"
     },
     {
       "id": "draft-copy",
@@ -87,9 +93,8 @@
     "产品数据无未决冲突：small-dog-beef、small-dog-beef.feeding、small-dog-chicken.nutrition.phosphorus、kitten-chicken.feeding.header",
     "全部内容变更已获批准：9 条待批准",
     "上线必需证据均已核实：packaging-docx-19(review)、small-dog-beef-feeding-typo(conflicting)、nutrition-basis(review)、production-address-source(review)、halal-certificate(missing)、product-photos(missing)、dealer-policy(missing)、legal-texts(missing)",
-    "正式表单接收端已配置并获批：未配置 productionEndpoint（当前只有本地模拟 API）",
     "页面无原型/模拟提示文案：仍含原型提示：en/zh/ru/ar/uz/kk/ky/tg"
   ],
   "pass": false,
-  "checkedAt": "2026-11-27T10:11:39.675Z"
+  "checkedAt": "2026-11-27T10:24:23.773Z"
 }
