@@ -60,3 +60,4 @@
 | 营销项目现状核查 | `output/marketing/05-营销现状核查_20261127.md` | 15 项能力分类、六平台授权、视频/客服能力、缺口、优先级、审批项与销售接口边界 | 现有资产 -> 单一报告 | 已完成（2026-11-27） |
 | PostgreSQL 价格审批 | `sales-v1-dev/server/postgres-preview-bank.mjs` | 授权申请、独立审批及只生成一张订单 | PostgreSQL 隔离预览 | HTTP 与 173 项回归通过，界面待接入 |
 | 交易工作台价格审批 | `sales-v1-dev/public/trade.js` | 申请、按权限查看、管理员批准或驳回 | SQLite 和 PostgreSQL 工作台 | Edge 销售申请、HTTP 审批及 173 项回归通过 |
+| 商品与协议价维护 | `sales-v1-dev/server/postgres-preview-bank.mjs` | 管理员商品、条形码及协议价维护，订单历史价格保留 | PostgreSQL 隔离预览 | HTTP 专项及 173 项通过 |
