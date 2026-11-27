@@ -62,3 +62,4 @@
 | 交易工作台价格审批 | `sales-v1-dev/public/trade.js` | 申请、按权限查看、管理员批准或驳回 | SQLite 和 PostgreSQL 工作台 | Edge 销售申请、HTTP 审批及 173 项回归通过 |
 | 商品与协议价维护 | `sales-v1-dev/server/postgres-preview-bank.mjs` | 管理员商品、条形码及协议价维护，订单历史价格保留 | PostgreSQL 隔离预览 | HTTP 专项及 173 项通过 |
 | 有效期价格规则及维护表单 | `sales-v1-dev/public/trade.js`、`sales-v1-dev/server/ops-sales.mjs` | 商品、协议价及有效期价格设置 | 隔离 PostgreSQL 和 SQLite | HTTP 专项及 173 项通过，表单专项待验 |
+| 客户合并、照片移除及拜访配置 | `sales-v1-dev/server/postgres-preview-bank.mjs`、`sales-v1-dev/public/field.js` | 保留原交易、照片软移除、修改拜访参数 | 隔离 PostgreSQL | HTTP 和 173 项回归通过 |
