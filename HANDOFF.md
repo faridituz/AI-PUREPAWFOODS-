@@ -5,6 +5,7 @@
 - **最短接手流程**：`git clone https://github.com/faridituz/AI-PUREPAWFOODS-.git` → 确认 `node --version` ≥22（**无需 npm install**）→ `cd src/website-v2 && node build.mjs` → `node serve.mjs ../../output/prototypes 4173` → 打开 `http://localhost:4173/d/uz/`。回归：`node qa-gate.mjs`、`node audit-barcodes.mjs`、`node qa-data.mjs --base http://localhost:4173`、`node qa-multilingual.mjs --base http://localhost:4173`、`node qa-forms.mjs`。门禁：`node build.mjs --release --origin https://new.purepawfoods.com`，**必须退出 1 且不生成 release**。
 - **环境差异（必须单独迁移）**：`.env` 不入库，需在新机单独创建 `DATABASE_URL` / `MEDIA_STORAGE_PATH` / `TG_BOT_TOKEN` / `TG_ADMIN_CHAT_ID`，再跑 `python src/check_env.py`（Python 3.12）；旧机媒体路径不能照抄本机 Drive 路径。`data/`、`media/` 增量文件不进 Git，走云盘/`git add -f` 决策。
 - **注意**：本次干净目录验证只是本机模拟，**不等同第二台真实电脑验收**；未改正式站/DNS/WordPress；`output/release` 仍不存在；`products.json` 仅为本地候选主数据；五语仍为草稿，en/ru/uz 也无人工审校记录。
+- **同步说明**：推送时远端已多出旧机两个销售系统提交（`0d2e708`、`7e1f6e1`，仅改 HANDOFF/INVENTORY/LESSONS 三份文档），已 rebase 保留双方记录，无代码冲突。
 - **下一步**：等老板补齐 `output/V2.7_人工待办清单_20261127.md` 的 A/B/E/F/G 项；确认默认语言与最终 URL（是否保留 `/d/` 前缀）；批准表单方案后再调门禁。
 
 ## [2026-11-27] - 销售系统 P1.5 候选人工转档（旧机 Codex 分支）
