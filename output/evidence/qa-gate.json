@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-11-27T04:19:06.321Z",
-  "checks": 9,
+  "checkedAt": "2026-11-27T10:10:16.692Z",
+  "checks": 13,
   "failed": 0,
   "results": [
     {
@@ -50,6 +50,30 @@
       "label": "门禁失败时必须清理旧发布目录且退出码非 0",
       "pass": true,
       "detail": "exit=1 残留=无"
+    },
+    {
+      "id": "guard-root",
+      "label": "拒绝把输出目录指向项目根目录或上级",
+      "pass": true,
+      "detail": "exit=1"
+    },
+    {
+      "id": "guard-data",
+      "label": "拒绝把输出目录指向 output 之外的 data/",
+      "pass": true,
+      "detail": "exit=1"
+    },
+    {
+      "id": "guard-output",
+      "label": "拒绝删除 output/ 本身",
+      "pass": true,
+      "detail": "exit=1"
+    },
+    {
+      "id": "guard-junction",
+      "label": "拒绝通过目录联接删除项目外内容",
+      "pass": true,
+      "detail": "exit=1 联接=保留 数据=完好"
     },
     {
       "id": "no-release-via-flags",
