@@ -1,5 +1,9 @@
 # 双机交接班日志（HANDOFF.md）
 
+## [2026-11-27] - 销售系统 P1.5 公开候选和转档实测
+- 销售分支 c9bedd6 已推送。隔离 PostgreSQL 17.12 实测已有 Geofabrik 公开快照 113 条入池，重导新增 0，正式客户新增 0。虚构候选并发转档只生成一份档案及来源关联。173 项回归通过。
+- 下一步补地图完整档案和照片权限，随后继续主入口功能对照。主服务仍是 SQLite，无采购或生产修改。
+
 ## [2026-11-27] - V2.7 开发冻结、主数据核验、干净环境接手验证
 - **刚完成**：①远端 `87e68c0` 与本地一致、工作区干净、无未提交文件、无 LFS、无密钥入库；②在 `data/temp/clean-clone` 从 GitHub 全新克隆（118MB）实测：构建 416 页、8 语全 200、布局 736/0、数据 1925/0、多语言 2468/0（需 `--origin` 与 `--base` 同端口）、表单 53/0、`--release` 退出码 1 且无 `output/release`；③发现并修复门禁失败不清理旧发布目录的缺陷（现失败即 `rm output/release`）；④新增 `qa-gate.mjs` 9 场景全过；⑤新建条码核对（GS1 PDF 实为 **24 条**，19 映射 / 5 未映射 / 校验位全对）、`barcodes.json`、`audit-barcodes.mjs`；⑥登记 P1-001～P1-006 主数据风险；⑦接口契约草案 + 证据分类建议（未改门禁）；⑧咨询接收端 A/B/C 比较与推荐、SEO 迁移实测方案；⑨`CODEX_REVIEW.md`；⑩Excel 六工作表与人工待办 A–J。
 - **最短接手流程**：`git clone https://github.com/faridituz/AI-PUREPAWFOODS-.git` → 确认 `node --version` ≥22（**无需 npm install**）→ `cd src/website-v2 && node build.mjs` → `node serve.mjs ../../output/prototypes 4173` → 打开 `http://localhost:4173/d/uz/`。回归：`node qa-gate.mjs`、`node audit-barcodes.mjs`、`node qa-data.mjs --base http://localhost:4173`、`node qa-multilingual.mjs --base http://localhost:4173`、`node qa-forms.mjs`。门禁：`node build.mjs --release --origin https://new.purepawfoods.com`，**必须退出 1 且不生成 release**。
