@@ -54,3 +54,4 @@
 | 销售地图建档与编辑 | `sales-v1-dev/public/field.js` | 复用移动客户写入、权限检查及版本校验 | PostgreSQL 隔离预览 | 173 项和 Edge 表单通过 |
 | 销售行政区维护 | `sales-v1-dev/server/field-maintenance.mjs` | 管理员修订三语名称、来源及状态 | SQLite 与 PostgreSQL 隔离入口 | 173 项与 PostgreSQL 专项通过 |
 | 管理岗位地图客户编辑 | `sales-v1-dev/server/postgres-preview-bank.mjs` | 管理员及区域经理编辑，归属走交接事务 | PostgreSQL 隔离预览 | HTTP 专项及 173 项全通过 |
+| 地图现场拜访及门店照片 | `sales-v1-dev/public/field.js`、`sales-v1-dev/server/postgres-preview-bank.mjs` | 复用 GPS 评估、照片净化、归属和幂等 | 隔离 PostgreSQL | HTTP 专项及 173 项回归通过 |
