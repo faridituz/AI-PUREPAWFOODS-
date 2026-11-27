@@ -41,3 +41,4 @@
 | 包装资料审核 | `outputs/packaging-audit/extract.py`、`compare.py`、`report.py`、`create_missing.py` | 包装资料抽取、比对差异、补齐缺失 Word | 依赖旧机桌面路径 `C:/Users/yinho/Desktop/包装袋` | 历史脚本，本机不可直接运行 |
 | PSD 批量分析 | `outputs/01a19155/grouped.py`、`reference-layout.py` | PSD/参考版式分析与分组 | 历史输入文件 | 历史脚本 |
 | 销售系统离线 OSM 候选导入 | `sales-v1-dev/server/field-discovery.mjs`、`sales-v1-dev/server/postgres-preview-bank.mjs` | 复用坐标、许可与来源验证，PostgreSQL 候选池按来源去重 | 离线 JSON → 待核实候选池 | 173 项通过，新增 PostgreSQL 专项待复验 |
+| 销售候选人工转档 | `sales-v1-dev/server/postgres-preview-bank.mjs`、`sales-v1-dev/public/field.js` | 核实、区域权限、去重及来源关联 | 已核实候选 → 正式客户 | 常规回归通过，PostgreSQL 专项待执行 |
