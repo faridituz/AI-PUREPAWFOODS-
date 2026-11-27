@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "version": "proposal-2026-11-27",
+    "status": "pending-owner-and-professional-review",
+    "note": "本文件只是门禁分类建议，不参与构建，不改变 evidence.json 的 requiredForLaunch。任何分类调整必须由项目所有者与必要专业人员（法律/食品标签）审核后另行修改 evidence.json。",
+    "necessityLevels": {
+      "legal-mandatory": "法律强制、产品安全或经营资质必须有，不得取消门禁",
+      "claim-triggered": "一旦使用相关宣传才必须取得；可不取得，但必须同步删除对应宣传",
+      "optional-trust": "转化/信任类素材，可选，安全替代为不展示",
+      "currently-hidden": "当前页面未使用，保持隐藏即可，不应作为永久上线阻断项"
+    }
+  },
+  "items": [
+    { "id": "logo-official", "necessity": "legal-mandatory", "rationale": "品牌标识是页面与版权归属的基础素材", "gateSuggestion": "keep-block" },
+    { "id": "packaging-docx-19", "necessity": "legal-mandatory", "rationale": "产品营养与喂食数据的唯一来源，食品标示准确性属安全事项", "gateSuggestion": "keep-block" },
+    { "id": "barcode-registration", "necessity": "legal-mandatory", "rationale": "零售商品编码与规格对应，属经营资质与标签信息", "gateSuggestion": "keep-block" },
+    { "id": "state-registration", "necessity": "legal-mandatory", "rationale": "企业法定名称、地址、STIR 属网站必须披露信息", "gateSuggestion": "keep-block" },
+    { "id": "official-site-languages", "necessity": "optional-trust", "rationale": "用于确认原站语言范围，属内部证据", "gateSuggestion": "keep-nonblock" },
+    { "id": "packaging-diecut-preview", "necessity": "optional-trust", "rationale": "刀版预览仅内部参考，网页不使用", "gateSuggestion": "keep-nonblock" },
+    { "id": "equipment-nameplates", "necessity": "optional-trust", "rationale": "设备铭牌属工厂信任素材，网页未使用", "gateSuggestion": "keep-nonblock" },
+    { "id": "brochure-image-pdf", "necessity": "optional-trust", "rationale": "旧宣传册版权与真伪未确认，网页未使用", "gateSuggestion": "keep-nonblock" },
+    { "id": "small-dog-beef-feeding-typo", "necessity": "legal-mandatory", "rationale": "喂食量错误直接关系宠物健康", "gateSuggestion": "keep-block" },
+    { "id": "certificate-number-ambiguity", "necessity": "legal-mandatory", "rationale": "企业登记证书编号对外披露前必须唯一确定", "gateSuggestion": "keep-block" },
+    { "id": "nutrition-basis", "necessity": "legal-mandatory", "rationale": "保证分析值的计量基准（干物质/原样）影响标签合规", "gateSuggestion": "keep-block" },
+    { "id": "production-address-source", "necessity": "legal-mandatory", "rationale": "生产地址属强制披露信息，需与登记文件一致", "gateSuggestion": "keep-block" },
+    { "id": "halal-certificate", "necessity": "claim-triggered", "rationale": "当前 8 语页面无清真宣称；取得证书才可使用相关文案。若所有者确认永久不做清真宣称，可在删除全部相关文案后申请降级", "gateSuggestion": "downgrade-only-after-owner-confirms-no-halal-claim" },
+    { "id": "product-photos", "necessity": "optional-trust", "rationale": "当前产品页为文字规格页，未使用产品实拍；无照片不会产生虚假陈述", "gateSuggestion": "downgrade-after-owner-accepts-text-only" },
+    { "id": "factory-photos", "necessity": "currently-hidden", "rationale": "网页未使用工厂照片", "gateSuggestion": "downgrade-to-nonblock" },
+    { "id": "dealer-policy", "necessity": "claim-triggered", "rationale": "当前招商文案未承诺价格、区域保护、起订量等具体政策；一旦加入必须取得政策文件", "gateSuggestion": "keep-block-until-copy-review" },
+    { "id": "legal-texts", "necessity": "legal-mandatory", "rationale": "在线表单收集个人数据，隐私政策与条款属法律必需", "gateSuggestion": "keep-block" },
+    { "id": "trademark", "necessity": "claim-triggered", "rationale": "未使用 ®/™ 宣称；注册证不是网页上线的前置条件，但不能宣称注册商标", "gateSuggestion": "downgrade-if-no-registered-mark-claim" },
+    { "id": "test-reports", "necessity": "claim-triggered", "rationale": "当前无第三方检测或兽医认证宣称；使用相关文案前必须取得报告", "gateSuggestion": "downgrade-if-no-test-claim" },
+    { "id": "packaging-version-conflict", "necessity": "legal-mandatory", "rationale": "包装版本冲突会导致标签与网页数据不一致", "gateSuggestion": "keep-block" },
+    { "id": "barcode-duplicate-risk", "necessity": "legal-mandatory", "rationale": "重复 EAN 会导致零售与库存错误", "gateSuggestion": "keep-block" },
+    { "id": "name-registry-mismatch", "necessity": "legal-mandatory", "rationale": "注册名称与销售名称必须一致或可解释", "gateSuggestion": "keep-block" }
+  ]
+}

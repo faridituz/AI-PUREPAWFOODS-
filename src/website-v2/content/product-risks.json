@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "version": "P1-2026-11-27",
+    "note": "产品主数据风险清单。状态为 open 的风险不得被推测值替代；正式条码、营养数据、喂食量及适用对象在品牌方确认前保持未批准。",
+    "approvalStatus": "unapproved"
+  },
+  "risks": [
+    {
+      "id": "P1-001",
+      "severity": "high",
+      "title": "全犬鸡肉 1.5kg 与小犬牛肉 1.5kg 重复使用 EAN 4780178200193",
+      "detail": "GS1 登记文件中 4780178200193 仅对应第 19 条（小犬牛肉 1.5kg）；全犬鸡肉 1.5kg 的核对清单登记为 4780178200162，但其 PSD 合成图曾显示 0193。",
+      "evidence": ["media/业务资料/purapaw产品条形码.pdf", "src/tools/gen-sku-docx.mjs", "outputs/packaging-audit/包装袋Word与PSD核对清单.md"],
+      "impact": "两规格同时印刷将产生条码冲突，零售扫码与库存对应错误。",
+      "status": "open",
+      "blockRelease": true,
+      "ownerAction": "对照 GS1 账户与两块包装设计稿确认全犬鸡肉 1.5kg 的正式号码。"
+    },
+    {
+      "id": "P1-002",
+      "severity": "medium",
+      "title": "小犬鸡肉俄语磷含量 ≥0.91%，其他语言 ≥0.9%",
+      "detail": "3kg 俄语数据稿写 ≥0.91%，乌/哈/英及 1.5kg 稿均为 ≥0.9%；库内按 ≥0.9% 收录。",
+      "evidence": ["media/包装资料/狗/小犬鸡肉3-文字(3).docx"],
+      "impact": "营养标示跨语言不一致，可能构成标签合规问题。",
+      "status": "open",
+      "blockRelease": false,
+      "ownerAction": "由配方/质检确认实际保证分析值，再统一四语版面。"
+    },
+    {
+      "id": "P1-003",
+      "severity": "high",
+      "title": "小犬牛肉 100–125g 喂食量尚未获得原始证据确认",
+      "detail": "四语数据稿在 6–8kg / 低活动量写 100--125g（双连字符）；同系列小犬鸡肉为 100-125g；表头为每日量（g/天）。无法确认是笔误还是原设计值。",
+      "evidence": ["media/包装资料/狗/小犬牛肉1.5-文字(3).docx", "media/包装资料/狗/小犬牛肉3-文字(3).docx"],
+      "impact": "喂食量错误直接影响宠物健康与品牌责任。",
+      "status": "open",
+      "blockRelease": true,
+      "ownerAction": "提供原始 PSD/AI 或实物包装照片，确认是否为 100–125g。"
+    },
+    {
+      "id": "P1-004",
+      "severity": "medium",
+      "title": "多款鸡肉及牛肉产品共用喂食表，需要核实适用性",
+      "detail": "反向核验显示全猫鸡/牛、全犬鸡/牛、小犬鸡/牛分别共用同一张喂食表；共用可能合理，也可能是复制未改。",
+      "evidence": ["output/evidence/source-check.json"],
+      "impact": "不同配方/体型适用同一喂食量缺乏依据。",
+      "status": "open",
+      "blockRelease": true,
+      "ownerAction": "由配方或营养负责人逐款确认喂食表适用性。"
+    },
+    {
+      "id": "P1-005",
+      "severity": "medium",
+      "title": "幼猫注册名称包含“孕哺猫”，与页面名称存在差异",
+      "detail": "GS1 登记条目名称为幼猫/孕哺猫鸡肉，网页使用“幼猫粮 · 鸡肉”；注册名与销售名未对齐。",
+      "evidence": ["src/tools/gen-sku-docx.mjs", "media/业务资料/purapaw产品条形码.pdf"],
+      "impact": "包装、注册与网页名称不一致，影响合规与搜索一致性。",
+      "status": "open",
+      "blockRelease": false,
+      "ownerAction": "确认对外名称是否需包含孕哺猫，并统一包装、条码登记与网页。"
+    },
+    {
+      "id": "P1-006",
+      "severity": "high",
+      "title": "七个 SKU 尚未完成实物及原始包装核验",
+      "detail": "19 份包装 docx 为 2026-11-03 由 python-docx 生成的派生稿，项目内无 PSD 原件；7 个 SKU 全部 pending-physical。",
+      "evidence": ["media/包装资料/狗/*.docx", "output/evidence/materials.json", "src/website-v2/content/products.json"],
+      "impact": "所有营养、喂食、规格数据均不得作为正式宣传数据发布。",
+      "status": "open",
+      "blockRelease": true,
+      "ownerAction": "提供 7 个 SKU 的原始设计文件或正/背面实物照片。"
+    }
+  ]
+}

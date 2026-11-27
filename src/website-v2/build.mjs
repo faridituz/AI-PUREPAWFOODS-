@@ -37,9 +37,11 @@ if (RELEASE) {
   console.log(`正式构建门禁：${gate.checks.length} 项，通过 ${gate.checks.filter((c) => c.pass).length} 项`);
   for (const c of gate.checks) console.log(`${c.pass ? "通过" : "阻断"}  ${c.label}${c.pass ? "" : " —— " + c.detail}`);
   if (!gate.pass) {
-    console.error(`正式构建已阻断：${gate.blockers.length} 项未满足，未生成任何发布文件。门禁报告 -> ${reportPath}`);
+    await rm(OUT_ROOT, { recursive: true, force: true });
+    console.error(`正式构建已阻断：${gate.blockers.length} 项未满足，未生成任何发布文件，已清理旧发布目录。门禁报告 -> ${reportPath}`);
     process.exit(1);
   }
+  await rm(OUT_ROOT, { recursive: true, force: true });
 }
 
 const formJsTemplate = await readFile(path.join(__dirname, "assets/form.js"), "utf-8");

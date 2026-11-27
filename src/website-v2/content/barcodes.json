@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "updatedAt": "2026-11-27",
+    "source": "media/业务资料/purapaw产品条形码.pdf（GS1 登记文件，5 页，24 条 GTIN）；文本提取稿 data/extracted/barcodes.txt",
+    "assignmentSource": "outputs/packaging-audit/包装袋Word与PSD核对清单.md、src/tools/gen-sku-docx.mjs EAN 映射",
+    "gcp": "478017820",
+    "gln": "4780178209998",
+    "holder": "M.Ch.J. \"PURE PAW NUTRITION\"",
+    "registrationDate": "PDF 日期字段不完整（仅见 22 日 / 2026 年）",
+    "note": "校验位正确不代表条码已合法分配或产品对应关系正确。登记文件与包装数据稿的映射尚未经品牌方与 GS1 记录最终核对，全部保持未批准。",
+    "approvalStatus": "unapproved",
+    "physicalChecked": false
+  },
+  "entries": [
+    { "entry": 1, "ean": "4780178200018", "sizeKg": "1.5", "sku": "all-age-cat-chicken", "packagingFile": "media/包装资料/狗/全猫鸡肉1.5-文字(5).docx" },
+    { "entry": 2, "ean": "4780178200025", "sizeKg": "3", "sku": "all-age-cat-chicken", "packagingFile": "media/包装资料/狗/全猫鸡肉3-文字(4).docx" },
+    { "entry": 3, "ean": "4780178200032", "sizeKg": "10", "sku": "all-age-cat-chicken", "packagingFile": "media/包装资料/狗/全猫鸡肉10-文字(4).docx" },
+    { "entry": 4, "ean": "4780178200049", "sizeKg": "1.5", "sku": "all-age-cat-beef", "packagingFile": "media/包装资料/狗/全猫牛肉1.5-文字(4).docx" },
+    { "entry": 5, "ean": "4780178200056", "sizeKg": "3", "sku": "all-age-cat-beef", "packagingFile": "media/包装资料/狗/全猫牛肉3-文字(4).docx" },
+    { "entry": 6, "ean": "4780178200063", "sizeKg": "10", "sku": "all-age-cat-beef", "packagingFile": "media/包装资料/狗/全猫牛肉10-文字(4).docx" },
+    { "entry": 7, "ean": "4780178200070", "sizeKg": "1.5", "sku": "kitten-chicken", "packagingFile": "media/包装资料/狗/幼猫鸡肉1.5-文字(2).docx" },
+    { "entry": 8, "ean": "4780178200087", "sizeKg": "3", "sku": "kitten-chicken", "packagingFile": "media/包装资料/狗/幼猫鸡肉3-文字(2).docx" },
+    { "entry": 9, "ean": "4780178200094", "sizeKg": "10", "sku": "kitten-chicken", "packagingFile": "media/包装资料/狗/幼猫鸡肉10-文字(2).docx" },
+    { "entry": 10, "ean": "4780178200100", "sizeKg": "1.5", "sku": "all-age-dog-beef", "packagingFile": "media/包装资料/狗/全犬牛肉1.5-文字(9).docx" },
+    { "entry": 11, "ean": "4780178200117", "sizeKg": "5", "sku": "all-age-dog-beef", "packagingFile": "media/包装资料/狗/全犬牛肉5-文字(8).docx" },
+    { "entry": 12, "ean": "4780178200124", "sizeKg": "15", "sku": "all-age-dog-beef", "packagingFile": "media/包装资料/狗/全犬牛肉15-文字(2).docx" },
+    { "entry": 13, "ean": "4780178200131", "sizeKg": "1.5", "sku": null, "packagingFile": null },
+    { "entry": 14, "ean": "4780178200148", "sizeKg": "5", "sku": null, "packagingFile": null },
+    { "entry": 15, "ean": "4780178200155", "sizeKg": "15", "sku": null, "packagingFile": null },
+    { "entry": 16, "ean": "4780178200162", "sizeKg": "1.5", "sku": "all-age-dog-chicken", "packagingFile": "media/包装资料/狗/全犬鸡肉1.5-文字(9).docx", "note": "PSD 合成图曾显示 4780178200193（与小犬牛肉1.5重复）；核对清单登记为本号码" },
+    { "entry": 17, "ean": "4780178200179", "sizeKg": "5", "sku": "all-age-dog-chicken", "packagingFile": "media/包装资料/狗/全犬鸡肉5-文字(8).docx" },
+    { "entry": 18, "ean": "4780178200186", "sizeKg": "15", "sku": "all-age-dog-chicken", "packagingFile": "media/包装资料/狗/全犬鸡肉15-文字(9).docx" },
+    { "entry": 19, "ean": "4780178200193", "sizeKg": "1.5", "sku": "small-dog-beef", "packagingFile": "media/包装资料/狗/小犬牛肉1.5-文字(3).docx", "note": "全犬鸡肉1.5 的 PSD 曾复用本号码，须确认后印刷" },
+    { "entry": 20, "ean": "4780178200209", "sizeKg": "3", "sku": "small-dog-beef", "packagingFile": "media/包装资料/狗/小犬牛肉3-文字(3).docx" },
+    { "entry": 21, "ean": "4780178200216", "sizeKg": "1.5", "sku": null, "packagingFile": null },
+    { "entry": 22, "ean": "4780178200223", "sizeKg": "3", "sku": null, "packagingFile": null },
+    { "entry": 23, "ean": "4780178200230", "sizeKg": "1.5", "sku": "small-dog-chicken", "packagingFile": "media/包装资料/狗/小犬鸡肉1.5-文字(3).docx" },
+    { "entry": 24, "ean": "4780178200247", "sizeKg": "3", "sku": "small-dog-chicken", "packagingFile": "media/包装资料/狗/小犬鸡肉3-文字(3).docx" }
+  ]
+}

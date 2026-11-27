@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-11-27T04:19:06.321Z",
+  "checks": 9,
+  "failed": 0,
+  "results": [
+    {
+      "id": "baseline-block",
+      "label": "未批准状态下门禁必须阻断",
+      "pass": true,
+      "detail": "阻断 9 项"
+    },
+    {
+      "id": "bad-origin",
+      "label": "http 或本地域名不得通过 origin 检查",
+      "pass": true,
+      "detail": "http://localhost:4173"
+    },
+    {
+      "id": "no-origin",
+      "label": "缺少 --origin 时不得通过",
+      "pass": true,
+      "detail": "未提供 origin"
+    },
+    {
+      "id": "claim-injection",
+      "label": "注入未证实认证宣称必须被拦截",
+      "pass": true,
+      "detail": "命中：marketing"
+    },
+    {
+      "id": "partial-approval",
+      "label": "仅批准单条内容不得放行",
+      "pass": true,
+      "detail": "8 条待批准"
+    },
+    {
+      "id": "evidence-hard-block",
+      "label": "即使伪造全部审批，缺失证据仍必须阻断",
+      "pass": true,
+      "detail": "上线必需证据均已核实：packaging-docx-19(review)、small-dog-beef-feeding-typo(conflicting)、nutrition-basis(review)、production-address-source(review)、halal-certificate(missing)、product-photos(missing)、dealer-policy(missing)、legal-texts(missing)；页面无原型/模拟提示文案：仍含原型提示：en/zh/ru/ar/uz/kk/ky/tg"
+    },
+    {
+      "id": "partial-evidence",
+      "label": "仅补齐部分证据不得放行",
+      "pass": true,
+      "detail": "packaging-docx-19(review)、small-dog-beef-feeding-typo(conflicting)、nutrition-basis(review)、production-address-source(review)、dealer-policy(missing)、legal-texts(missing)"
+    },
+    {
+      "id": "stale-residue",
+      "label": "门禁失败时必须清理旧发布目录且退出码非 0",
+      "pass": true,
+      "detail": "exit=1 残留=无"
+    },
+    {
+      "id": "no-release-via-flags",
+      "label": "非 release 构建不得写入 output/release",
+      "pass": true,
+      "detail": "exit=0"
+    }
+  ]
+}

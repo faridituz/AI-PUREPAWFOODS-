@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updated": "2026-11-26",
-  "note": "可配置语言清单。正式站为 en/zh/ru/ar/uz/kk/ky/tg 八语同页；本原型拆为独立 URL 并补 hreflang。全部 8 种语言均为原站已有语言，不得删除；其中 zh/ar/kk/ky/tg 的本轮文案仍为原型草稿，待母语审校。enabled=false 的 kaa/tr 为测试候选，不生成页面、不进菜单、不进 hreflang/sitemap。",
+  "note": "可配置语言清单。正式站为 en/zh/ru/ar/uz/kk/ky/tg 八语同页；本原型拆为独立 URL 并补 hreflang。全部 8 种语言均为原站已有语言，不得删除；其中 zh/ar/kk/ky/tg 的本轮文案仍为原型草稿，待母语审校。enabled=false 的 kaa/tr 为测试候选，不生成页面、不进菜单、不进 hreflang/sitemap。 2026-11-27 复核：translation=official 仅表示 en/ru/uz 沿用原站已发布原文（live-site），项目内没有人工审校签署记录；本轮新增文案同样未审校。所有语言 reviewStatus=no-review-record，不得对外声称已完成专业审核。",
   "default": "en",
   "languages": [
     {
@@ -12,7 +12,9 @@
       "enabled": true,
       "origin": "live-site",
       "publicApproved": true,
-      "translation": "official"
+      "translation": "official",
+      "reviewStatus": "no-review-record",
+      "reviewBasis": "原站已发布原文（正式站截图证据）+ 本轮 AI 新增文案；无人工审校签署记录"
     },
     {
       "code": "zh",
@@ -22,7 +24,9 @@
       "enabled": true,
       "origin": "live-site",
       "publicApproved": true,
-      "translation": "prototype-draft"
+      "translation": "prototype-draft",
+      "reviewStatus": "no-review-record",
+      "reviewBasis": "AI 翻译草稿；无母语人员审核记录"
     },
     {
       "code": "ru",
@@ -32,7 +36,9 @@
       "enabled": true,
       "origin": "live-site",
       "publicApproved": true,
-      "translation": "official"
+      "translation": "official",
+      "reviewStatus": "no-review-record",
+      "reviewBasis": "原站已发布原文（正式站截图证据）+ 本轮 AI 新增文案；无人工审校签署记录"
     },
     {
       "code": "ar",
@@ -42,7 +48,9 @@
       "enabled": true,
       "origin": "live-site",
       "publicApproved": true,
-      "translation": "prototype-draft"
+      "translation": "prototype-draft",
+      "reviewStatus": "no-review-record",
+      "reviewBasis": "AI 翻译草稿；无母语人员审核记录"
     },
     {
       "code": "uz",
@@ -52,7 +60,9 @@
       "enabled": true,
       "origin": "live-site",
       "publicApproved": true,
-      "translation": "official"
+      "translation": "official",
+      "reviewStatus": "no-review-record",
+      "reviewBasis": "原站已发布原文（正式站截图证据）+ 本轮 AI 新增文案；无人工审校签署记录"
     },
     {
       "code": "kk",
@@ -62,7 +72,9 @@
       "enabled": true,
       "origin": "live-site",
       "publicApproved": true,
-      "translation": "prototype-draft"
+      "translation": "prototype-draft",
+      "reviewStatus": "no-review-record",
+      "reviewBasis": "AI 翻译草稿；无母语人员审核记录"
     },
     {
       "code": "ky",
@@ -72,7 +84,9 @@
       "enabled": true,
       "origin": "live-site",
       "publicApproved": true,
-      "translation": "prototype-draft"
+      "translation": "prototype-draft",
+      "reviewStatus": "no-review-record",
+      "reviewBasis": "AI 翻译草稿；无母语人员审核记录"
     },
     {
       "code": "tg",
@@ -82,7 +96,9 @@
       "enabled": true,
       "origin": "live-site",
       "publicApproved": true,
-      "translation": "prototype-draft"
+      "translation": "prototype-draft",
+      "reviewStatus": "no-review-record",
+      "reviewBasis": "AI 翻译草稿；无母语人员审核记录"
     },
     {
       "code": "kaa",
@@ -92,7 +108,9 @@
       "enabled": false,
       "origin": "candidate",
       "publicApproved": false,
-      "translation": "none"
+      "translation": "none",
+      "reviewStatus": "not-applicable",
+      "reviewBasis": "语言关闭"
     },
     {
       "code": "tr",
@@ -102,7 +120,9 @@
       "enabled": false,
       "origin": "candidate",
       "publicApproved": false,
-      "translation": "none"
+      "translation": "none",
+      "reviewStatus": "not-applicable",
+      "reviewBasis": "语言关闭"
     }
   ]
 }

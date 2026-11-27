@@ -2,7 +2,7 @@
 
 | 模块名称 | 文件路径 | 核心功能说明 | 输入/输出 | 状态 |
 | :--- | :--- | :--- | :--- | :--- |
-| 四原型统一构建器 | `src/website-v2/build.mjs` | 单一内容源生成 A/B/C/D 四主题×8语×13类=416页；含 hreflang/canonical/RTL/sitemap/robots/assets/content-status；`--index` 切生产索引；`--release` 只构建 D、强制索引、先跑发布门禁 | `content/*.json`、`core/*`、`styles/*` -> `output/prototypes/{a,b,c,d}/` 或 `output/release/` | 已实测：416页；release 门禁 13项拦截9项 |
+| 四原型统一构建器 | `src/website-v2/build.mjs` | 单一内容源生成 A/B/C/D 四主题×8语×13类=416页；含 hreflang/canonical/RTL/sitemap/robots/assets/content-status；`--index` 切生产索引；`--release` 只构建 D、强制索引、先跑发布门禁，失败时清理旧 `output/release` | `content/*.json`、`core/*`、`styles/*` -> `output/prototypes/{a,b,c,d}/` 或 `output/release/` | 已实测：416页；release 门禁 13项拦截9项 |
 | 正式发布门禁 | `src/website-v2/core/release-gate.mjs` | 13项上线检查：八语范围/翻译状态/草稿标记/产品批准/实物核验/数据冲突/内容日志/必需证据/表单接收端/原型文案/认证宣称/HTTPS origin | content ctx + origin -> 通过/阻断清单 | 已实测：4通过9阻断，未生成发布文件 |
 | 内容加载与校验 | `src/website-v2/core/content.mjs` | 读取 languages/site/ui/forms/marketing/errors/products/d/evidence/content-log；校验语言齐全、产品数、9项营养、喂食表、证据五状态+requiredForLaunch/publicUse、内容日志九字段 | JSON -> 统一 ctx | 已实测 |
 | 真实产品数据源 | `src/website-v2/content/products.json` | 7 SKU 保证分析值/喂食表/动物性原料占比/规格/来源/冲突/逐SKU核验状态，唯一数字源 | 包装 docx -> JSON | 已实测；`draft:true, publicApproved:false`，7 SKU `pending-physical` |
@@ -23,6 +23,12 @@
 | 真实资料盘点 | `src/website-v2/materials.mjs` | 扫描 `media/`，记录路径/SHA-256/docx元数据/SKU/规格/证据状态/公开范围 | media -> `output/evidence/materials.json` | 已实测 31 文件 |
 | 数据反向核验 | `src/website-v2/check-sources.mjs` | 用 19 份包装数据稿反向核验 products.json：四语喂食表/9项营养/每日量/单位/跨规格/跨产品 | 提取稿+products.json -> `output/evidence/source-check.json` | 已实测 295项，5处源文件问题 |
 | 发布包泄漏检查 | `src/website-v2/qa-release.mjs` | 构建后扫描：noindex/原型标记/mock/localhost/测试数据/A-B-C链接/页面数/404/sitemap/robots | 构建目录 -> `output/evidence/qa-release.json` | 已实测：原型D识别7项泄漏 |
+| 发布门禁补充测试 | `src/website-v2/qa-gate.mjs` | 9 场景：基线阻断、错误/缺失 origin、宣称注入、单条批准、伪造审批、部分证据、旧 release 残留清理、非 release 不写 release | 内存内容 + 子进程 -> `output/evidence/qa-gate.json` | 已实测 9/9 |
+| 条码核对 | `src/website-v2/audit-barcodes.mjs`、`content/barcodes.json` | 解析 GS1 登记 PDF 提取稿与包装数据稿，校验 24 条 EAN 校验位/重复/规格映射/未映射 | `data/extracted/barcodes.txt` + `barcodes.json` -> `output/evidence/barcodes.json`、`output/V2.7_条码核对表_20261127.md` | 已实测：24 条、19 映射、5 未映射、0 校验位错误 |
+| 产品主数据风险 | `src/website-v2/content/product-risks.json` | P1-001～P1-006：条码冲突、磷含量、喂食量、共用喂食表、注册名、实物核验 | JSON -> 文档/Excel | 已登记，全部未批准 |
+| 产品接口契约 | `src/website-v2/contracts/product-api.schema.json` | 主数据与营销内容分离的产品 JSON Schema（草案，未批准） | Schema -> 对接文档 | 草案 0.1.0 |
+| 证据分类建议 | `src/website-v2/content/evidence-classification.proposal.json` | 22 项证据按法律必须/宣称触发/可选/隐藏分类建议，不参与构建、不改门禁 | evidence.json -> 建议 | 待所有者与专业人员审核 |
+| V2.7 核验与交接材料 | `output/V2.7_*.md`、`output/V2.7_产品资料核验表_20261127.xlsx`、`CODEX_REVIEW.md` | 主数据审核材料、接口契约、接收端/SEO 方案、人工待办、Codex 审核入口、六工作表 Excel | 现有数据 -> 文档/Excel | 已生成；干净目录接手验证通过 |
 | 8语原型生成器（方案A，旧） | `src/website-v2/build-a.mjs` | 初版单主题生成器 | 旧 content/styles -> `output/prototypes/a/` | 已被 `build.mjs` 取代，保留备查 |
 | 原型本地预览与模拟API | `src/website-v2/serve.mjs` | 静态服务 + mock 线索 API（同源/JSON/16KB/限流/蜜罐/幂等/脱敏日志）、CSP等安全头、ETag/304、多语言404；`STRESS=1` 开放统计 | 原型目录 -> http://localhost:4173 | 已实测 |
 | 8语布局自检 | `src/website-v2/qa-layout.mjs` | CDP 驱动 Chrome，四主题×8语×7断点×5页（含320/360/412/1920）检查溢出/lang/dir/hreflang/noindex/中文串入/表单；含切换保页与后退交互 | 本地服务 -> 控制台/`output/evidence/qa-layout.json` | 已实测：736组合0异常 |

@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://purepawfoods.com/schemas/product-api.schema.json",
+  "title": "PUREPAW 统一产品数据接口契约（草案）",
+  "description": "供官网与 Codex 销售系统对接的候选契约。products.json 只是本地候选数据源，不代表企业最终主数据库；归属由项目所有者批准。本契约不包含库存、订单、价格与收款，避免重复建设。",
+  "type": "object",
+  "required": ["contractVersion", "sourceOfTruth", "products"],
+  "properties": {
+    "contractVersion": { "type": "string", "const": "0.1.0-draft" },
+    "sourceOfTruth": {
+      "type": "object",
+      "required": ["kind", "approved"],
+      "properties": {
+        "kind": { "enum": ["local-candidate", "approved-master"] },
+        "approved": { "type": "boolean", "description": "true 仅当项目所有者书面指定该来源为统一主数据" },
+        "owner": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    },
+    "products": { "type": "array", "items": { "$ref": "#/$defs/product" } }
+  },
+  "$defs": {
+    "localized": {
+      "type": "object",
+      "description": "键为 enabled 语言代码，值必须为该语言文本；不得用其他语言占位",
+      "propertyNames": { "enum": ["en", "zh", "ru", "ar", "uz", "kk", "ky", "tg"] },
+      "additionalProperties": { "type": "string" }
+    },
+    "product": {
+      "type": "object",
+      "required": [
+        "productId", "sku", "barcode", "name", "category", "packSize",
+        "ingredients", "nutrition", "feeding", "target", "media",
+        "masterData", "marketingContent", "dataVersion", "reviewStatus", "publishStatus", "updatedAt"
+      ],
+      "properties": {
+        "productId": { "type": "string", "description": "跨系统稳定 ID，不复用、不随名称变化", "pattern": "^pp-[a-z0-9-]+$" },
+        "sku": { "type": "string", "description": "内部 SKU（产品 × 规格）" },
+        "barcode": {
+          "type": "object",
+          "required": ["gtin", "status"],
+          "properties": {
+            "gtin": { "type": ["string", "null"], "pattern": "^[0-9]{13}$" },
+            "status": { "enum": ["unapproved", "verified"] },
+            "source": { "type": "string" }
+          }
+        },
+        "name": { "$ref": "#/$defs/localized" },
+        "category": { "enum": ["cat", "dog"] },
+        "segment": { "enum": ["all-age", "kitten", "small-breed"] },
+        "flavor": { "enum": ["chicken", "beef"] },
+        "packSize": {
+          "type": "object",
+          "required": ["value", "unit"],
+          "properties": {
+            "value": { "type": "number", "exclusiveMinimum": 0 },
+            "unit": { "const": "kg" }
+          }
+        },
+        "ingredients": { "$ref": "#/$defs/localized" },
+        "nutrition": {
+          "type": "object",
+          "required": ["basis", "items"],
+          "properties": {
+            "basis": { "enum": ["as-fed", "dry-matter", "unknown"] },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["key", "value", "unit"],
+                "properties": {
+                  "key": { "type": "string" },
+                  "value": { "type": "string", "description": "保留 ≥/≤ 符号与原文精度，不在接口层重算" },
+                  "unit": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "feeding": {
+          "type": "object",
+          "required": ["kind", "basis", "headers", "rows"],
+          "properties": {
+            "kind": { "enum": ["weight", "age"] },
+            "basis": { "enum": ["per-day", "per-meal", "unknown"] },
+            "headers": { "$ref": "#/$defs/localized" },
+            "rows": { "type": "array", "items": { "type": "array", "items": { "type": "string" } } },
+            "status": { "enum": ["unverified", "verified", "blocked"] }
+          }
+        },
+        "target": {
+          "type": "object",
+          "required": ["species", "lifeStage"],
+          "properties": {
+            "species": { "enum": ["cat", "dog"] },
+            "lifeStage": { "enum": ["all-age", "kitten", "adult", "unknown"] },
+            "sizeClass": { "enum": ["small", "medium", "large", "unknown"] },
+            "conditions": { "$ref": "#/$defs/localized" }
+          }
+        },
+        "media": {
+          "type": "object",
+          "properties": {
+            "images": { "type": "array", "items": { "type": "string" } },
+            "video": { "type": ["string", "null"] },
+            "alt": { "$ref": "#/$defs/localized" }
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "status"],
+            "properties": {
+              "id": { "type": "string" },
+              "status": { "enum": ["verified", "review", "missing", "conflicting", "unapproved"] }
+            }
+          }
+        },
+        "masterData": {
+          "type": "object",
+          "description": "统一产品主数据：事实字段，营销内容不得覆盖",
+          "properties": {
+            "fields": {
+              "type": "array",
+              "items": { "enum": ["identity", "barcode", "packSize", "ingredients", "nutrition", "feeding", "target", "manufacturer", "origin", "shelfLife", "storage"] }
+            },
+            "companyFacts": {
+              "type": "object",
+              "properties": {
+                "legalName": { "type": "string" },
+                "stir": { "type": "string" },
+                "gcp": { "type": "string" },
+                "gln": { "type": "string" },
+                "productionAddress": { "type": "string" }
+              }
+            }
+          }
+        },
+        "marketingContent": {
+          "type": "object",
+          "description": "官网营销内容：允许独立编辑，不得改变 masterData 事实或暗示未证实认证",
+          "properties": {
+            "headline": { "$ref": "#/$defs/localized" },
+            "description": { "$ref": "#/$defs/localized" },
+            "seoTitle": { "$ref": "#/$defs/localized" },
+            "seoDescription": { "$ref": "#/$defs/localized" },
+            "claims": { "type": "array", "items": { "type": "string" }, "description": "任何认证/检测/配送承诺必须能指向 evidence id" }
+          }
+        },
+        "dataVersion": { "type": "string" },
+        "reviewStatus": { "enum": ["not-reviewed", "reviewed", "rejected"] },
+        "publishStatus": { "enum": ["blocked", "approved"] },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}

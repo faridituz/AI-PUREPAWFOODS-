@@ -1,13 +1,17 @@
 # 双机交接班日志（HANDOFF.md）
 
+## [2026-11-27] - V2.7 开发冻结、主数据核验、干净环境接手验证
+- **刚完成**：①远端 `87e68c0` 与本地一致、工作区干净、无未提交文件、无 LFS、无密钥入库；②在 `data/temp/clean-clone` 从 GitHub 全新克隆（118MB）实测：构建 416 页、8 语全 200、布局 736/0、数据 1925/0、多语言 2468/0（需 `--origin` 与 `--base` 同端口）、表单 53/0、`--release` 退出码 1 且无 `output/release`；③发现并修复门禁失败不清理旧发布目录的缺陷（现失败即 `rm output/release`）；④新增 `qa-gate.mjs` 9 场景全过；⑤新建条码核对（GS1 PDF 实为 **24 条**，19 映射 / 5 未映射 / 校验位全对）、`barcodes.json`、`audit-barcodes.mjs`；⑥登记 P1-001～P1-006 主数据风险；⑦接口契约草案 + 证据分类建议（未改门禁）；⑧咨询接收端 A/B/C 比较与推荐、SEO 迁移实测方案；⑨`CODEX_REVIEW.md`；⑩Excel 六工作表与人工待办 A–J。
+- **最短接手流程**：`git clone https://github.com/faridituz/AI-PUREPAWFOODS-.git` → 确认 `node --version` ≥22（**无需 npm install**）→ `cd src/website-v2 && node build.mjs` → `node serve.mjs ../../output/prototypes 4173` → 打开 `http://localhost:4173/d/uz/`。回归：`node qa-gate.mjs`、`node audit-barcodes.mjs`、`node qa-data.mjs --base http://localhost:4173`、`node qa-multilingual.mjs --base http://localhost:4173`、`node qa-forms.mjs`。门禁：`node build.mjs --release --origin https://new.purepawfoods.com`，**必须退出 1 且不生成 release**。
+- **环境差异（必须单独迁移）**：`.env` 不入库，需在新机单独创建 `DATABASE_URL` / `MEDIA_STORAGE_PATH` / `TG_BOT_TOKEN` / `TG_ADMIN_CHAT_ID`，再跑 `python src/check_env.py`（Python 3.12）；旧机媒体路径不能照抄本机 Drive 路径。`data/`、`media/` 增量文件不进 Git，走云盘/`git add -f` 决策。
+- **注意**：本次干净目录验证只是本机模拟，**不等同第二台真实电脑验收**；未改正式站/DNS/WordPress；`output/release` 仍不存在；`products.json` 仅为本地候选主数据；五语仍为草稿，en/ru/uz 也无人工审校记录。
+- **下一步**：等老板补齐 `output/V2.7_人工待办清单_20261127.md` 的 A/B/E/F/G 项；确认默认语言与最终 URL（是否保留 `/d/` 前缀）；批准表单方案后再调门禁。
 
-## [2026-11-27] - 销售系统 P1.5 候选人工转档
+## [2026-11-27] - 销售系统 P1.5 候选人工转档（旧机 Codex 分支）
 - 销售分支 aa4d00a 已同步。候选必须人工核实并通过区域、负责人及去重检查；来源关联随档案一并保存。
 - 173 项回归通过，新增 PostgreSQL HTTP 专项尚待运行。下一步实测离线导入和转档成功路径，再做主入口对照。无采购或生产变更。
+- 背景（同日更早）：销售仓库 feature/sales-v1 本地提交 e49390e 接通 PostgreSQL 离线 OSM 候选入口；PostgreSQL 专项因项目路径含中文，initdb 后置阶段报 UTF8 0xb0，暂未到达 HTTP，日志留在本地 data。
 
-## [2026-11-27] - 销售系统 P1.5 离线候选
-- 销售仓库 feature/sales-v1 本地提交 e49390e 已接通 PostgreSQL 离线 OSM 候选入口，173 项回归通过。
-- PostgreSQL 专项因项目路径含中文，initdb 后置阶段报 UTF8 0xb0，暂未到达 HTTP。日志保留在本地 data。下一步候选人工转档及隔离库复验。无采购、真实数据或生产变更。
 ## [2026-11-26] - V2.6 收口：八语证据、资料核验、发布门禁
 - **刚完成**：①正式站八语逐语截图留档（`output/evidence/live-langs/`，8/8，含选择器与首段标题），确认正式站是同一 URL 内 8 个语言面板、无独立语言路径；②31 个真实素材全量盘点（`materials.json`，含 SHA-256、docx 元数据、SKU/规格、可公开范围）；③`check-sources.mjs` 用 19 份数据稿反向核验 products.json 295 项，发现 3 处 `100--125g` 双连字符、1 处俄语 `≥0.91%`、1 处俄语表头截断；④small-dog-beef 专项查明：6–8kg、低活动量、每日 g/天，双连字符为笔误但牛肉无单连字符版本，包装日期不可考，继续阻断；⑤证据登记扩到 22 项，新增 EAN 重复风险与名称差异；⑥品牌页新增八语 GCP/GLN“非质量认证”说明；⑦发布门禁 13 项上线，当前 4 通过 9 阻断，`--release` 不写任何文件；`qa-release.mjs` 在原型 D 上识别 7 项泄漏。
 - **验证**：构建 416 页；qa-layout 736 组合 0 异常；qa-multilingual 2,468 项 0 失败；qa-data 1,925 项 0 失败；qa-forms 53 项 0 失败。

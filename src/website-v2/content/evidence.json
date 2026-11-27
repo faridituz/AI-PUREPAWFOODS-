@@ -81,7 +81,7 @@
       "title": "GS1 条码登记文件（GCP 478017820 / GLN 4780178209998）",
       "path": "media/业务资料/purapaw产品条形码.pdf",
       "source": "项目内既有素材",
-      "version": "条码登记文件（16 个 EAN-13）",
+      "version": "条码登记文件（24 条 GTIN，5 页）",
       "date": "2026（PDF 内日期字段不完整）",
       "holder": "M.Ch.J. “PURE PAW NUTRITION”",
       "files": [
@@ -92,7 +92,7 @@
       ],
       "publicUse": "fields-only",
       "requiredForLaunch": false,
-      "note": "GCP/GLN 是 GS1 商品编码标识，不是产品质量认证；品牌页只展示这两个编号，不展示 16 个 EAN 明细。"
+      "note": "GCP/GLN 是 GS1 商品编码标识，不是产品质量认证；品牌页只展示这两个编号，不展示 EAN 明细。2026-11-27 复核：PDF 实为 24 条 GTIN，其中 5 条（20131/20148/20155/20216/20223）在包装数据稿中无对应 SKU，19 条与 7 个 SKU 的规格一一映射；校验位全部正确，登记文件内无重复。条码与产品对应关系仍为未批准，详见 output/V2.7_条码核对表_20261127.md。"
     },
     {
       "id": "state-registration",
