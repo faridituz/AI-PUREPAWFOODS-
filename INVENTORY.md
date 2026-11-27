@@ -55,3 +55,6 @@
 | 销售行政区维护 | `sales-v1-dev/server/field-maintenance.mjs` | 管理员修订三语名称、来源及状态 | SQLite 与 PostgreSQL 隔离入口 | 173 项与 PostgreSQL 专项通过 |
 | 管理岗位地图客户编辑 | `sales-v1-dev/server/postgres-preview-bank.mjs` | 管理员及区域经理编辑，归属走交接事务 | PostgreSQL 隔离预览 | HTTP 专项及 173 项全通过 |
 | 地图现场拜访及门店照片 | `sales-v1-dev/public/field.js`、`sales-v1-dev/server/postgres-preview-bank.mjs` | 复用 GPS 评估、照片净化、归属和幂等 | 隔离 PostgreSQL | HTTP 专项及 173 项回归通过 |
+| 营销文档库（首周策划） | `output/marketing/01–04` | 市场与竞品审核、PP-01～07 双语句本/分镜/帖文、调研计划、Codex-Qoder 协作接口 | 文档 -> 人工审核 | 2026-11-20 v1，全部待审核；04 中 `../mvp` 链接在本仓库失效 |
+| 营销/客服/内容沙盒 MVP | 旧机 `D:\AI办公\purepaw\mvp`（非本仓库） | 零依赖 Node 24 + node:sqlite：产品/批次/库存、客户与渠道级同意、订单状态机、审批、知识库客服与转人工、六渠道内容草稿/排期/模拟执行/重试、审计、备份；36 项测试通过 | 本地 4310 沙盒 -> 虚构数据 | 仅旧机一份、无 Git；无真实外部动作，不具备上线条件 |
+| 营销项目现状核查 | `output/marketing/05-营销现状核查_20261127.md` | 15 项能力分类、六平台授权、视频/客服能力、缺口、优先级、审批项与销售接口边界 | 现有资产 -> 单一报告 | 已完成（2026-11-27） |
