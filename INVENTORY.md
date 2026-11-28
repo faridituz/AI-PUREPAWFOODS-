@@ -1,5 +1,7 @@
 # 现有功能与脚本资产清单（禁止重复造轮子）
 
+- PUREPAW 销售系统库存工作台已有管理员经营阈值表单及 Edge 实测脚本。
+
 | 模块名称 | 文件路径 | 核心功能说明 | 输入/输出 | 状态 |
 | :--- | :--- | :--- | :--- | :--- |
 | 四原型统一构建器 | `src/website-v2/build.mjs` | 单一内容源生成 A/B/C/D 四主题×8语×13类=416页；含 hreflang/canonical/RTL/sitemap/robots/assets/content-status；`--index` 切生产索引；`--release` 只构建 D、强制索引、先跑发布门禁，失败时清理旧 `output/release`；所有输出/删除先经 `assertSafeOut`（仅允许 output/ 子目录、拒绝根目录/上级/符号链接与目录联接） | `content/*.json`、`core/*`、`styles/*` -> `output/prototypes/{a,b,c,d}/` 或 `output/release/` | 已实测：416页；release 门禁 13项拦截9项 |
